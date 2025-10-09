@@ -1,0 +1,29 @@
+const BackgroundAnimation = () => {
+  return (
+    <>
+      <div className="fixed hidden md:block inset-0 w-screen h-screen">
+        <video
+          autoPlay
+          loop
+          muted
+          preload="auto"
+          playsInline
+          aria-hidden="true"
+          className="object-cover w-full h-full grayscale dark:grayscale opacity-20 dark:opacity-10 dark:invert-0"
+        >
+          <source src="/assets/videos/hero.webm" type="video/webm" />
+          <source src="/assets/videos/hero.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div
+        className="fixed inset-0 hidden md:block bg-[#0a1628] dark:mix-blend-color mix-blend-color backdrop-blur-xs  h-screen w-screen"
+        style={{
+          willChange: "transform, opacity", // Hint GPU for smooth compositing
+        }}
+      />
+    </>
+  );
+};
+
+export default BackgroundAnimation;
