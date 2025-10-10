@@ -13,7 +13,7 @@ const ThemeToggle = () => {
 
   const currentTheme = useMemo(
     () => resolvedTheme || theme || "light",
-    [resolvedTheme, theme]
+    [resolvedTheme, theme],
   );
 
   if (!mounted) return null; // prevent SSR rendering mismatch

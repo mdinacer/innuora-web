@@ -1,4 +1,8 @@
-import { ContentCategory, ContentItem, ContentMetadata } from "@/types/content.types";
+import {
+  ContentCategory,
+  ContentItem,
+  ContentMetadata,
+} from "@/types/content.types";
 
 // =========================
 // Content Registry
@@ -106,7 +110,9 @@ export class ContentRegistry {
       return (
         title.toLowerCase().includes(lowercaseQuery) ||
         description.toLowerCase().includes(lowercaseQuery) ||
-        keywords.some((keyword) => keyword.toLowerCase().includes(lowercaseQuery))
+        keywords.some((keyword) =>
+          keyword.toLowerCase().includes(lowercaseQuery),
+        )
       );
     });
   }
@@ -125,12 +131,16 @@ export class ContentRegistry {
 
         // Matching CBT modules
         if (relatedCbtModules && other.metadata.relatedCbtModules) {
-          return relatedCbtModules.some((module) => other.metadata.relatedCbtModules!.includes(module));
+          return relatedCbtModules.some((module) =>
+            other.metadata.relatedCbtModules!.includes(module),
+          );
         }
 
         // Matching target emotions
         if (targetEmotions && other.metadata.targetEmotions) {
-          return targetEmotions.some((emotion) => other.metadata.targetEmotions!.includes(emotion));
+          return targetEmotions.some((emotion) =>
+            other.metadata.targetEmotions!.includes(emotion),
+          );
         }
 
         return false;

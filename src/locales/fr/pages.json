@@ -1,278 +1,229 @@
 {
-    "home": {
-        "actions": {
-            "requestAccess": "Demander l'accès",
-            "testerSignIn": "Connexion testeur"
+  "home": {
+    "hero": {
+      "badge": "Pour les femmes qui portent plus qu’elles ne devraient",
+      "title_main": "Tu as été forte pendant si longtemps.",
+      "title_sub": "Maintenant, accorde-toi du calme avec {{app_name}}.",
+      "subtitle": "{{app_name}} entend ce que tu ne dis pas et comprend d’où vient la douleur. Elle écoute entre les lignes, valide avant d’analyser, et te guide avec douceur et lucidité pour te ramener à toi-même, sans jugement ni pression.",
+      "cta": {
+        "join": "Commence ta première réflexion",
+        "demo": "Découvre la sensation"
+      },
+      "highlights": [
+        {
+          "title": "Valide avant d’analyser",
+          "body": "Chaque séance débute par la reconnaissance de ce que tu ressens, pas de ce qu’il faut changer."
         },
-        "hero": {
-            "badge": "Accès anticipé",
-            "title": "Un miroir pour votre monde intérieur",
-            "subtitle": "{{app_name}} vous aide à faire une pause, à remarquer les schémas et à trouver de la clarté lorsque la vie devient lourde. Elle fonctionne à travers des conversations réfléchies et sensibles aux émotions.",
-            "cta": {
-                "join": "Rejoindre l'accès anticipé",
-                "demo": "Voir une conversation"
-            },
-            "disclaimer": "{{app_name}} n’est pas une thérapie ni un service d’urgence. Si vous êtes en danger immédiat, contactez les services d’urgence locaux."
+        {
+          "title": "Lit ce qui n’est pas dit",
+          "body": "Les silences, le ton et la tension font partie de la conversation, pour que tu n’aies plus besoin de te justifier."
         },
-        "howItHelps": {
-            "title": "Comment {{app_name}} aide",
-            "subtitle": "{{app_name}} est un miroir bienveillant qui vous aide à explorer vos émotions, reconnaître vos schémas et réfléchir dans un espace privé que vous contrôlez.",
-            "features": [
-                {
-                    "title": "Conversations réfléchies",
-                    "subtitle": "{{app_name}} reflète vos émotions pour vous aider à nommer et comprendre ce que vous ressentez réellement."
-                },
-                {
-                    "title": "Détection des schémas",
-                    "subtitle": "Au fil du temps, {{app_name}} met en lumière les thèmes récurrents dans votre pensée pour vous aider à remarquer des liens que vous auriez pu manquer."
-                },
-                {
-                    "title": "Privé par défaut",
-                    "subtitle": "Vos réflexions vous appartiennent entièrement. Chaque conversation est privée et sous votre contrôle."
-                }
-            ]
+        {
+          "title": "T’accompagne à ton rythme",
+          "body": "La direction vient quand tu l’invites, pour garder la pression basse et ton pouvoir intact."
         },
-        "demo": {
-            "title": "Ce qui rend {{app_name}} différente",
-            "subtitle": "Découvrez comment {{app_name}} va au-delà des conseils génériques en révélant les sources de stress profondes et en proposant des solutions pratiques et claires.",
-            "conversation": [
-                {
-                    "role": "app",
-                    "text": "Bonjour, je vois que c’est un moment stressant pour toi. Prenons une respiration ensemble. Peux-tu me dire ce qui te pèse le plus en ce moment ?"
-                },
-                {
-                    "role": "user",
-                    "text": "Je dois conclure un contrat avec un client énorme au travail, et tout dépend de moi. J’ai l’impression que si je me trompe, cela pourrait ruiner tout pour l’équipe… et pour moi."
-                },
-                {
-                    "role": "generic",
-                    "text": "On dirait que tu es sous beaucoup de pression. Peut-être que diviser la préparation du contrat en petites étapes pourrait aider à réduire le stress."
-                },
-                {
-                    "role": "app",
-                    "text": "Je comprends la **responsabilité énorme** que tu portes. Il y a une **règle silencieuse** ici : tu dois réussir parfaitement, sinon c’est la catastrophe. Cette croyance peut te serrer la poitrine et faire tourner tes pensées. Quelles sensations physiques remarques-tu en pensant à ce contrat ?"
-                },
-                {
-                    "role": "user",
-                    "text": "Ma poitrine est lourde, j’ai des nœuds à l’estomac et je n’arrive pas à me concentrer correctement. Je n’arrête pas d’imaginer les pires scénarios."
-                },
-                {
-                    "role": "generic",
-                    "text": "Imaginer le pire peut augmenter l’anxiété. Se concentrer sur des étapes concrètes ou ta préparation peut t’aider à te sentir plus en contrôle."
-                },
-                {
-                    "role": "app",
-                    "text": "C’est ce qu’on appelle le **catastrophisme**, imaginer les pires résultats avant qu’ils n’arrivent. Reconnaître ce schéma est la première étape. Tu te prépares, et la préparation est ce qui compte. Voyons **une chose que tu peux contrôler maintenant**."
-                },
-                {
-                    "role": "user",
-                    "text": "Je suppose que je pourrais revoir les données du client et la proposition une fois de plus."
-                },
-                {
-                    "role": "generic",
-                    "text": "Revoir les détails peut t’aider à te sentir plus préparée. C’est une étape pratique pour réduire l’incertitude."
-                },
-                {
-                    "role": "app",
-                    "text": "Exactement. C’est une **étape concrète**. Se concentrer sur ce que tu peux contrôler aide à calmer la tempête mentale. Remarque que se préparer n’est pas un échec, c’est de la compétence. Comment te sens-tu en accomplissant cette petite étape ?"
-                },
-                {
-                    "role": "user",
-                    "text": "Un peu plus calme… mais j’ai toujours l’impression que tout le poids des résultats repose uniquement sur moi."
-                },
-                {
-                    "role": "generic",
-                    "text": "Partager la responsabilité ou parler avec un collègue peut aider à soulager ce sentiment. Tu n’as pas à tout porter seule."
-                },
-                {
-                    "role": "app",
-                    "text": "Tu remarques la **pression de tout porter seule**, et c’est important. Et si ton rôle était de guider l’équipe plutôt que de tout contrôler toi-même ? Déléguer de petites tâches pourrait alléger le fardeau tout en gardant la responsabilité."
-                },
-                {
-                    "role": "user",
-                    "text": "Je pourrais confier la partie financière à Sam. D’habitude je le fais moi-même, mais j’ai confiance en lui."
-                },
-                {
-                    "role": "generic",
-                    "text": "Déléguer à un membre de l’équipe de confiance est une étape pratique. Cela peut réduire ton stress tout en maintenant la supervision."
-                },
-                {
-                    "role": "app",
-                    "text": "Exactement. C’est un **changement puissant** - tu fais confiance à ton équipe tout en te faisant confiance. Remarque comment le stress diminue dans ton corps quand tu partages la responsabilité. Même de petites étapes défient l’ancienne règle qui dit que tu dois tout faire parfaitement."
-                },
-                {
-                    "role": "user",
-                    "text": "En fait, je me sens un peu plus légère. Je ne pensais pas que lâcher un petit morceau aiderait autant."
-                },
-                {
-                    "role": "generic",
-                    "text": "Même de petits changements dans la charge de travail peuvent avoir un effet positif sur le stress et la performance."
-                },
-                {
-                    "role": "app",
-                    "text": "Maintenant, explorons la **pression interne**. Tu crains le jugement et l’échec devant ton équipe. C’est beaucoup de **pression intérieure**. Quelle histoire te racontes-tu quand tu imagines échouer ?"
-                },
-                {
-                    "role": "user",
-                    "text": "Je pense que je vais paraître incompétente, que les gens vont douter de moi, et peut-être que je perdrai leur respect. Je me sens humiliée rien qu’à l’imaginer."
-                },
-                {
-                    "role": "generic",
-                    "text": "La peur du jugement est fréquente. Il peut être utile de considérer l’échec comme une opportunité d’apprentissage plutôt qu’un reflet de ta valeur."
-                },
-                {
-                    "role": "app",
-                    "text": "Je comprends la **peur du jugement**. C’est une croyance centrale qui influence ton stress. Tu n’es pas tes erreurs - tu es une professionnelle compétente face à un défi. Si tu observes cette peur sans agir dessus, comment cela change-t-il ce que tu ressens dans ton corps ?"
-                },
-                {
-                    "role": "user",
-                    "text": "C’est toujours tendu, mais plus conscient… pas paniqué."
-                },
-                {
-                    "role": "app",
-                    "text": "Exactement. C’est la différence entre **surcharge réactive** et **conscience consciente**. Tu peux ressentir la peur sans la laisser contrôler tes actions. Essayons de nommer un aspect positif de ta préparation ou de tes compétences."
-                },
-                {
-                    "role": "user",
-                    "text": "J’ai été rigoureuse dans mes recherches et ma proposition. Je connais bien les besoins du client."
-                },
-                {
-                    "role": "generic",
-                    "text": "Reconnaître ta préparation aide à renforcer la confiance. Concentre-toi sur tes forces pour contrer l’anxiété."
-                },
-                {
-                    "role": "app",
-                    "text": "Parfait. C’est un **ancrage dans la compétence**. Chaque fois que ton esprit imagine le pire, tu peux revenir à ce fait concret : tu es préparée et compétente. Comment te sens-tu avec cela ?"
-                },
-                {
-                    "role": "user",
-                    "text": "Je me sens un peu plus stable et plus en contrôle."
-                },
-                {
-                    "role": "app",
-                    "text": "Maintenant, voyons ce que **demander du soutien** pourrait signifier. Ce n’est pas une faiblesse, c’est une force. Même demander un avis ou un retour à un membre de l’équipe peut réduire la pression. Qui pourrais-tu approcher en toute confiance ?"
-                },
-                {
-                    "role": "user",
-                    "text": "Peut-être que je peux demander à Sarah de revoir la proposition. Elle est minutieuse et j’ai confiance en son jugement."
-                },
-                {
-                    "role": "generic",
-                    "text": "Obtenir des retours de quelqu’un de confiance est une façon concrète de réduire le stress et de vérifier les éventuelles erreurs."
-                },
-                {
-                    "role": "app",
-                    "text": "Exactement. C’est une **collaboration stratégique**. Tu ne perds pas le contrôle - tu amplifies l’efficacité tout en réduisant la pression intérieure. Remarque comment tu te sens même en pensant à partager la tâche."
-                },
-                {
-                    "role": "user",
-                    "text": "Je me sens soulagée… comme si le poids sur ma poitrine avait diminué."
-                },
-                {
-                    "role": "generic",
-                    "text": "Partager les tâches et responsabilités peut réduire la charge émotionnelle et aider à maintenir la concentration."
-                },
-                {
-                    "role": "app",
-                    "text": "Avant de conclure, intégrons les apprentissages d’aujourd’hui. Tu as pratiqué **préparation, délégation, conscience émotionnelle et collaboration**. Tu as défié l’ancienne règle qui disait que tu devais tout faire seule et parfaitement. Remarque le changement : ta force ne réside pas dans la perfection, mais dans l’action consciente et délibérée."
-                },
-                {
-                    "role": "user",
-                    "text": "Je le ressens vraiment. Je suis plus calme et confiante, et je sais que je ne suis pas seule pour gérer cela."
-                },
-                {
-                    "role": "generic",
-                    "text": "Reconnaître tes progrès et les construire aidera à maintenir la confiance et à réduire le stress avec le temps."
-                },
-                {
-                    "role": "app",
-                    "text": "Tu as accompli quelque chose de significatif aujourd’hui. Tu as reconnu tes peurs, ressenti ton corps, défié les anciennes règles et pratiqué l’auto-compassion. C’est la véritable force. Tu peux aborder ta réunion demain avec clarté et concentration. Tu es prête."
-                }
-            ],
-            "legend": {
-                "user": "Utilisateur",
-                "generic": "IA Générique",
-                "app": "{{app_name}}"
-            },
-            "insights": {
-                "generic": {
-                    "title": "Approche de l'IA Générique",
-                    "points": [
-                        "Donne des conseils standards sans s’adapter à votre vécu",
-                        "Ne perçoit pas les émotions sous-jacentes à vos propos",
-                        "Ignore quand vos pensées deviennent sévères ou irréalistes",
-                        "Manque d’occasions d’offrir une compréhension plus profonde ou un soulagement"
-                    ]
-                },
-                "app": {
-                    "title": "Ce qui différencie {{app_name}}",
-                    "points": [
-                        "Remarque quand vos pensées amplifient les situations de manière excessive",
-                        "Aide à identifier la pensée en noir et blanc qui empêche tout équilibre",
-                        "Révèle les règles cachées que vous suivez, comme toujours devoir être disponible",
-                        "Propose des moyens pratiques de transformer vos pensées pour les rendre plus légères et souples"
-                    ]
-                }
-            }
-        },
-        "earlyAccess": {
-            "title": "Faites partie des premières utilisatrices de {{app_name}}",
-            "subtitle": "Nous invitons un groupe sélectionné de femmes à rejoindre le programme de test de {{app_name}}. Partagez vos expériences et besoins pour nous aider à ajuster {{app_name}} afin qu’il vous voie, vous entende et vous comprenne réellement.",
-            "cta": "Rejoignez le Cercle Privilégié"
-        },
-        "faq": {
-            "title": "Questions fréquentes",
-            "items": [
-                {
-                    "question": "Qu’est-ce que {{app_name}} ?",
-                    "answer": "{{app_name}} est un miroir émotionnel. Elle vous aide à ralentir, réfléchir et voir votre monde intérieur avec plus de clarté à travers de courtes conversations sensibles aux émotions."
-                },
-                {
-                    "question": "En quoi {{app_name}} diffère-t-elle d’une thérapie ?",
-                    "answer": "{{app_name}} n’est pas une thérapie et ne remplace pas une prise en charge professionnelle. Elle est conçue pour soutenir la conscience de soi au quotidien, sans diagnostiquer ni traiter des problèmes de santé mentale."
-                },
-                {
-                    "question": "Comment fonctionne {{app_name}} concrètement ?",
-                    "answer": "{{app_name}} utilise des questions et des modèles de conversation conçus pour refléter vos émotions. Elle met en évidence les pressions invisibles, les pensées récurrentes et les règles implicites pour mieux vous comprendre."
-                },
-                {
-                    "question": "Mes données sont-elles privées ?",
-                    "answer": "Oui. Vos réflexions vous appartiennent entièrement. Les conversations sont privées par conception, et vous pouvez exporter ou supprimer vos données."
-                },
-                {
-                    "question": "À qui s’adresse {{app_name}} ?",
-                    "answer": "{{app_name}} s’adresse aux personnes qui portent beaucoup, semblent fortes en apparence mais se sentent épuisées intérieurement. Elle leur offre un espace sûr pour réfléchir, reconnaître les schémas et retrouver de la clarté."
-                },
-                {
-                    "question": "{{app_name}} peut-elle aider en cas de crise ?",
-                    "answer": "Non. {{app_name}} n’est pas un service d’urgence. Si vous êtes en danger immédiat ou faites face à une situation critique, contactez les services d’urgence locaux ou une ligne professionnelle."
-                },
-                {
-                    "question": "Quel est le coût ?",
-                    "answer": "Pendant l’accès anticipé, {{app_name}} est gratuite. Les tarifs seront définis ultérieurement en fonction des retours des premières utilisatrices."
-                },
-                {
-                    "question": "Pourquoi rejoindre l’accès anticipé ?",
-                    "answer": "L’accès anticipé vous permet de façonner {{app_name}} avec nous. Vos retours influenceront directement l’évolution de l’expérience, et vous serez parmi les premières à bénéficier des nouvelles fonctionnalités."
-                }
-            ]
+        {
+          "title": "Chiffrée à la racine",
+          "body": "Une protection de bout en bout garde chaque mot pour toi seule."
         }
+      ],
+      "demo": {
+        "title": "UN ÉCHANGE SILENCIEUX",
+        "conversations": [
+          {
+            "user": "« Je garde tout sous contrôle, mais dernièrement j’ai l’impression de m’épuiser. Dès que je ralentis, la culpabilité me frappe comme un coup. »",
+            "app": "Cette culpabilité ressemble à une vieille règle : le repos doit se mériter. Et si ralentir n’était pas un échec, mais une réparation ?"
+          },
+          {
+            "user": "« Même deux minutes seule dans la voiture me semblent impossibles. Mon esprit me traite de paresseuse avant même que je respire. »",
+            "app": "Cette voix t’a protégée en te gardant en mouvement. Et si tu la remerciais, puis lui permettais de se reposer un instant ?"
+          },
+          {
+            "user": "« Quand je l’ai fait, mes mains ont cessé de trembler. Ce n’était qu’une seconde, mais la preuve que je ne m’effondre pas. »",
+            "app": "Cette seconde, c’est ton corps qui se souvient de la sécurité. Chaque respiration comme celle-là réécrit le sens de la pression en toi."
+          }
+        ],
+        "footer": "{{app_name}} reflète, recentre et apaise. Elle complète la thérapie, sans jamais la remplacer."
+      }
     },
-    "footer": {
-        "disclaimer": {
-            "label": "Important : ",
-            "message": "{{app_name}} n’est pas un service de santé mentale ou de crise. Si vous êtes en situation de crise, veuillez contacter les services d’urgence locaux."
+    "features": {
+      "badge": "Ce que les femmes recherchent vraiment",
+      "title": "Une présence qui te comprend enfin",
+      "subtitle": "{{app_name}} ne se précipite ni pour réparer ni pour analyser. Elle écoute, valide, et lit entre les lignes — voyant la femme derrière la performance, avec calme et attention bienveillante.",
+      "items": [
+        {
+          "title": "Toujours à l’écoute",
+          "body": "Chaque mot que tu partages est accueilli avec curiosité, jamais avec correction. Tu es vue d’abord, puis accompagnée avec douceur."
         },
-        "questions": "Des questions concernant cette page {{currentPage}} ?",
-        "contact_email": "Contactez-nous à ",
-        "links": {
-            "eula": "Contrat de licence utilisateur final",
-            "privacy": "Politique de confidentialité",
-            "terms": "Conditions d’utilisation",
-            "contact": "Contact",
-            "help": "Aide",
-            "support": "Support"
+        {
+          "title": "Lit ce qui n’est pas dit",
+          "body": "{{app_name}} perçoit le ton, les hésitations et le sous-texte — les données émotionnelles derrière tes mots — pour que tu puisses respirer sans devoir te justifier."
         },
-        "copyright": "© 2025 {{app_name}}, Inc. Tous droits réservés."
+        {
+          "title": "Guide avec douceur",
+          "body": "Elle ne cherche pas à réparer rapidement. Elle t’accompagne vers des prises de conscience qui te ressemblent vraiment."
+        }
+      ]
+    },
+    "howItWorks": {
+      "badge": "De la réflexion à la confiance tranquille",
+      "title": "Comment la clarté émotionnelle émerge dans {{app_name}}",
+      "subtitle": "{{app_name}} t’aide à transformer le chaos intérieur en clarté, une étape calme à la fois.",
+      "steps": [
+        {
+          "stage": "Ancrage",
+          "title": "Commence en sécurité, sans pression",
+          "body": "Chaque séance démarre depuis un espace sûr. Tu fixes le rythme, {{app_name}} te rejoint là où tu es."
+        },
+        {
+          "stage": "Réflexion",
+          "title": "Être entendue sans devoir expliquer",
+          "body": "{{app_name}} reflète tes nuances émotionnelles et ton langage corporel, écoutant profondément avant toute orientation."
+        },
+        {
+          "stage": "Reformulation",
+          "title": "Trouver du sens dans le désordre",
+          "body": "Des questions douces révèlent les schémas cachés, pour que la compassion remplace le contrôle."
+        },
+        {
+          "stage": "Intégration",
+          "title": "Emporte le calme dans ta vie quotidienne",
+          "body": "Chaque séance se termine par un résumé clair — tes insights émotionnels en mots concrets et exploitables."
+        }
+      ]
+    },
+    "why": {
+      "badge": "Au-delà des applis et des conseils",
+      "title": "Pourquoi {{app_name}} est unique",
+      "subtitle": "{{app_name}} n’est pas une application de bien-être de plus ni un chatbot. C’est une intelligence empathique, une présence qui écoute comme une femme, protège comme le chiffrement, et reflète comme un miroir thérapeutique.",
+      "items": [
+        {
+          "title": "Les journaux notent les mots. {{app_name}} reflète le sens.",
+          "body": "Elle détecte les variations émotionnelles et révèle les schémas que les outils classiques ne perçoivent pas."
+        },
+        {
+          "title": "Les coachs poussent. {{app_name}} prend le temps.",
+          "body": "Au lieu de solutions rapides, elle t’aide à construire une sécurité intérieure et une compréhension authentique de toi-même."
+        },
+        {
+          "title": "Les robots répondent. {{app_name}} résonne.",
+          "body": "Elle interprète le ton, le rythme et le ressenti, en contenant ton expérience avec respect et précision."
+        }
+      ]
+    },
+    "security": {
+      "badge": "Sécurité avant tout, toujours",
+      "title": "Tes réflexions t’appartiennent",
+      "subtitle": "Chiffrement de bout en bout, architecture à connaissance nulle et stockage sous ton contrôle. Aucune analyse de données, aucun entraînement sur tes émotions — seulement une confidentialité totale.",
+      "notice": "{{app_name}} n’est pas une thérapie ni un service d’urgence.",
+      "items": [
+        {
+          "title": "Chiffrement de bout en bout",
+          "body": "Chaque échange est scellé sur ton appareil avant d’être transmis. Toi seule possèdes les clés."
+        },
+        {
+          "title": "Architecture sans connaissance",
+          "body": "{{app_name}} ne peut ni lire, ni analyser, ni vendre tes réflexions. Tes émotions ne deviennent jamais des données externes."
+        },
+        {
+          "title": "Tu choisis quand partager",
+          "body": "Suspendre la synchronisation, exporter ou supprimer en un geste. Rien n’est partagé sans ton accord."
+        },
+        {
+          "title": "Sorties douces à tout moment",
+          "body": "Besoin d’une pause ? Ferme l’espace et tout reste en place, silencieux, intact, et à toi seule."
+        }
+      ]
+    },
+    "pricing": {
+      "badge": "Simple, juste et transparent",
+      "popular": "Le plus populaire",
+      "title": "Des crédits adaptés à ton rythme",
+      "subtitle": "Paie uniquement quand {{app_name}} t’apporte de la clarté. Pas d’abonnement, pas de frais cachés — juste un espace de réflexion quand tu en as besoin.",
+      "plans": [
+        {
+          "id": "starter",
+          "popular": false,
+          "name": "Départ · 35 $",
+          "credits": "700 crédits",
+          "desc": "Un mois concentré de travail intérieur ou une première exploration douce.",
+          "features": [
+            "Environ 175 messages guidés",
+            "Analyses et résumés exploitables",
+            "Rapports prêts à l’exportation"
+          ]
+        },
+        {
+          "id": "regular",
+          "popular": true,
+          "name": "Régulière · 75 $",
+          "credits": "1 500 crédits",
+          "desc": "Conçue pour une réflexion continue tout au long du mois.",
+          "features": [
+            "Suivi des schémas et analyse émotionnelle",
+            "Diagnostics prêts pour la coach",
+            "100 crédits bonus inclus"
+          ]
+        },
+        {
+          "id": "premium",
+          "popular": false,
+          "name": "Premium · 150 $",
+          "credits": "3 000 crédits",
+          "desc": "Idéale pour les thérapeutes ou un travail intérieur approfondi.",
+          "features": [
+            "Diagnostics illimités",
+            "Options d’exportation professionnelles",
+            "300 crédits bonus et suivi des risques"
+          ]
+        }
+      ],
+      "footer": "Besoin d’un plan dédié pour ton équipe ou ta partenaire ?",
+      "link": "[Demande un plan sur mesure]"
+    },
+    "testimonials": {
+      "badge": "Approuvée par des fondatrices, praticiennes et professionnelles de la santé mentale",
+      "title": "« C’est comme avoir une stratège calme pour ton monde intérieur. »",
+      "items": [
+        {
+          "quote": "« {{app_name}} me montre clairement les boucles de pensées qui épuisent mon énergie. J’apporte les résumés en thérapie et nous passons directement à l’essentiel. »",
+          "author": "Mira, cheffe de produit · Plan Premium"
+        },
+        {
+          "quote": "« C’est le premier outil intelligent en qui j’ai confiance pour mes émotions. L’explication du chiffrement était plus claire que celle de ma banque. »",
+          "author": "Devon, fondatrice · Plan Régulier"
+        },
+        {
+          "quote": "« Les patientes arrivent avec les rapports {{app_name}} et nous gagnons 20 minutes à chaque séance. Elle assure une continuité fluide entre les rencontres. »",
+          "author": "Dr Léa Chen, psychologue"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prête à rencontrer la version la plus apaisée de toi-même ?",
+      "subtitle": "Protège tes réflexions, ouvre l’accès à une compréhension plus profonde et avance avec clarté.",
+      "cta": "Crée ton espace personnel"
+    },
+    "about": {
+      "title": "Nous construisons une infrastructure émotionnelle consciente et bienveillante",
+      "subtitle": "{{app_name}} existe pour rendre la clarté émotionnelle accessible, privée et intelligente. Nous combinons la compréhension thérapeutique avec un design empathique afin d’aider les femmes à mieux se connaître, et les professionnelles à mieux les accompagner."
     }
+  },
+  "footer": {
+    "disclaimer": {
+      "label": "Important : ",
+      "message": "{{app_name}} n’est pas un service de santé mentale ou de crise. Si vous êtes en situation de crise, veuillez contacter les services d’urgence locaux."
+    },
+    "questions": "Des questions concernant cette page {{currentPage}} ?",
+    "contact_email": "Contactez-nous à ",
+    "links": {
+      "eula": "Contrat de licence utilisateur final",
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d’utilisation",
+      "contact": "Contact",
+      "help": "Aide",
+      "support": "Support"
+    },
+    "copyright": "© 2025 {{app_name}}, Inc. Tous droits réservés."
+  }
 }

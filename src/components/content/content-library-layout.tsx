@@ -225,7 +225,7 @@ interface CategoryCardProps {
 function CategoryCard({ category, articles }: CategoryCardProps) {
   const info = categoryInfo[category];
   const featuredCount = articles.filter(
-    (article) => article.metadata.featured
+    (article) => article.metadata.featured,
   ).length;
 
   return (

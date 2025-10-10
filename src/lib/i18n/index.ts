@@ -29,7 +29,7 @@ export default async function initTranslations(
   locale: string,
   namespaces: string[],
   i18nInstance?: i18n,
-  resources?: Resource
+  resources?: Resource,
 ) {
   i18nInstance = i18nInstance || createInstance();
 
@@ -39,8 +39,8 @@ export default async function initTranslations(
     i18nInstance.use(
       resourcesToBackend(
         (language: string, namespace: string) =>
-          import(`@/locales/${language}/${namespace}.json`)
-      )
+          import(`@/locales/${language}/${namespace}.json`),
+      ),
     );
   }
 

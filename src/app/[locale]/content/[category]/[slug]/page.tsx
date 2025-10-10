@@ -2,7 +2,11 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import ArticleLayout from "@/components/content/article-layout";
-import { getAvailableLocales, initializeContentRegistry, loadLocalizedContent } from "@/lib/content/content-loader";
+import {
+  getAvailableLocales,
+  initializeContentRegistry,
+  loadLocalizedContent,
+} from "@/lib/content/content-loader";
 import { contentRegistry } from "@/lib/content/content-registry";
 import { ContentCategory } from "@/types/content.types";
 
@@ -22,7 +26,9 @@ interface ContentPageProps {
 // Dynamic Metadata Generation (Next.js 15)
 // =========================
 
-export async function generateMetadata({ params }: ContentPageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: ContentPageProps): Promise<Metadata> {
   const { slug } = await params;
 
   // Initialize content registry if needed
@@ -106,12 +112,18 @@ export default async function ContentPage({ params }: ContentPageProps) {
 
   // Generate structured data for SEO
   const { SEOGenerator } = await import("@/lib/content/seo-generator");
-  const structuredData = SEOGenerator.generateStructuredData(contentItem.metadata, markdownContent);
+  const structuredData = SEOGenerator.generateStructuredData(
+    contentItem.metadata,
+    markdownContent,
+  );
 
   return (
     <>
       {/* JSON-LD Structured Data for SEO */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <ArticleLayout
         contentItem={contentItem}
         relatedContent={relatedContent}

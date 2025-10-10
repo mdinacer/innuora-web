@@ -24,7 +24,12 @@ interface CategoryLayoutProps {
 // Category Layout Component
 // =========================
 
-export default function CategoryLayout({ category, categoryInfo, content, featuredContent }: CategoryLayoutProps) {
+export default function CategoryLayout({
+  category,
+  categoryInfo,
+  content,
+  featuredContent,
+}: CategoryLayoutProps) {
   // Sort content by priority and reading time
   const sortedContent = [...content].sort((a, b) => {
     const priorityOrder = { high: 3, medium: 2, low: 1 };
@@ -50,12 +55,16 @@ export default function CategoryLayout({ category, categoryInfo, content, featur
             Content Library
           </Link>
           <span className="mx-2 text-gray-400">/</span>
-          <span className="text-sm text-gray-600 dark:text-gray-400 capitalize">{category.replace(/-/g, " ")}</span>
+          <span className="text-sm text-gray-600 dark:text-gray-400 capitalize">
+            {category.replace(/-/g, " ")}
+          </span>
         </nav>
 
         {/* Category Header */}
         <header className="mb-10">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">{categoryInfo.title}</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            {categoryInfo.title}
+          </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl">
             {categoryInfo.description}
           </p>
@@ -78,7 +87,9 @@ export default function CategoryLayout({ category, categoryInfo, content, featur
         {/* Featured Content */}
         {featuredContent.length > 0 && (
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Featured Articles</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+              Featured Articles
+            </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {featuredContent.map((item) => (
                 <ContentCard key={item.metadata.slug} item={item} featured />
@@ -89,15 +100,19 @@ export default function CategoryLayout({ category, categoryInfo, content, featur
 
         {/* All Content */}
         <section>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">All Articles</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+            All Articles
+          </h2>
 
           {sortedContent.length === 0 ? (
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-8 text-center">
               <BookOpen className="w-12 h-12 mx-auto text-gray-400 mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Content Coming Soon</h3>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                Content Coming Soon
+              </h3>
               <p className="text-gray-600 dark:text-gray-400">
-                We're working on creating comprehensive content for this category. Check back soon for helpful articles
-                and guides.
+                We're working on creating comprehensive content for this
+                category. Check back soon for helpful articles and guides.
               </p>
             </div>
           ) : (
@@ -129,7 +144,9 @@ function ContentCard({ item, featured = false }: ContentCardProps) {
     <Link
       href={`/content/${metadata.category}/${metadata.slug}`}
       className={`block bg-inn-bg-card border border-inn-border-light rounded-2xl hover:shadow-[0_4px_20px] hover:shadow-inn-bg-accent/15 transition-all duration-200 overflow-hidden ${
-        featured ? "ring-1 ring-inn-bg-accent/50 " : "hover:border-inn-bg-accent"
+        featured
+          ? "ring-1 ring-inn-bg-accent/50 "
+          : "hover:border-inn-bg-accent"
       }`}
     >
       <div className="p-6">
@@ -139,7 +156,9 @@ function ContentCard({ item, featured = false }: ContentCardProps) {
             {featured && (
               <div className="flex items-center mb-2">
                 <StarIcon className="w-4 h-4 text-inn-bg-flame mr-1" />
-                <span className="text-xs font-medium text-inn-bg-flame">Featured</span>
+                <span className="text-xs font-medium text-inn-bg-flame">
+                  Featured
+                </span>
               </div>
             )}
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white leading-tight line-clamp-2">
@@ -156,7 +175,9 @@ function ContentCard({ item, featured = false }: ContentCardProps) {
         {/* Metadata */}
         <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
           <div className="flex items-center space-x-3">
-            <span className={`px-3 capitalize py-1 rounded-2xl ${getPriorityColor(metadata.priority)} font-medium`}>
+            <span
+              className={`px-3 capitalize py-1 rounded-2xl ${getPriorityColor(metadata.priority)} font-medium`}
+            >
               {metadata.priority}
             </span>
             <span className="capitalize text-sm">{metadata.intent}</span>
@@ -180,7 +201,8 @@ function ContentCard({ item, featured = false }: ContentCardProps) {
 function getPriorityColor(priority: string): string {
   const colors = {
     high: "bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300",
-    medium: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300",
+    medium:
+      "bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300",
     low: "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300",
   };
 

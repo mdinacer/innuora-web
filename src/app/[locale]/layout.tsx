@@ -3,15 +3,14 @@ import type { Metadata, Viewport } from "next";
 
 import { ThemeProvider } from "@/components/theme-provider";
 import TranslationProvider from "@/components/translation-provider";
-import { geistMono, geistSans, tajawal, zain } from "@/lib/fonts";
+import { METADATA } from "@/config/metadata";
+import { VIEWPORT } from "@/config/viewport";
+import { sans, serif, arabicBody, arabicTitle } from "@/lib/fonts";
 import initTranslations, { AppLocales, i18nNamespaces } from "@/lib/i18n";
 import i18nConfig from "@/lib/i18n/config";
 import { notFound } from "next/navigation";
 import "../globals.css";
-import LayoutHeader from "@/components/layout/header";
 import LayoutFooter from "@/components/layout/footer";
-import { METADATA } from "@/config/metadata";
-import { VIEWPORT } from "@/config/viewport";
 
 export function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ locale }));
@@ -28,6 +27,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const { locale } = await params;
+  const textDirection = dir(locale);
 
   if (!i18nConfig.locales.includes(locale)) {
     return notFound();
@@ -35,9 +35,9 @@ export default async function RootLayout({
   const { resources } = await initTranslations(locale, i18nNamespaces);
 
   return (
-    <html lang={locale} dir={dir(locale)} suppressHydrationWarning>
+    <html lang={locale} dir={textDirection} suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${zain.variable} ${tajawal.variable} ltr:font-sans rtl:font-arabic-body text-base rtl:text-lg antialiased bg-inn-bg-primary`}
+        className={`${sans.variable} ${serif.variable} ${arabicTitle.variable} ${arabicBody.variable} rtl:font-arabic-body text-base antialiased bg-background ltr:font-sans text-foreground`}
       >
         <ThemeProvider
           attribute="class"
@@ -50,7 +50,7 @@ export default async function RootLayout({
             resources={resources}
             namespaces={i18nNamespaces}
           >
-            <LayoutHeader locale={locale as AppLocales} />
+            {/* <LayoutHeader locale={locale as AppLocales} /> */}
             {children}
             <LayoutFooter locale={locale as AppLocales} />
           </TranslationProvider>

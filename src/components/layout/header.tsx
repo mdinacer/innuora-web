@@ -39,7 +39,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
     <header
       className={cn(
         "sticky top-0 z-50 border-b border-b-inn-border-light/50 bg-inn-bg-primary/50 backdrop-blur-md backdrop-saturate-150",
-        className
+        className,
       )}
     >
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
@@ -68,7 +68,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
                 className={cn(
                   "relative transition-colors duration-200 ease-in",
                   "text-sm font-medium text-inn-text-secondary hover:text-inn-text-primary",
-                  "after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-[2px] after:bg-inn-bg-accent after:scale-x-0 after:transition-transform after:duration-200 after:ease-in-out hover:after:scale-x-100"
+                  "after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-[2px] after:bg-inn-bg-accent after:scale-x-0 after:transition-transform after:duration-200 after:ease-in-out hover:after:scale-x-100",
                 )}
               >
                 {link.label}

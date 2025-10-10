@@ -86,20 +86,20 @@ export default async function TermsOfUseRoute({
         accountSecurity: {
           title: t("terms.responsibilities.sections.account_security.title"),
           description: t(
-            "terms.responsibilities.sections.account_security.description"
+            "terms.responsibilities.sections.account_security.description",
           ),
         },
         legalCompliance: {
           title: t("terms.responsibilities.sections.legal_compliance.title"),
           description: t(
             "terms.responsibilities.sections.legal_compliance.description",
-            { app_name: APP_CONFIG.name }
+            { app_name: APP_CONFIG.name },
           ),
         },
         prohibitedUses: {
           title: t("terms.responsibilities.sections.prohibited_uses.title"),
           description: t(
-            "terms.responsibilities.sections.prohibited_uses.description"
+            "terms.responsibilities.sections.prohibited_uses.description",
           ),
           items: t("terms.responsibilities.sections.prohibited_uses.items", {
             returnObjects: true,
@@ -123,26 +123,26 @@ export default async function TermsOfUseRoute({
       sections: {
         generatedResponses: {
           title: t(
-            "terms.ai_and_content.sections.ai_generated_responses.title"
+            "terms.ai_and_content.sections.ai_generated_responses.title",
           ),
           description: t(
             "terms.ai_and_content.sections.ai_generated_responses.description",
             {
               app_name: APP_CONFIG.name,
-            }
+            },
           ),
         },
         contentRights: {
           title: t("terms.ai_and_content.sections.content_rights.title"),
           description: t(
             "terms.ai_and_content.sections.content_rights.description",
-            { app_name: APP_CONFIG.name }
+            { app_name: APP_CONFIG.name },
           ),
         },
         contentModeration: {
           title: t("terms.ai_and_content.sections.content_moderation.title"),
           description: t(
-            "terms.ai_and_content.sections.content_moderation.description"
+            "terms.ai_and_content.sections.content_moderation.description",
           ),
         },
       },
@@ -397,7 +397,9 @@ export default async function TermsOfUseRoute({
                 {content.responsibilities.sections.legalCompliance.title}
               </h3>
               <p className="text-muted-foreground">
-                {content.responsibilities.sections.legalCompliance.description}{" "}
+                {
+                  content.responsibilities.sections.legalCompliance.description
+                }{" "}
               </p>
             </div>
 
@@ -414,7 +416,7 @@ export default async function TermsOfUseRoute({
                     <li className="list-item" key={index}>
                       {item}
                     </li>
-                  )
+                  ),
                 )}
               </ul>
             </div>

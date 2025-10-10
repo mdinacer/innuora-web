@@ -49,7 +49,9 @@ export class SEOGenerator {
         card: "summary_large_image",
         title: seoTitle,
         description: seoDescription,
-        images: [`/api/og?title=${encodeURIComponent(title)}&category=${category}`],
+        images: [
+          `/api/og?title=${encodeURIComponent(title)}&category=${category}`,
+        ],
       },
 
       // Canonical URL
@@ -85,8 +87,19 @@ export class SEOGenerator {
   /**
    * Generate structured data (JSON-LD) for articles
    */
-  static generateStructuredData(contentMetadata: ContentMetadata, content?: string): object {
-    const { title, description, keywords, category, slug, publishedAt, readingTime } = contentMetadata;
+  static generateStructuredData(
+    contentMetadata: ContentMetadata,
+    content?: string,
+  ): object {
+    const {
+      title,
+      description,
+      keywords,
+      category,
+      slug,
+      publishedAt,
+      readingTime,
+    } = contentMetadata;
 
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://innuora.com";
     const articleUrl = `${baseUrl}/content/${category}/${slug}`;
@@ -227,7 +240,7 @@ export class InternalLinkingHelper {
    */
   static generateLinkSuggestions(
     contentMetadata: ContentMetadata,
-    availableContent: ContentMetadata[]
+    availableContent: ContentMetadata[],
   ): Array<{
     anchor: string;
     url: string;
@@ -241,7 +254,8 @@ export class InternalLinkingHelper {
       relevance: number;
     }> = [];
 
-    const { keywords, relatedCbtModules, targetEmotions, category } = contentMetadata;
+    const { keywords, relatedCbtModules, targetEmotions, category } =
+      contentMetadata;
 
     for (const otherContent of availableContent) {
       if (otherContent.slug === contentMetadata.slug) continue;
@@ -256,7 +270,7 @@ export class InternalLinkingHelper {
       // Matching CBT modules
       if (relatedCbtModules && otherContent.relatedCbtModules) {
         const matchingModules = relatedCbtModules.filter((cbtModule: string) =>
-          otherContent.relatedCbtModules!.includes(cbtModule)
+          otherContent.relatedCbtModules!.includes(cbtModule),
         );
         relevance += matchingModules.length * 0.2;
       }
@@ -264,13 +278,15 @@ export class InternalLinkingHelper {
       // Matching emotions
       if (targetEmotions && otherContent.targetEmotions) {
         const matchingEmotions = targetEmotions.filter((emotion: string) =>
-          otherContent.targetEmotions!.includes(emotion)
+          otherContent.targetEmotions!.includes(emotion),
         );
         relevance += matchingEmotions.length * 0.15;
       }
 
       // Keyword overlap
-      const keywordOverlap = keywords.filter((keyword: string) => otherContent.keywords.includes(keyword));
+      const keywordOverlap = keywords.filter((keyword: string) =>
+        otherContent.keywords.includes(keyword),
+      );
       relevance += keywordOverlap.length * 0.1;
 
       // Only suggest if relevance is significant

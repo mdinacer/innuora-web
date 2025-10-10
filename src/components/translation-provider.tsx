@@ -12,15 +12,15 @@ interface TranslationProviderProps {
   resources: Resource;
 }
 
-const TranslationProvider = React.memo<PropsWithChildren<TranslationProviderProps>>(
-  ({ children, locale, namespaces, resources }) => {
-    const i18n = createInstance();
+const TranslationProvider = React.memo<
+  PropsWithChildren<TranslationProviderProps>
+>(({ children, locale, namespaces, resources }) => {
+  const i18n = createInstance();
 
-    initTranslations(locale, namespaces, i18n, resources);
+  initTranslations(locale, namespaces, i18n, resources);
 
-    return <I18nextProvider i18n={i18n}>{children}</I18nextProvider>;
-  }
-);
+  return <I18nextProvider i18n={i18n}>{children}</I18nextProvider>;
+});
 
 TranslationProvider.displayName = "TranslationProvider";
 

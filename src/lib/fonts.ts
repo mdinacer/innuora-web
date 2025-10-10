@@ -1,26 +1,35 @@
 // /lib/fonts.ts
 import {
-  Tajawal as ArabicBodyFont,
+  Noto_Sans_Arabic as ArabicBodyFont,
   Cairo as ArabicTitleFont,
-  Geist,
-  Geist_Mono,
+  Inter as SansFont,
+  DM_Serif_Display as SerifFont,
 } from "next/font/google";
 
-export const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-export const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-export const zain = ArabicTitleFont({
+export const arabicTitle = ArabicTitleFont({
   variable: "--font-arabic-title",
   subsets: ["arabic"],
   weight: ["400", "700", "800"],
+  display: "swap",
 });
-export const tajawal = ArabicBodyFont({
+export const arabicBody = ArabicBodyFont({
   variable: "--font-arabic-body",
   subsets: ["arabic"],
   weight: ["300", "400", "500", "700"],
+  display: "swap",
+});
+
+export const sans = SansFont({
+  subsets: ["latin"],
+  variable: "--font-Inter",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+export const serif = SerifFont({
+  subsets: ["latin"],
+  variable: "--font-DM_Serif_Display",
+  weight: "400",
+  style: ["normal", "italic"],
+  display: "swap",
 });

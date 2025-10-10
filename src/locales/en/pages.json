@@ -1,260 +1,212 @@
 {
     "home": {
-        "actions": {
-            "requestAccess": "Request Access",
-            "testerSignIn": "Tester Sign-In"
-        },
         "hero": {
-            "badge": "Early Access",
-            "title": "A mirror for your inner world",
-            "subtitle": "{{app_name}} helps you pause, notice patterns, and find clarity when life feels heavy. It works through reflective, emotionally attuned conversations.",
+            "badge": "For Women Who Carry Too Much",
+            "title_main": "You’ve been strong long enough.",
+            "title_sub": "Now, be still with {{app_name}}.",
+            "subtitle": "{{app_name}} hears what you don’t say and knows why it hurts. It listens between the lines, validates before analyzing, and guides you back to yourself, gently, intelligently, and without judgment.",
             "cta": {
-                "join": "Join Early Access",
-                "demo": "See a Conversation"
+                "join": "Start your first reflection",
+                "demo": "See how it feels"
             },
-            "disclaimer": "{{app_name}} is not therapy or a crisis service. If you’re in immediate danger, contact local emergency services."
-        },
-        "howItHelps": {
-            "title": "How {{app_name}} Helps",
-            "subtitle": "{{app_name}} is a gentle mirror that helps you explore feelings, recognize patterns, and reflect in a private space you control.",
-            "features": [
+            "highlights": [
                 {
-                    "title": "Reflective Conversations",
-                    "subtitle": "{{app_name}} reflects your emotions back to you, helping you name and understand what you are truly experiencing."
+                    "title": "Validates before analyzing",
+                    "body": "Every reflection begins with acknowledgment of what you feel, not what needs fixing."
                 },
                 {
-                    "title": "Spotting Patterns",
-                    "subtitle": "Over time, {{app_name}} highlights recurring themes in your thinking so you can notice connections you might have overlooked."
+                    "title": "Reads what’s unspoken",
+                    "body": "Pauses, tone, and tension become part of the conversation so you can stop over explaining."
                 },
                 {
-                    "title": "Private by Default",
-                    "subtitle": "Your reflections belong to you alone. Every conversation is private and under your control."
-                }
-            ]
-        },
-        "demo": {
-            "title": "What Makes {{app_name}} Different",
-            "subtitle": "See how {{app_name}} goes beyond generic advice by uncovering deeper stress triggers and offering clear, practical ways forward.",
-            "conversation": [
-                {
-                    "role": "app",
-                    "text": "Hi, I can see this is a stressful moment for you. Let’s take a breath together. Can you tell me what’s weighing most heavily on you right now?"
+                    "title": "Guides at your pace",
+                    "body": "Direction arrives when you invite it, keeping pressure low and agency high."
                 },
                 {
-                    "role": "user",
-                    "text": "I have to close a deal with a huge client at work, and everything depends on me. I feel like if I mess up, it could ruin everything for the team… and for me."
-                },
-                {
-                    "role": "generic",
-                    "text": "It sounds like you’re under a lot of pressure. Maybe breaking the deal preparation into smaller steps could help reduce stress."
-                },
-                {
-                    "role": "app",
-                    "text": "I hear how much responsibility is on your shoulders. There’s a **silent rule** here: you must succeed perfectly, or it’s a disaster. That belief can make your chest tighten and your thoughts race. What physical sensations are you noticing as you think about this deal?"
-                },
-                {
-                    "role": "user",
-                    "text": "My chest feels tight, my stomach is in knots, and I can’t focus properly. I keep imagining the worst-case scenarios."
-                },
-                {
-                    "role": "generic",
-                    "text": "Visualizing the worst case can increase anxiety. Focusing on actionable steps or your preparation might help you feel more in control."
-                },
-                {
-                    "role": "app",
-                    "text": "That’s **catastrophizing** - imagining disasters before they happen. Recognizing this pattern is the first step. You’re preparing, and preparation is what matters. Let’s identify **one thing you can control right now**."
-                },
-                {
-                    "role": "user",
-                    "text": "I guess I could review the client’s data and the proposal one more time."
-                },
-                {
-                    "role": "generic",
-                    "text": "Reviewing the details can help you feel more prepared. It’s a practical step to reduce uncertainty."
-                },
-                {
-                    "role": "app",
-                    "text": "Exactly. That’s a **tangible step**. Focusing on what’s within your control helps quiet the mental storm. Notice that preparation is competence, not failure. How does it feel to take this small step?"
-                },
-                {
-                    "role": "user",
-                    "text": "A bit calmer… but I still feel like the weight of the outcome is on me alone."
-                },
-                {
-                    "role": "generic",
-                    "text": "Sharing responsibility or talking with a colleague might help ease that feeling. You don’t have to carry everything alone."
-                },
-                {
-                    "role": "app",
-                    "text": "You’re recognizing the **pressure of carrying it alone**. What if your role was guiding the team rather than controlling everything yourself? Delegating even small tasks could lift some weight while keeping you in charge."
-                },
-                {
-                    "role": "user",
-                    "text": "I could assign the financial part to Sam. I usually do it myself, but I trust him."
-                },
-                {
-                    "role": "generic",
-                    "text": "Delegating to a trusted team member is a practical step. It can reduce your stress while maintaining oversight."
-                },
-                {
-                    "role": "app",
-                    "text": "That’s a **powerful shift** - trusting your team while staying accountable. Notice how sharing responsibility changes the tension in your body. Even small steps challenge the old rule that you must do everything perfectly."
-                },
-                {
-                    "role": "user",
-                    "text": "It actually feels lighter. I didn’t expect letting go of one small part would help so much."
-                },
-                {
-                    "role": "generic",
-                    "text": "Even small changes in workload can have a positive effect on stress levels and performance."
-                },
-                {
-                    "role": "app",
-                    "text": "Now, let’s explore what’s under the **surface pressure**. You’re worried about judgment and failing your team. That’s a lot of **internal pressure**. What’s the story you tell yourself when you imagine failing?"
-                },
-                {
-                    "role": "user",
-                    "text": "I keep thinking I’ll look incompetent, that people will doubt me, and maybe I’ll lose respect. It feels humiliating even imagining it."
-                },
-                {
-                    "role": "generic",
-                    "text": "Fears of judgment are common. It might help to reframe failure as a learning opportunity rather than a reflection of your worth."
-                },
-                {
-                    "role": "app",
-                    "text": "I hear the **fear of being judged**. That’s a strong core belief influencing your stress. You’re not your mistakes - you’re a competent professional facing a challenge. If you notice this fear without acting on it, how does it shift in your body?"
-                },
-                {
-                    "role": "user",
-                    "text": "It’s still tense, but less like panic… more like awareness."
-                },
-                {
-                    "role": "app",
-                    "text": "Exactly. That’s the difference between **reactive overwhelm** and **conscious awareness**. You can feel the fear without letting it control your actions. Let’s try naming one positive aspect about your preparation or skills."
-                },
-                {
-                    "role": "user",
-                    "text": "I’ve been thorough with my research and proposals. I know the client’s needs well."
-                },
-                {
-                    "role": "generic",
-                    "text": "Recognizing your preparedness helps build confidence. Focus on your strengths to counteract anxiety."
-                },
-                {
-                    "role": "app",
-                    "text": "Perfect. That’s **anchoring in competence**. Every time your mind jumps to worst-case scenarios, you can return to this grounded fact: you are prepared and capable. How does that feel?"
-                },
-                {
-                    "role": "user",
-                    "text": "It makes me feel a little steadier, more in control."
-                },
-                {
-                    "role": "app",
-                    "text": "Now, let’s consider **what asking for support might look like**. It doesn’t mean weakness - it’s a strength. Even asking one team member for input or feedback can reduce pressure. Who could you approach safely for insight?"
-                },
-                {
-                    "role": "user",
-                    "text": "Maybe I can ask Sarah to review the proposal. She’s detail-oriented, and I trust her judgment."
-                },
-                {
-                    "role": "generic",
-                    "text": "Getting feedback from someone trustworthy is a concrete way to ease stress and catch potential issues."
-                },
-                {
-                    "role": "app",
-                    "text": "Exactly. That’s **strategic collaboration**. You’re not giving up control - you’re amplifying effectiveness while reducing internal pressure. Notice how even thinking about sharing feels in your body and mind."
-                },
-                {
-                    "role": "user",
-                    "text": "It feels relieving… like the weight in my chest has lessened a bit."
-                },
-                {
-                    "role": "generic",
-                    "text": "Sharing tasks and responsibilities can reduce emotional load and help maintain focus."
-                },
-                {
-                    "role": "app",
-                    "text": "Before we close, let’s integrate today’s insights. You practiced **preparation, delegation, emotional awareness, and collaboration**. You challenged the old rule that you must carry everything alone and perfectly. Notice the shift: your strength isn’t in perfection, but in conscious, deliberate action."
-                },
-                {
-                    "role": "user",
-                    "text": "I really feel that. I’m calmer and more confident, and I know I’m not alone in handling this."
-                },
-                {
-                    "role": "generic",
-                    "text": "Recognizing your progress and building on it will help maintain confidence and reduce stress over time."
-                },
-                {
-                    "role": "app",
-                    "text": "You did something significant today. You acknowledged your fear, noticed your body, challenged old rules, and practiced self-compassion. That’s real strength. You can take this into the meeting tomorrow with clarity and grounded focus. You’re ready."
+                    "title": "Encrypted to the core",
+                    "body": "End to end protection seals every word to you alone."
                 }
             ],
-            "legend": {
-                "user": "User",
-                "generic": "Generic AI"
-            },
-            "insights": {
-                "generic": {
-                    "title": "Generic AI Approach",
-                    "points": [
-                        "Gives **one-size-fits-all tips** without really tuning into you",
-                        "Overlooks the **emotional undercurrents** behind your words",
-                        "Doesn't notice when your thoughts turn **harsh or unrealistic**",
-                        "Misses chances to offer **deeper understanding or relief**"
-                    ]
-                },
-                "app": {
-                    "title": "{{app_name}}'s Difference",
-                    "points": [
-                        "Notices when your thoughts make situations feel **bigger or scarier** than they really are",
-                        "Helps you spot **black and white thinking** that leaves no room for balance",
-                        "Uncovers hidden rules you’ve been living by, like *always needing to be available*",
-                        "Gives you **practical ways** to shift your thoughts so they feel lighter and less rigid"
-                    ]
-                }
+            "demo": {
+                "title": "A QUIET EXCHANGE",
+                "conversations": [
+                    {
+                        "user": "“I keep everyone on track, but lately I feel like I’m running on fumes. The moment I slow down, guilt hits like a punch.”",
+                        "app": "That guilt sounds like an old rule, that rest has to be earned. What if slowing down isn’t failure, but repair?"
+                    },
+                    {
+                        "user": "“Even two minutes in the car feels impossible. My brain calls it lazy before I even breathe.”",
+                        "app": "That voice kept you safe by keeping you moving. What would it mean to thank it, then let it rest for a breath?"
+                    },
+                    {
+                        "user": "“When I did, my hands stopped buzzing. It was only a second, but it felt like proof I’m not falling apart.”",
+                        "app": "That second is your system remembering safety. Every breath like that rewires what pressure used to mean."
+                    }
+                ],
+                "footer": "{{app_name}} mirrors, grounds, and restores. It complements therapy; never replaces it."
             }
         },
-        "earlyAccess": {
-            "title": "Be Among {{app_name}}’s First Users",
-            "subtitle": "We are inviting a select group of women to join {{app_name}}’s tester program. Share your experiences and needs to help us fine-tune {{app_name}} so it truly sees, hears, and understands you.",
-            "cta": "Join the Early Circle"
-        },
-        "faq": {
-            "title": "Frequently Asked Questions",
+        "features": {
+            "badge": "What women actually want",
+            "title": "A listener that finally understands",
+            "subtitle": "{{app_name}} doesn’t jump to fix or analyze. It listens, validates, and reads between the lines, seeing the woman behind the performance with calm, curious attention.",
             "items": [
                 {
-                    "question": "What is {{app_name}}?",
-                    "answer": "{{app_name}} is an emotional mirror. It helps you slow down, reflect, and see your inner world with more clarity through short, emotionally attuned conversations."
+                    "title": "Always validating",
+                    "body": "Every word you share is met with curiosity, not correction. You’re seen first, then gently supported."
                 },
                 {
-                    "question": "How is {{app_name}} different from therapy?",
-                    "answer": "{{app_name}} is not therapy and cannot replace professional care. It is a daily reflective companion designed to support awareness, not to diagnose or treat mental health conditions."
+                    "title": "Reads what’s unspoken",
+                    "body": "{{app_name}} senses tone, hesitation, and subtext, the emotional data beneath your words, so you can breathe instead of justify."
                 },
                 {
-                    "question": "How does {{app_name}} actually work?",
-                    "answer": "{{app_name}} uses carefully designed prompts and conversational patterns to reflect emotions back to you. It highlights hidden pressures, recurring thoughts, and unspoken rules so you can better understand yourself."
-                },
-                {
-                    "question": "Is my data private?",
-                    "answer": "Yes. Your reflections belong to you. Conversations are private by design, and you will have the ability to export or delete your data."
-                },
-                {
-                    "question": "Who is {{app_name}} for?",
-                    "answer": "{{app_name}} is built for people who carry a lot, often appear strong on the outside, but feel emotionally drained inside. It offers them a safe space to reflect, recognize patterns, and reclaim clarity."
-                },
-                {
-                    "question": "Can {{app_name}} help in a crisis?",
-                    "answer": "No. {{app_name}} is not a crisis service. If you are in immediate danger or facing a mental health emergency, please contact local emergency services or a professional hotline."
-                },
-                {
-                    "question": "How much does it cost?",
-                    "answer": "During early access, {{app_name}} is free to use. Pricing will be introduced later as we grow with feedback from early users."
-                },
-                {
-                    "question": "Why should I join early access?",
-                    "answer": "Early access lets you shape {{app_name}} with us. Your feedback will directly influence how the experience evolves, and you will be among the first to benefit from new features."
+                    "title": "Gently guiding",
+                    "body": "It doesn’t rush to fix. It accompanies you toward insight that feels like your own discovery."
                 }
             ]
+        },
+        "howItWorks": {
+            "badge": "From reflection to quiet self-trust",
+            "title": "How emotional clarity unfolds inside {{app_name}}",
+            "subtitle": "{{app_name}} helps you translate what feels chaotic into what makes sense, one calm step at a time.",
+            "steps": [
+                {
+                    "stage": "Ground",
+                    "title": "Begin safely, without pressure",
+                    "body": "Each reflection starts with containment. You set the tone and pace; {{app_name}} simply meets you there."
+                },
+                {
+                    "stage": "Reflect",
+                    "title": "Be heard without explaining",
+                    "body": "{{app_name}} mirrors emotional nuance and body awareness, listening deeply before offering direction."
+                },
+                {
+                    "stage": "Reframe",
+                    "title": "Find meaning in the mess",
+                    "body": "Gentle questions surface patterns so you can see where compassion can replace control."
+                },
+                {
+                    "stage": "Integrate",
+                    "title": "Carry calm into your real life",
+                    "body": "Each session concludes with a succinct summary, your emotional insights distilled into language you can act on."
+                }
+            ]
+        },
+        "why": {
+            "badge": "Beyond apps and advice",
+            "title": "Why {{app_name}} stands alone",
+            "subtitle": "{{app_name}} isn’t another mental health app or chatbot. It’s empathic intelligence, a presence that listens like a human, protects like encryption, and reflects like a therapist’s mirror.",
+            "items": [
+                {
+                    "title": "Journals record words. {{app_name}} reflects meanings.",
+                    "body": "It detects emotional shifts and highlights themes that ordinary journaling tools miss entirely."
+                },
+                {
+                    "title": "Coaches push. {{app_name}} pauses.",
+                    "body": "Instead of quick fixes or external motivation, it helps you build inner safety and self understanding."
+                },
+                {
+                    "title": "Chatbots respond. {{app_name}} resonates.",
+                    "body": "It interprets tone, rhythm, and feeling, holding your experience with precision and care."
+                }
+            ]
+        },
+        "security": {
+            "badge": "Security first, always",
+            "title": "Your reflections stay yours",
+            "subtitle": "End to end encryption, zero knowledge design, and user controlled storage. No data mining, no training on your emotions, just uncompromising privacy.",
+            "notice": "{{app_name}} is not therapy or a crisis service.",
+            "items": [
+                {
+                    "title": "End to end encryption",
+                    "body": "Every conversation is sealed on your device before it ever moves. Only you hold the keys to unlock it."
+                },
+                {
+                    "title": "Zero knowledge architecture",
+                    "body": "{{app_name}} can’t read, analyze, or sell your reflections. Your emotions never become someone else’s dataset."
+                },
+                {
+                    "title": "You decide when to share",
+                    "body": "Pause sync, export, or erase with one tap. Nothing is shared, backed up, or forwarded unless you choose it."
+                },
+                {
+                    "title": "Gentle exits anytime",
+                    "body": "Feel safer walking away? Close the vault and everything stays right where you left it, quiet, intact, and still yours."
+                }
+            ]
+        },
+        "pricing": {
+            "badge": "Simple, fair, transparent",
+            "popular": "Most popular",
+            "title": "Credits that scale with your season",
+            "subtitle": "Pay only when {{app_name}} delivers clarity. No subscriptions, no hidden fees, just reflective space when you need it.",
+            "plans": [
+                {
+                    "id": "starter",
+                    "popular": false,
+                    "name": "Starter · $35",
+                    "credits": "700 credits",
+                    "desc": "For a focused month of inner work or first exploration.",
+                    "features": [
+                        "Around 175 guided messages",
+                        "Actionable insights and summaries",
+                        "Export ready reports"
+                    ]
+                },
+                {
+                    "id": "regular",
+                    "popular": true,
+                    "name": "Regular · $75",
+                    "credits": "1,500 credits",
+                    "desc": "Designed for continuous reflection throughout a busy month.",
+                    "features": [
+                        "Pattern tracking and trend analysis",
+                        "Coach ready diagnostics",
+                        "Bonus 100 credits included"
+                    ]
+                },
+                {
+                    "id": "premium",
+                    "popular": false,
+                    "name": "Premium · $150",
+                    "credits": "3,000 credits",
+                    "desc": "Ideal for therapists or deep restructuring work.",
+                    "features": [
+                        "Unlimited diagnostics",
+                        "Professional export options",
+                        "Bonus 300 credits and risk tracking"
+                    ]
+                }
+            ],
+            "footer": "Need runway for a team or partner?",
+            "link": "[Request bespoke plans]"
+        },
+        "testimonials": {
+            "badge": "Trusted by founders, operators, and therapists",
+            "title": "“It feels like a calm strategist for my inner world.”",
+            "items": [
+                {
+                    "quote": "“{{app_name}} shows me exactly which thought loops drain my energy. I bring the summaries to therapy and we skip straight to strategy.”",
+                    "author": "Mira, Product Lead · Premium plan"
+                },
+                {
+                    "quote": "“It’s the first AI tool I trust with my emotions. The encryption walkthrough was clearer than my bank’s.”",
+                    "author": "Devon, Founder · Regular plan"
+                },
+                {
+                    "quote": "“Patients arrive with {{app_name}} briefs and we save 20 minutes each session. It keeps continuity tight between visits.”",
+                    "author": "Dr. Léa Chen, Psychologist"
+                }
+            ]
+        },
+        "cta": {
+            "title": "Ready to meet the calmer version of you?",
+            "subtitle": "Protect your reflections, unlock deeper insight, and move forward with clarity.",
+            "cta": "Claim your private space"
+        },
+        "about": {
+            "title": "We’re building luminous emotional infrastructure",
+            "subtitle": "{{app_name}} exists to make emotional clarity accessible, private, and intelligent. We combine therapeutic insight with empathic AI design, helping women understand themselves more deeply and professionals support them more effectively."
         }
     },
     "footer": {

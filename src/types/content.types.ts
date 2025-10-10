@@ -21,7 +21,13 @@ export const ContentTypeSchema = z.enum(["article", "guide", "insight"]);
 
 export type ContentType = z.infer<typeof ContentTypeSchema>;
 
-export const ContentIntentSchema = z.enum(["informational", "actionable", "supportive", "therapeutic", "emergency"]);
+export const ContentIntentSchema = z.enum([
+  "informational",
+  "actionable",
+  "supportive",
+  "therapeutic",
+  "emergency",
+]);
 
 export type ContentIntent = z.infer<typeof ContentIntentSchema>;
 

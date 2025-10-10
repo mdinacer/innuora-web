@@ -1,6 +1,5 @@
 import { APP_CONFIG } from "@/config/app";
 import initTranslations, { AppLocales } from "@/lib/i18n";
-import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 interface Props {
@@ -36,7 +35,7 @@ export default async function LayoutFooter({
     }),
   };
   return (
-    <footer className="relative border-t border-inn-border-light">
+    <footer className="relative border-t">
       <div className="max-w-6xl mx-auto px-6 py-10 text-center text-base rtl:text-lg text-inn-text-secondary">
         {showDisclaimer && (
           <p className="mb-3 text-primary">

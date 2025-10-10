@@ -24,7 +24,12 @@ interface ArticleLayoutProps {
 // Article Layout Component
 // =========================
 
-export default function ArticleLayout({ contentItem, relatedContent, category, markdownContent }: ArticleLayoutProps) {
+export default function ArticleLayout({
+  contentItem,
+  relatedContent,
+  category,
+  markdownContent,
+}: ArticleLayoutProps) {
   const { metadata } = contentItem;
 
   return (
@@ -59,26 +64,39 @@ export default function ArticleLayout({ contentItem, relatedContent, category, m
             )}
 
             {/* Intent Badge */}
-            <span className={`px-3 py-1 rounded capitalize text-xs font-medium ${getIntentColor(metadata.intent)}`}>
+            <span
+              className={`px-3 py-1 rounded capitalize text-xs font-medium ${getIntentColor(metadata.intent)}`}
+            >
               {metadata.intent}
             </span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">{metadata.title}</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+            {metadata.title}
+          </h1>
 
-          <p className="text-lg text-inn-text-secondary leading-relaxed">{metadata.description}</p>
+          <p className="text-lg text-inn-text-secondary leading-relaxed">
+            {metadata.description}
+          </p>
         </header>
 
         {/* Content Area */}
         <main className="border-inn-border-light border bg-inn-bg-card rounded-lg shadow-[0_2px_8px] shadow-inn-bg-accent/10 p-8 mb-8">
           <div className="prose prose-lg dark:prose-invert max-w-none">
             {markdownContent ? (
-              <Markdown options={{ forceBlock: true, disableParsingRawHTML: true }}>{markdownContent}</Markdown>
+              <Markdown
+                options={{ forceBlock: true, disableParsingRawHTML: true }}
+              >
+                {markdownContent}
+              </Markdown>
             ) : (
               <div className="bg-inn-bg-soft border-l-4 border-inn-bg-accent p-4 mb-6">
-                <h3 className="text-inn-text-primary font-semibold mb-2">Content Loading...</h3>
+                <h3 className="text-inn-text-primary font-semibold mb-2">
+                  Content Loading...
+                </h3>
                 <p className="text-inn-text-secondary">
-                  Unable to load article content. Please check if the file exists.
+                  Unable to load article content. Please check if the file
+                  exists.
                 </p>
               </div>
             )}
@@ -86,7 +104,9 @@ export default function ArticleLayout({ contentItem, relatedContent, category, m
             {/* Keywords */}
             {metadata.keywords.length > 0 && (
               <div className="mt-8 pt-6 border-t border-inn-border-light">
-                <h4 className="text-sm font-semibold text-inn-text-secondary mb-3">Related Topics</h4>
+                <h4 className="text-sm font-semibold text-inn-text-secondary mb-3">
+                  Related Topics
+                </h4>
                 <div className="flex flex-wrap gap-2">
                   {metadata.keywords.map((keyword) => (
                     <span
@@ -105,7 +125,9 @@ export default function ArticleLayout({ contentItem, relatedContent, category, m
         {/* Related Content */}
         {relatedContent.length > 0 && (
           <section className="bg-inn-bg-card border border-inn-border-light rounded-lg shadow-[0_2px_8px] shadow-inn-bg-accent/10 p-8">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Related Articles</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+              Related Articles
+            </h2>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {relatedContent.map((item) => (
                 <Link
@@ -116,9 +138,13 @@ export default function ArticleLayout({ contentItem, relatedContent, category, m
                   <h3 className="font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2">
                     {item.metadata.title}
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-3">{item.metadata.description}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-3">
+                    {item.metadata.description}
+                  </p>
                   <div className="mt-3 flex items-center text-xs text-gray-500">
-                    <span className="capitalize">{item.metadata.category.replace(/-/g, " ")}</span>
+                    <span className="capitalize">
+                      {item.metadata.category.replace(/-/g, " ")}
+                    </span>
                     {item.metadata.readingTime && (
                       <>
                         <span className="mx-2">•</span>
@@ -143,9 +169,12 @@ export default function ArticleLayout({ contentItem, relatedContent, category, m
 function getIntentColor(intent: string): string {
   const colors = {
     informational: "bg-inn-bg-soft text-inn-bg-accent",
-    actionable: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
-    supportive: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
-    therapeutic: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200",
+    actionable:
+      "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
+    supportive:
+      "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
+    therapeutic:
+      "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200",
     emergency: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
   };
 
