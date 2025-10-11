@@ -220,12 +220,12 @@ export default async function Home({
   };
 
   return (
-    <div
+    <main
       className={cn(
         "relative",
         "min-h-screen flex flex-col",
         "rtl:font-arabic-body rtl:text-lg",
-        "[&_section]:relative",
+        "[&_section]:relative"
       )}
     >
       {/* <!-- Hero --> */}
@@ -645,6 +645,6 @@ export default async function Home({
           <p className="mt-4 text-lg text-muted-foreground">{about.subtitle}</p>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

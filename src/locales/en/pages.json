@@ -976,7 +976,7 @@
         "items": [
           {
             "question": "How do I reach support?",
-            "answer": "Reach us anytime at [**support@innuora.com**](mailto:support@innuora.com). We typically respond within **24 to 48 business hours**."
+            "answer": "Reach us anytime at [**support@{{app_name}}.com**](mailto:support@{{app_name}}.com). We typically respond within **24 to 48 business hours**."
           },
           {
             "question": "What if I encounter a bug?",
@@ -990,16 +990,180 @@
       }
     }
   },
+  "about": {
+    "hero": {
+      "badge": "Behind the mirror",
+      "title": "We build emotional infrastructure for modern minds",
+      "description": "{{app_name}} merges **cognitive science**, **empathic AI**, and **privacy-first design** to create reflective technology that understands, protects, and evolves with you."
+    },
+    "mission": {
+      "title": "Our mission",
+      "paragraphs": [
+        "To make **emotional clarity** accessible through intelligence that listens like a human and safeguards like encryption.",
+        "{{app_name}} exists to help women understand their **emotional patterns** and the *silent rules* that shape them. Behind constant performance there is *exhaustion*, *guilt*, and the pressure to hold everything together.",
+        "Modern life has amplified these demands. **High-functioning women** often carry *invisible weight* beneath composure, shaped by *unspoken expectations* of perfection, care, and control.",
+        "Our goal is to build technology that helps them see through these *inherited masks*. Each reflection turns **societal noise** into **personal insight**, replacing *self-blame* with **understanding** and *awareness* with **choice**."
+      ]
+    },
+    "founding": {
+      "title": "Born from a question that mattered",
+      "body": "{{app_name}} started as an experiment in **digital empathy**. The idea was simple: could artificial intelligence truly *listen with care*? That question grew into a system that helps people translate what they feel into **language**, **insight**, and *calm awareness*."
+    },
+    "principles": {
+      "badge": "What guides our design",
+      "title": "Four principles define {{app_name}}",
+      "items": [
+        {
+          "title": "Empathy before logic",
+          "body": "Every reflection begins with **emotional validation**, not analysis."
+        },
+        {
+          "title": "Privacy as psychology",
+          "body": "**Zero-knowledge encryption** provides the safety required for real honesty."
+        },
+        {
+          "title": "Therapeutic intelligence",
+          "body": "Each exchange is grounded in **CBT-informed reasoning** and *emotional nuance*."
+        },
+        {
+          "title": "Human-paced design",
+          "body": "Built for **regulation**, not engagement. *Calm interaction* replaces *distraction loops*."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Empathy, engineered.",
+      "description": "{{app_name}} is more than AI. It is an **emotional companion** that *listens*, *reflects*, and helps you reconnect with your own **clarity**.",
+      "button": "Start your reflection"
+    }
+  },
+  "features": {
+    "hero": {
+      "badge": "Features that matter",
+      "title": "A calm, intelligent space for emotional clarity",
+      "description": "{{app_name}} combines insight, privacy, and reflection to help you understand yourself on your own terms. No pressure, no tracking, no noise. Just space to breathe and learn."
+    },
+    "core": {
+      "badge": "Core Experience",
+      "title": "Built for depth, not distraction",
+      "items": [
+        {
+          "title": "Library of Guidance",
+          "body": "A living library of **articles, insights, and reflective guides** drawn from psychology, mindfulness, and emotional education. Always accessible, always at your pace."
+        },
+        {
+          "title": "User-Paced Reflection",
+          "body": "No reminders, no notifications, no streaks. Your progress follows your rhythm, not an algorithm."
+        },
+        {
+          "title": "Human-Calm Design",
+          "body": "Every interaction feels grounded and spacious. No gamification, no dopamine loops, just thoughtful design for reflection."
+        }
+      ]
+    },
+    "privacy": {
+      "badge": "Privacy & Trust",
+      "title": "Because reflection requires safety",
+      "items": [
+        {
+          "title": "End-to-End Protection",
+          "body": "Your conversations are sealed with **end-to-end encryption**. What you write stays between you and your device."
+        },
+        {
+          "title": "Private by Principle",
+          "body": "{{app_name}} is designed around **zero tracking** and **no behavioral data collection**. Your inner world remains yours."
+        },
+        {
+          "title": "Quiet Ownership",
+          "body": "You decide what to keep or erase. Your data, your keys, your choice."
+        }
+      ]
+    },
+    "insight": {
+      "badge": "Insight & Awareness",
+      "title": "Understand yourself clearly and compassionately",
+      "items": [
+        {
+          "title": "Basic Diagnostics",
+          "body": "A simple, **user-friendly overview** of emotional and cognitive themes, presented with warmth and clarity."
+        },
+        {
+          "title": "Advanced Analysis",
+          "body": "Deeper, **structured insights** for those who want to recognize recurring emotional patterns and growth trends."
+        },
+        {
+          "title": "Educational Integration",
+          "body": "Each diagnostic connects to **curated learning content** so reflection becomes understanding, not abstraction."
+        }
+      ]
+    },
+    "interaction": {
+      "badge": "Empathic Design",
+      "title": "How {{app_name}} meets you where you are",
+      "items": [
+        {
+          "title": "Validation Before Analysis",
+          "body": "{{app_name}} begins every exchange by *acknowledging your experience*, not dissecting it. It listens first, ensuring your feelings are seen before any insight is offered."
+        },
+        {
+          "title": "Reading Between the Lines",
+          "body": "Through linguistic and emotional nuance, {{app_name}} perceives what’s *implied but unspoken*. It senses the tension beneath words and the fatigue behind strength."
+        },
+        {
+          "title": "Feminine Tone and Cultural Sensitivity",
+          "body": "Every response is shaped with *gentle directness* and *cultural awareness*. {{app_name}} respects context, language, and emotional norms, rather than imposing one-size-fits-all advice."
+        },
+        {
+          "title": "Seeing the Woman, Not the Role",
+          "body": "Behind the caregiver, professional, or perfectionist, {{app_name}} recognizes the person. It reflects who you are, not just the expectations you navigate."
+        },
+        {
+          "title": "Insight Over Instruction",
+          "body": "Unlike generic mental health apps that rush to solve, {{app_name}} slows the pace. It invites *reflection before reaction*, helping you form your own understanding."
+        }
+      ]
+    },
+    "experience": {
+      "badge": "Access & Ease",
+      "title": "Reflection anywhere, anytime",
+      "items": [
+        {
+          "title": "Seamless PWA Experience",
+          "body": "Install {{app_name}} like an app on any device. Works offline, syncs when you’re ready."
+        },
+        {
+          "title": "24/7 Reflection Availability",
+          "body": "Your space for reflection is always open. No appointments, no waiting, just quiet access whenever you need to breathe and think."
+        },
+        {
+          "title": "Multilingual Empathy",
+          "body": "Emotionally fluent in **English**, **French**, and **Arabic**, with full right-to-left support."
+        },
+        {
+          "title": "Educational Depth",
+          "body": "Access an expanding library of **research-based resources** designed to build emotional literacy and resilience."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Technology that listens before it guides",
+      "description": "Experience a digital space that replaces noise with nuance and algorithms with awareness.",
+      "button": "See it in action"
+    }
+  },
   "header": {
     "wordmark": "Reflective intelligence",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "links": {
-      "home": "Home",
+      "about": "About",
+      "contact": "Contact",
       "demo": "Demo",
-      "library": "Content library",
       "faq": "FAQ",
-      "join": "Join beta"
+      "features": "Features",
+      "home": "Home",
+      "join": "Join beta",
+      "library": "Library"
     }
   },
   "footer": {

@@ -32,5 +32,20 @@
     "title": "Innuora Demo — Real Session Walkthrough | Emotional Clarity in Action",
     "description": "Explore a full real-time Innuora session with authentic user messages and AI responses. Compare how generic productivity bots, wellness apps, and Innuora’s emotionally intelligent system handle burnout, guilt, and rest ambivalence in high-functioning women.",
     "ogImageAlt": "Innuora Demo Session — Real-time Emotional Clarity Walkthrough"
+  },
+  "about": {
+    "title": "About Innuora | Empathic Intelligence, Engineered for Emotional Clarity",
+    "description": "Discover the mission, values, and people behind Innuora — the AI emotional companion redefining reflective technology through therapeutic intelligence and encryption ethics.",
+    "ogImageAlt": "Innuora — About the team building empathic AI for emotional wellness"
+  },
+  "features": {
+    "title": "Features | Innuora Reflective Intelligence Platform",
+    "description": "Explore Innuora’s core capabilities — empathic AI reflection, therapeutic diagnostics, encrypted memory, and multilingual support designed for emotional wellness and cognitive clarity.",
+    "ogImageAlt": "Innuora Features — Empathic AI built for emotional clarity"
+  },
+  "contact": {
+    "title": "Contact Innuora | Secure Communication and Support",
+    "description": "Get in touch with the Innuora team. For support, business, or privacy inquiries — reach us through encrypted and transparent channels.",
+    "ogImageAlt": "Contact Innuora — Support, business, and privacy communication"
   }
 }

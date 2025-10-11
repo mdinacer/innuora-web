@@ -52,6 +52,10 @@ export default async function LayoutFooter({
       href: buildLocalizedPath(locale, "/join"),
       label: navigationLabels.join ?? "Join beta",
     },
+    {
+      href: buildLocalizedPath(locale, "/faq"),
+      label: navigationLabels.faq ?? "FAQ",
+    },
   ];
 
   const legalLinks = [
@@ -84,7 +88,7 @@ export default async function LayoutFooter({
     <footer
       className={cn(
         "relative border-t border-border/60 bg-background/90",
-        className,
+        className
       )}
     >
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
