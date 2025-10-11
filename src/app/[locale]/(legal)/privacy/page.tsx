@@ -92,20 +92,20 @@ export default async function PrivacyPolicyRoute({
     },
   };
   return (
-    <main className="relative font-sans rtl:font-arabic-body rtl:text-lg min-h-screen pt-20 w-screen standalone:w-full overflow-hidden bg-inn-bg-primary transition-all duration-300 ease-in text-inn-text-primary">
+    <main className="relative font-sans rtl:font-arabic-body rtl:text-lg min-h-screen pt-20 w-screen standalone:w-full overflow-hidden bg-background transition-all duration-300 ease-in text-foreground">
       {/* <!-- Hero Section --> */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-center">
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-4 rtl:font-arabic">
           {content.title}
         </h1>
-        <div className="inline-flex items-center gap-2 rounded-full border border-inn-bg-accent/25 bg-inn-bg-soft px-3 py-1 ltr:text-[13px] rtl:text-base font-semibold text-inn-bg-accent mb-8">
+        <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-muted px-3 py-1 ltr:text-[13px] rtl:text-base font-semibold text-primary mb-8">
           {content.lastUpdated}
         </div>
       </section>
 
       {/* <!-- Intro Section --> */}
       <section className="max-w-4xl mx-auto px-6 pb-12">
-        <div className="rounded-2xl p-8 text-center text-white bg-gradient-to-b from-inn-bg-accent to-inn-bg-accent-dark">
+        <div className="rounded-2xl p-8 text-center text-white bg-gradient-to-b from-primary to-primary/90">
           <h2 className="text-3xl font-bold mb-4 rtl:font-arabic">
             {content.intro.title}
           </h2>
@@ -126,15 +126,15 @@ export default async function PrivacyPolicyRoute({
       <div className="max-w-4xl mx-auto px-6 pb-16">
         {/* <!-- Key Principles --> */}
         <section className="mb-12">
-          <div className="rounded-2xl border border-inn-border-light bg-inn-bg-card p-8 shadow-[0_2px_8px] shadow-black/5">
+          <div className="rounded-2xl border border-border bg-card p-8 shadow-soft">
             <h2 className="text-2xl font-bold mb-6 rtl:font-arabic">
               {content.principles.title}
             </h2>
             <div className="space-y-4">
               {content.principles.items.map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-inn-bg-accent mt-2 flex-shrink-0"></div>
-                  <p className="text-inn-text-secondary">{item}</p>
+                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                  <p className="text-muted-foreground">{item}</p>
                 </div>
               ))}
             </div>
@@ -146,17 +146,17 @@ export default async function PrivacyPolicyRoute({
           <h2 className="text-2xl font-bold mb-6 rtl:font-arabic">
             {content.dataWeCollect.title}
           </h2>
-          <div className="rounded-2xl border border-inn-border-light bg-inn-bg-card shadow-[0_2px_8px] shadow-black/5 overflow-hidden">
+          <div className="rounded-2xl border border-border bg-card shadow-soft overflow-hidden">
             {/* <!-- Desktop Table --> */}
             <div className="hidden md:block">
               <table className="w-full">
-                <thead className="bg-inn-bg-input">
+                <thead className="bg-muted">
                   <tr>
                     {content.dataWeCollect.table.headers.map(
                       (header, index) => (
                         <th
                           key={index}
-                          className="px-6 py-4 ltr:text-left rtl:text-right text-sm rtl:text-base font-semibold text-inn-text-primary"
+                          className="px-6 py-4 ltr:text-left rtl:text-right text-sm rtl:text-base font-semibold text-foreground"
                         >
                           {header}
                         </th>
@@ -164,19 +164,19 @@ export default async function PrivacyPolicyRoute({
                     )}
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-inn-border-light">
+                <tbody className="divide-y divide-border">
                   {content.dataWeCollect.table.rows.map((row, index) => {
                     if (row.length !== 3) return null;
                     const [header, description, storage] = row;
                     return (
                       <tr key={index}>
-                        <td className="px-6 py-4 font-medium text-inn-text-primary">
+                        <td className="px-6 py-4 font-medium text-foreground">
                           {header}
                         </td>
-                        <td className="px-6 py-4 text-inn-text-secondary">
+                        <td className="px-6 py-4 text-muted-foreground">
                           {description}
                         </td>
-                        <td className="px-6 py-4 text-inn-text-secondary">
+                        <td className="px-6 py-4 text-muted-foreground">
                           {storage}
                         </td>
                       </tr>
@@ -195,14 +195,14 @@ export default async function PrivacyPolicyRoute({
                   content.dataWeCollect.table.headers;
                 return (
                   <div key={index} className="space-y-2">
-                    <h3 className="font-semibold text-inn-text-primary">
+                    <h3 className="font-semibold text-foreground">
                       {header}
                     </h3>
-                    <p className="text-sm rtl:text-base text-inn-text-secondary">
+                    <p className="text-sm rtl:text-base text-muted-foreground">
                       <strong>{descriptionCol}: </strong>
                       {description}
                     </p>
-                    <p className="text-sm rtl:text-base text-inn-text-secondary">
+                    <p className="text-sm rtl:text-base text-muted-foreground">
                       <strong>{storageCol}: </strong>
                       {storage}
                     </p>
@@ -215,11 +215,11 @@ export default async function PrivacyPolicyRoute({
 
         {/* <!-- How We Use Your Data --> */}
         <section className="mb-12">
-          <div className="rounded-2xl border border-inn-border-light bg-inn-bg-card p-8 shadow-[0_2px_8px] shadow-black/5">
+          <div className="rounded-2xl border border-border bg-card p-8 shadow-soft">
             <h2 className="text-2xl font-bold mb-4 rtl:font-arabic">
               {content.howWeUse.title}
             </h2>
-            <div className="space-y-4 text-inn-text-secondary">
+            <div className="space-y-4 text-muted-foreground">
               {content.howWeUse.paragraphs.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
@@ -229,11 +229,11 @@ export default async function PrivacyPolicyRoute({
 
         {/* <!-- Your Rights --> */}
         <section className="mb-12">
-          <div className="rounded-2xl border border-inn-border-light bg-inn-bg-card p-8 shadow-[0_2px_8px] shadow-black/5">
+          <div className="rounded-2xl border border-border bg-card p-8 shadow-soft">
             <h2 className="text-2xl font-bold mb-4 rtl:font-arabic">
               {content.yourRights.title}
             </h2>
-            <div className="space-y-4 text-inn-text-secondary">
+            <div className="space-y-4 text-muted-foreground">
               {content.yourRights.paragraphs.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
@@ -243,25 +243,25 @@ export default async function PrivacyPolicyRoute({
 
         {/* <!-- Children --> */}
         <section className="mb-12">
-          <div className="rounded-2xl border border-inn-border-light bg-inn-bg-card p-8 shadow-[0_2px_8px] shadow-black/5">
+          <div className="rounded-2xl border border-border bg-card p-8 shadow-soft">
             <h2 className="text-2xl font-bold mb-4 rtl:font-arabic">
               {content.children.title}
             </h2>
-            <p className="text-inn-text-secondary">{content.children.note}</p>
+            <p className="text-muted-foreground">{content.children.note}</p>
           </div>
         </section>
 
         {/* <!-- Contact Us --> */}
         <section className="mb-12">
-          <div className="rounded-2xl border border-inn-border-light bg-inn-bg-card p-8 shadow-[0_2px_8px] shadow-black/5">
+          <div className="rounded-2xl border border-border bg-card p-8 shadow-soft">
             <h2 className="text-2xl font-bold mb-4 rtl:font-arabic">
               {content.contact.title}
             </h2>
-            <p className="text-inn-text-secondary">
+            <p className="text-muted-foreground">
               {content.contact.message}{" "}
               <Link
                 href={`mailto:${APP_CONFIG.contact.privacy}`}
-                className="text-inn-bg-accent text-center hover:underline"
+                className="text-primary text-center hover:underline"
               >
                 {APP_CONFIG.contact.privacy}
               </Link>

@@ -17,17 +17,8 @@ src/content/
 │   ├── self-compassion/                # Self-kindness and acceptance
 │   ├── mindfulness-techniques/         # Present-moment awareness
 │   └── mood-tracking/                  # Emotional awareness
-├── guides/                             # Step-by-step tutorials
-│   ├── getting-started/                # Platform onboarding
-│   ├── cbt-exercises/                  # Practical exercises
-│   └── self-help-tools/                # DIY therapeutic techniques
-├── insights/                           # AI-generated content
-│   ├── pattern-recognition/            # Understanding behavioral patterns
-│   ├── progress-tracking/              # Measuring therapeutic progress
-│   └── personalization/                # AI-powered personalization
 └── templates/                          # Content templates and schemas
     ├── article-template.md             # Standard article structure
-    ├── guide-template.md               # Step-by-step guide structure
     └── metadata-schema.json            # Content metadata schema
 ```
 
@@ -52,15 +43,11 @@ src/content/
 
 Comprehensive guides that establish authority and capture broad search terms.
 
-### 2. Practical Guides (Action-Oriented)
+### 2. Conversion-Oriented Articles
 
-Step-by-step content that demonstrates our AI's capabilities and drives conversions.
+Actionable pieces that demonstrate our AI's capabilities and drive marketing goals.
 
-### 3. AI Insights Showcases (Unique Value Prop)
-
-Content that highlights our competitive advantage in pattern recognition and personalization.
-
-### 4. User Journey Mapping
+### 3. User Journey Mapping
 
 Content mapped to different stages of user awareness and therapeutic readiness.
 
