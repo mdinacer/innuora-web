@@ -281,7 +281,7 @@
 
   /* Code styling */
   code {
-    background-color: rgb(243 244 246);
+    background-color: var(--color-card-foreground);
     padding: 0.125rem 0.25rem;
     border-radius: 0.25rem;
     font-size: 0.875em;

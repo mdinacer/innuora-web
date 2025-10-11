@@ -88,7 +88,7 @@ export class SEOGenerator {
    */
   static generateStructuredData(
     contentMetadata: ContentMetadata,
-    content?: string
+    content?: string,
   ): object {
     const {
       title,
@@ -111,7 +111,7 @@ export class SEOGenerator {
       headline: title,
       description: description,
       image: `${baseUrl}/api/og?title=${encodeURIComponent(
-        title
+        title,
       )}&category=${category}`,
       url: articleUrl,
       datePublished: publishedAt?.toISOString(),
@@ -244,7 +244,7 @@ export class InternalLinkingHelper {
    */
   static generateLinkSuggestions(
     contentMetadata: ContentMetadata,
-    availableContent: ContentMetadata[]
+    availableContent: ContentMetadata[],
   ): Array<{
     anchor: string;
     url: string;
@@ -274,7 +274,7 @@ export class InternalLinkingHelper {
       // Matching CBT modules
       if (relatedCbtModules && otherContent.relatedCbtModules) {
         const matchingModules = relatedCbtModules.filter((cbtModule: string) =>
-          otherContent.relatedCbtModules!.includes(cbtModule)
+          otherContent.relatedCbtModules!.includes(cbtModule),
         );
         relevance += matchingModules.length * 0.2;
       }
@@ -282,14 +282,14 @@ export class InternalLinkingHelper {
       // Matching emotions
       if (targetEmotions && otherContent.targetEmotions) {
         const matchingEmotions = targetEmotions.filter((emotion: string) =>
-          otherContent.targetEmotions!.includes(emotion)
+          otherContent.targetEmotions!.includes(emotion),
         );
         relevance += matchingEmotions.length * 0.15;
       }
 
       // Keyword overlap
       const keywordOverlap = keywords.filter((keyword: string) =>
-        otherContent.keywords.includes(keyword)
+        otherContent.keywords.includes(keyword),
       );
       relevance += keywordOverlap.length * 0.1;
 

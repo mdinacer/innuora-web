@@ -80,7 +80,7 @@ export default async function ContactPage() {
         "relative",
         "min-h-screen flex flex-col",
         "rtl:font-arabic-body rtl:text-lg",
-        "[&_section]:relative"
+        "[&_section]:relative",
       )}
     >
       <section className="py-20 border-b bg-card text-center">

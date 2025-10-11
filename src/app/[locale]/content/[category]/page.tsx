@@ -171,16 +171,16 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   // Get content for this category
   const categoryContent = contentRegistry.getByCategory(
-    category as ContentCategory
+    category as ContentCategory,
   );
 
   const localizedContent = contentRegistry.applyLocaleOverrides(
     categoryContent,
-    locale
+    locale,
   );
 
   const featuredContent = localizedContent.filter(
-    (item) => item.metadata.featured
+    (item) => item.metadata.featured,
   );
 
   return (
