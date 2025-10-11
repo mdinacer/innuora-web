@@ -2,6 +2,7 @@ import { Metadata } from "next";
 
 import { APP_CONFIG } from "@/config/app";
 import initTranslations from "@/lib/i18n";
+import Link from "next/link";
 
 export async function generateMetadata({
   params,
@@ -279,12 +280,12 @@ export default async function EULARoute({
               <p className="font-medium text-foreground">
                 {content.contact.supportEmail}
               </p>
-              <a
+              <Link
                 href={`mailto:${APP_CONFIG.contact.support}`}
                 className="text-primary hover:underline"
               >
                 {APP_CONFIG.contact.support}
-              </a>
+              </Link>
             </div>
           </div>
         </section>

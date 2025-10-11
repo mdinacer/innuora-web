@@ -145,15 +145,15 @@ export const EMAIL_ADDRESSES = {
 export const SOCIAL_URLS = {
   twitter: `https://twitter.com/${APP_CONFIG.social.twitter.handle.replace(
     "@",
-    ""
+    "",
   )}`,
   linkedin: `https://linkedin.com/company/${APP_CONFIG.social.linkedin.replace(
     "@",
-    ""
+    "",
   )}`,
   instagram: `https://instagram.com/${APP_CONFIG.social.instagram.replace(
     "@",
-    ""
+    "",
   )}`,
 } as const;
 

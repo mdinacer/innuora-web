@@ -44,11 +44,11 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
         label: t("links.home"),
         variant: "link",
       },
-      {
-        href: buildLocalizedPath(locale, "/demo"),
-        label: t("links.demo"),
-        variant: "link",
-      },
+      // {
+      //   href: buildLocalizedPath(locale, "/demo"),
+      //   label: t("links.demo"),
+      //   variant: "link",
+      // },
       {
         href: buildLocalizedPath(locale, "/features"),
         label: t("links.features"),
@@ -69,11 +69,11 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
         label: t("links.about"),
         variant: "link",
       },
-      {
-        href: buildLocalizedPath(locale, "/contact"),
-        label: t("links.contact"),
-        variant: "link",
-      },
+      // {
+      //   href: buildLocalizedPath(locale, "/contact"),
+      //   label: t("links.contact"),
+      //   variant: "link",
+      // },
 
       {
         href: buildLocalizedPath(locale, "/join"),

@@ -225,7 +225,7 @@ export default async function Home({
         "relative",
         "min-h-screen flex flex-col",
         "rtl:font-arabic-body rtl:text-lg",
-        "[&_section]:relative"
+        "[&_section]:relative",
       )}
     >
       {/* <!-- Hero --> */}
@@ -569,7 +569,7 @@ export default async function Home({
             <p className="text-center space-x-2 text-sm rtl:text-base text-muted-foreground">
               <span>{pricing.footer}</span>
               <Link
-                href="mailto:hello@innuora.com"
+                href={`mailto:${APP_CONFIG.contact.business}`}
                 className="underline underline-offset-2 decoration-dotted hover:text-primary"
               >
                 {pricing.link}

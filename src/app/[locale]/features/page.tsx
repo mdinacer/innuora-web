@@ -3,6 +3,7 @@ import initTranslations from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import { Metadata } from "next";
 import Markdown from "markdown-to-jsx";
+import Link from "next/link";
 
 // SEO Metadata
 export async function generateMetadata({
@@ -189,12 +190,12 @@ export default async function FeaturePage({
             <div className="text-muted-foreground text-lg">
               <Markdown>{data.cta.description}</Markdown>
             </div>
-            <a
+            <Link
               href="/demo"
               className="inline-flex rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft hover:opacity-90"
             >
               {data.cta.button}
-            </a>
+            </Link>
           </div>
         </div>
       </section>

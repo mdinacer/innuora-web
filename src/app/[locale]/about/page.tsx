@@ -121,7 +121,7 @@ export default async function AboutPage({
         "relative",
         "min-h-screen flex flex-col",
         "rtl:font-arabic-body rtl:text-lg",
-        "[&_section]:relative"
+        "[&_section]:relative",
       )}
     >
       {/* Hero Section */}

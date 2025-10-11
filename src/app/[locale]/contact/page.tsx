@@ -1,7 +1,8 @@
-import { APP_CONFIG } from "@/config/app";
+import { APP_CONFIG, EMAIL_ADDRESSES } from "@/config/app";
 import initTranslations from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import { Metadata } from "next";
+import Link from "next/link";
 
 // SEO Metadata
 export async function generateMetadata({
@@ -141,33 +142,33 @@ export default async function ContactPage() {
             <p>Or reach us directly:</p>
             <p>
               Support:{" "}
-              <a
-                href="mailto:innuora@gmail.com"
+              <Link
+                href={`mailto:${EMAIL_ADDRESSES.support}`}
                 className="underline hover:text-primary"
               >
-                innuora@gmail.com
-              </a>
+                {EMAIL_ADDRESSES.support}
+              </Link>
             </p>
             <p>
               Privacy:{" "}
-              <a
-                href="mailto:innuora@gmail.com"
+              <Link
+                href={`mailto:${EMAIL_ADDRESSES.privacy}`}
                 className="underline hover:text-primary"
               >
-                innuora@gmail.com
-              </a>
+                {EMAIL_ADDRESSES.privacy}
+              </Link>
             </p>
             <p>
               Business:{" "}
-              <a
-                href="mailto:innuora@gmail.com"
+              <Link
+                href={`mailto:${EMAIL_ADDRESSES.business}`}
                 className="underline hover:text-primary"
               >
-                innuora@gmail.com
-              </a>
+                {EMAIL_ADDRESSES.business}
+              </Link>
             </p>
             <p className="mt-2 text-xs uppercase tracking-[0.3em]">
-              Innuora, Inc. · United States
+              {APP_CONFIG.company.legalName} · {APP_CONFIG.legal.jurisdiction}
             </p>
           </div>
         </div>
