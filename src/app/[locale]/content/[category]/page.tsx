@@ -95,6 +95,11 @@ export async function generateMetadata({
     defaultValue: info.description,
   });
 
+  // Build locale-aware URLs (respecting prefixDefault: false for English)
+  const localePrefix = locale === "en" ? "" : `/${locale}`;
+  const currentUrl = `${localePrefix}/content/${category}`;
+  const canonicalPath = `/content/${category}`;
+
   return {
     title: `${localizedTitle} | Innuora`,
     description: localizedDescription,
@@ -103,16 +108,16 @@ export async function generateMetadata({
       description: localizedDescription,
       type: "website",
       siteName: "Innuora",
-      url: `/${locale}/content/${category}`,
+      url: currentUrl,
       locale: locale === "ar" ? "ar_AR" : locale === "fr" ? "fr_FR" : "en_US",
     },
     alternates: {
-      canonical: `/${locale}/content/${category}`,
+      canonical: currentUrl,
       languages: {
-        en: `/en/content/${category}`,
-        ar: `/ar/content/${category}`,
-        fr: `/fr/content/${category}`,
-        "x-default": `/en/content/${category}`,
+        en: canonicalPath, // Default locale, no prefix
+        ar: `/ar${canonicalPath}`,
+        fr: `/fr${canonicalPath}`,
+        "x-default": canonicalPath, // Default uses English (no prefix)
       },
     },
   };

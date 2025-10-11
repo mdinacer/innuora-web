@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export function buildFAQStructuredData(
   sections: Record<string, any>,
-  options?: { includeSections?: string[]; maxPerSection?: number }
+  options?: { includeSections?: string[]; maxPerSection?: number },
 ) {
   const { includeSections, maxPerSection = 1 } = options || {};
 
@@ -24,7 +24,7 @@ export function buildFAQStructuredData(
             .replace(/[_*`]/g, "")
             .trim(),
         },
-      }))
+      })),
     );
 
   return {
@@ -80,12 +80,12 @@ export async function generateMetadata({
       creator: APP_CONFIG.social.twitter.creator,
     },
     alternates: {
-      canonical: `/${locale}/faq`,
+      canonical: locale === "en" ? "/faq" : `/${locale}/faq`, // Respect prefixDefault: false
       languages: {
-        en: "/en/faq",
+        en: "/faq", // Default locale, no prefix
         fr: "/fr/faq",
         ar: "/ar/faq",
-        "x-default": "/en/faq",
+        "x-default": "/faq", // Default uses English (no prefix)
       },
     },
   };

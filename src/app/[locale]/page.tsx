@@ -225,7 +225,7 @@ export default async function Home({
         "relative",
         "min-h-screen flex flex-col",
         "rtl:font-arabic-body rtl:text-lg",
-        "[&_section]:relative"
+        "[&_section]:relative",
       )}
     >
       {/* <!-- Hero --> */}

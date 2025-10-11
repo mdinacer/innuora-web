@@ -6,6 +6,10 @@ import { initializeContentRegistry } from "@/lib/content/content-loader";
 import { contentRegistry } from "@/lib/content/content-registry";
 import { SEOGenerator } from "@/lib/content/seo-generator";
 
+function withTrailingSlash(path: string) {
+  return path.endsWith("/") ? path : path + "/";
+}
+
 //const baseUrl = APP_CONFIG.domains.primary;
 const baseUrl = APP_CONFIG.domains.primary.replace(/\/+$/, "");
 
@@ -33,25 +37,46 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Generate static route entries
   const staticRoutes = routes.flatMap((route) =>
-    locales.map((locale) => ({
-      url: `${baseUrl}/${locale}${
-        route.path.startsWith("/") ? route.path : "/" + route.path
-      }`,
-      lastModified,
-      changeFrequency:
-        route.changeFrequency as MetadataRoute.Sitemap[number]["changeFrequency"],
-      priority: route.priority,
-      alternates: {
-        languages: {
-          ...Object.fromEntries(
-            locales
-              .filter((l) => l !== locale)
-              .map((l) => [l, `${baseUrl}/${l}${route.path}`])
-          ),
-          "x-default": `${baseUrl}/en${route.path}`,
-        } as Languages<string>,
-      },
-    }))
+    locales.map((locale) => {
+      const routePath = route.path.startsWith("/")
+        ? route.path
+        : "/" + route.path;
+      const isHomepage = routePath === "/" || routePath === "";
+
+      // For English (default locale with prefixDefault: false), don't add /en/ prefix
+      const localePrefix = locale === "en" ? "" : `/${locale}`;
+      const url = isHomepage
+        ? `${baseUrl}${localePrefix}/`
+        : `${baseUrl}${localePrefix}${withTrailingSlash(routePath)}`;
+
+      return {
+        url,
+        lastModified,
+        changeFrequency:
+          route.changeFrequency as MetadataRoute.Sitemap[number]["changeFrequency"],
+        priority: route.priority,
+        alternates: {
+          languages: {
+            ...Object.fromEntries(
+              locales
+                .filter((l) => l !== locale)
+                .map((l) => {
+                  const altPrefix = l === "en" ? "" : `/${l}`;
+                  return [
+                    l,
+                    isHomepage
+                      ? `${baseUrl}${altPrefix}/`
+                      : `${baseUrl}${altPrefix}${withTrailingSlash(routePath)}`,
+                  ];
+                }),
+            ),
+            "x-default": isHomepage
+              ? `${baseUrl}/`
+              : `${baseUrl}${withTrailingSlash(routePath)}`,
+          } as Languages<string>,
+        },
+      };
+    }),
   );
 
   // Get unique categories
@@ -61,45 +86,65 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Generate category page entries
   const categoryRoutes = categories.flatMap((category) =>
-    locales.map((locale) => ({
-      url: `${baseUrl}/${locale}/content/${category}`,
-      lastModified,
-      changeFrequency:
-        "weekly" as MetadataRoute.Sitemap[number]["changeFrequency"],
-      priority: 0.8,
-      alternates: {
-        languages: {
-          ...Object.fromEntries(
-            locales
-              .filter((l) => l !== locale)
-              .map((l) => [l, `${baseUrl}/${l}/content/${category}`])
-          ),
-          "x-default": `${baseUrl}/en/content/${category}`,
-        } as Languages<string>,
-      },
-    }))
+    locales.map((locale) => {
+      const localePrefix = locale === "en" ? "" : `/${locale}`;
+      const path = withTrailingSlash(`/content/${category}`);
+      const url = `${baseUrl}${localePrefix}${path}`;
+
+      return {
+        url,
+        lastModified,
+        changeFrequency:
+          "weekly" as MetadataRoute.Sitemap[number]["changeFrequency"],
+        priority: 0.8,
+        alternates: {
+          languages: {
+            ...Object.fromEntries(
+              locales
+                .filter((l) => l !== locale)
+                .map((l) => {
+                  const altPrefix = l === "en" ? "" : `/${l}`;
+                  return [l, `${baseUrl}${altPrefix}${path}`];
+                }),
+            ),
+            "x-default": `${baseUrl}${path}`,
+          } as Languages<string>,
+        },
+      };
+    }),
   );
 
   // Generate content article entries
   const contentRoutes = allContent.flatMap((item) => {
     const sitemapEntry = SEOGenerator.generateSitemapEntry(item.metadata);
 
-    return locales.map((locale) => ({
-      url: `${baseUrl}/${locale}${sitemapEntry.url}`,
-      lastModified: sitemapEntry.lastModified,
-      changeFrequency: sitemapEntry.changeFrequency,
-      priority: sitemapEntry.priority,
-      alternates: {
-        languages: {
-          ...Object.fromEntries(
-            locales
-              .filter((l) => l !== locale)
-              .map((l) => [l, `${baseUrl}/${l}${sitemapEntry.url}`])
-          ),
-          "x-default": `${baseUrl}/en${sitemapEntry.url}`,
-        } as Languages<string>,
-      },
-    }));
+    return locales.map((locale) => {
+      const localePrefix = locale === "en" ? "" : `/${locale}`;
+      const url = `${baseUrl}${localePrefix}${withTrailingSlash(sitemapEntry.url)}`;
+
+      return {
+        url,
+        lastModified: sitemapEntry.lastModified,
+        changeFrequency: sitemapEntry.changeFrequency,
+        priority: sitemapEntry.priority,
+        alternates: {
+          languages: {
+            ...Object.fromEntries(
+              locales
+                .filter((l) => l !== locale)
+                .map((l) => {
+                  const altPrefix = l === "en" ? "" : `/${l}`;
+                  return [
+                    l,
+                    `${baseUrl}${altPrefix}${withTrailingSlash(sitemapEntry.url)}`,
+                  ];
+                }),
+            ),
+            "x-default": `${baseUrl}${withTrailingSlash(sitemapEntry.url)}`,
+          } as Languages<string>,
+        },
+      };
+    });
   });
 
   return [...staticRoutes, ...categoryRoutes, ...contentRoutes];

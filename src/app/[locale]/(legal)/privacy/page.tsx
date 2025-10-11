@@ -16,11 +16,12 @@ export async function generateMetadata({
     title: t("seo:privacy.title"),
     description: t("seo:privacy.description"),
     alternates: {
-      canonical: `${APP_CONFIG.domains.primary}/en/privacy`,
+      canonical: `${APP_CONFIG.domains.primary}/privacy`, // Default locale, no prefix
       languages: {
-        en: `${APP_CONFIG.domains.primary}/en/privacy`,
+        en: `${APP_CONFIG.domains.primary}/privacy`, // Default locale, no prefix
         fr: `${APP_CONFIG.domains.primary}/fr/privacy`,
         ar: `${APP_CONFIG.domains.primary}/ar/privacy`,
+        "x-default": `${APP_CONFIG.domains.primary}/privacy`, // Default uses English (no prefix)
       },
     },
     robots: {

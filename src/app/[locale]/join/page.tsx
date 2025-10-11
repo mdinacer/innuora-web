@@ -19,11 +19,12 @@ export const metadata: Metadata = {
     "emotional companion for women beta",
   ],
   alternates: {
-    canonical: `${APP_CONFIG.domains.primary}/en/join`,
+    canonical: `${APP_CONFIG.domains.primary}/join`, // Default locale, no prefix
     languages: {
+      en: `${APP_CONFIG.domains.primary}/join`, // Default locale, no prefix
       fr: `${APP_CONFIG.domains.primary}/fr/join`,
       ar: `${APP_CONFIG.domains.primary}/ar/join`,
-      "x-default": `${APP_CONFIG.domains.primary}/en/join`,
+      "x-default": `${APP_CONFIG.domains.primary}/join`, // Default uses English (no prefix)
     },
   },
 };

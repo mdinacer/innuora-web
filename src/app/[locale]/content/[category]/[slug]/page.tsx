@@ -54,19 +54,23 @@ export async function generateMetadata({
   );
   const canonicalPath = `/content/${contentItem.metadata.category}/${contentItem.metadata.slug}`;
 
+  // Build locale-aware URLs (respecting prefixDefault: false for English)
+  const localePrefix = locale === "en" ? "" : `/${locale}`;
+  const currentUrl = `${localePrefix}${canonicalPath}`;
+
   return {
     ...baseMetadata,
     openGraph: {
       ...baseMetadata.openGraph,
-      url: `/${locale}${canonicalPath}`,
+      url: currentUrl,
     },
     alternates: {
-      canonical: `/${locale}${canonicalPath}`,
+      canonical: currentUrl,
       languages: {
-        en: `/en${canonicalPath}`,
+        en: canonicalPath, // Default locale, no prefix
         ar: `/ar${canonicalPath}`,
         fr: `/fr${canonicalPath}`,
-        "x-default": `/en${canonicalPath}`,
+        "x-default": canonicalPath, // Default uses English (no prefix)
       },
     },
   };

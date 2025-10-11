@@ -59,10 +59,10 @@ export class SEOGenerator {
       alternates: {
         canonical: canonicalUrl,
         languages: {
-          en: `/en${canonicalUrl}`,
+          en: canonicalUrl, // Default locale, no prefix
           ar: `/ar${canonicalUrl}`,
           fr: `/fr${canonicalUrl}`,
-          "x-default": `/en${canonicalUrl}`,
+          "x-default": canonicalUrl, // Default uses English (no prefix)
         },
       },
 
