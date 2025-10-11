@@ -6,7 +6,7 @@ export const METADATA: Metadata = {
   // ──────────────────────────────────────────────
   // Core SEO
   // ──────────────────────────────────────────────
-  title: APP_NAMES.taglined,
+  title: APP_NAMES.tagline,
   description: APP_CONFIG.description,
   keywords: [...APP_CONFIG.seo.primaryKeywords],
   applicationName: APP_CONFIG.name,

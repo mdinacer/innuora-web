@@ -31,12 +31,12 @@ export const APP_CONFIG = {
 
   // Contact Information
   contact: {
-    support: "innuora@gmail.com",
-    privacy: "innuora@gmail.com",
-    business: "innuora@gmail.com",
-    // support: "support@innuora.com",
-    // privacy: "privacy@innuora.com",
-    // business: "hello@innuora.com",
+    // support: "innuora@gmail.com",
+    // privacy: "innuora@gmail.com",
+    // business: "innuora@gmail.com",
+    support: "support@innuora.com",
+    privacy: "privacy@innuora.com",
+    business: "hello@innuora.com",
   },
 
   // Domains & URLs
@@ -129,7 +129,7 @@ export const AVATAR_LETTERS = {
 export const APP_NAMES = {
   full: APP_CONFIG.name,
   short: APP_CONFIG.name,
-  taglined: `${APP_CONFIG.name} - ${APP_CONFIG.tagline}`,
+  tagline: `${APP_CONFIG.name} - ${APP_CONFIG.tagline}`,
   withAI: `${APP_CONFIG.name} AI`,
 } as const;
 
@@ -145,15 +145,15 @@ export const EMAIL_ADDRESSES = {
 export const SOCIAL_URLS = {
   twitter: `https://twitter.com/${APP_CONFIG.social.twitter.handle.replace(
     "@",
-    "",
+    ""
   )}`,
   linkedin: `https://linkedin.com/company/${APP_CONFIG.social.linkedin.replace(
     "@",
-    "",
+    ""
   )}`,
   instagram: `https://instagram.com/${APP_CONFIG.social.instagram.replace(
     "@",
-    "",
+    ""
   )}`,
 } as const;
 
