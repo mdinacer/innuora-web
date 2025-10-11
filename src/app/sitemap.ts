@@ -6,11 +6,12 @@ import { initializeContentRegistry } from "@/lib/content/content-loader";
 import { contentRegistry } from "@/lib/content/content-registry";
 import { SEOGenerator } from "@/lib/content/seo-generator";
 
-const baseUrl = APP_CONFIG.domains.primary;
+//const baseUrl = APP_CONFIG.domains.primary;
+const baseUrl = APP_CONFIG.domains.primary.replace(/\/+$/, "");
 
 const routes = [
   { path: "", changeFrequency: "weekly", priority: 1 },
-  { path: "/join", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/join", changeFrequency: "weekly", priority: 0.9 },
   { path: "/demo", changeFrequency: "weekly", priority: 0.9 },
   { path: "/content", changeFrequency: "weekly", priority: 0.9 },
   { path: "/faq", changeFrequency: "monthly", priority: 0.7 },
