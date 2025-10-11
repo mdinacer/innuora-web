@@ -64,16 +64,6 @@ export async function generateMetadata({
     openGraph: {
       ...baseMetadata.openGraph,
       url: currentUrl,
-      images: [
-        {
-          url: `${APP_CONFIG.domains.canonical}/og/innuora-cover.png`,
-          width: 1200,
-          height: 630,
-          alt:
-            (baseMetadata.title as string | undefined) ||
-            `${APP_CONFIG.name} Open Graph Cover`,
-        },
-      ],
     },
     alternates: {
       canonical: currentUrl,
