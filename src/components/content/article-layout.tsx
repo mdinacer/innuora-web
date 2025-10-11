@@ -84,7 +84,7 @@ export default function ArticleLayout({
             </span>
           </div>
 
-          <h1 className="text-3xl font-serif-brand text-foreground md:text-4xl">
+          <h1 className="text-3xl ltr:font-serif-brand rtl:font-arabic text-foreground md:text-4xl">
             {metadata.title}
           </h1>
 
@@ -137,7 +137,7 @@ export default function ArticleLayout({
         {/* Related Content */}
         {relatedContent.length > 0 && (
           <section className="rounded-app border border-border bg-card p-8 shadow-soft">
-            <h2 className="mb-6 text-2xl font-serif-brand text-foreground">
+            <h2 className="mb-6 text-2xl rtl:font-arabic ltr:font-serif-brand text-foreground">
               {t("article.relatedHeading")}
             </h2>
             <div className="grid gap-5 md:grid-cols-2">

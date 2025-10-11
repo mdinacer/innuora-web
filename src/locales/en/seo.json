@@ -22,5 +22,10 @@
   "terms": {
     "title": "Terms of Service | Innuora",
     "description": "Terms and conditions for using Innuora's AI-powered therapeutic platform."
+  },
+  "faq": {
+    "title": "FAQ - Frequently Asked Questions | {{app_name}}",
+    "description": "Everything you need to know about {{app_name}}: how it listens, protects, and stays human in its intelligence. Answers about privacy, security, billing, and more.",
+    "ogImageAlt": "{{app_name}} FAQ - Your questions answered"
   }
 }

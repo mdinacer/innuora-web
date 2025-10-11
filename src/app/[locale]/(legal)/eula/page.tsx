@@ -114,10 +114,10 @@ export default async function EULARoute({
   };
 
   return (
-    <main className="relative  font-sans rtl:font-arabic-body rtl:text-base min-h-screen pt-20 w-screen standalone:w-full overflow-hidden bg-background transition-all duration-300 ease-in text-foreground">
+    <main className="relative  font-sans rtl:font-arabic-body [&_h2]:ltr:font-serif [&_h2]:rtl:font-arabic rtl:text-base min-h-screen pt-20 w-screen standalone:w-full overflow-hidden bg-background transition-all duration-300 ease-in text-foreground">
       {/* <!-- Hero Section --> */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-center">
-        <h1 className="rtl:font-arabic text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-4">
+        <h1 className="rtl:font-arabic ltr:font-serif-brand font-bold text-4xl md:text-5xl leading-tight tracking-tight mb-4">
           {content.hero.headline}
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6">
@@ -131,7 +131,7 @@ export default async function EULARoute({
       {/* <!-- Agreement Notice --> */}
       <section className="max-w-4xl mx-auto px-6 pb-12">
         <div className="rounded-2xl p-8 text-center text-white bg-gradient-to-b from-primary to-primary/90">
-          <h2 className="rtl:font-arabic text-2xl font-bold mb-3">
+          <h2 className="rtl:font-arabic ltr:font-serif-brand text-2xl font-bold mb-3">
             {content.notice.title}
           </h2>
           <p className="mb-4 opacity-90">{content.notice.message}</p>
@@ -146,7 +146,7 @@ export default async function EULARoute({
         {/* <!-- Acceptance of Agreement --> */}
         <section className="mb-12">
           <div className="rounded-2xl border border-border bg-card p-8 shadow-soft">
-            <h2 className="rtl:font-arabic text-2xl font-bold mb-4">
+            <h2 className="rtl:font-arabic ltr:font-serif-brand text-2xl font-bold mb-4">
               {content.acceptance.title}
             </h2>
             <p className="text-muted-foreground">
@@ -158,7 +158,7 @@ export default async function EULARoute({
         {/* <!-- License Grant --> */}
         <section className="mb-12">
           <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
-            <h2 className="rtl:font-arabic text-2xl font-bold mb-4">
+            <h2 className="rtl:font-arabic ltr:font-serif-brand text-2xl font-bold mb-4">
               {content.licenseGrant.title}
             </h2>
             <p className="text-muted-foreground">
@@ -250,9 +250,7 @@ export default async function EULARoute({
             <h2 className="rtl:font-arabic text-2xl font-bold mb-4">
               {content.liability.title}
             </h2>
-            <p className="text-muted-foreground">
-              {content.liability.message}
-            </p>
+            <p className="text-muted-foreground">{content.liability.message}</p>
           </div>
         </section>
 

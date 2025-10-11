@@ -23,7 +23,7 @@ export async function generateMetadata({
       siteName: APP_CONFIG.name,
       images: [
         {
-          url: "/og/innuora-cover.png",
+          url: `${APP_CONFIG.domains.canonical}/og/innuora-cover.png`,
           width: 1200,
           height: 630,
           alt: `${APP_CONFIG.name} Open Graph Cover`,
@@ -36,7 +36,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: t("seo:home.title"),
       description: t("seo:home.description"),
-      images: ["/og/innuora-cover.png"],
+      images: [`${APP_CONFIG.domains.canonical}/og/innuora-cover.png`],
       creator: APP_CONFIG.social.twitter.creator,
     },
     alternates: {
@@ -218,76 +218,14 @@ export default async function Home({
       subtitle: t("home.about.subtitle", { app_name: APP_CONFIG.name }),
     },
   };
-  // Structured data for SEO
-  // const organizationJsonLd = {
-  //   "@context": "https://schema.org",
-  //   "@type": "Organization",
-  //   name: APP_CONFIG.company.legalName,
-  //   url: APP_CONFIG.domains.primary,
-  //   logo: `${APP_CONFIG.domains.primary}/assets/icons/ios/512.png`,
-  //   description:
-  //     "AI companion for emotional clarity, self-reflection, and burnout recovery",
-  //   foundingDate: APP_CONFIG.company.establishedYear,
-  //   founder: {
-  //     "@type": "Person",
-  //     name: APP_CONFIG.company.founder,
-  //   },
-  //   contactPoint: {
-  //     "@type": "ContactPoint",
-  //     email: APP_CONFIG.contact.support,
-  //     contactType: "customer support",
-  //   },
-  //   sameAs: [
-  //     `https://twitter.com/${APP_CONFIG.social.twitter.handle.replace(
-  //       "@",
-  //       ""
-  //     )}`,
-  //     `https://linkedin.com/company/${APP_CONFIG.social.linkedin.replace(
-  //       "@",
-  //       ""
-  //     )}`,
-  //   ],
-  // };
-
-  // const webAppJsonLd = {
-  //   "@context": "https://schema.org",
-  //   "@type": "WebApplication",
-  //   name: APP_CONFIG.name,
-  //   url: APP_CONFIG.domains.primary,
-  //   description:
-  //     "AI companion for emotional clarity and burnout recovery for high-functioning women",
-  //   applicationCategory: "HealthApplication",
-  //   operatingSystem: "Web",
-  //   offers: {
-  //     "@type": "Offer",
-  //     price: "0",
-  //     priceCurrency: "USD",
-  //   },
-  //   author: {
-  //     "@type": "Organization",
-  //     name: APP_CONFIG.name,
-  //   },
-  // };
-
-  // const faqJsonLd = {
-  //   "@context": "https://schema.org",
-  //   "@type": "FAQPage",
-  //   mainEntity: faq.items.map((item) => ({
-  //     "@type": "Question",
-  //     name: item.question,
-  //     acceptedAnswer: {
-  //       "@type": "Answer",
-  //       text: item.answer,
-  //     },
-  //   })),
-  // };
 
   return (
     <div
       className={cn(
         "relative",
         "min-h-screen flex flex-col",
-        "rtl:font-arabic-body rtl:text-lg ",
+        "rtl:font-arabic-body rtl:text-lg",
+        "[&_section]:relative"
       )}
     >
       {/* <!-- Hero --> */}

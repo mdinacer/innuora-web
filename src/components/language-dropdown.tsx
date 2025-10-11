@@ -95,7 +95,7 @@ const LanguagePicker = () => {
       <button
         onClick={() => setIsOpen(!isOpen)}
         id="langDropdownTrigger"
-        className="flex items-center gap-2 rounded-2xl border border-inn-border-light bg-inn-bg-card px-3 py-2 hover:border-inn-bg-accent transition"
+        className="flex items-center gap-2 rounded-2xl border border-border bg-card px-3 py-2 hover:border-accent transition"
         aria-label="Select language"
       >
         {/* <!-- Globe Icon --> */}
@@ -106,7 +106,7 @@ const LanguagePicker = () => {
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
-          className="text-inn-text-secondary"
+          className="text-secondary-foreground/50"
         >
           <circle cx="12" cy="12" r="10"></circle>
           <line x1="2" y1="12" x2="22" y2="12"></line>
@@ -116,7 +116,7 @@ const LanguagePicker = () => {
         <span
           id="selectedLang"
           className={cn("text-sm font-sans font-medium hidden sm:inline", {
-            "font-arabic": currentLocale === "ar",
+            "font-arabic-title": currentLocale === "ar",
           })}
         >
           {t(currentLocale, { keyPrefix: "languages" })}
@@ -146,7 +146,7 @@ const LanguagePicker = () => {
         id="langDropdown"
         className={cn(
           "absolute top-[calc(100%_+_8px)] ltr:right-0 rtl:left-0 min-w-[200px] ",
-          "lang-dropdown rounded-2xl border border-inn-border-light bg-background shadow-floating",
+          "lang-dropdown rounded-2xl border border-border bg-background shadow-floating",
           "transition-all duration-200 ease-in-out z-10",
           isOpen
             ? "opacity-100  visible translate-y-0"
@@ -181,12 +181,12 @@ const LanguagePicker = () => {
                 >
                   <div
                     className={cn(
-                      "font-medium font-sans text-sm sm:rtl:font-arabic",
+                      "font-medium font-sans text-sm sm:rtl:font-arabic-title",
                     )}
                   >
                     {lang.label}
                   </div>
-                  <div className="text-xs text-inn-text-primary/70 font-sans">
+                  <div className="text-xs text-secondary-foreground/70 font-sans">
                     {lang.nativeName}
                   </div>
                 </div>

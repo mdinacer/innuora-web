@@ -55,6 +55,11 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
         variant: "link",
       },
       {
+        href: buildLocalizedPath(locale, "/faq"),
+        label: t("links.faq"),
+        variant: "link",
+      },
+      {
         href: buildLocalizedPath(locale, "/join"),
         label: t("links.join"),
         variant: "button",
@@ -82,20 +87,26 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
 
   const isActiveLink = React.useCallback(
     (href: string) => {
-      if (!href.startsWith("/")) {
-        return false;
-      }
+      if (!href.startsWith("/")) return false;
 
-      const target = normalize(href.split("#")[0] || "/");
-      const current = normalize(pathname || "/");
+      // Normalize helper
+      const normalizePath = (p: string) => {
+        let clean = p.split(/[?#]/)[0].replace(/\/+$/, "") || "/";
+        // Strip locale prefix like /en or /ar or /fr
+        clean = clean.replace(/^\/(en|ar|fr)(?=\/|$)/, "");
+        return clean === "" ? "/" : clean;
+      };
 
-      if (target === "/") {
-        return current === "/";
-      }
+      const target = normalizePath(href);
+      const current = normalizePath(pathname || "/");
 
+      // ✅ Case 1: Home must be strictly /
+      if (target === "/") return current === "/";
+
+      // ✅ Case 2: Exact or nested match (e.g. /content or /content/article)
       return current === target || current.startsWith(`${target}/`);
     },
-    [normalize, pathname],
+    [pathname]
   );
 
   const renderLink = React.useCallback(
@@ -110,14 +121,14 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
           isDesktop
             ? "bg-primary text-primary-foreground hover:bg-primary/90"
             : "w-full bg-primary text-primary-foreground hover:bg-primary/90",
-          active && "ring-2 ring-primary/50",
+          active && "ring-2 ring-primary/50"
         );
 
         return (
           <Link
             key={`${link.href}-${index}`}
             href={link.href}
-            className={buttonClasses}
+            className={cn(buttonClasses, "rtl:font-arabic-title")}
             onClick={() => setIsMenuOpen(false)}
           >
             {link.label}
@@ -133,28 +144,28 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
         active && "text-foreground",
         isDesktop &&
           "after:absolute after:bottom-[2px] after:left-1/2 after:h-[2px] after:w-[70%] after:-translate-x-1/2 after:scale-x-0 after:bg-primary after:transition-transform after:duration-200 hover:after:scale-x-100",
-        isDesktop && active && "after:scale-x-100",
+        isDesktop && active && "after:scale-x-100"
       );
 
       return (
         <Link
           key={`${link.href}-${index}`}
           href={link.href}
-          className={linkClasses}
+          className={cn(linkClasses, "rtl:font-arabic-title")}
           onClick={() => setIsMenuOpen(false)}
         >
           {link.label}
         </Link>
       );
     },
-    [isActiveLink],
+    [isActiveLink]
   );
 
   return (
     <header
       className={cn(
         "sticky top-0 z-50 w-full backdrop-blur supports-[backdrop-filter]:bg-background/70",
-        className,
+        className
       )}
     >
       <div className="border-b border-border/60 bg-background/80">
@@ -162,7 +173,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
           <div className="flex flex-wrap items-center justify-between gap-3">
             <Link
               href={buildLocalizedPath(locale, "/")}
-              className="group inline-flex items-center gap-3 rounded-full border border-border/70 bg-card/80 px-3 py-2 shadow-soft transition hover:border-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+              className="group inline-flex items-center gap-3 rounded-full border border-border/70 bg-card/80 px-3 rtl:pl-5 py-2 shadow-soft transition hover:border-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
             >
               <span className="relative flex h-9 w-9 items-center justify-center rounded-full border border-primary/40 bg-primary/10">
                 <Image
@@ -177,7 +188,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
                 <span className="text-base font-semibold text-foreground">
                   In<span className="text-primary">nu</span>ora
                 </span>
-                <span className="text-[0.68rem] sr-only sm:not-sr-only font-medium uppercase tracking-[0.35em] text-muted-foreground group-hover:text-foreground/80">
+                <span className="text-[0.68rem] sr-only sm:not-sr-only rtl:font-arabic-title rtl:text-sm font-medium uppercase tracking-[0.35em] text-muted-foreground group-hover:text-foreground/80">
                   {t("wordmark", { defaultValue: "AI Companion" })}
                 </span>
               </span>

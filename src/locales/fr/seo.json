@@ -22,5 +22,10 @@
   "terms": {
     "title": "Conditions d'Utilisation | Innuora",
     "description": "Conditions générales d'utilisation de la plateforme thérapeutique alimentée par l'IA d'Innuora."
+  },
+  "faq": {
+    "title": "FAQ - Questions Fréquemment Posées | {{app_name}}",
+    "description": "Tout ce qu’il faut savoir sur {{app_name}} : comment elle écoute, protège et reste profondément humaine dans son intelligence. Réponses sur la confidentialité, la sécurité, la facturation et plus encore.",
+    "ogImageAlt": "{{app_name}} FAQ - Vos questions, nos réponses"
   }
 }

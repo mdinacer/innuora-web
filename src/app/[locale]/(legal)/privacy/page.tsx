@@ -195,9 +195,7 @@ export default async function PrivacyPolicyRoute({
                   content.dataWeCollect.table.headers;
                 return (
                   <div key={index} className="space-y-2">
-                    <h3 className="font-semibold text-foreground">
-                      {header}
-                    </h3>
+                    <h3 className="font-semibold text-foreground">{header}</h3>
                     <p className="text-sm rtl:text-base text-muted-foreground">
                       <strong>{descriptionCol}: </strong>
                       {description}

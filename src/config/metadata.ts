@@ -189,7 +189,7 @@ export const METADATA: Metadata = {
     siteName: APP_CONFIG.name,
     images: [
       {
-        url: "/og/innuora-cover.png",
+        url: `${APP_CONFIG.domains.canonical}/og/innuora-cover.png`,
         width: 1200,
         height: 630,
         alt: `${APP_CONFIG.name} App Open Graph Cover`,
@@ -204,7 +204,7 @@ export const METADATA: Metadata = {
     title: `${APP_CONFIG.name} - AI Emotional Companion for High-Functioning Women`,
     description: `${APP_CONFIG.name} helps high-functioning women overcome emotional exhaustion, burnout, overwhelm, and perfectionism by reflecting emotions, uncovering silent rules, and providing actionable self-insight.`,
     creator: APP_CONFIG.social.twitter.creator,
-    images: ["/og/innuora-cover.png"],
+    images: [`${APP_CONFIG.domains.canonical}/og/innuora-cover.png`],
   },
 
   other: {

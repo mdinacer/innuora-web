@@ -264,10 +264,10 @@ export default async function TermsOfUseRoute({
   };
 
   return (
-    <main className="relative font-sans rtl:font-arabic-body rtl:text-lg min-h-screen pt-20 w-screen standalone:w-full overflow-hidden bg-background transition-all duration-300 ease-in text-foreground">
+    <main className="relative font-sans rtl:font-arabic-body [&_h2]:ltr:font-serif [&_h2]:rtl:font-arabic rtl:text-lg min-h-screen pt-20 w-screen standalone:w-full overflow-hidden bg-background transition-all duration-300 ease-in text-foreground">
       {/* <!-- Hero Section --> */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-center">
-        <h1 className="text-4xl rtl:font-arabic md:text-5xl font-extrabold leading-tight tracking-tight mb-4">
+        <h1 className="text-4xl rtl:font-arabic ltr:font-serif-brand md:text-5xl font-extrabold leading-tight tracking-tight mb-4">
           {content.title}
         </h1>
         <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-muted px-3 py-1 text-[13px] rtl:text-base font-semibold text-primary mb-8">
