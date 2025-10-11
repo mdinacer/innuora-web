@@ -12,6 +12,8 @@ import { notFound } from "next/navigation";
 import "../globals.css";
 import LayoutFooter from "@/components/layout/footer";
 import LayoutHeader from "@/components/layout/header";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ locale }));
@@ -56,6 +58,12 @@ export default async function RootLayout({
             <LayoutFooter locale={locale as AppLocales} />
           </TranslationProvider>
         </ThemeProvider>
+        {process.env.NODE_ENV === "production" && (
+          <>
+            <Analytics />
+            <SpeedInsights />
+          </>
+        )}
       </body>
     </html>
   );
