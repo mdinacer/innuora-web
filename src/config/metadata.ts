@@ -166,6 +166,11 @@ export const METADATA: Metadata = {
   icons: {
     icon: [
       { url: "/assets/icons/ios/32.png", sizes: "32x32", type: "image/png" },
+      {
+        url: "/assets/icons/android/android-launchericon-96-96.png",
+        sizes: "96x96",
+        type: "image/png",
+      },
       { url: "/assets/icons/ios/192.png", sizes: "192x192", type: "image/png" },
       { url: "/assets/icons/ios/512.png", sizes: "512x512", type: "image/png" },
     ],
@@ -174,12 +179,12 @@ export const METADATA: Metadata = {
       { url: "/assets/icons/ios/152.png", sizes: "152x152", type: "image/png" },
       { url: "/assets/icons/ios/120.png", sizes: "120x120", type: "image/png" },
     ],
-    other: [
-      {
-        rel: "apple-touch-startup-image",
-        url: "/assets/icons/ios/1024.png",
-      },
-    ],
+    // other: [
+    //   {
+    //     rel: "apple-touch-startup-image",
+    //     url: "/assets/icons/ios/1024.png",
+    //   },
+    // ],
   },
 
   openGraph: {
