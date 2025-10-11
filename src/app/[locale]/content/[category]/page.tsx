@@ -21,7 +21,10 @@ interface CategoryPageProps {
 // Category Metadata
 // =========================
 
-const fallbackCategoryInfo: Record<string, { title: string; description: string }> = {
+const fallbackCategoryInfo: Record<
+  string,
+  { title: string; description: string }
+> = {
   "cognitive-behavioral-therapy": {
     title: "Cognitive Behavioral Therapy (CBT) Resources",
     description:
@@ -88,12 +91,9 @@ export async function generateMetadata({
   const localizedTitle = t(`library.categories.${category}.title`, {
     defaultValue: info.title,
   });
-  const localizedDescription = t(
-    `library.categories.${category}.description`,
-    {
-      defaultValue: info.description,
-    },
-  );
+  const localizedDescription = t(`library.categories.${category}.description`, {
+    defaultValue: info.description,
+  });
 
   return {
     title: `${localizedTitle} | Innuora`,
@@ -157,16 +157,16 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   // Get content for this category
   const categoryContent = contentRegistry.getByCategory(
-    category as ContentCategory
+    category as ContentCategory,
   );
 
   const localizedContent = contentRegistry.applyLocaleOverrides(
     categoryContent,
-    locale
+    locale,
   );
 
   const featuredContent = localizedContent.filter(
-    (item) => item.metadata.featured
+    (item) => item.metadata.featured,
   );
 
   return (

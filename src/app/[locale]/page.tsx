@@ -287,7 +287,7 @@ export default async function Home({
       className={cn(
         "relative",
         "min-h-screen flex flex-col",
-        "rtl:font-arabic-body rtl:text-lg "
+        "rtl:font-arabic-body rtl:text-lg ",
       )}
     >
       {/* <!-- Hero --> */}

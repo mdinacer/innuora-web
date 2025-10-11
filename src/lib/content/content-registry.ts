@@ -1,4 +1,9 @@
-import { ContentCategory, ContentItem, ContentMetadata, LocalizedMetadataOverride } from "@/types/content.types";
+import {
+  ContentCategory,
+  ContentItem,
+  ContentMetadata,
+  LocalizedMetadataOverride,
+} from "@/types/content.types";
 
 // =========================
 // Content Registry
@@ -107,7 +112,9 @@ export class ContentRegistry {
       return (
         title.toLowerCase().includes(lowercaseQuery) ||
         description.toLowerCase().includes(lowercaseQuery) ||
-        keywords.some((keyword) => keyword.toLowerCase().includes(lowercaseQuery))
+        keywords.some((keyword) =>
+          keyword.toLowerCase().includes(lowercaseQuery),
+        )
       );
     });
   }
@@ -126,12 +133,16 @@ export class ContentRegistry {
 
         // Matching CBT modules
         if (relatedCbtModules && other.metadata.relatedCbtModules) {
-          return relatedCbtModules.some((module) => other.metadata.relatedCbtModules!.includes(module));
+          return relatedCbtModules.some((module) =>
+            other.metadata.relatedCbtModules!.includes(module),
+          );
         }
 
         // Matching target emotions
         if (targetEmotions && other.metadata.targetEmotions) {
-          return targetEmotions.some((emotion) => other.metadata.targetEmotions!.includes(emotion));
+          return targetEmotions.some((emotion) =>
+            other.metadata.targetEmotions!.includes(emotion),
+          );
         }
 
         return false;
@@ -139,7 +150,11 @@ export class ContentRegistry {
       .slice(0, limit);
   }
 
-  addLocalizedMetadata(slug: string, locale: string, override: LocalizedMetadataOverride): void {
+  addLocalizedMetadata(
+    slug: string,
+    locale: string,
+    override: LocalizedMetadataOverride,
+  ): void {
     const item = this.contentIndex.get(slug);
     if (!item) {
       return;
@@ -174,7 +189,9 @@ export class ContentRegistry {
   }
 
   applyLocaleOverrides(items: ContentItem[], locale: string): ContentItem[] {
-    return items.map((item) => this.getItemForLocale(item.metadata.slug, locale) || item);
+    return items.map(
+      (item) => this.getItemForLocale(item.metadata.slug, locale) || item,
+    );
   }
 }
 

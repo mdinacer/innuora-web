@@ -34,36 +34,46 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     locales.map((locale) => ({
       url: `${baseUrl}/${locale}${route.path.startsWith("/") ? route.path : "/" + route.path}`,
       lastModified,
-      changeFrequency: route.changeFrequency as MetadataRoute.Sitemap[number]["changeFrequency"],
+      changeFrequency:
+        route.changeFrequency as MetadataRoute.Sitemap[number]["changeFrequency"],
       priority: route.priority,
       alternates: {
         languages: {
-          ...Object.fromEntries(locales.filter((l) => l !== locale).map((l) => [l, `${baseUrl}/${l}${route.path}`])),
+          ...Object.fromEntries(
+            locales
+              .filter((l) => l !== locale)
+              .map((l) => [l, `${baseUrl}/${l}${route.path}`]),
+          ),
           "x-default": `${baseUrl}/en${route.path}`,
         } as Languages<string>,
       },
-    }))
+    })),
   );
 
   // Get unique categories
-  const categories = [...new Set(allContent.map((item) => item.metadata.category))];
+  const categories = [
+    ...new Set(allContent.map((item) => item.metadata.category)),
+  ];
 
   // Generate category page entries
   const categoryRoutes = categories.flatMap((category) =>
     locales.map((locale) => ({
       url: `${baseUrl}/${locale}/content/${category}`,
       lastModified,
-      changeFrequency: "weekly" as MetadataRoute.Sitemap[number]["changeFrequency"],
+      changeFrequency:
+        "weekly" as MetadataRoute.Sitemap[number]["changeFrequency"],
       priority: 0.8,
       alternates: {
         languages: {
           ...Object.fromEntries(
-            locales.filter((l) => l !== locale).map((l) => [l, `${baseUrl}/${l}/content/${category}`])
+            locales
+              .filter((l) => l !== locale)
+              .map((l) => [l, `${baseUrl}/${l}/content/${category}`]),
           ),
           "x-default": `${baseUrl}/en/content/${category}`,
         } as Languages<string>,
       },
-    }))
+    })),
   );
 
   // Generate content article entries
@@ -78,7 +88,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       alternates: {
         languages: {
           ...Object.fromEntries(
-            locales.filter((l) => l !== locale).map((l) => [l, `${baseUrl}/${l}${sitemapEntry.url}`])
+            locales
+              .filter((l) => l !== locale)
+              .map((l) => [l, `${baseUrl}/${l}${sitemapEntry.url}`]),
           ),
           "x-default": `${baseUrl}/en${sitemapEntry.url}`,
         } as Languages<string>,

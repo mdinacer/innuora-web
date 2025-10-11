@@ -1,788 +1,788 @@
 {
-    "home": {
-        "hero": {
-            "badge": "Pour les femmes qui en portent trop",
-            "title_main": "Vous avez été forte assez longtemps.",
-            "title_sub": "Maintenant, prenez le temps de vous poser avec {{app_name}}.",
-            "subtitle": "{{app_name}} entend ce que vous ne dites pas et sait pourquoi cela fait mal. Il écoute entre les lignes, valide avant d'analyser et vous ramène vers vous-même, avec douceur, intelligence et sans jugement.",
-            "cta": {
-                "join": "Commencez votre première réflexion",
-                "demo": "Voyez ce que ça fait"
-            },
-            "highlights": [
-                {
-                    "title": "Valide avant d'analyser",
-                    "body": "Chaque réflexion commence par la reconnaissance de ce que vous ressentez, pas de ce qu'il faut réparer."
-                },
-                {
-                    "title": "Lit ce qui n'est pas dit",
-                    "body": "Les pauses, le ton et la tension entrent dans la conversation pour que vous puissiez arrêter de trop expliquer."
-                },
-                {
-                    "title": "Guide à votre rythme",
-                    "body": "L'orientation arrive quand vous l'invitez, avec une pression faible et un pouvoir d'agir élevé."
-                },
-                {
-                    "title": "Chiffré à tous les niveaux",
-                    "body": "Une protection de bout en bout scelle chaque mot pour vous seule."
-                }
-            ],
-            "demo": {
-                "title": "UN ÉCHANGE SILENCIEUX",
-                "conversations": [
-                    {
-                        "user": "« Je garde tout le monde sur la bonne voie, mais ces derniers temps j'ai l'impression de tourner à vide. Dès que je ralentis, la culpabilité me frappe comme un coup de poing. »",
-                        "app": "Cette culpabilité ressemble à une vieille règle : le repos doit se mériter. Et si ralentir n'était pas un échec mais une réparation ?"
-                    },
-                    {
-                        "user": "« Même deux minutes dans la voiture me semblent impossibles. Mon cerveau traite ça de paresse avant même que je respire. »",
-                        "app": "Cette voix vous a protégée en vous gardant en mouvement. Que signifierait la remercier puis la laisser se reposer le temps d'une respiration ?"
-                    },
-                    {
-                        "user": "« Quand je l'ai fait, mes mains ont cessé de vibrer. Ce n'était qu'une seconde, mais ça m'a prouvé que je ne suis pas en train de m'effondrer. »",
-                        "app": "Cette seconde, c'est votre système qui se souvient de la sécurité. Chaque respiration comme celle-ci reprogramme ce que signifiait la pression."
-                    }
-                ],
-                "footer": "{{app_name}} reflète, ancre et restaure. Il complète la thérapie, ne la remplace jamais."
+  "home": {
+    "hero": {
+      "badge": "Pour les femmes qui en portent trop",
+      "title_main": "Vous avez été forte assez longtemps.",
+      "title_sub": "Maintenant, prenez le temps de vous poser avec {{app_name}}.",
+      "subtitle": "{{app_name}} entend ce que vous ne dites pas et sait pourquoi cela fait mal. Il écoute entre les lignes, valide avant d'analyser et vous ramène vers vous-même, avec douceur, intelligence et sans jugement.",
+      "cta": {
+        "join": "Commencez votre première réflexion",
+        "demo": "Voyez ce que ça fait"
+      },
+      "highlights": [
+        {
+          "title": "Valide avant d'analyser",
+          "body": "Chaque réflexion commence par la reconnaissance de ce que vous ressentez, pas de ce qu'il faut réparer."
+        },
+        {
+          "title": "Lit ce qui n'est pas dit",
+          "body": "Les pauses, le ton et la tension entrent dans la conversation pour que vous puissiez arrêter de trop expliquer."
+        },
+        {
+          "title": "Guide à votre rythme",
+          "body": "L'orientation arrive quand vous l'invitez, avec une pression faible et un pouvoir d'agir élevé."
+        },
+        {
+          "title": "Chiffré à tous les niveaux",
+          "body": "Une protection de bout en bout scelle chaque mot pour vous seule."
+        }
+      ],
+      "demo": {
+        "title": "UN ÉCHANGE SILENCIEUX",
+        "conversations": [
+          {
+            "user": "« Je garde tout le monde sur la bonne voie, mais ces derniers temps j'ai l'impression de tourner à vide. Dès que je ralentis, la culpabilité me frappe comme un coup de poing. »",
+            "app": "Cette culpabilité ressemble à une vieille règle : le repos doit se mériter. Et si ralentir n'était pas un échec mais une réparation ?"
+          },
+          {
+            "user": "« Même deux minutes dans la voiture me semblent impossibles. Mon cerveau traite ça de paresse avant même que je respire. »",
+            "app": "Cette voix vous a protégée en vous gardant en mouvement. Que signifierait la remercier puis la laisser se reposer le temps d'une respiration ?"
+          },
+          {
+            "user": "« Quand je l'ai fait, mes mains ont cessé de vibrer. Ce n'était qu'une seconde, mais ça m'a prouvé que je ne suis pas en train de m'effondrer. »",
+            "app": "Cette seconde, c'est votre système qui se souvient de la sécurité. Chaque respiration comme celle-ci reprogramme ce que signifiait la pression."
+          }
+        ],
+        "footer": "{{app_name}} reflète, ancre et restaure. Il complète la thérapie, ne la remplace jamais."
+      }
+    },
+    "features": {
+      "badge": "Ce que veulent vraiment les femmes",
+      "title": "Une écoute qui comprend enfin",
+      "subtitle": "{{app_name}} ne se précipite pas pour réparer ou analyser. Il écoute, valide et lit entre les lignes, voyant la femme derrière la performance avec une attention calme et curieuse.",
+      "items": [
+        {
+          "title": "Toujours dans la validation",
+          "body": "Chaque mot que vous partagez est accueilli avec curiosité, jamais avec correction. Vous êtes d'abord vue, puis soutenue avec douceur."
+        },
+        {
+          "title": "Lit ce qui n'est pas dit",
+          "body": "{{app_name}} capte le ton, les hésitations et le sous-texte, ces données émotionnelles sous vos mots, pour que vous puissiez respirer au lieu de vous justifier."
+        },
+        {
+          "title": "Accompagne avec douceur",
+          "body": "Il ne se précipite pas pour réparer. Il vous accompagne vers un éclairage qui ressemble à votre propre découverte."
+        }
+      ]
+    },
+    "quickLinks": {
+      "badge": "Commencer à explorer",
+      "title": "Choisissez votre prochaine étape",
+      "subtitle": "Lancez-vous dans une démo en direct ou parcourez notre bibliothèque de contenus localisés.",
+      "items": [
+        {
+          "title": "Découvrez la démo pour aidantes",
+          "body": "Parcourez une véritable session d'aidante à haut fonctionnement et voyez les diagnostics apparaître en temps réel.",
+          "action": "Ouvrir la démo",
+          "href": "/demo"
+        },
+        {
+          "title": "Parcourez la bibliothèque de contenus",
+          "body": "Guides, outils TCC et perspectives thérapeutiques en anglais, arabe et français.",
+          "action": "Explorer les articles",
+          "href": "/content"
+        }
+      ]
+    },
+    "testerInvite": {
+      "badge": "Rejoignez le groupe de testeuses",
+      "title": "Nous intégrons un petit groupe de testeuses avancées",
+      "description": "Si vous êtes enthousiaste à l'idée de façonner {{app_name}} de l'intérieur, candidatez au programme de test avancé et partagez directement vos retours avec l'équipe.",
+      "button": "Postuler pour devenir testeuse",
+      "disclaimer": "Places limitées · chaque candidature est examinée manuellement"
+    },
+    "howItWorks": {
+      "badge": "De la réflexion à une confiance tranquille",
+      "title": "Comment la clarté émotionnelle se déploie dans {{app_name}}",
+      "subtitle": "{{app_name}} vous aide à traduire ce qui semble chaotique en quelque chose qui a du sens, une étape calme à la fois.",
+      "steps": [
+        {
+          "stage": "Ancrer",
+          "title": "Commencer en sécurité, sans pression",
+          "body": "Chaque réflexion débute dans un espace contenant. Vous posez le ton et le rythme ; {{app_name}} vous rejoint simplement là."
+        },
+        {
+          "stage": "Réfléchir",
+          "title": "Être entendue sans devoir expliquer",
+          "body": "{{app_name}} reflète les nuances émotionnelles et la conscience du corps, écoutant en profondeur avant de proposer une direction."
+        },
+        {
+          "stage": "Reformuler",
+          "title": "Trouver du sens dans le chaos",
+          "body": "Des questions douces révèlent les schémas pour que la compassion puisse remplacer le contrôle."
+        },
+        {
+          "stage": "Intégrer",
+          "title": "Emporter ce calme dans votre vie",
+          "body": "Chaque session se conclut par un résumé succinct, vos éclairages émotionnels distillés en un langage actionnable."
+        }
+      ]
+    },
+    "why": {
+      "badge": "Au-delà des applis et des conseils",
+      "title": "Pourquoi {{app_name}} est unique",
+      "subtitle": "{{app_name}} n'est pas une application de santé mentale ou un chatbot de plus. C'est une intelligence empathique, une présence qui écoute comme un humain, protège comme un chiffrement et reflète comme un miroir thérapeutique.",
+      "items": [
+        {
+          "title": "Les journaux notent les mots. {{app_name}} reflète les significations.",
+          "body": "Il détecte les variations émotionnelles et met en lumière des thèmes que les outils de journalisation ordinaires ratent complètement."
+        },
+        {
+          "title": "Les coachs poussent. {{app_name}} fait une pause.",
+          "body": "Au lieu de recettes rapides ou de motivation externe, il vous aide à construire une sécurité intérieure et une meilleure compréhension de vous-même."
+        },
+        {
+          "title": "Les chatbots répondent. {{app_name}} résonne.",
+          "body": "Il interprète le ton, le rythme et le ressenti, en tenant votre expérience avec précision et soin."
+        }
+      ]
+    },
+    "security": {
+      "badge": "La sécurité avant tout",
+      "title": "Vos réflexions restent les vôtres",
+      "subtitle": "Chiffrement de bout en bout, conception zéro connaissance et stockage contrôlé par l'utilisatrice. Aucun minage de données, aucun entraînement sur vos émotions, juste une confidentialité intransigeante.",
+      "notice": "{{app_name}} n'est pas une thérapie ni un service de crise.",
+      "items": [
+        {
+          "title": "Chiffrement de bout en bout",
+          "body": "Chaque conversation est scellée sur votre appareil avant de bouger. Vous seule détenez les clés pour l'ouvrir."
+        },
+        {
+          "title": "Architecture zéro connaissance",
+          "body": "{{app_name}} ne peut ni lire, ni analyser, ni vendre vos réflexions. Vos émotions ne deviennent jamais la base de données de quelqu'un d'autre."
+        },
+        {
+          "title": "Vous décidez quand partager",
+          "body": "Mettez en pause la synchro, exportez ou effacez en un geste. Rien n'est partagé, sauvegardé ou transmis sans votre décision."
+        },
+        {
+          "title": "Sorties en douceur à tout moment",
+          "body": "Vous vous sentez plus en sécurité en vous éloignant ? Fermez le coffre et tout reste exactement là où vous l'avez laissé : calme, intact et toujours à vous."
+        }
+      ]
+    },
+    "pricing": {
+      "badge": "Simple, juste, transparent",
+      "popular": "Le plus populaire",
+      "title": "Des crédits qui s'adaptent à votre saison",
+      "subtitle": "Payez seulement lorsque {{app_name}} apporte de la clarté. Pas d'abonnement, pas de frais cachés, juste un espace réflexif quand vous en avez besoin.",
+      "plans": [
+        {
+          "id": "starter",
+          "popular": false,
+          "name": "Starter · 35 $",
+          "credits": "700 crédits",
+          "desc": "Pour un mois ciblé de travail intérieur ou une première exploration.",
+          "features": [
+            "Environ 175 messages guidés",
+            "Analyses actionnables et synthèses",
+            "Rapports prêts à l'export"
+          ]
+        },
+        {
+          "id": "regular",
+          "popular": true,
+          "name": "Regular · 75 $",
+          "credits": "1 500 crédits",
+          "desc": "Pensé pour une réflexion continue tout au long d'un mois chargé.",
+          "features": [
+            "Suivi des schémas et analyse des tendances",
+            "Diagnostics prêts pour les coachs",
+            "Bonus de 100 crédits inclus"
+          ]
+        },
+        {
+          "id": "premium",
+          "popular": false,
+          "name": "Premium · 150 $",
+          "credits": "3 000 crédits",
+          "desc": "Idéal pour les thérapeutes ou un travail de restructuration en profondeur.",
+          "features": [
+            "Diagnostics illimités",
+            "Options d'export professionnel",
+            "Bonus de 300 crédits et suivi des risques"
+          ]
+        }
+      ],
+      "footer": "Besoin d'une marge de manœuvre pour une équipe ou un partenaire ?",
+      "link": "[Demandez un plan sur mesure]"
+    },
+    "testimonials": {
+      "badge": "Approuvé par des fondatrices, des opératrices et des thérapeutes",
+      "title": "« C'est comme une stratège apaisée pour mon monde intérieur. »",
+      "items": [
+        {
+          "quote": "« {{app_name}} me montre exactement quelles boucles de pensée drainent mon énergie. J'apporte les synthèses en thérapie et nous passons directement à la stratégie. »",
+          "author": "Mira, cheffe de produit · offre Premium"
+        },
+        {
+          "quote": "« C'est le premier outil d'IA auquel je confie mes émotions. Le guide sur le chiffrement était plus clair que celui de ma banque. »",
+          "author": "Devon, fondatrice · offre Regular"
+        },
+        {
+          "quote": "« Les patientes arrivent avec des synthèses {{app_name}} et nous gagnons 20 minutes à chaque séance. La continuité reste serrée entre les visites. »",
+          "author": "Dr Léa Chen, psychologue"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prête à rencontrer votre version plus calme ?",
+      "subtitle": "Protégez vos réflexions, dévoilez des éclairages plus profonds et avancez avec clarté.",
+      "cta": "Réservez votre espace privé"
+    },
+    "about": {
+      "title": "Nous construisons une infrastructure émotionnelle lumineuse",
+      "subtitle": "{{app_name}} existe pour rendre la clarté émotionnelle accessible, privée et intelligente. Nous allions l'intelligence thérapeutique à une IA empathique, pour aider les femmes à mieux se comprendre et les professionnelles à mieux les accompagner."
+    }
+  },
+  "demo": {
+    "messages": [
+      {
+        "headline": "La poitrine ressemble à une mèche prête à brûler.",
+        "user": "Je ne sais pas vraiment quoi répondre. Tout le monde dit que je \"gère\", mais j'ai l'impression de traverser la semaine en somnambule. Je me lève, je fais les réunions, j'envoie les mails et pendant ce temps ma poitrine ressemble à une mèche presque consumée. Je n'arrive même pas à expliquer ce qui cloche exactement.",
+        "genericProductivity": "Essayez de découper vos tâches en actions plus petites et programmez des rappels dans votre agenda pour que rien ne vous échappe. Une fois la tâche terminée, cochez-la et offrez-vous une courte pause.",
+        "genericWellness": "Inspirez lentement sur quatre temps, expirez sur six. Repérez un point dans votre poitrine qui se détend ne serait-ce qu'un peu.",
+        "app": "On dirait que vous gardez tout en mouvement à l'extérieur tout en portant une forte pression à l'intérieur. Quand cette sensation de mèche dans la poitrine apparaît, que remarquez-vous autour de vous ou dans votre corps ?"
+      },
+      {
+        "headline": "À l'extérieur tout va bien, à l'intérieur je suis vide.",
+        "user": "En général rien de spectaculaire. Je suis assise en réunion à hocher la tête, ou je termine des présentations à minuit. À l'extérieur tout semble aller. À l'intérieur, c'est nerveux et creux, comme si j'attendais que quelqu'un remarque que ça ne va pas, mais s'il le faisait je me figerais parce que je ne saurais pas comment l'expliquer.",
+        "genericProductivity": "Envisagez de partager un point d'avancement avec votre manager ou une collègue pour aligner les attentes. Planifier un récapitulatif quotidien peut vous aider à exprimer la pression avant qu'elle ne monte.",
+        "genericWellness": "Posez une main sur votre poitrine et prenez une respiration douce. Laissez vos épaules s'abaisser légèrement à l'expiration.",
+        "app": "Cela semble tellement solitaire. Désirer qu'on vous remarque sans avoir les mots prêts. Votre corps paraît en alerte même dans les moments calmes. Depuis combien de temps portez-vous ce vide agité ?"
+      },
+      {
+        "headline": "Je me suis portée volontaire et je ne me suis jamais arrêtée.",
+        "user": "Je crois que tout a commencé lorsque maman a été opérée l'hiver dernier. Je me suis proposée pour tout organiser pendant quelques mois. Presque un an plus tard, c'est encore moi qui maintiens tout en place à la maison et au travail. Je me répète que c'est temporaire, mais rien ne s'allège.",
+        "genericProductivity": "Essayez de créer un plan de délégation pour que les tâches puissent être redistribuées progressivement. Un tableau partagé ou un tableau de projet pourrait aider les autres à prendre le relais.",
+        "genericWellness": "Vous portez énormément. Notez une tâche que quelqu'un d'autre pourrait faire, même si vous ne la déléguez pas encore.",
+        "app": "Vous avez pris tant de choses en charge pour tout le monde, et cela ne s'est jamais vraiment arrêté. Pas étonnant que votre système soit fatigué. Que se passe-t-il en vous quand vous imaginez ralentir certaines assiettes, ne serait-ce qu'une minute ?"
+      },
+      {
+        "headline": "Dire oui garde tout le monde calme.",
+        "user": "Si je laisse entendre que je ralentis, tout le monde me regarde comme si j'avais le plan maître. Mes frères et sœurs me demandent des nouvelles, mon équipe veut savoir si j'ai validé. C'est plus simple de continuer à dire oui que de sentir la panique dans la pièce quand je fais une pause.",
+        "genericProductivity": "Entraînez-vous à une communication assertive. Essayez des phrases comme « Je regarderai ça demain » pour gérer les attentes sans avoir l'impression de décevoir.",
+        "genericWellness": "Avant de répondre, faites une pause et sentez vos pieds sur le sol. Parlez quand le moment vous semble juste.",
+        "app": "Rester aux commandes semble le moyen le plus rapide de garder tout le monde calme, même si cela vous épuise. Quand vous donnez ce oui immédiat, quels signaux apparaissent ensuite dans votre corps ?"
+      },
+      {
+        "headline": "Listes cachées, défilement jusqu'à en avoir les yeux qui brûlent.",
+        "user": "Je m'entends soupirer tout au long de la journée. Je garde des listes cachées dans mon carnet pour que mon équipe ne me voie pas paniquer. Le soir, je fais défiler jusqu'à en avoir les yeux qui brûlent, parce que si je pose le téléphone le silence devient trop fort et je repense à tout ce que j'ai manqué.",
+        "genericProductivity": "Regroupez vos tâches et utilisez des minuteurs de concentration pour pouvoir décrocher plus tôt. Essayez un filtre anti-lumière bleue ou définissez un temps « sans téléphone » avant de dormir.",
+        "genericWellness": "Ce soir, réglez un minuteur court. Lorsqu'il sonne, posez votre téléphone et nommez trois sons que vous entendez.",
+        "app": "Ces listes cachées et ce défilement tardif semblent des manières de baisser le volume de ce silence bruyant. Quand le silence s'invite, quelles sensations ou quels souvenirs surgissent ?"
+      },
+      {
+        "headline": "Les promesses envers moi-même s'effritent.",
+        "user": "Le silence me rappelle les promesses que je me suis faites. Peindre plus. Rappeler ma sœur. Dormir huit heures. À la place, je relave de la vaisselle ou je revérifie les agendas. Puis je culpabilise d'avoir même envie de repos quand des gens comptent sur moi.",
+        "genericProductivity": "Bloquez du temps dans votre agenda pour la création afin que ce soit non négociable. Traitez-le comme n'importe quel rendez-vous important.",
+        "genericWellness": "Avant de dormir, écrivez-vous une phrase bienveillante. Lisez-la lentement et remarquez vos épaules se détendre un peu.",
+        "app": "Il y a un mélange si délicat ici : vouloir un simple soin pour vous et ressentir tout de suite de la culpabilité à l'idée même de l'envisager. Cette culpabilité semble lourde. Que fait votre corps quand vous la remarquez ?"
+      },
+      {
+        "headline": "Mes épaules s'enflamment, ma gorge se bloque.",
+        "user": "La tension remonte dans mes épaules et jusque dans ma gorge. Je frotte l'arrière de mon cou si fort que ça pique, et je mâchonne l'intérieur de ma joue jusqu'à sentir un goût métallique. C'est comme si mon corps se préparait à décevoir quelqu'un.",
+        "genericProductivity": "Lorsque vous remarquez la tension, faites une pause et étirez-vous ou utilisez une application de relaxation pour détendre ces muscles avant de reprendre.",
+        "genericWellness": "Prenez une respiration lente. À l'expiration, murmurez « adoucis » et laissez vos épaules tomber légèrement.",
+        "app": "Cette crispation montre à quel point vous êtes prête à encaisser une réaction, même quand personne n'est réellement fâché. Vous souvenez-vous d'un moment récent où cette tension a pris le dessus sur le reste de votre journée ?"
+      },
+      {
+        "headline": "Mon jour de repos est devenu un autre service.",
+        "user": "Le mois dernier, j'ai essayé de prendre mon vendredi. J'ai passé la matinée à vérifier les mails « au cas où », puis j'ai réorganisé le garde-manger, puis j'ai rangé le garage. Le soir, j'étais plus épuisée que si j'avais travaillé.",
+        "genericProductivity": "Planifiez le temps non structuré comme n'importe quel rendez-vous. Ajoutez des « blocs de repos » à votre agenda pour vous rappeler de ne pas les remplir.",
+        "genericWellness": "Avant votre prochain jour de repos, choisissez une petite chose reposante que vous aimeriez faire. Gardez-la simple et facile à commencer.",
+        "app": "Ce jour de repos s'est transformé en une nouvelle garde, pleine de contrôle et de tâches. Pas étonnant que votre corps n'ait pas eu le repos qu'il réclamait. Si le repos semblait plus sûr, de quoi auriez-vous eu le plus besoin ce jour-là ?"
+      },
+      {
+        "headline": "J'ai craqué, puis j'ai voulu rattraper.",
+        "user": "Oui. Dimanche dernier, j'ai essayé de faire une sieste pendant que la lessive tournait, et ma fille est entrée pour savoir où était son uniforme. J'ai craqué, puis j'ai passé le reste de la soirée à tout replier pour que personne ne pense que je me relâchais.",
+        "genericProductivity": "Créez une liste de tâches partagée pour que tout le monde sache où se trouvent les choses. En documentant le système, vous n'aurez plus la pression de tout refaire après une erreur.",
+        "genericWellness": "Après un moment tendu, expirez lentement et dites-vous : « C'est normal de repartir de zéro maintenant. »",
+        "app": "Craquer puis surcompenser est épuisant et solitaire, comme si vous deviez prouver la gentillesse encore une fois. De quoi cette part de vous avait-elle besoin à cet instant, en dehors de tout replier ?"
+      },
+      {
+        "headline": "Je souhaite une fièvre juste pour me reposer.",
+        "user": "Une part de moi aimerait se réveiller avec de la fièvre pour pouvoir rester au lit sans discussion. Puis je me sens horrible rien que de penser ça parce que d'autres gèrent de vraies urgences.",
+        "genericProductivity": "Tenez la liste de tout ce que vous avez accompli récemment. Voir la preuve de vos efforts peut diminuer la culpabilité que vous ressentez à faire des pauses.",
+        "genericWellness": "Quand cette pensée arrive, posez une main sur votre cœur et dites : « C'est normal d'avoir besoin de repos. »",
+        "app": "Ce souhait montre à quel point votre corps implore la permission, et comme vous vous jugez vite d'en avoir besoin. Une voix dit que le repos doit être justifié par la maladie. Que cherche-t-elle à protéger, selon vous ?"
+      },
+      {
+        "headline": "La voix dit : ne sois pas dramatique.",
+        "user": "Je me vois sans cesse assise dans la voiture une minute avant d'entrer, juste pour respirer. Mais j'entends immédiatement : « ne fais pas ta dramatique, le dîner ne va pas se faire tout seul. » Je ne sais pas comment contredire cette voix sans me sentir paresseuse.",
+        "genericProductivity": "Utilisez des affirmations motivationnelles comme « Je mérite le repos en travaillant avec discernement ». Répétez-les avant de sortir de la voiture pour changer d'état d'esprit.",
+        "genericWellness": "Quand cette voix apparaît, prenez une respiration calme et rappelez-vous : « C'est ok de faire une pause une minute. »",
+        "app": "Cette voix semble stricte et familière, peut-être une vieille règle qui exige de prouver votre valeur en étant toujours active. Si vous pouviez lui faire un signe doux, qu'est-ce qu'une autre part plus calme dirait de cette pause dans la voiture ?"
+      },
+      {
+        "headline": "Et si j'échouais à me détendre ?",
+        "user": "Peut-être qu'elle dirait que ce n'est que deux minutes et que personne ne le remarquera. Je pourrais rester là, téléphone éteint, sentir le volant et vérifier mes épaules. J'ai peur d'échouer aussi à me détendre, ce qui sonne ridicule même en le disant.",
+        "genericProductivity": "Programmez un rappel quotidien sur votre téléphone et suivez si vous prenez la pause. Voir la série se construire peut vous garder motivée.",
+        "genericWellness": "Réglez un minuteur de deux minutes. Fermez les yeux et répétez un mot calme, comme « stable », en respirant.",
+        "app": "Ce n'est pas ridicule du tout. Cela montre à quel point le repos est devenu une autre performance. Rester deux minutes au calme dans la voiture, juste pour remarquer vos épaules, peut être une petite expérience, pas un test. Et si vous traitiez cette pause comme un cadeau que vous êtes autorisée à recevoir, même si cela semble inhabituel ?"
+      },
+      {
+        "headline": "La voix qui lève les yeux au ciel est forte.",
+        "user": "Même en entendant ça, une voix lève les yeux au ciel. Elle dit : « deux minutes ne rattraperont pas des années de retard, tu dramatises. » Cette voix est plus forte que tout le reste.",
+        "genericProductivity": "Reformulez la pensée rapidement. Rappelez-vous que les petits pas s'additionnent. Répétez « chaque pause est un progrès » dès que le doute arrive.",
+        "genericWellness": "Quand cette critique intérieure parle, expirez lentement et dites : « Chaque petite pause compte. »",
+        "app": "Ce roulement des yeux est tellement incisif, et il vous a probablement gardée en mouvement pendant des années. Si nous le remerciions pour tout ce travail, quel minuscule signe vous montrerait qu'il est plus sûr de relâcher, même un instant ?"
+      },
+      {
+        "headline": "Peut-être que mes mains cesseraient de vibrer.",
+        "user": "Peut-être que mes mains cesseraient de vibrer. Le week-end dernier, j'ai lâché une casserole et je suis restée là à trembler. Si elles pouvaient reposer sur mes genoux sans tressauter, ce serait la preuve que je ne suis pas sur le point de perdre le contrôle.",
+        "genericProductivity": "Si vos mains tremblent, pressez une balle anti-stress ou utilisez des outils d'ancrage pour vous recentrer rapidement.",
+        "genericWellness": "Posez vos deux mains sur vos genoux. Prenez une grande inspiration et sentez-les devenir un peu plus lourdes en expirant.",
+        "app": "Des mains posées sans vibration ressemblent à la permission que vous cherchez. Qui pourrait s'asseoir à vos côtés dans cette pause ou protéger cet espace pour qu'il ne se remplisse pas aussitôt ?"
+      },
+      {
+        "headline": "Ma sœur a proposé d'aider, j'ai dit non.",
+        "user": "Ma sœur avait proposé de gérer les dîners du jeudi mais je lui ai dit que je m'en chargeais. Le demander maintenant me paraît tellement tard, comme si j'avouais que je n'ai jamais tenu la barre.",
+        "genericProductivity": "Quand quelqu'un propose de l'aide, préparez une checklist rapide qu'il pourra suivre. Déléguer avec des consignes claires permet de garder le cap.",
+        "genericWellness": "Avant d'écrire à votre sœur, prenez une respiration régulière. Imaginez-la dire oui et laissez cette pensée adoucir votre poitrine.",
+        "app": "L'admettre maintenant peut aussi être une façon de lui confier la vérité. Seriez-vous d'accord pour l'essayer ici, peut-être en rédigeant le message pendant que nous respirons, et en observant la réaction de votre corps ?"
+      },
+      {
+        "headline": "La sensation de mèche s'est adoucie.",
+        "user": "Pendant que vous parliez, j'ai laissé mes mains reposer sur mes genoux et j'ai tapé le message pour ma sœur sans l'envoyer. La sensation de mèche n'a pas disparu, mais elle s'est adoucie une seconde. Peut-être que deux minutes dans la voiture ne feront pas tout s'effondrer.",
+        "genericProductivity": "Utilisez un rappel numérique pour déclencher la pause chaque jour. Associez-le à une checklist pour mesurer vos progrès.",
+        "genericWellness": "Prenez une respiration et chuchotez un mot apaisant, comme « adoucis ». Remarquez un endroit qui se sent plus léger après.",
+        "app": "Ce frémissement qui s'adoucit montre que votre corps peut réagir même à une seule respiration. Si vous honoriez cette pause après le travail, qu'est-ce qui pourrait vous le rappeler et qui pourrait porter une petite part pendant que vous la prenez ?"
+      },
+      {
+        "headline": "Dégivrage de deux minutes, message rédigé.",
+        "user": "Je peux programmer un petit rappel qui s'affiche avant de me garer. Je vais l'appeler mon \"dégivrage de deux minutes\". Et je vais envoyer un message à ma sœur pour qu'elle prenne le dîner de jeudi prochain. Le dire tremble un peu, mais j'ai l'impression que l'air revient.",
+        "genericProductivity": "Célébrez cette petite victoire en la notant dans un suivi d'habitudes. Le suivi régulier entretient l'élan.",
+        "genericWellness": "Après avoir envoyé le message, prenez une inspiration et une expiration lentes. Dites-vous doucement : « Cet espace est le mien pour respirer. »",
+        "app": "Vous venez de vous offrir la permission en temps réel et d'aligner du soutien pour la protéger. Remarquez la sensation dans votre poitrine et vos épaules quand vous imaginez ce rappel et votre sœur qui prend le relais. Qu'avez-vous envie de garder de ce moment ?"
+      },
+      {
+        "headline": "Des mains plus lourdes, sans bourdonnement.",
+        "user": "Il y a encore une fatigue autour des côtes, mais c'est plus stable. Je vais envoyer le message quand on aura fini et attendre réellement sa réponse au lieu de combler le vide. Je garde la sensation de mes mains plus lourdes, sans bourdonnement.",
+        "genericProductivity": "Notez le résultat dans un journal de réflexion pour observer les tendances dans le temps. La constance renforcera l'habitude.",
+        "genericWellness": "Chaque soir, posez votre paume sur la zone qui se sent calme et prenez une longue respiration silencieuse avant de dormir.",
+        "app": "Cette fatigue plus stable et ces mains plus lourdes montrent que votre corps croit que cette pause est réelle. Continuez de vérifier ce rappel « dégivrage » ce soir et laissez l'aide que vous avez invitée rester près de vous."
+      }
+    ],
+    "meta": {
+      "badge": "Bilan du réseau de soutien · 37 messages · ~13 minutes",
+      "title": "Quand une aidante surperformante relâche enfin la pression",
+      "description": "Cet échange en direct est partagé avec le consentement d'une testeuse qui a collaboré avec {{app_name}} alors qu'elle portait la logistique familiale après l'opération de sa mère. Chaque message ci-dessous est réel. À côté, vous verrez comment un bot de productivité générique ou une application de santé mentale générique pourrait répondre, et comment {{app_name}} a réellement répondu."
+    },
+    "conversation": {
+      "badge": "Déroulé de la conversation",
+      "title": "Chaque message, trois perspectives",
+      "description": "Les réponses génériques sont des composites illustratifs. Les réponses de {{app_name}} sont citées mot pour mot d'une session réelle (testeuse).",
+      "userReflection": "Réflexion de l'utilisatrice",
+      "appVerbatim": "{{app_name}} (verbatim)",
+      "vs": "vs",
+      "vsLabel": "Comment des outils génériques répondraient",
+      "genericProductivity": "Bot de productivité générique",
+      "genericWellness": "Application de santé mentale générique"
+    },
+    "highlights": {
+      "badge": "Moments forts de la session",
+      "title": "Transitions clés captées en temps réel",
+      "items": [
+        {
+          "title": "Des règles silencieuses mises au jour",
+          "body": "{{app_name}} nomme les règles qui gouvernent : le repos doit se mériter par la crise et ne pas ajouter à la charge des autres, afin que l'utilisatrice comprenne pourquoi chaque pause semblait dangereuse."
+        },
+        {
+          "title": "Rituel de micro-repos protégé",
+          "body": "Le dégivrage de deux minutes dans la voiture est ancré aux signaux somatiques (mains qui bourdonnent → mains plus lourdes) pour que le corps fasse confiance à l’expérience."
+        },
+        {
+          "title": "Entraînement à la délégation accompli",
+          "body": "Pendant la session, elle rédige le message confiant le dîner du jeudi à sa sœur, s'entraîne à l'envoyer et nomme le soutien qu'elle acceptera."
+        }
+      ]
+    },
+    "chart": {
+      "analytics": {
+        "header": {
+          "title": "Indicateurs thérapeutiques dans le temps",
+          "subtitle": "Chaque point représente un message de l'utilisatrice et son analyse correspondante."
+        },
+        "metrics": {
+          "emotional_cognitive": {
+            "title": "Tendances émotionnelles et cognitives",
+            "badge": "Équilibrée",
+            "rows": {
+              "emotional_intensity": {
+                "label": "Intensité émotionnelle",
+                "value": "↓ 60 % (baisse régulière)"
+              },
+              "cognitive_load": {
+                "label": "Charge cognitive",
+                "value": "↓ 65 % (réduction nette)"
+              },
+              "overall_regulation": {
+                "label": "Régulation globale",
+                "value": "Améliorée"
+              }
             }
+          },
+          "readiness": {
+            "title": "Préparation thérapeutique",
+            "badge": "Améliorée",
+            "rows": {
+              "engaged": {
+                "label": "Engagée",
+                "value": "68 % de la séance"
+              },
+              "ambivalent": {
+                "label": "Ambivalente",
+                "value": "32 % de la séance"
+              },
+              "final_state": {
+                "label": "État final",
+                "value": "Totalement engagée"
+              }
+            }
+          },
+          "integration": {
+            "title": "Intégration des aperçus",
+            "badge": "9 moments",
+            "rows": {
+              "early_insights": {
+                "label": "Micro-aperçus précoces",
+                "value": "3 réflexions clés"
+              },
+              "mid_breakthroughs": {
+                "label": "Déclics en milieu de session",
+                "value": "4 intégrations"
+              },
+              "sustained_insight": {
+                "label": "Aperçus consolidés",
+                "value": "2 transformations profondes"
+              }
+            }
+          }
         },
-        "features": {
-            "badge": "Ce que veulent vraiment les femmes",
-            "title": "Une écoute qui comprend enfin",
-            "subtitle": "{{app_name}} ne se précipite pas pour réparer ou analyser. Il écoute, valide et lit entre les lignes, voyant la femme derrière la performance avec une attention calme et curieuse.",
-            "items": [
-                {
-                    "title": "Toujours dans la validation",
-                    "body": "Chaque mot que vous partagez est accueilli avec curiosité, jamais avec correction. Vous êtes d'abord vue, puis soutenue avec douceur."
-                },
-                {
-                    "title": "Lit ce qui n'est pas dit",
-                    "body": "{{app_name}} capte le ton, les hésitations et le sous-texte, ces données émotionnelles sous vos mots, pour que vous puissiez respirer au lieu de vous justifier."
-                },
-                {
-                    "title": "Accompagne avec douceur",
-                    "body": "Il ne se précipite pas pour réparer. Il vous accompagne vers un éclairage qui ressemble à votre propre découverte."
-                }
-            ]
+        "insights": {
+          "title": "Principales observations de la progression émotionnelle",
+          "list": [
+            "La disponibilité est passée d'ambivalente à engagée dès l'échange 6, signe d'une confiance et d'une ouverture croissantes.",
+            "La charge cognitive a nettement diminué, révélant moins de rumination et une meilleure autorégulation.",
+            "L'intensité émotionnelle s'est adoucie au fil des échanges, suggérant une stabilisation et davantage de containment.",
+            "Les moments d'intégration se multiplient vers la fin, montrant une réflexion soutenue et l'appropriation des insights."
+          ]
+        }
+      },
+      "header": {
+        "badge": "Analyses de session",
+        "title": "Progrès thérapeutiques tout au long de la session",
+        "subtitle": "Chaque point représente un message de l'utilisatrice et son analyse émotionnelle."
+      },
+      "axes": {
+        "x_label": "Échange",
+        "y_label": "Niveau"
+      },
+      "tooltip": {
+        "label_prefix": "Échange"
+      },
+      "legend": {
+        "emotional_intensity": "Intensité émotionnelle",
+        "cognitive_load": "Charge cognitive",
+        "readiness": "Préparation thérapeutique",
+        "integration": "Paliers d'insight"
+      },
+      "chart_config": {
+        "emotionalIntensity": "Intensité émotionnelle",
+        "cognitiveLoad": "Charge cognitive",
+        "readiness": "Préparation thérapeutique",
+        "integration": "Paliers d'insight"
+      }
+    },
+    "diagnostics": {
+      "badge": "Diagnostics distillés",
+      "title": "Deux regards sur la même conversation",
+      "description": "Parcourez les onglets pour voir les diagnostics complets exactement tels que l'app les restitue.",
+      "labels": {
+        "rigidity": {
+          "rigid": "Règle rigide",
+          "moderate": "Règle modérément rigide",
+          "flexible": "Règle assouplie"
         },
-        "quickLinks": {
-            "badge": "Commencer à explorer",
-            "title": "Choisissez votre prochaine étape",
-            "subtitle": "Lancez-vous dans une démo en direct ou parcourez notre bibliothèque de contenus localisés.",
-            "items": [
-                {
-                    "title": "Découvrez la démo pour aidantes",
-                    "body": "Parcourez une véritable session d'aidante à haut fonctionnement et voyez les diagnostics apparaître en temps réel.",
-                    "action": "Ouvrir la démo",
-                    "href": "/demo"
-                },
-                {
-                    "title": "Parcourez la bibliothèque de contenus",
-                    "body": "Guides, outils TCC et perspectives thérapeutiques en anglais, arabe et français.",
-                    "action": "Explorer les articles",
-                    "href": "/content"
-                }
-            ]
+        "confidence": {
+          "high": "Grande confiance",
+          "medium": "Confiance moyenne",
+          "low": "Faible confiance"
+        }
+      },
+      "confidenceValue": "Confiance : {{value}}",
+      "basic": {
+        "title": "Diagnostic de base",
+        "now": {
+          "title": "Ce qui se passe en ce moment",
+          "points": [
+            "Une charge continue de soin et de travail cohabite avec une tension chronique et une façade maîtrisée, créant une solitude silencieuse derrière sa compétence.",
+            "Elle est prise dans un conflit interne : elle réclame du repos tandis qu'un critique intérieur exige de continuer, déclenchant culpabilité et sur-responsabilité.",
+            "Les micro-expériences — pause dans l'allée ou texto à sa sœur — montrent qu'un soin doux et un soutien partagé allègent déjà la charge."
+          ]
         },
-        "testerInvite": {
-            "badge": "Rejoignez le groupe de testeuses",
-            "title": "Nous intégrons un petit groupe de testeuses avancées",
-            "description": "Si vous êtes enthousiaste à l'idée de façonner {{app_name}} de l'intérieur, candidatez au programme de test avancé et partagez directement vos retours avec l'équipe.",
-            "button": "Postuler pour devenir testeuse",
-            "disclaimer": "Places limitées · chaque candidature est examinée manuellement"
-        },
-        "howItWorks": {
-            "badge": "De la réflexion à une confiance tranquille",
-            "title": "Comment la clarté émotionnelle se déploie dans {{app_name}}",
-            "subtitle": "{{app_name}} vous aide à traduire ce qui semble chaotique en quelque chose qui a du sens, une étape calme à la fois.",
-            "steps": [
-                {
-                    "stage": "Ancrer",
-                    "title": "Commencer en sécurité, sans pression",
-                    "body": "Chaque réflexion débute dans un espace contenant. Vous posez le ton et le rythme ; {{app_name}} vous rejoint simplement là."
-                },
-                {
-                    "stage": "Réfléchir",
-                    "title": "Être entendue sans devoir expliquer",
-                    "body": "{{app_name}} reflète les nuances émotionnelles et la conscience du corps, écoutant en profondeur avant de proposer une direction."
-                },
-                {
-                    "stage": "Reformuler",
-                    "title": "Trouver du sens dans le chaos",
-                    "body": "Des questions douces révèlent les schémas pour que la compassion puisse remplacer le contrôle."
-                },
-                {
-                    "stage": "Intégrer",
-                    "title": "Emporter ce calme dans votre vie",
-                    "body": "Chaque session se conclut par un résumé succinct, vos éclairages émotionnels distillés en un langage actionnable."
-                }
-            ]
+        "rules": {
+          "title": "Règles cachées qui maintiennent le poids",
+          "items": [
+            {
+              "title": "Le repos doit être mérité par la crise",
+              "rigidity": "rigid",
+              "confidence": "high",
+              "body": "Cette règle la convainc qu'elle ne peut ralentir que lorsque tout s'effondre. Le perfectionnisme et la rumination maintiennent alors le système en surchauffe."
+            },
+            {
+              "title": "Ne pas ajouter à la charge des autres",
+              "rigidity": "moderate",
+              "confidence": "high",
+              "body": "La règle fait taire ses besoins pour protéger les autres, rendant chaque demande d'aide périlleuse et augmentant la pression de performance."
+            }
+          ]
         },
         "why": {
-            "badge": "Au-delà des applis et des conseils",
-            "title": "Pourquoi {{app_name}} est unique",
-            "subtitle": "{{app_name}} n'est pas une application de santé mentale ou un chatbot de plus. C'est une intelligence empathique, une présence qui écoute comme un humain, protège comme un chiffrement et reflète comme un miroir thérapeutique.",
-            "items": [
-                {
-                    "title": "Les journaux notent les mots. {{app_name}} reflète les significations.",
-                    "body": "Il détecte les variations émotionnelles et met en lumière des thèmes que les outils de journalisation ordinaires ratent complètement."
-                },
-                {
-                    "title": "Les coachs poussent. {{app_name}} fait une pause.",
-                    "body": "Au lieu de recettes rapides ou de motivation externe, il vous aide à construire une sécurité intérieure et une meilleure compréhension de vous-même."
-                },
-                {
-                    "title": "Les chatbots répondent. {{app_name}} résonne.",
-                    "body": "Il interprète le ton, le rythme et le ressenti, en tenant votre expérience avec précision et soin."
-                }
-            ]
+          "title": "Pourquoi c’est si lourd",
+          "item": {
+            "title": "Le poids de la charge invisible",
+            "body": "Soin + travail + culpabilité forment la boucle culpabilité → tension → évitement du repos → épuisement accru. Le corps reste en alerte même quand rien de grave ne se passe."
+          }
         },
-        "security": {
-            "badge": "La sécurité avant tout",
-            "title": "Vos réflexions restent les vôtres",
-            "subtitle": "Chiffrement de bout en bout, conception zéro connaissance et stockage contrôlé par l'utilisatrice. Aucun minage de données, aucun entraînement sur vos émotions, juste une confidentialité intransigeante.",
-            "notice": "{{app_name}} n'est pas une thérapie ni un service de crise.",
-            "items": [
-                {
-                    "title": "Chiffrement de bout en bout",
-                    "body": "Chaque conversation est scellée sur votre appareil avant de bouger. Vous seule détenez les clés pour l'ouvrir."
-                },
-                {
-                    "title": "Architecture zéro connaissance",
-                    "body": "{{app_name}} ne peut ni lire, ni analyser, ni vendre vos réflexions. Vos émotions ne deviennent jamais la base de données de quelqu'un d'autre."
-                },
-                {
-                    "title": "Vous décidez quand partager",
-                    "body": "Mettez en pause la synchro, exportez ou effacez en un geste. Rien n'est partagé, sauvegardé ou transmis sans votre décision."
-                },
-                {
-                    "title": "Sorties en douceur à tout moment",
-                    "body": "Vous vous sentez plus en sécurité en vous éloignant ? Fermez le coffre et tout reste exactement là où vous l'avez laissé : calme, intact et toujours à vous."
-                }
-            ]
-        },
-        "pricing": {
-            "badge": "Simple, juste, transparent",
-            "popular": "Le plus populaire",
-            "title": "Des crédits qui s'adaptent à votre saison",
-            "subtitle": "Payez seulement lorsque {{app_name}} apporte de la clarté. Pas d'abonnement, pas de frais cachés, juste un espace réflexif quand vous en avez besoin.",
-            "plans": [
-                {
-                    "id": "starter",
-                    "popular": false,
-                    "name": "Starter · 35 $",
-                    "credits": "700 crédits",
-                    "desc": "Pour un mois ciblé de travail intérieur ou une première exploration.",
-                    "features": [
-                        "Environ 175 messages guidés",
-                        "Analyses actionnables et synthèses",
-                        "Rapports prêts à l'export"
-                    ]
-                },
-                {
-                    "id": "regular",
-                    "popular": true,
-                    "name": "Regular · 75 $",
-                    "credits": "1 500 crédits",
-                    "desc": "Pensé pour une réflexion continue tout au long d'un mois chargé.",
-                    "features": [
-                        "Suivi des schémas et analyse des tendances",
-                        "Diagnostics prêts pour les coachs",
-                        "Bonus de 100 crédits inclus"
-                    ]
-                },
-                {
-                    "id": "premium",
-                    "popular": false,
-                    "name": "Premium · 150 $",
-                    "credits": "3 000 crédits",
-                    "desc": "Idéal pour les thérapeutes ou un travail de restructuration en profondeur.",
-                    "features": [
-                        "Diagnostics illimités",
-                        "Options d'export professionnel",
-                        "Bonus de 300 crédits et suivi des risques"
-                    ]
-                }
-            ],
-            "footer": "Besoin d'une marge de manœuvre pour une équipe ou un partenaire ?",
-            "link": "[Demandez un plan sur mesure]"
-        },
-        "testimonials": {
-            "badge": "Approuvé par des fondatrices, des opératrices et des thérapeutes",
-            "title": "« C'est comme une stratège apaisée pour mon monde intérieur. »",
-            "items": [
-                {
-                    "quote": "« {{app_name}} me montre exactement quelles boucles de pensée drainent mon énergie. J'apporte les synthèses en thérapie et nous passons directement à la stratégie. »",
-                    "author": "Mira, cheffe de produit · offre Premium"
-                },
-                {
-                    "quote": "« C'est le premier outil d'IA auquel je confie mes émotions. Le guide sur le chiffrement était plus clair que celui de ma banque. »",
-                    "author": "Devon, fondatrice · offre Regular"
-                },
-                {
-                    "quote": "« Les patientes arrivent avec des synthèses {{app_name}} et nous gagnons 20 minutes à chaque séance. La continuité reste serrée entre les visites. »",
-                    "author": "Dr Léa Chen, psychologue"
-                }
-            ]
-        },
-        "cta": {
-            "title": "Prête à rencontrer votre version plus calme ?",
-            "subtitle": "Protégez vos réflexions, dévoilez des éclairages plus profonds et avancez avec clarté.",
-            "cta": "Réservez votre espace privé"
-        },
-        "about": {
-            "title": "Nous construisons une infrastructure émotionnelle lumineuse",
-            "subtitle": "{{app_name}} existe pour rendre la clarté émotionnelle accessible, privée et intelligente. Nous allions l'intelligence thérapeutique à une IA empathique, pour aider les femmes à mieux se comprendre et les professionnelles à mieux les accompagner."
-        }
-    },
-    "demo": {
-        "messages": [
-            {
-                "headline": "La poitrine ressemble à une mèche prête à brûler.",
-                "user": "Je ne sais pas vraiment quoi répondre. Tout le monde dit que je \"gère\", mais j'ai l'impression de traverser la semaine en somnambule. Je me lève, je fais les réunions, j'envoie les mails et pendant ce temps ma poitrine ressemble à une mèche presque consumée. Je n'arrive même pas à expliquer ce qui cloche exactement.",
-                "genericProductivity": "Essayez de découper vos tâches en actions plus petites et programmez des rappels dans votre agenda pour que rien ne vous échappe. Une fois la tâche terminée, cochez-la et offrez-vous une courte pause.",
-                "genericWellness": "Inspirez lentement sur quatre temps, expirez sur six. Repérez un point dans votre poitrine qui se détend ne serait-ce qu'un peu.",
-                "app": "On dirait que vous gardez tout en mouvement à l'extérieur tout en portant une forte pression à l'intérieur. Quand cette sensation de mèche dans la poitrine apparaît, que remarquez-vous autour de vous ou dans votre corps ?"
-            },
-            {
-                "headline": "À l'extérieur tout va bien, à l'intérieur je suis vide.",
-                "user": "En général rien de spectaculaire. Je suis assise en réunion à hocher la tête, ou je termine des présentations à minuit. À l'extérieur tout semble aller. À l'intérieur, c'est nerveux et creux, comme si j'attendais que quelqu'un remarque que ça ne va pas, mais s'il le faisait je me figerais parce que je ne saurais pas comment l'expliquer.",
-                "genericProductivity": "Envisagez de partager un point d'avancement avec votre manager ou une collègue pour aligner les attentes. Planifier un récapitulatif quotidien peut vous aider à exprimer la pression avant qu'elle ne monte.",
-                "genericWellness": "Posez une main sur votre poitrine et prenez une respiration douce. Laissez vos épaules s'abaisser légèrement à l'expiration.",
-                "app": "Cela semble tellement solitaire. Désirer qu'on vous remarque sans avoir les mots prêts. Votre corps paraît en alerte même dans les moments calmes. Depuis combien de temps portez-vous ce vide agité ?"
-            },
-            {
-                "headline": "Je me suis portée volontaire et je ne me suis jamais arrêtée.",
-                "user": "Je crois que tout a commencé lorsque maman a été opérée l'hiver dernier. Je me suis proposée pour tout organiser pendant quelques mois. Presque un an plus tard, c'est encore moi qui maintiens tout en place à la maison et au travail. Je me répète que c'est temporaire, mais rien ne s'allège.",
-                "genericProductivity": "Essayez de créer un plan de délégation pour que les tâches puissent être redistribuées progressivement. Un tableau partagé ou un tableau de projet pourrait aider les autres à prendre le relais.",
-                "genericWellness": "Vous portez énormément. Notez une tâche que quelqu'un d'autre pourrait faire, même si vous ne la déléguez pas encore.",
-                "app": "Vous avez pris tant de choses en charge pour tout le monde, et cela ne s'est jamais vraiment arrêté. Pas étonnant que votre système soit fatigué. Que se passe-t-il en vous quand vous imaginez ralentir certaines assiettes, ne serait-ce qu'une minute ?"
-            },
-            {
-                "headline": "Dire oui garde tout le monde calme.",
-                "user": "Si je laisse entendre que je ralentis, tout le monde me regarde comme si j'avais le plan maître. Mes frères et sœurs me demandent des nouvelles, mon équipe veut savoir si j'ai validé. C'est plus simple de continuer à dire oui que de sentir la panique dans la pièce quand je fais une pause.",
-                "genericProductivity": "Entraînez-vous à une communication assertive. Essayez des phrases comme « Je regarderai ça demain » pour gérer les attentes sans avoir l'impression de décevoir.",
-                "genericWellness": "Avant de répondre, faites une pause et sentez vos pieds sur le sol. Parlez quand le moment vous semble juste.",
-                "app": "Rester aux commandes semble le moyen le plus rapide de garder tout le monde calme, même si cela vous épuise. Quand vous donnez ce oui immédiat, quels signaux apparaissent ensuite dans votre corps ?"
-            },
-            {
-                "headline": "Listes cachées, défilement jusqu'à en avoir les yeux qui brûlent.",
-                "user": "Je m'entends soupirer tout au long de la journée. Je garde des listes cachées dans mon carnet pour que mon équipe ne me voie pas paniquer. Le soir, je fais défiler jusqu'à en avoir les yeux qui brûlent, parce que si je pose le téléphone le silence devient trop fort et je repense à tout ce que j'ai manqué.",
-                "genericProductivity": "Regroupez vos tâches et utilisez des minuteurs de concentration pour pouvoir décrocher plus tôt. Essayez un filtre anti-lumière bleue ou définissez un temps « sans téléphone » avant de dormir.",
-                "genericWellness": "Ce soir, réglez un minuteur court. Lorsqu'il sonne, posez votre téléphone et nommez trois sons que vous entendez.",
-                "app": "Ces listes cachées et ce défilement tardif semblent des manières de baisser le volume de ce silence bruyant. Quand le silence s'invite, quelles sensations ou quels souvenirs surgissent ?"
-            },
-            {
-                "headline": "Les promesses envers moi-même s'effritent.",
-                "user": "Le silence me rappelle les promesses que je me suis faites. Peindre plus. Rappeler ma sœur. Dormir huit heures. À la place, je relave de la vaisselle ou je revérifie les agendas. Puis je culpabilise d'avoir même envie de repos quand des gens comptent sur moi.",
-                "genericProductivity": "Bloquez du temps dans votre agenda pour la création afin que ce soit non négociable. Traitez-le comme n'importe quel rendez-vous important.",
-                "genericWellness": "Avant de dormir, écrivez-vous une phrase bienveillante. Lisez-la lentement et remarquez vos épaules se détendre un peu.",
-                "app": "Il y a un mélange si délicat ici : vouloir un simple soin pour vous et ressentir tout de suite de la culpabilité à l'idée même de l'envisager. Cette culpabilité semble lourde. Que fait votre corps quand vous la remarquez ?"
-            },
-            {
-                "headline": "Mes épaules s'enflamment, ma gorge se bloque.",
-                "user": "La tension remonte dans mes épaules et jusque dans ma gorge. Je frotte l'arrière de mon cou si fort que ça pique, et je mâchonne l'intérieur de ma joue jusqu'à sentir un goût métallique. C'est comme si mon corps se préparait à décevoir quelqu'un.",
-                "genericProductivity": "Lorsque vous remarquez la tension, faites une pause et étirez-vous ou utilisez une application de relaxation pour détendre ces muscles avant de reprendre.",
-                "genericWellness": "Prenez une respiration lente. À l'expiration, murmurez « adoucis » et laissez vos épaules tomber légèrement.",
-                "app": "Cette crispation montre à quel point vous êtes prête à encaisser une réaction, même quand personne n'est réellement fâché. Vous souvenez-vous d'un moment récent où cette tension a pris le dessus sur le reste de votre journée ?"
-            },
-            {
-                "headline": "Mon jour de repos est devenu un autre service.",
-                "user": "Le mois dernier, j'ai essayé de prendre mon vendredi. J'ai passé la matinée à vérifier les mails « au cas où », puis j'ai réorganisé le garde-manger, puis j'ai rangé le garage. Le soir, j'étais plus épuisée que si j'avais travaillé.",
-                "genericProductivity": "Planifiez le temps non structuré comme n'importe quel rendez-vous. Ajoutez des « blocs de repos » à votre agenda pour vous rappeler de ne pas les remplir.",
-                "genericWellness": "Avant votre prochain jour de repos, choisissez une petite chose reposante que vous aimeriez faire. Gardez-la simple et facile à commencer.",
-                "app": "Ce jour de repos s'est transformé en une nouvelle garde, pleine de contrôle et de tâches. Pas étonnant que votre corps n'ait pas eu le repos qu'il réclamait. Si le repos semblait plus sûr, de quoi auriez-vous eu le plus besoin ce jour-là ?"
-            },
-            {
-                "headline": "J'ai craqué, puis j'ai voulu rattraper.",
-                "user": "Oui. Dimanche dernier, j'ai essayé de faire une sieste pendant que la lessive tournait, et ma fille est entrée pour savoir où était son uniforme. J'ai craqué, puis j'ai passé le reste de la soirée à tout replier pour que personne ne pense que je me relâchais.",
-                "genericProductivity": "Créez une liste de tâches partagée pour que tout le monde sache où se trouvent les choses. En documentant le système, vous n'aurez plus la pression de tout refaire après une erreur.",
-                "genericWellness": "Après un moment tendu, expirez lentement et dites-vous : « C'est normal de repartir de zéro maintenant. »",
-                "app": "Craquer puis surcompenser est épuisant et solitaire, comme si vous deviez prouver la gentillesse encore une fois. De quoi cette part de vous avait-elle besoin à cet instant, en dehors de tout replier ?"
-            },
-            {
-                "headline": "Je souhaite une fièvre juste pour me reposer.",
-                "user": "Une part de moi aimerait se réveiller avec de la fièvre pour pouvoir rester au lit sans discussion. Puis je me sens horrible rien que de penser ça parce que d'autres gèrent de vraies urgences.",
-                "genericProductivity": "Tenez la liste de tout ce que vous avez accompli récemment. Voir la preuve de vos efforts peut diminuer la culpabilité que vous ressentez à faire des pauses.",
-                "genericWellness": "Quand cette pensée arrive, posez une main sur votre cœur et dites : « C'est normal d'avoir besoin de repos. »",
-                "app": "Ce souhait montre à quel point votre corps implore la permission, et comme vous vous jugez vite d'en avoir besoin. Une voix dit que le repos doit être justifié par la maladie. Que cherche-t-elle à protéger, selon vous ?"
-            },
-            {
-                "headline": "La voix dit : ne sois pas dramatique.",
-                "user": "Je me vois sans cesse assise dans la voiture une minute avant d'entrer, juste pour respirer. Mais j'entends immédiatement : « ne fais pas ta dramatique, le dîner ne va pas se faire tout seul. » Je ne sais pas comment contredire cette voix sans me sentir paresseuse.",
-                "genericProductivity": "Utilisez des affirmations motivationnelles comme « Je mérite le repos en travaillant avec discernement ». Répétez-les avant de sortir de la voiture pour changer d'état d'esprit.",
-                "genericWellness": "Quand cette voix apparaît, prenez une respiration calme et rappelez-vous : « C'est ok de faire une pause une minute. »",
-                "app": "Cette voix semble stricte et familière, peut-être une vieille règle qui exige de prouver votre valeur en étant toujours active. Si vous pouviez lui faire un signe doux, qu'est-ce qu'une autre part plus calme dirait de cette pause dans la voiture ?"
-            },
-            {
-                "headline": "Et si j'échouais à me détendre ?",
-                "user": "Peut-être qu'elle dirait que ce n'est que deux minutes et que personne ne le remarquera. Je pourrais rester là, téléphone éteint, sentir le volant et vérifier mes épaules. J'ai peur d'échouer aussi à me détendre, ce qui sonne ridicule même en le disant.",
-                "genericProductivity": "Programmez un rappel quotidien sur votre téléphone et suivez si vous prenez la pause. Voir la série se construire peut vous garder motivée.",
-                "genericWellness": "Réglez un minuteur de deux minutes. Fermez les yeux et répétez un mot calme, comme « stable », en respirant.",
-                "app": "Ce n'est pas ridicule du tout. Cela montre à quel point le repos est devenu une autre performance. Rester deux minutes au calme dans la voiture, juste pour remarquer vos épaules, peut être une petite expérience, pas un test. Et si vous traitiez cette pause comme un cadeau que vous êtes autorisée à recevoir, même si cela semble inhabituel ?"
-            },
-            {
-                "headline": "La voix qui lève les yeux au ciel est forte.",
-                "user": "Même en entendant ça, une voix lève les yeux au ciel. Elle dit : « deux minutes ne rattraperont pas des années de retard, tu dramatises. » Cette voix est plus forte que tout le reste.",
-                "genericProductivity": "Reformulez la pensée rapidement. Rappelez-vous que les petits pas s'additionnent. Répétez « chaque pause est un progrès » dès que le doute arrive.",
-                "genericWellness": "Quand cette critique intérieure parle, expirez lentement et dites : « Chaque petite pause compte. »",
-                "app": "Ce roulement des yeux est tellement incisif, et il vous a probablement gardée en mouvement pendant des années. Si nous le remerciions pour tout ce travail, quel minuscule signe vous montrerait qu'il est plus sûr de relâcher, même un instant ?"
-            },
-            {
-                "headline": "Peut-être que mes mains cesseraient de vibrer.",
-                "user": "Peut-être que mes mains cesseraient de vibrer. Le week-end dernier, j'ai lâché une casserole et je suis restée là à trembler. Si elles pouvaient reposer sur mes genoux sans tressauter, ce serait la preuve que je ne suis pas sur le point de perdre le contrôle.",
-                "genericProductivity": "Si vos mains tremblent, pressez une balle anti-stress ou utilisez des outils d'ancrage pour vous recentrer rapidement.",
-                "genericWellness": "Posez vos deux mains sur vos genoux. Prenez une grande inspiration et sentez-les devenir un peu plus lourdes en expirant.",
-                "app": "Des mains posées sans vibration ressemblent à la permission que vous cherchez. Qui pourrait s'asseoir à vos côtés dans cette pause ou protéger cet espace pour qu'il ne se remplisse pas aussitôt ?"
-            },
-            {
-                "headline": "Ma sœur a proposé d'aider, j'ai dit non.",
-                "user": "Ma sœur avait proposé de gérer les dîners du jeudi mais je lui ai dit que je m'en chargeais. Le demander maintenant me paraît tellement tard, comme si j'avouais que je n'ai jamais tenu la barre.",
-                "genericProductivity": "Quand quelqu'un propose de l'aide, préparez une checklist rapide qu'il pourra suivre. Déléguer avec des consignes claires permet de garder le cap.",
-                "genericWellness": "Avant d'écrire à votre sœur, prenez une respiration régulière. Imaginez-la dire oui et laissez cette pensée adoucir votre poitrine.",
-                "app": "L'admettre maintenant peut aussi être une façon de lui confier la vérité. Seriez-vous d'accord pour l'essayer ici, peut-être en rédigeant le message pendant que nous respirons, et en observant la réaction de votre corps ?"
-            },
-            {
-                "headline": "La sensation de mèche s'est adoucie.",
-                "user": "Pendant que vous parliez, j'ai laissé mes mains reposer sur mes genoux et j'ai tapé le message pour ma sœur sans l'envoyer. La sensation de mèche n'a pas disparu, mais elle s'est adoucie une seconde. Peut-être que deux minutes dans la voiture ne feront pas tout s'effondrer.",
-                "genericProductivity": "Utilisez un rappel numérique pour déclencher la pause chaque jour. Associez-le à une checklist pour mesurer vos progrès.",
-                "genericWellness": "Prenez une respiration et chuchotez un mot apaisant, comme « adoucis ». Remarquez un endroit qui se sent plus léger après.",
-                "app": "Ce frémissement qui s'adoucit montre que votre corps peut réagir même à une seule respiration. Si vous honoriez cette pause après le travail, qu'est-ce qui pourrait vous le rappeler et qui pourrait porter une petite part pendant que vous la prenez ?"
-            },
-            {
-                "headline": "Dégivrage de deux minutes, message rédigé.",
-                "user": "Je peux programmer un petit rappel qui s'affiche avant de me garer. Je vais l'appeler mon \"dégivrage de deux minutes\". Et je vais envoyer un message à ma sœur pour qu'elle prenne le dîner de jeudi prochain. Le dire tremble un peu, mais j'ai l'impression que l'air revient.",
-                "genericProductivity": "Célébrez cette petite victoire en la notant dans un suivi d'habitudes. Le suivi régulier entretient l'élan.",
-                "genericWellness": "Après avoir envoyé le message, prenez une inspiration et une expiration lentes. Dites-vous doucement : « Cet espace est le mien pour respirer. »",
-                "app": "Vous venez de vous offrir la permission en temps réel et d'aligner du soutien pour la protéger. Remarquez la sensation dans votre poitrine et vos épaules quand vous imaginez ce rappel et votre sœur qui prend le relais. Qu'avez-vous envie de garder de ce moment ?"
-            },
-            {
-                "headline": "Des mains plus lourdes, sans bourdonnement.",
-                "user": "Il y a encore une fatigue autour des côtes, mais c'est plus stable. Je vais envoyer le message quand on aura fini et attendre réellement sa réponse au lieu de combler le vide. Je garde la sensation de mes mains plus lourdes, sans bourdonnement.",
-                "genericProductivity": "Notez le résultat dans un journal de réflexion pour observer les tendances dans le temps. La constance renforcera l'habitude.",
-                "genericWellness": "Chaque soir, posez votre paume sur la zone qui se sent calme et prenez une longue respiration silencieuse avant de dormir.",
-                "app": "Cette fatigue plus stable et ces mains plus lourdes montrent que votre corps croit que cette pause est réelle. Continuez de vérifier ce rappel « dégivrage » ce soir et laissez l'aide que vous avez invitée rester près de vous."
-            }
-        ],
         "meta": {
-            "badge": "Bilan du réseau de soutien · 37 messages · ~13 minutes",
-            "title": "Quand une aidante surperformante relâche enfin la pression",
-            "description": "Cet échange en direct est partagé avec le consentement d'une testeuse qui a collaboré avec {{app_name}} alors qu'elle portait la logistique familiale après l'opération de sa mère. Chaque message ci-dessous est réel. À côté, vous verrez comment un bot de productivité générique ou une application de santé mentale générique pourrait répondre, et comment {{app_name}} a réellement répondu."
+          "title": "Méta-schéma à surveiller",
+          "item": {
+            "title": "Le cycle de la soigneuse invisible",
+            "body": "Elle gère chaque rôle en silence, évite le repos à cause de règles internes, puis teste prudemment des soins de soi. Le cycle entretient la croyance que sa valeur dépend de tout maintenir."
+          }
         },
-        "conversation": {
-            "badge": "Déroulé de la conversation",
-            "title": "Chaque message, trois perspectives",
-            "description": "Les réponses génériques sont des composites illustratifs. Les réponses de {{app_name}} sont citées mot pour mot d'une session réelle (testeuse).",
-            "userReflection": "Réflexion de l'utilisatrice",
-            "appVerbatim": "{{app_name}} (verbatim)",
-            "vs": "vs",
-            "vsLabel": "Comment des outils génériques répondraient",
-            "genericProductivity": "Bot de productivité générique",
-            "genericWellness": "Application de santé mentale générique"
+        "leverage": {
+          "title": "Points d'appui",
+          "points": [
+            "La pause de deux minutes avant d'entrer chez elle casse la tension automatique et transforme le repos en expérience corporelle plutôt qu'en performance.",
+            "Demander de l'aide (dîner du jeudi) fissure la règle « ne pas partager la charge » et invite à la connexion."
+          ]
         },
-        "highlights": {
-            "badge": "Moments forts de la session",
-            "title": "Transitions clés captées en temps réel",
-            "items": [
-                {
-                    "title": "Des règles silencieuses mises au jour",
-                    "body": "{{app_name}} nomme les règles qui gouvernent : le repos doit se mériter par la crise et ne pas ajouter à la charge des autres, afin que l'utilisatrice comprenne pourquoi chaque pause semblait dangereuse."
-                },
-                {
-                    "title": "Rituel de micro-repos protégé",
-                    "body": "Le dégivrage de deux minutes dans la voiture est ancré aux signaux somatiques (mains qui bourdonnent → mains plus lourdes) pour que le corps fasse confiance à l’expérience."
-                },
-                {
-                    "title": "Entraînement à la délégation accompli",
-                    "body": "Pendant la session, elle rédige le message confiant le dîner du jeudi à sa sœur, s'entraîne à l'envoyer et nomme le soutien qu'elle acceptera."
-                }
-            ]
+        "start": {
+          "title": "Par où commencer",
+          "points": [
+            "Pratiquer la pause de deux minutes avant d'entrer à la maison. Courte, auto-dirigée, elle construit la confiance dans le ralentissement. Difficulté : douce.",
+            "Envoyer une demande d'aide, le texto pour le dîner du jeudi, afin de défier la règle qui interdit de peser sur les autres. Difficulté : douce.",
+            "Remarquer un moment de tension, aux épaules ou à la gorge, et l'accueillir avec curiosité. Difficulté : douce."
+          ]
         },
-        "chart": {
-            "analytics": {
-                "header": {
-                    "title": "Indicateurs thérapeutiques dans le temps",
-                    "subtitle": "Chaque point représente un message de l'utilisatrice et son analyse correspondante."
-                },
-                "metrics": {
-                    "emotional_cognitive": {
-                        "title": "Tendances émotionnelles et cognitives",
-                        "badge": "Équilibrée",
-                        "rows": {
-                            "emotional_intensity": {
-                                "label": "Intensité émotionnelle",
-                                "value": "↓ 60 % (baisse régulière)"
-                            },
-                            "cognitive_load": {
-                                "label": "Charge cognitive",
-                                "value": "↓ 65 % (réduction nette)"
-                            },
-                            "overall_regulation": {
-                                "label": "Régulation globale",
-                                "value": "Améliorée"
-                            }
-                        }
-                    },
-                    "readiness": {
-                        "title": "Préparation thérapeutique",
-                        "badge": "Améliorée",
-                        "rows": {
-                            "engaged": {
-                                "label": "Engagée",
-                                "value": "68 % de la séance"
-                            },
-                            "ambivalent": {
-                                "label": "Ambivalente",
-                                "value": "32 % de la séance"
-                            },
-                            "final_state": {
-                                "label": "État final",
-                                "value": "Totalement engagée"
-                            }
-                        }
-                    },
-                    "integration": {
-                        "title": "Intégration des aperçus",
-                        "badge": "9 moments",
-                        "rows": {
-                            "early_insights": {
-                                "label": "Micro-aperçus précoces",
-                                "value": "3 réflexions clés"
-                            },
-                            "mid_breakthroughs": {
-                                "label": "Déclics en milieu de session",
-                                "value": "4 intégrations"
-                            },
-                            "sustained_insight": {
-                                "label": "Aperçus consolidés",
-                                "value": "2 transformations profondes"
-                            }
-                        }
-                    }
-                },
-                "insights": {
-                    "title": "Principales observations de la progression émotionnelle",
-                    "list": [
-                        "La disponibilité est passée d'ambivalente à engagée dès l'échange 6, signe d'une confiance et d'une ouverture croissantes.",
-                        "La charge cognitive a nettement diminué, révélant moins de rumination et une meilleure autorégulation.",
-                        "L'intensité émotionnelle s'est adoucie au fil des échanges, suggérant une stabilisation et davantage de containment.",
-                        "Les moments d'intégration se multiplient vers la fin, montrant une réflexion soutenue et l'appropriation des insights."
-                    ]
-                }
+        "resources": {
+          "title": "Ressources suggérées",
+          "points": [
+            "Auto-compassion · Cultiver la bienveillance envers le critique épuisé. Débutante.",
+            "Techniques de pleine conscience · Courtes pauses et écoute corporelle pour réduire le débordement. Débutante.",
+            "Gestion de l'anxiété · Questionner avec douceur la peur anticipée et l'auto-discours négatif. Intermédiaire."
+          ]
+        }
+      },
+      "advanced": {
+        "title": "Diagnostic avancé",
+        "state": {
+          "title": "État émotionnel et risques",
+          "labels": {
+            "primary": "Principal",
+            "secondary": "Secondaire",
+            "risk": "Risque"
+          },
+          "values": {
+            "primary": "épuisement émotionnel modéré",
+            "secondary": "culpabilité · anxiété de peser sur les autres · ambivalence face au repos",
+            "risk_body": "Niveau : faible. Aucune crise observée ; l'intensité émotionnelle est modérée et congruente. L'utilisatrice est engagée et répond aux expériences thérapeutiques."
+          }
+        },
+        "themes": {
+          "title": "Thèmes (4)",
+          "items": [
+            {
+              "title": "Épuisement émotionnel derrière une façade maîtrisée",
+              "severity": "Gravité : élevée",
+              "trajectory": "Trajectoire : stable",
+              "points": [
+                "Gère la logistique familiale depuis l'opération de sa mère.",
+                "Craque quand la fatigue arrive, puis surcorrige pour paraître fiable.",
+                "Culpabilité dès qu’elle envisage de se reposer."
+              ]
             },
-            "header": {
-                "badge": "Analyses de session",
-                "title": "Progrès thérapeutiques tout au long de la session",
-                "subtitle": "Chaque point représente un message de l'utilisatrice et son analyse émotionnelle."
+            {
+              "title": "Tension physique chronique et maintien somatique",
+              "severity": "Gravité : élevée",
+              "trajectory": "Trajectoire : stable",
+              "points": [
+                "Épaules et gorge contractées, mâchoire mordue, mains qui bourdonnent.",
+                "La tension diminue lorsque les rituels de micro-repos prennent racine.",
+                "Le corps se crispe en prévision d’une déception."
+              ]
             },
-            "axes": {
-                "x_label": "Échange",
-                "y_label": "Niveau"
+            {
+              "title": "Sur-responsabilité et croyances d’indispensabilité",
+              "severity": "Gravité : élevée",
+              "trajectory": "Trajectoire : stable",
+              "points": [
+                "Listes de tâches cachées ; réticence à déléguer à la sœur ou à l’équipe.",
+                "Croyances centrales : si je ralentis, tout s’effondre et ma valeur dépend de tout faire tourner.",
+                "Règles silencieuses : le repos doit être mérité ; ne pas ajouter à la charge des autres."
+              ]
             },
-            "tooltip": {
-                "label_prefix": "Échange"
-            },
-            "legend": {
-                "emotional_intensity": "Intensité émotionnelle",
-                "cognitive_load": "Charge cognitive",
-                "readiness": "Préparation thérapeutique",
-                "integration": "Paliers d'insight"
-            },
-            "chart_config": {
-                "emotionalIntensity": "Intensité émotionnelle",
-                "cognitiveLoad": "Charge cognitive",
-                "readiness": "Préparation thérapeutique",
-                "integration": "Paliers d'insight"
+            {
+              "title": "Évitements et résistance du critique intérieur au repos",
+              "severity": "Gravité : moyenne",
+              "trajectory": "Trajectoire : stable",
+              "points": [
+                "Défilement tardif, boucles de productivité, ambivalence à l’idée de faire une pause.",
+                "Le critique intérieur juge le repos dramatique.",
+                "Les micro-expériences de repos montrent une disponibilité naissante."
+              ]
             }
+          ]
         },
-        "diagnostics": {
-            "badge": "Diagnostics distillés",
-            "title": "Deux regards sur la même conversation",
-            "description": "Parcourez les onglets pour voir les diagnostics complets exactement tels que l'app les restitue.",
-            "labels": {
-                "rigidity": {
-                    "rigid": "Règle rigide",
-                    "moderate": "Règle modérément rigide",
-                    "flexible": "Règle assouplie"
-                },
-                "confidence": {
-                    "high": "Grande confiance",
-                    "medium": "Confiance moyenne",
-                    "low": "Faible confiance"
-                }
-            },
-            "confidenceValue": "Confiance : {{value}}",
-            "basic": {
-                "title": "Diagnostic de base",
-                "now": {
-                    "title": "Ce qui se passe en ce moment",
-                    "points": [
-                        "Une charge continue de soin et de travail cohabite avec une tension chronique et une façade maîtrisée, créant une solitude silencieuse derrière sa compétence.",
-                        "Elle est prise dans un conflit interne : elle réclame du repos tandis qu'un critique intérieur exige de continuer, déclenchant culpabilité et sur-responsabilité.",
-                        "Les micro-expériences — pause dans l'allée ou texto à sa sœur — montrent qu'un soin doux et un soutien partagé allègent déjà la charge."
-                    ]
-                },
-                "rules": {
-                    "title": "Règles cachées qui maintiennent le poids",
-                    "items": [
-                        {
-                            "title": "Le repos doit être mérité par la crise",
-                            "rigidity": "rigid",
-                            "confidence": "high",
-                            "body": "Cette règle la convainc qu'elle ne peut ralentir que lorsque tout s'effondre. Le perfectionnisme et la rumination maintiennent alors le système en surchauffe."
-                        },
-                        {
-                            "title": "Ne pas ajouter à la charge des autres",
-                            "rigidity": "moderate",
-                            "confidence": "high",
-                            "body": "La règle fait taire ses besoins pour protéger les autres, rendant chaque demande d'aide périlleuse et augmentant la pression de performance."
-                        }
-                    ]
-                },
-                "why": {
-                    "title": "Pourquoi c’est si lourd",
-                    "item": {
-                        "title": "Le poids de la charge invisible",
-                        "body": "Soin + travail + culpabilité forment la boucle culpabilité → tension → évitement du repos → épuisement accru. Le corps reste en alerte même quand rien de grave ne se passe."
-                    }
-                },
-                "meta": {
-                    "title": "Méta-schéma à surveiller",
-                    "item": {
-                        "title": "Le cycle de la soigneuse invisible",
-                        "body": "Elle gère chaque rôle en silence, évite le repos à cause de règles internes, puis teste prudemment des soins de soi. Le cycle entretient la croyance que sa valeur dépend de tout maintenir."
-                    }
-                },
-                "leverage": {
-                    "title": "Points d'appui",
-                    "points": [
-                        "La pause de deux minutes avant d'entrer chez elle casse la tension automatique et transforme le repos en expérience corporelle plutôt qu'en performance.",
-                        "Demander de l'aide (dîner du jeudi) fissure la règle « ne pas partager la charge » et invite à la connexion."
-                    ]
-                },
-                "start": {
-                    "title": "Par où commencer",
-                    "points": [
-                        "Pratiquer la pause de deux minutes avant d'entrer à la maison. Courte, auto-dirigée, elle construit la confiance dans le ralentissement. Difficulté : douce.",
-                        "Envoyer une demande d'aide, le texto pour le dîner du jeudi, afin de défier la règle qui interdit de peser sur les autres. Difficulté : douce.",
-                        "Remarquer un moment de tension, aux épaules ou à la gorge, et l'accueillir avec curiosité. Difficulté : douce."
-                    ]
-                },
-                "resources": {
-                    "title": "Ressources suggérées",
-                    "points": [
-                        "Auto-compassion · Cultiver la bienveillance envers le critique épuisé. Débutante.",
-                        "Techniques de pleine conscience · Courtes pauses et écoute corporelle pour réduire le débordement. Débutante.",
-                        "Gestion de l'anxiété · Questionner avec douceur la peur anticipée et l'auto-discours négatif. Intermédiaire."
-                    ]
-                }
-            },
-            "advanced": {
-                "title": "Diagnostic avancé",
-                "state": {
-                    "title": "État émotionnel et risques",
-                    "labels": {
-                        "primary": "Principal",
-                        "secondary": "Secondaire",
-                        "risk": "Risque"
-                    },
-                    "values": {
-                        "primary": "épuisement émotionnel modéré",
-                        "secondary": "culpabilité · anxiété de peser sur les autres · ambivalence face au repos",
-                        "risk_body": "Niveau : faible. Aucune crise observée ; l'intensité émotionnelle est modérée et congruente. L'utilisatrice est engagée et répond aux expériences thérapeutiques."
-                    }
-                },
-                "themes": {
-                    "title": "Thèmes (4)",
-                    "items": [
-                        {
-                            "title": "Épuisement émotionnel derrière une façade maîtrisée",
-                            "severity": "Gravité : élevée",
-                            "trajectory": "Trajectoire : stable",
-                            "points": [
-                                "Gère la logistique familiale depuis l'opération de sa mère.",
-                                "Craque quand la fatigue arrive, puis surcorrige pour paraître fiable.",
-                                "Culpabilité dès qu’elle envisage de se reposer."
-                            ]
-                        },
-                        {
-                            "title": "Tension physique chronique et maintien somatique",
-                            "severity": "Gravité : élevée",
-                            "trajectory": "Trajectoire : stable",
-                            "points": [
-                                "Épaules et gorge contractées, mâchoire mordue, mains qui bourdonnent.",
-                                "La tension diminue lorsque les rituels de micro-repos prennent racine.",
-                                "Le corps se crispe en prévision d’une déception."
-                            ]
-                        },
-                        {
-                            "title": "Sur-responsabilité et croyances d’indispensabilité",
-                            "severity": "Gravité : élevée",
-                            "trajectory": "Trajectoire : stable",
-                            "points": [
-                                "Listes de tâches cachées ; réticence à déléguer à la sœur ou à l’équipe.",
-                                "Croyances centrales : si je ralentis, tout s’effondre et ma valeur dépend de tout faire tourner.",
-                                "Règles silencieuses : le repos doit être mérité ; ne pas ajouter à la charge des autres."
-                            ]
-                        },
-                        {
-                            "title": "Évitements et résistance du critique intérieur au repos",
-                            "severity": "Gravité : moyenne",
-                            "trajectory": "Trajectoire : stable",
-                            "points": [
-                                "Défilement tardif, boucles de productivité, ambivalence à l’idée de faire une pause.",
-                                "Le critique intérieur juge le repos dramatique.",
-                                "Les micro-expériences de repos montrent une disponibilité naissante."
-                            ]
-                        }
-                    ]
-                },
-                "distortions": {
-                    "title": "Distorsions cognitives (5)",
-                    "items": [
-                        "Énoncés en « il faut » · Fréquence : 6 · Gravité : modérée. Les règles de productivité définissent la valeur.",
-                        "Personnalisation · Fréquence : 5 · Gravité : modérée. Interprète chaque charge comme sa responsabilité.",
-                        "Raisonnement émotionnel · Fréquence : 5 · Gravité : modérée. Lit la tension comme la preuve d’un échec.",
-                        "Filtre mental · Fréquence : 4 · Gravité : modérée. Focalise sur les risques du repos, néglige les victoires.",
-                        "Catastrophisme · Fréquence : 3 · Gravité : modérée. Anticipe l’effondrement si elle ralentit."
-                    ]
-                },
-                "therapist_focus": {
-                    "title": "Axes de travail pour la thérapeute",
-                    "points": [
-                        "Cibler les croyances d’indispensabilité et la culpabilité liée au repos.",
-                        "Associer le travail de compassion à des pratiques de régulation corporelle.",
-                        "Renforcer les rituels de micro-repos et les check-ins somatiques.",
-                        "Défier les “il faut” et le catastrophisme.",
-                        "Soutenir une délégation progressive et des expériences de soutien partagé."
-                    ]
-                },
-                "clinical_interpretations": {
-                    "title": "Interprétations cliniques",
-                    "points": [
-                        "Le perfectionnisme combiné à la charge de soin entretient une activation chronique.",
-                        "Les règles silencieuses maintiennent l’évitement du repos et de l’aide.",
-                        "Les distorsions amplifient la culpabilité et la difficulté à décrocher.",
-                        "Les expériences comportementales signalent une disponibilité à un changement plus profond."
-                    ]
-                },
-                "treatment_recommendations": {
-                    "title": "Recommandations d’intervention",
-                    "points": [
-                        "Restructuration cognitive des “il faut” et du catastrophisme autour de la délégation.",
-                        "Interventions centrées sur la compassion pour adoucir le critique.",
-                        "Rituels réguliers de micro-repos et techniques d’écoute corporelle.",
-                        "Expériences guidées de demande d’aide pour desserrer la sur-responsabilité.",
-                        "Surveiller l’intensité émotionnelle et l’ambivalence face au repos afin d’ajuster le rythme du travail."
-                    ]
-                },
-                "professional_language": {
-                    "title": "Langage professionnel",
-                    "points": [
-                        "La charge chronique de soin associée au perfectionnisme maintient l’activation sympathique.",
-                        "Des schémas d’indispensabilité et de valeur conditionnelle freinent la demande d’aide.",
-                        "Les distorsions (« il faut », personnalisation, catastrophisme) perpétuent des stratégies d’adaptation inadaptées.",
-                        "L’engagement thérapeutique est modéré à élevé avec une activation comportementale émergente.",
-                        "Le faible risque aigu soutient les approches TCC et centrées sur la compassion."
-                    ]
-                },
-                "clinical_insights": {
-                    "title": "Aperçus cliniques",
-                    "points": [
-                        "L’intégration corps-esprit est essentielle face à la tension somatique.",
-                        "L’ambivalence face au repos découle de règles silencieuses intériorisées.",
-                        "Les réussites de micro-repos offrent un levier pour transformer les croyances centrales.",
-                        "Un suivi continu de l’intensité guidera le rythme et la profondeur des interventions."
-                    ]
-                }
-            }
+        "distortions": {
+          "title": "Distorsions cognitives (5)",
+          "items": [
+            "Énoncés en « il faut » · Fréquence : 6 · Gravité : modérée. Les règles de productivité définissent la valeur.",
+            "Personnalisation · Fréquence : 5 · Gravité : modérée. Interprète chaque charge comme sa responsabilité.",
+            "Raisonnement émotionnel · Fréquence : 5 · Gravité : modérée. Lit la tension comme la preuve d’un échec.",
+            "Filtre mental · Fréquence : 4 · Gravité : modérée. Focalise sur les risques du repos, néglige les victoires.",
+            "Catastrophisme · Fréquence : 3 · Gravité : modérée. Anticipe l’effondrement si elle ralentit."
+          ]
         },
-        "cta": {
-            "title": "Intégrez {{app_name}} à votre propre contexte",
-            "description": "Partagez un scénario réel. Nous mirerons le schéma émotionnel, ferons émerger les règles silencieuses et renverrons des diagnostics prêts pour l'utilisatrice et la clinicienne en moins de quinze minutes.",
-            "button": "Demander une invitation",
-            "disclaimer": "Intelligence réflexive · pas un service de crise"
+        "therapist_focus": {
+          "title": "Axes de travail pour la thérapeute",
+          "points": [
+            "Cibler les croyances d’indispensabilité et la culpabilité liée au repos.",
+            "Associer le travail de compassion à des pratiques de régulation corporelle.",
+            "Renforcer les rituels de micro-repos et les check-ins somatiques.",
+            "Défier les “il faut” et le catastrophisme.",
+            "Soutenir une délégation progressive et des expériences de soutien partagé."
+          ]
+        },
+        "clinical_interpretations": {
+          "title": "Interprétations cliniques",
+          "points": [
+            "Le perfectionnisme combiné à la charge de soin entretient une activation chronique.",
+            "Les règles silencieuses maintiennent l’évitement du repos et de l’aide.",
+            "Les distorsions amplifient la culpabilité et la difficulté à décrocher.",
+            "Les expériences comportementales signalent une disponibilité à un changement plus profond."
+          ]
+        },
+        "treatment_recommendations": {
+          "title": "Recommandations d’intervention",
+          "points": [
+            "Restructuration cognitive des “il faut” et du catastrophisme autour de la délégation.",
+            "Interventions centrées sur la compassion pour adoucir le critique.",
+            "Rituels réguliers de micro-repos et techniques d’écoute corporelle.",
+            "Expériences guidées de demande d’aide pour desserrer la sur-responsabilité.",
+            "Surveiller l’intensité émotionnelle et l’ambivalence face au repos afin d’ajuster le rythme du travail."
+          ]
+        },
+        "professional_language": {
+          "title": "Langage professionnel",
+          "points": [
+            "La charge chronique de soin associée au perfectionnisme maintient l’activation sympathique.",
+            "Des schémas d’indispensabilité et de valeur conditionnelle freinent la demande d’aide.",
+            "Les distorsions (« il faut », personnalisation, catastrophisme) perpétuent des stratégies d’adaptation inadaptées.",
+            "L’engagement thérapeutique est modéré à élevé avec une activation comportementale émergente.",
+            "Le faible risque aigu soutient les approches TCC et centrées sur la compassion."
+          ]
+        },
+        "clinical_insights": {
+          "title": "Aperçus cliniques",
+          "points": [
+            "L’intégration corps-esprit est essentielle face à la tension somatique.",
+            "L’ambivalence face au repos découle de règles silencieuses intériorisées.",
+            "Les réussites de micro-repos offrent un levier pour transformer les croyances centrales.",
+            "Un suivi continu de l’intensité guidera le rythme et la profondeur des interventions."
+          ]
         }
+      }
     },
-    "advancedTester": {
-        "hero": {
-            "badge": "Tests avancés",
-            "title": "Contribuez à façonner l'avenir de {{app_name}}",
-            "description": "Rejoignez notre programme de tests avancés et partagez des retours précieux pendant que nous affinons les conversations d'IA réflexive de {{app_name}}. Vos insights influencent directement la construction de cet outil de soutien émotionnel."
-        },
-        "form": {
-            "email": {
-                "label": "Adresse e-mail",
-                "placeholder": "vous@example.com",
-                "required": "L'e-mail est requis"
-            },
-            "occupation": {
-                "label": "Métier / rôle",
-                "placeholder": "ex. : ingénieure, enseignante, étudiante, etc.",
-                "helpText": "Nous aide à comprendre la diversité des perspectives et des besoins."
-            },
-            "struggles": {
-                "label": "Difficultés générales / défis émotionnels",
-                "placeholder": "Quels défis émotionnels ou quelles situations de vie souhaitez-vous explorer ? (stress professionnel, relations, prise de décision, etc.)",
-                "helpText": "Partagez ce sur quoi vous aimeriez être accompagnée ou réfléchir. Cela nous aide à comprendre vos besoins."
-            },
-            "coping": {
-                "label": "Mécanismes d’adaptation / gestion du stress",
-                "placeholder": "Comment gérez-vous actuellement le stress ou des émotions difficiles ? (journal, sport, parler à des proches, méditation, etc.)",
-                "helpText": "Comprendre vos stratégies actuelles nous aide à créer des outils complémentaires."
-            },
-            "source": {
-                "label": "Comment avez-vous entendu parler de {{app_name}} ?",
-                "placeholder": "ex. : Twitter, recommandation, article de blog, etc.",
-                "helpText": "Nous aide à savoir quelles actions de communication sont les plus efficaces."
-            },
-            "notes": {
-                "label": "Commentaires / notes supplémentaires",
-                "placeholder": "Autre chose à partager sur votre intérêt pour {{app_name}} ou vos retours sur les outils d'IA émotionnelle ?",
-                "helpText": "Partagez toute autre idée, question ou domaine spécifique à explorer durant les tests."
-            },
-            "submitButton": "Envoyer la candidature",
-            "thankYouNote": "Merci de contribuer à façonner {{app_name}}. Nous étudierons les candidatures et contacterons les testeuses retenues à mesure que nous élargissons le programme. Rappel : {{app_name}} n'est ni une thérapie ni un service de crise."
-        },
-        "messages": {
-            "success": "Candidature envoyée",
-            "pending": "Envoi en cours…",
-            "error": "Échec de l’envoi"
-        },
-        "nextSteps": {
-            "viewDemo": "Voir la démo aidante",
-            "browseLibrary": "Explorer la bibliothèque de contenus",
-            "submitAnother": "Envoyer une autre candidature"
-        }
-    },
-    "header": {
-        "wordmark": "Intelligence réfléchie",
-        "openMenu": "Ouvrir le menu",
-        "closeMenu": "Fermer le menu",
-        "links": {
-            "home": "Accueil",
-            "demo": "Démo",
-            "library": "Bibliothèque",
-            "join": "Rejoindre la bêta"
-        }
-    },
-    "footer": {
-        "disclaimer": {
-            "label": "Important : ",
-            "message": "{{app_name}} n'est pas un service de santé mentale ni un service d'urgence. En cas de crise, contactez immédiatement les services de secours locaux."
-        },
-        "questions": "Des questions sur cette page {{currentPage}} ?",
-        "contact_email": "Écrivez-nous à ",
-        "navigationHeading": "Navigation",
-        "legalHeading": "Mentions légales",
-        "links": {
-            "eula": "Contrat de licence d'utilisateur final",
-            "privacy": "Politique de confidentialité",
-            "terms": "Conditions d’utilisation",
-            "contact": "Contact",
-            "help": "Aide",
-            "support": "Support"
-        },
-        "copyright": "© 2025 {{app_name}}. Tous droits réservés."
+    "cta": {
+      "title": "Intégrez {{app_name}} à votre propre contexte",
+      "description": "Partagez un scénario réel. Nous mirerons le schéma émotionnel, ferons émerger les règles silencieuses et renverrons des diagnostics prêts pour l'utilisatrice et la clinicienne en moins de quinze minutes.",
+      "button": "Demander une invitation",
+      "disclaimer": "Intelligence réflexive · pas un service de crise"
     }
+  },
+  "advancedTester": {
+    "hero": {
+      "badge": "Tests avancés",
+      "title": "Contribuez à façonner l'avenir de {{app_name}}",
+      "description": "Rejoignez notre programme de tests avancés et partagez des retours précieux pendant que nous affinons les conversations d'IA réflexive de {{app_name}}. Vos insights influencent directement la construction de cet outil de soutien émotionnel."
+    },
+    "form": {
+      "email": {
+        "label": "Adresse e-mail",
+        "placeholder": "vous@example.com",
+        "required": "L'e-mail est requis"
+      },
+      "occupation": {
+        "label": "Métier / rôle",
+        "placeholder": "ex. : ingénieure, enseignante, étudiante, etc.",
+        "helpText": "Nous aide à comprendre la diversité des perspectives et des besoins."
+      },
+      "struggles": {
+        "label": "Difficultés générales / défis émotionnels",
+        "placeholder": "Quels défis émotionnels ou quelles situations de vie souhaitez-vous explorer ? (stress professionnel, relations, prise de décision, etc.)",
+        "helpText": "Partagez ce sur quoi vous aimeriez être accompagnée ou réfléchir. Cela nous aide à comprendre vos besoins."
+      },
+      "coping": {
+        "label": "Mécanismes d’adaptation / gestion du stress",
+        "placeholder": "Comment gérez-vous actuellement le stress ou des émotions difficiles ? (journal, sport, parler à des proches, méditation, etc.)",
+        "helpText": "Comprendre vos stratégies actuelles nous aide à créer des outils complémentaires."
+      },
+      "source": {
+        "label": "Comment avez-vous entendu parler de {{app_name}} ?",
+        "placeholder": "ex. : Twitter, recommandation, article de blog, etc.",
+        "helpText": "Nous aide à savoir quelles actions de communication sont les plus efficaces."
+      },
+      "notes": {
+        "label": "Commentaires / notes supplémentaires",
+        "placeholder": "Autre chose à partager sur votre intérêt pour {{app_name}} ou vos retours sur les outils d'IA émotionnelle ?",
+        "helpText": "Partagez toute autre idée, question ou domaine spécifique à explorer durant les tests."
+      },
+      "submitButton": "Envoyer la candidature",
+      "thankYouNote": "Merci de contribuer à façonner {{app_name}}. Nous étudierons les candidatures et contacterons les testeuses retenues à mesure que nous élargissons le programme. Rappel : {{app_name}} n'est ni une thérapie ni un service de crise."
+    },
+    "messages": {
+      "success": "Candidature envoyée",
+      "pending": "Envoi en cours…",
+      "error": "Échec de l’envoi"
+    },
+    "nextSteps": {
+      "viewDemo": "Voir la démo aidante",
+      "browseLibrary": "Explorer la bibliothèque de contenus",
+      "submitAnother": "Envoyer une autre candidature"
+    }
+  },
+  "header": {
+    "wordmark": "Intelligence réfléchie",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "links": {
+      "home": "Accueil",
+      "demo": "Démo",
+      "library": "Bibliothèque",
+      "join": "Rejoindre la bêta"
+    }
+  },
+  "footer": {
+    "disclaimer": {
+      "label": "Important : ",
+      "message": "{{app_name}} n'est pas un service de santé mentale ni un service d'urgence. En cas de crise, contactez immédiatement les services de secours locaux."
+    },
+    "questions": "Des questions sur cette page {{currentPage}} ?",
+    "contact_email": "Écrivez-nous à ",
+    "navigationHeading": "Navigation",
+    "legalHeading": "Mentions légales",
+    "links": {
+      "eula": "Contrat de licence d'utilisateur final",
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d’utilisation",
+      "contact": "Contact",
+      "help": "Aide",
+      "support": "Support"
+    },
+    "copyright": "© 2025 {{app_name}}. Tous droits réservés."
+  }
 }

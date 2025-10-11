@@ -51,16 +51,11 @@ export default function CategoryLayout({
       <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
         {/* Breadcrumb */}
         <nav className="mb-8 text-sm text-muted-foreground">
-          <Link
-            href="/content"
-            className="transition hover:text-primary"
-          >
+          <Link href="/content" className="transition hover:text-primary">
             {t("shared.libraryRoot")}
           </Link>
           <span className="mx-2 opacity-50">/</span>
-          <span className="capitalize">
-            {category.replace(/-/g, " ")}
-          </span>
+          <span className="capitalize">{category.replace(/-/g, " ")}</span>
         </nav>
 
         {/* Category Header */}
@@ -179,7 +174,7 @@ function ContentCard({ item, featured = false }: ContentCardProps) {
         <div className="flex items-center gap-3">
           <span
             className={`inline-flex items-center rounded-full px-3 py-1 capitalize ${getPriorityColor(
-              metadata.priority
+              metadata.priority,
             )} font-medium`}
           >
             {t(`shared.priority.${metadata.priority}`, {

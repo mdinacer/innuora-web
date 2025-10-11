@@ -171,26 +171,26 @@ export default function TherapeuticProgressChart() {
         rows: {
           emotional_intensity: {
             label: t(
-              "analytics.metrics.emotional_cognitive.rows.emotional_intensity.label"
+              "analytics.metrics.emotional_cognitive.rows.emotional_intensity.label",
             ),
             value: t(
-              "analytics.metrics.emotional_cognitive.rows.emotional_intensity.value"
+              "analytics.metrics.emotional_cognitive.rows.emotional_intensity.value",
             ),
           },
           cognitive_load: {
             label: t(
-              "analytics.metrics.emotional_cognitive.rows.cognitive_load.label"
+              "analytics.metrics.emotional_cognitive.rows.cognitive_load.label",
             ),
             value: t(
-              "analytics.metrics.emotional_cognitive.rows.cognitive_load.value"
+              "analytics.metrics.emotional_cognitive.rows.cognitive_load.value",
             ),
           },
           overall_regulation: {
             label: t(
-              "analytics.metrics.emotional_cognitive.rows.overall_regulation.label"
+              "analytics.metrics.emotional_cognitive.rows.overall_regulation.label",
             ),
             value: t(
-              "analytics.metrics.emotional_cognitive.rows.overall_regulation.value"
+              "analytics.metrics.emotional_cognitive.rows.overall_regulation.value",
             ),
           },
         },
@@ -223,18 +223,18 @@ export default function TherapeuticProgressChart() {
           },
           mid_breakthroughs: {
             label: t(
-              "analytics.metrics.integration.rows.mid_breakthroughs.label"
+              "analytics.metrics.integration.rows.mid_breakthroughs.label",
             ),
             value: t(
-              "analytics.metrics.integration.rows.mid_breakthroughs.value"
+              "analytics.metrics.integration.rows.mid_breakthroughs.value",
             ),
           },
           sustained_insight: {
             label: t(
-              "analytics.metrics.integration.rows.sustained_insight.label"
+              "analytics.metrics.integration.rows.sustained_insight.label",
             ),
             value: t(
-              "analytics.metrics.integration.rows.sustained_insight.value"
+              "analytics.metrics.integration.rows.sustained_insight.value",
             ),
           },
         },
@@ -481,7 +481,7 @@ export default function TherapeuticProgressChart() {
               <span
                 className={cn(
                   "inline-block w-2 h-2 rounded-full mt-2",
-                  colors[index]
+                  colors[index],
                 )}
               ></span>
               <span>{item}</span>

@@ -75,7 +75,7 @@ export default function ArticleLayout({
             {/* Intent Badge */}
             <span
               className={`px-3 py-1 rounded capitalize text-xs font-medium ${getIntentColor(
-                metadata.intent
+                metadata.intent,
               )}`}
             >
               {t(`shared.intent.${metadata.intent}`, {
@@ -155,15 +155,9 @@ export default function ArticleLayout({
                   </p>
                   <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
                     <span className="capitalize opacity-80">
-                      {t(
-                        `library.categories.${item.metadata.category}.title`,
-                        {
-                          defaultValue: item.metadata.category.replace(
-                            /-/g,
-                            " "
-                          ),
-                        }
-                      )}
+                      {t(`library.categories.${item.metadata.category}.title`, {
+                        defaultValue: item.metadata.category.replace(/-/g, " "),
+                      })}
                     </span>
                     {item.metadata.readingTime && (
                       <span className="flex items-center gap-2">
@@ -193,10 +187,13 @@ export default function ArticleLayout({
 function getIntentColor(intent: string): string {
   const colors = {
     informational: "bg-primary/10 text-primary",
-    actionable: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-200",
-    supportive: "bg-violet-100 text-violet-800 dark:bg-violet-900/60 dark:text-violet-200",
+    actionable:
+      "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-200",
+    supportive:
+      "bg-violet-100 text-violet-800 dark:bg-violet-900/60 dark:text-violet-200",
     therapeutic: "bg-sky-100 text-sky-800 dark:bg-sky-900/60 dark:text-sky-200",
-    emergency: "bg-rose-100 text-rose-800 dark:bg-rose-900/60 dark:text-rose-200",
+    emergency:
+      "bg-rose-100 text-rose-800 dark:bg-rose-900/60 dark:text-rose-200",
   };
 
   return colors[intent as keyof typeof colors] || colors.informational;

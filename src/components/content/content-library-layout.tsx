@@ -48,7 +48,9 @@ export default function ContentLibraryLayout({
       <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
         {/* Header */}
         <header className="mb-12 space-y-6 text-center">
-          <h1 className="text-4xl font-serif-brand text-foreground md:text-6xl">{t("library.heading")}</h1>
+          <h1 className="text-4xl font-serif-brand text-foreground md:text-6xl">
+            {t("library.heading")}
+          </h1>
           <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted-foreground">
             {t("library.intro")}
           </p>
@@ -96,7 +98,11 @@ export default function ContentLibraryLayout({
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {Object.entries(contentByCategory).map(([category, articles]) => (
-              <CategoryCard key={category} category={category as ContentCategory} articles={articles} />
+              <CategoryCard
+                key={category}
+                category={category as ContentCategory}
+                articles={articles}
+              />
             ))}
           </div>
         </section>
@@ -184,7 +190,9 @@ interface CategoryCardProps {
 function CategoryCard({ category, articles }: CategoryCardProps) {
   const { t } = useTranslation("content");
   const icon = CATEGORY_ICONS[category];
-  const featuredCount = articles.filter((article) => article.metadata.featured).length;
+  const featuredCount = articles.filter(
+    (article) => article.metadata.featured,
+  ).length;
 
   return (
     <Link

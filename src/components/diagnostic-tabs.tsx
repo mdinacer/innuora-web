@@ -17,7 +17,7 @@ const DiagnosticsTabs: React.FC<Props> = ({
   advancedContent,
 }) => {
   const [selectedTab, setSelectedTab] = React.useState<"basic" | "advanced">(
-    "basic"
+    "basic",
   );
   return (
     <>
@@ -30,7 +30,7 @@ const DiagnosticsTabs: React.FC<Props> = ({
             {
               "border-b-primary text-primary font-semibold":
                 selectedTab === "basic",
-            }
+            },
           )}
           data-tab="basic"
         >
@@ -44,7 +44,7 @@ const DiagnosticsTabs: React.FC<Props> = ({
             {
               "border-b-primary text-primary font-semibold":
                 selectedTab === "advanced",
-            }
+            },
           )}
           data-tab="advanced"
         >

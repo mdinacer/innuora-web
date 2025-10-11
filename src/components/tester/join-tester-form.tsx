@@ -163,8 +163,12 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
     return (
       <div className="space-y-6 text-center">
         <div className="rounded-2xl border border-green-200 bg-green-50 p-6 text-green-800">
-          <h2 className="text-xl font-semibold">{copy.messages.successTitle}</h2>
-          <p className="mt-2 text-sm text-green-700">{copy.messages.thankYou}</p>
+          <h2 className="text-xl font-semibold">
+            {copy.messages.successTitle}
+          </h2>
+          <p className="mt-2 text-sm text-green-700">
+            {copy.messages.thankYou}
+          </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 md:flex-row">
             <Link
               href={`/${locale}/demo`}
@@ -195,7 +199,10 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
     <form className="grid gap-8" onSubmit={handleSubmit}>
       <fieldset className="grid gap-6" disabled={isSubmitting}>
         <div className="grid gap-2 text-left">
-          <label className="text-sm font-semibold text-foreground" htmlFor="email">
+          <label
+            className="text-sm font-semibold text-foreground"
+            htmlFor="email"
+          >
             {copy.labels.email.label}
             <span className="text-red-500"> *</span>
           </label>
@@ -212,12 +219,17 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
           {fieldErrors.email ? (
             <p className="text-sm text-red-500">{fieldErrors.email}</p>
           ) : (
-            <p className="text-xs text-muted-foreground">{copy.labels.email.required}</p>
+            <p className="text-xs text-muted-foreground">
+              {copy.labels.email.required}
+            </p>
           )}
         </div>
 
         <div className="grid gap-2 text-left">
-          <label className="text-sm font-semibold text-foreground" htmlFor="occupation">
+          <label
+            className="text-sm font-semibold text-foreground"
+            htmlFor="occupation"
+          >
             {copy.labels.occupation.label}
           </label>
           <input
@@ -229,7 +241,9 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
             className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
           {copy.labels.occupation.helpText && (
-            <p className="text-xs text-muted-foreground">{copy.labels.occupation.helpText}</p>
+            <p className="text-xs text-muted-foreground">
+              {copy.labels.occupation.helpText}
+            </p>
           )}
           {fieldErrors.occupation && (
             <p className="text-sm text-red-500">{fieldErrors.occupation}</p>
@@ -237,7 +251,10 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
         </div>
 
         <div className="grid gap-2 text-left">
-          <label className="text-sm font-semibold text-foreground" htmlFor="struggles">
+          <label
+            className="text-sm font-semibold text-foreground"
+            htmlFor="struggles"
+          >
             {copy.labels.struggles.label}
           </label>
           <textarea
@@ -250,7 +267,9 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
             className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
           {copy.labels.struggles.helpText && (
-            <p className="text-xs text-muted-foreground">{copy.labels.struggles.helpText}</p>
+            <p className="text-xs text-muted-foreground">
+              {copy.labels.struggles.helpText}
+            </p>
           )}
           {fieldErrors.struggles && (
             <p className="text-sm text-red-500">{fieldErrors.struggles}</p>
@@ -258,7 +277,10 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
         </div>
 
         <div className="grid gap-2 text-left">
-          <label className="text-sm font-semibold text-foreground" htmlFor="coping">
+          <label
+            className="text-sm font-semibold text-foreground"
+            htmlFor="coping"
+          >
             {copy.labels.coping.label}
           </label>
           <textarea
@@ -271,7 +293,9 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
             className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
           {copy.labels.coping.helpText && (
-            <p className="text-xs text-muted-foreground">{copy.labels.coping.helpText}</p>
+            <p className="text-xs text-muted-foreground">
+              {copy.labels.coping.helpText}
+            </p>
           )}
           {fieldErrors.coping && (
             <p className="text-sm text-red-500">{fieldErrors.coping}</p>
@@ -279,7 +303,10 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
         </div>
 
         <div className="grid gap-2 text-left">
-          <label className="text-sm font-semibold text-foreground" htmlFor="source">
+          <label
+            className="text-sm font-semibold text-foreground"
+            htmlFor="source"
+          >
             {copy.labels.source.label}
           </label>
           <input
@@ -291,7 +318,9 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
             className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
           {copy.labels.source.helpText && (
-            <p className="text-xs text-muted-foreground">{copy.labels.source.helpText}</p>
+            <p className="text-xs text-muted-foreground">
+              {copy.labels.source.helpText}
+            </p>
           )}
           {fieldErrors.source && (
             <p className="text-sm text-red-500">{fieldErrors.source}</p>
@@ -299,7 +328,10 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
         </div>
 
         <div className="grid gap-2 text-left">
-          <label className="text-sm font-semibold text-foreground" htmlFor="notes">
+          <label
+            className="text-sm font-semibold text-foreground"
+            htmlFor="notes"
+          >
             {copy.labels.notes.label}
           </label>
           <textarea
@@ -312,7 +344,9 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
             className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
           {copy.labels.notes.helpText && (
-            <p className="text-xs text-muted-foreground">{copy.labels.notes.helpText}</p>
+            <p className="text-xs text-muted-foreground">
+              {copy.labels.notes.helpText}
+            </p>
           )}
           {fieldErrors.notes && (
             <p className="text-sm text-red-500">{fieldErrors.notes}</p>

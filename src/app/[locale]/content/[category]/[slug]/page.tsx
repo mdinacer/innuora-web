@@ -50,7 +50,7 @@ export async function generateMetadata({
   // Use SEOGenerator for comprehensive metadata
   const { SEOGenerator } = await import("@/lib/content/seo-generator");
   const baseMetadata = SEOGenerator.generateMetadata(
-    localizedContentItem.metadata
+    localizedContentItem.metadata,
   );
   const canonicalPath = `/content/${contentItem.metadata.category}/${contentItem.metadata.slug}`;
 
@@ -137,14 +137,14 @@ export default async function ContentPage({ params }: ContentPageProps) {
   // Get related content
   const relatedContent = contentRegistry.applyLocaleOverrides(
     contentRegistry.getRelated(contentItem),
-    locale
+    locale,
   );
 
   // Generate structured data for SEO
   const { SEOGenerator } = await import("@/lib/content/seo-generator");
   const structuredData = SEOGenerator.generateStructuredData(
     localizedContentItem.metadata,
-    markdownContent
+    markdownContent,
   );
 
   return (

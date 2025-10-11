@@ -95,7 +95,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
 
       return current === target || current.startsWith(`${target}/`);
     },
-    [normalize, pathname]
+    [normalize, pathname],
   );
 
   const renderLink = React.useCallback(
@@ -110,7 +110,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
           isDesktop
             ? "bg-primary text-primary-foreground hover:bg-primary/90"
             : "w-full bg-primary text-primary-foreground hover:bg-primary/90",
-          active && "ring-2 ring-primary/50"
+          active && "ring-2 ring-primary/50",
         );
 
         return (
@@ -133,7 +133,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
         active && "text-foreground",
         isDesktop &&
           "after:absolute after:bottom-[2px] after:left-1/2 after:h-[2px] after:w-[70%] after:-translate-x-1/2 after:scale-x-0 after:bg-primary after:transition-transform after:duration-200 hover:after:scale-x-100",
-        isDesktop && active && "after:scale-x-100"
+        isDesktop && active && "after:scale-x-100",
       );
 
       return (
@@ -147,14 +147,14 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
         </Link>
       );
     },
-    [isActiveLink]
+    [isActiveLink],
   );
 
   return (
     <header
       className={cn(
         "sticky top-0 z-50 w-full backdrop-blur supports-[backdrop-filter]:bg-background/70",
-        className
+        className,
       )}
     >
       <div className="border-b border-border/60 bg-background/80">

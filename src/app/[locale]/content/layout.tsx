@@ -19,9 +19,7 @@ export default async function Layout({
       {children}
       <footer className="border-t border-inn-border-light mt-12 sm:mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 text-center text-xs sm:text-sm text-inn-text-secondary">
-          <p className="mb-3">
-            {t("layout.educationalNotice")}
-          </p>
+          <p className="mb-3">{t("layout.educationalNotice")}</p>
           <p>
             {t("layout.privacyNotice", {
               year,

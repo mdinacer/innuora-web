@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const TherapeuticProgressChart = dynamic(
-  () => import("@/components/therapeutic-chart")
+  () => import("@/components/therapeutic-chart"),
 );
 type Message = {
   headline: string;
@@ -210,14 +210,14 @@ export default async function Page({
           title: t("demo.diagnostics.advanced.clinical_interpretations.title"),
           points: t(
             "demo.diagnostics.advanced.clinical_interpretations.points",
-            { returnObjects: true }
+            { returnObjects: true },
           ) as string[],
         },
         treatment_recommendations: {
           title: t("demo.diagnostics.advanced.treatment_recommendations.title"),
           points: t(
             "demo.diagnostics.advanced.treatment_recommendations.points",
-            { returnObjects: true }
+            { returnObjects: true },
           ) as string[],
         },
         professional_language: {
@@ -256,7 +256,7 @@ export default async function Page({
 
   const renderMessageCard = (
     { headline, user, app, genericProductivity, genericWellness }: Message,
-    key: number
+    key: number,
   ) => (
     <article
       key={key}
@@ -342,7 +342,7 @@ export default async function Page({
       className={cn(
         "relative flex-1",
         "min-h-screen flex flex-col",
-        "rtl:font-arabic-body rtl:text-lg "
+        "rtl:font-arabic-body rtl:text-lg ",
       )}
     >
       <section className="py-16 md:py-20">
@@ -400,7 +400,7 @@ export default async function Page({
           </div>
           <div id="conversation-feed" className="space-y-8">
             {previewMessages.map((message, index) =>
-              renderMessageCard(message, index)
+              renderMessageCard(message, index),
             )}
             {remainingMessages.length > 0 && (
               <details className="rounded-app border border-border bg-background p-6 shadow-soft">
@@ -411,7 +411,7 @@ export default async function Page({
                 </summary>
                 <div className="mt-6 space-y-8">
                   {remainingMessages.map((message, index) =>
-                    renderMessageCard(message, index + PREVIEW_COUNT)
+                    renderMessageCard(message, index + PREVIEW_COUNT),
                   )}
                 </div>
               </details>
@@ -511,7 +511,7 @@ export default async function Page({
                               <div
                                 className={cn(
                                   "rounded-md px-2 py-0.5 text-xs uppercase",
-                                  BADGE_COLORS.rigidity[item.rigidity]
+                                  BADGE_COLORS.rigidity[item.rigidity],
                                 )}
                               >
                                 {diagnostics.labels.rigidity[item.rigidity] ??
@@ -520,7 +520,7 @@ export default async function Page({
                               <div
                                 className={cn(
                                   "rounded-md px-2 py-0.5 text-xs text-center uppercase",
-                                  BADGE_COLORS.confidence[item.confidence]
+                                  BADGE_COLORS.confidence[item.confidence],
                                 )}
                               >
                                 {diagnostics.labels.confidence[
@@ -680,7 +680,7 @@ export default async function Page({
                       {diagnostics.advanced.distortions.items.map(
                         (item, index) => (
                           <li key={index}>{item}</li>
-                        )
+                        ),
                       )}
                     </ul>
                   </section>
@@ -694,7 +694,7 @@ export default async function Page({
                       {diagnostics.advanced.therapist_focus.points.map(
                         (point, index) => (
                           <li key={index}>{point}</li>
-                        )
+                        ),
                       )}
                     </ul>
                   </section>
@@ -708,7 +708,7 @@ export default async function Page({
                       {diagnostics.advanced.clinical_interpretations.points.map(
                         (point, index) => (
                           <li key={index}>{point}</li>
-                        )
+                        ),
                       )}
                     </ul>
                   </section>
@@ -722,7 +722,7 @@ export default async function Page({
                       {diagnostics.advanced.treatment_recommendations.points.map(
                         (point, index) => (
                           <li key={index}>{point}</li>
-                        )
+                        ),
                       )}
                     </ul>
                   </section>
@@ -736,7 +736,7 @@ export default async function Page({
                       {diagnostics.advanced.professional_language.points.map(
                         (point, index) => (
                           <li key={index}>{point}</li>
-                        )
+                        ),
                       )}
                     </ul>
                   </section>
@@ -750,7 +750,7 @@ export default async function Page({
                       {diagnostics.advanced.clinical_insights.points.map(
                         (point, index) => (
                           <li key={index}>{point}</li>
-                        )
+                        ),
                       )}
                     </ul>
                   </section>

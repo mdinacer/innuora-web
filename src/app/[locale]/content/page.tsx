@@ -18,7 +18,9 @@ interface ContentLibraryPageProps {
 // Metadata Generation
 // =========================
 
-export async function generateMetadata({ params }: ContentLibraryPageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: ContentLibraryPageProps): Promise<Metadata> {
   const { locale } = await params;
   const { default: initTranslations } = await import("@/lib/i18n");
   const { t } = await initTranslations(locale, ["seo"]);
@@ -49,7 +51,9 @@ export async function generateMetadata({ params }: ContentLibraryPageProps): Pro
 // Page Component
 // =========================
 
-export default async function ContentLibraryPage({ params }: ContentLibraryPageProps) {
+export default async function ContentLibraryPage({
+  params,
+}: ContentLibraryPageProps) {
   const { locale } = await params;
 
   // Initialize content registry
@@ -59,8 +63,14 @@ export default async function ContentLibraryPage({ params }: ContentLibraryPageP
   const allContent = contentRegistry.getAll();
   const featuredContent = contentRegistry.getFeatured();
 
-  const localizedContent = contentRegistry.applyLocaleOverrides(allContent, locale);
-  const localizedFeatured = contentRegistry.applyLocaleOverrides(featuredContent, locale);
+  const localizedContent = contentRegistry.applyLocaleOverrides(
+    allContent,
+    locale,
+  );
+  const localizedFeatured = contentRegistry.applyLocaleOverrides(
+    featuredContent,
+    locale,
+  );
 
   // Group localized content by category
   const contentByCategory = localizedContent.reduce(
@@ -72,7 +82,7 @@ export default async function ContentLibraryPage({ params }: ContentLibraryPageP
       acc[category].push(item);
       return acc;
     },
-    {} as Record<string, typeof localizedContent>
+    {} as Record<string, typeof localizedContent>,
   );
 
   return (

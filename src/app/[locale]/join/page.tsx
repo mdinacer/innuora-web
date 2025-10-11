@@ -58,13 +58,17 @@ export default async function TesterJoinRoute({
         helpText: t("advancedTester.form.coping.helpText"),
       },
       source: {
-        label: t("advancedTester.form.source.label", { app_name: APP_CONFIG.name }),
+        label: t("advancedTester.form.source.label", {
+          app_name: APP_CONFIG.name,
+        }),
         placeholder: t("advancedTester.form.source.placeholder"),
         helpText: t("advancedTester.form.source.helpText"),
       },
       notes: {
         label: t("advancedTester.form.notes.label"),
-        placeholder: t("advancedTester.form.notes.placeholder", { app_name: APP_CONFIG.name }),
+        placeholder: t("advancedTester.form.notes.placeholder", {
+          app_name: APP_CONFIG.name,
+        }),
         helpText: t("advancedTester.form.notes.helpText"),
       },
       submitButton: t("advancedTester.form.submitButton"),
@@ -72,7 +76,9 @@ export default async function TesterJoinRoute({
     messages: {
       successTitle: t("advancedTester.messages.success"),
       error: t("advancedTester.messages.error"),
-      thankYou: t("advancedTester.form.thankYouNote", { app_name: APP_CONFIG.name }),
+      thankYou: t("advancedTester.form.thankYouNote", {
+        app_name: APP_CONFIG.name,
+      }),
     },
     nextSteps: {
       viewDemo: t("advancedTester.nextSteps.viewDemo"),
