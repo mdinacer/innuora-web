@@ -50,9 +50,7 @@ export class SEOGenerator {
         card: "summary_large_image",
         title: seoTitle,
         description: seoDescription,
-        images: [
-          `/api/og?title=${encodeURIComponent(title)}&category=${category}`,
-        ],
+        images: [`${APP_CONFIG.domains.canonical}/og/innuora-cover.png`],
       },
 
       // Canonical URL
