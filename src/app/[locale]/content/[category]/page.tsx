@@ -5,6 +5,7 @@ import CategoryLayout from "@/components/content/category-layout";
 import { initializeContentRegistry } from "@/lib/content/content-loader";
 import { contentRegistry } from "@/lib/content/content-registry";
 import { ContentCategory } from "@/types/content.types";
+import { APP_CONFIG } from "@/config/app";
 
 // =========================
 // Page Props
@@ -110,6 +111,14 @@ export async function generateMetadata({
       siteName: "Innuora",
       url: currentUrl,
       locale: locale === "ar" ? "ar_AR" : locale === "fr" ? "fr_FR" : "en_US",
+      images: [
+        {
+          url: `${APP_CONFIG.domains.canonical}/og/innuora-cover.png`,
+          width: 1200,
+          height: 630,
+          alt: localizedTitle,
+        },
+      ],
     },
     alternates: {
       canonical: currentUrl,
@@ -162,16 +171,16 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   // Get content for this category
   const categoryContent = contentRegistry.getByCategory(
-    category as ContentCategory,
+    category as ContentCategory
   );
 
   const localizedContent = contentRegistry.applyLocaleOverrides(
     categoryContent,
-    locale,
+    locale
   );
 
   const featuredContent = localizedContent.filter(
-    (item) => item.metadata.featured,
+    (item) => item.metadata.featured
   );
 
   return (

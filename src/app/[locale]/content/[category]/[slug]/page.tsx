@@ -9,6 +9,7 @@ import {
 } from "@/lib/content/content-loader";
 import { contentRegistry } from "@/lib/content/content-registry";
 import { ContentCategory } from "@/types/content.types";
+import { APP_CONFIG } from "@/config/app";
 
 // =========================
 // Page Props
@@ -50,7 +51,7 @@ export async function generateMetadata({
   // Use SEOGenerator for comprehensive metadata
   const { SEOGenerator } = await import("@/lib/content/seo-generator");
   const baseMetadata = SEOGenerator.generateMetadata(
-    localizedContentItem.metadata,
+    localizedContentItem.metadata
   );
   const canonicalPath = `/content/${contentItem.metadata.category}/${contentItem.metadata.slug}`;
 
@@ -63,6 +64,16 @@ export async function generateMetadata({
     openGraph: {
       ...baseMetadata.openGraph,
       url: currentUrl,
+      images: [
+        {
+          url: `${APP_CONFIG.domains.canonical}/og/innuora-cover.png`,
+          width: 1200,
+          height: 630,
+          alt:
+            (baseMetadata.title as string | undefined) ||
+            `${APP_CONFIG.name} Open Graph Cover`,
+        },
+      ],
     },
     alternates: {
       canonical: currentUrl,
@@ -141,14 +152,14 @@ export default async function ContentPage({ params }: ContentPageProps) {
   // Get related content
   const relatedContent = contentRegistry.applyLocaleOverrides(
     contentRegistry.getRelated(contentItem),
-    locale,
+    locale
   );
 
   // Generate structured data for SEO
   const { SEOGenerator } = await import("@/lib/content/seo-generator");
   const structuredData = SEOGenerator.generateStructuredData(
     localizedContentItem.metadata,
-    markdownContent,
+    markdownContent
   );
 
   return (

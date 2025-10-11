@@ -202,7 +202,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
               </span>
               <span className="flex flex-col leading-tight">
                 <span className="text-base font-semibold text-foreground">
-                  In<span className="text-primary">nu</span>ora
+                  In<span>nu</span>ora
                 </span>
                 <span className="text-[0.68rem] sr-only sm:not-sr-only rtl:font-arabic-title rtl:text-sm font-medium uppercase tracking-[0.35em] text-muted-foreground group-hover:text-foreground/80">
                   {t("wordmark", { defaultValue: "AI Companion" })}
