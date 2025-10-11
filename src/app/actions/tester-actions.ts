@@ -30,7 +30,7 @@ export async function addAdvancedTester(formData: FormData) {
 
     await sheets.spreadsheets.values.append({
       spreadsheetId: sheetId,
-      range: "Sheet1!A:G", // 7 columns: Timestamp + 6 fields
+      range: "'Form Responses'!A:G", // 7 columns: Timestamp + 6 fields
       valueInputOption: "USER_ENTERED",
       requestBody: {
         values: [
@@ -60,6 +60,12 @@ export async function addAdvancedTester(formData: FormData) {
       };
     }
     console.error("Google Sheets append failed:", err);
+    console.error("Error details:", {
+      message: err.message,
+      code: err.code,
+      status: err.status,
+      errors: err.errors,
+    });
     return { success: false, error: err.message || "Unexpected error" };
   }
 }

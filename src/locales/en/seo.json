@@ -27,5 +27,10 @@
     "title": "FAQ - Frequently Asked Questions | {{app_name}}",
     "description": "Everything you need to know about {{app_name}}: how it listens, protects, and stays human in its intelligence. Answers about privacy, security, billing, and more.",
     "ogImageAlt": "{{app_name}} FAQ - Your questions answered"
+  },
+  "demo": {
+    "title": "Innuora Demo — Real Session Walkthrough | Emotional Clarity in Action",
+    "description": "Explore a full real-time Innuora session with authentic user messages and AI responses. Compare how generic productivity bots, wellness apps, and Innuora’s emotionally intelligent system handle burnout, guilt, and rest ambivalence in high-functioning women.",
+    "ogImageAlt": "Innuora Demo Session — Real-time Emotional Clarity Walkthrough"
   }
 }

@@ -27,5 +27,10 @@
     "title": "FAQ - Questions Fréquemment Posées | {{app_name}}",
     "description": "Tout ce qu’il faut savoir sur {{app_name}} : comment elle écoute, protège et reste profondément humaine dans son intelligence. Réponses sur la confidentialité, la sécurité, la facturation et plus encore.",
     "ogImageAlt": "{{app_name}} FAQ - Vos questions, nos réponses"
+  },
+  "demo": {
+    "title": "Démo Innuora — Séance réelle en direct | Clarté émotionnelle en action",
+    "description": "Découvrez une véritable séance Innuora en temps réel avec des messages authentiques d’utilisatrices et les réponses de l’IA. Comparez comment un bot de productivité, une application de bien-être et le système émotionnellement intelligent d’Innuora réagissent face au burnout, à la culpabilité et à l’ambivalence autour du repos.",
+    "ogImageAlt": "Démo Innuora — Séance réelle et parcours de clarté émotionnelle"
   }
 }

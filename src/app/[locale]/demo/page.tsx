@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import DiagnosticsTabs from "@/components/diagnostic-tabs";
 import { APP_CONFIG } from "@/config/app";
 import initTranslations from "@/lib/i18n";
@@ -7,8 +8,70 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 
+// SEO Metadata
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale = "en" } = await params;
+  const { t } = await initTranslations(locale, ["seo", "pages"]);
+
+  const title = t("seo:demo.title", { app_name: APP_CONFIG.name });
+  const description = t("seo:demo.description", { app_name: APP_CONFIG.name });
+
+  // Build locale-aware URLs (respecting prefixDefault: false for English)
+  const localePrefix = locale === "en" ? "" : `/${locale}`;
+  const currentUrl = `${localePrefix}/demo`;
+
+  return {
+    title,
+    description,
+    keywords: [
+      "AI therapy demo",
+      "CBT conversation example",
+      "mental health AI demo",
+      "emotional support AI",
+      "therapy chatbot demo",
+      ...APP_CONFIG.seo.primaryKeywords,
+    ],
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      siteName: APP_CONFIG.name,
+      url: currentUrl,
+      locale: locale === "ar" ? "ar_AR" : locale === "fr" ? "fr_FR" : "en_US",
+      images: [
+        {
+          url: `${APP_CONFIG.domains.canonical}/og/innuora-cover.png`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [`${APP_CONFIG.domains.canonical}/og/innuora-cover.png`],
+      creator: APP_CONFIG.social.twitter.creator,
+    },
+    alternates: {
+      canonical: currentUrl,
+      languages: {
+        en: "/demo", // Default locale, no prefix
+        ar: "/ar/demo",
+        fr: "/fr/demo",
+        "x-default": "/demo", // Default uses English (no prefix)
+      },
+    },
+  };
+}
+
 const TherapeuticProgressChart = dynamic(
-  () => import("@/components/therapeutic-chart"),
+  () => import("@/components/therapeutic-chart")
 );
 type Message = {
   headline: string;
@@ -210,14 +273,14 @@ export default async function Page({
           title: t("demo.diagnostics.advanced.clinical_interpretations.title"),
           points: t(
             "demo.diagnostics.advanced.clinical_interpretations.points",
-            { returnObjects: true },
+            { returnObjects: true }
           ) as string[],
         },
         treatment_recommendations: {
           title: t("demo.diagnostics.advanced.treatment_recommendations.title"),
           points: t(
             "demo.diagnostics.advanced.treatment_recommendations.points",
-            { returnObjects: true },
+            { returnObjects: true }
           ) as string[],
         },
         professional_language: {
@@ -256,7 +319,7 @@ export default async function Page({
 
   const renderMessageCard = (
     { headline, user, app, genericProductivity, genericWellness }: Message,
-    key: number,
+    key: number
   ) => (
     <article
       key={key}
@@ -342,7 +405,7 @@ export default async function Page({
       className={cn(
         "relative flex-1",
         "min-h-screen flex flex-col",
-        "rtl:font-arabic-body rtl:text-lg ",
+        "rtl:font-arabic-body rtl:text-lg "
       )}
     >
       <section className="py-16 md:py-20">
@@ -400,7 +463,7 @@ export default async function Page({
           </div>
           <div id="conversation-feed" className="space-y-8">
             {previewMessages.map((message, index) =>
-              renderMessageCard(message, index),
+              renderMessageCard(message, index)
             )}
             {remainingMessages.length > 0 && (
               <details className="rounded-app border border-border bg-background p-6 shadow-soft">
@@ -411,7 +474,7 @@ export default async function Page({
                 </summary>
                 <div className="mt-6 space-y-8">
                   {remainingMessages.map((message, index) =>
-                    renderMessageCard(message, index + PREVIEW_COUNT),
+                    renderMessageCard(message, index + PREVIEW_COUNT)
                   )}
                 </div>
               </details>
@@ -426,7 +489,7 @@ export default async function Page({
             <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
               {highlights.badge}
             </p>
-            <h2 className="ltr:font-serif-brand rtl:font-arabic-title rtl:font-arabic-title text-3xl">
+            <h2 className="ltr:font-serif-brand rtl:font-arabic-title text-3xl">
               {highlights.title}
             </h2>
           </div>
@@ -511,7 +574,7 @@ export default async function Page({
                               <div
                                 className={cn(
                                   "rounded-md px-2 py-0.5 text-xs uppercase",
-                                  BADGE_COLORS.rigidity[item.rigidity],
+                                  BADGE_COLORS.rigidity[item.rigidity]
                                 )}
                               >
                                 {diagnostics.labels.rigidity[item.rigidity] ??
@@ -520,7 +583,7 @@ export default async function Page({
                               <div
                                 className={cn(
                                   "rounded-md px-2 py-0.5 text-xs text-center uppercase",
-                                  BADGE_COLORS.confidence[item.confidence],
+                                  BADGE_COLORS.confidence[item.confidence]
                                 )}
                               >
                                 {diagnostics.labels.confidence[
@@ -680,7 +743,7 @@ export default async function Page({
                       {diagnostics.advanced.distortions.items.map(
                         (item, index) => (
                           <li key={index}>{item}</li>
-                        ),
+                        )
                       )}
                     </ul>
                   </section>
@@ -694,7 +757,7 @@ export default async function Page({
                       {diagnostics.advanced.therapist_focus.points.map(
                         (point, index) => (
                           <li key={index}>{point}</li>
-                        ),
+                        )
                       )}
                     </ul>
                   </section>
@@ -708,7 +771,7 @@ export default async function Page({
                       {diagnostics.advanced.clinical_interpretations.points.map(
                         (point, index) => (
                           <li key={index}>{point}</li>
-                        ),
+                        )
                       )}
                     </ul>
                   </section>
@@ -722,7 +785,7 @@ export default async function Page({
                       {diagnostics.advanced.treatment_recommendations.points.map(
                         (point, index) => (
                           <li key={index}>{point}</li>
-                        ),
+                        )
                       )}
                     </ul>
                   </section>
@@ -736,7 +799,7 @@ export default async function Page({
                       {diagnostics.advanced.professional_language.points.map(
                         (point, index) => (
                           <li key={index}>{point}</li>
-                        ),
+                        )
                       )}
                     </ul>
                   </section>
@@ -750,7 +813,7 @@ export default async function Page({
                       {diagnostics.advanced.clinical_insights.points.map(
                         (point, index) => (
                           <li key={index}>{point}</li>
-                        ),
+                        )
                       )}
                     </ul>
                   </section>
