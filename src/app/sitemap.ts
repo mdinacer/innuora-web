@@ -32,7 +32,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Generate static route entries
   const staticRoutes = routes.flatMap((route) =>
     locales.map((locale) => ({
-      url: `${baseUrl}/${locale}${route.path.startsWith("/") ? route.path : "/" + route.path}`,
+      url: `${baseUrl}/${locale}${
+        route.path.startsWith("/") ? route.path : "/" + route.path
+      }`,
       lastModified,
       changeFrequency:
         route.changeFrequency as MetadataRoute.Sitemap[number]["changeFrequency"],
@@ -42,12 +44,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           ...Object.fromEntries(
             locales
               .filter((l) => l !== locale)
-              .map((l) => [l, `${baseUrl}/${l}${route.path}`]),
+              .map((l) => [l, `${baseUrl}/${l}${route.path}`])
           ),
           "x-default": `${baseUrl}/en${route.path}`,
         } as Languages<string>,
       },
-    })),
+    }))
   );
 
   // Get unique categories
@@ -68,12 +70,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           ...Object.fromEntries(
             locales
               .filter((l) => l !== locale)
-              .map((l) => [l, `${baseUrl}/${l}/content/${category}`]),
+              .map((l) => [l, `${baseUrl}/${l}/content/${category}`])
           ),
           "x-default": `${baseUrl}/en/content/${category}`,
         } as Languages<string>,
       },
-    })),
+    }))
   );
 
   // Generate content article entries
@@ -90,7 +92,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           ...Object.fromEntries(
             locales
               .filter((l) => l !== locale)
-              .map((l) => [l, `${baseUrl}/${l}${sitemapEntry.url}`]),
+              .map((l) => [l, `${baseUrl}/${l}${sitemapEntry.url}`])
           ),
           "x-default": `${baseUrl}/en${sitemapEntry.url}`,
         } as Languages<string>,
