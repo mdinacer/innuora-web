@@ -5,59 +5,7 @@ import { APP_CONFIG, APP_NAMES } from "@/config/app";
 export const METADATA: Metadata = {
   title: APP_NAMES.taglined,
   description: APP_CONFIG.description,
-  keywords: [
-    // Primary keywords - core problems Innuora solves
-    "emotional burnout support",
-    "women burnout recovery",
-    "high-functioning women support",
-    "emotional overwhelm relief",
-    "perfectionist burnout help",
-    "emotional exhaustion support",
-    "cognitive distortions help",
-    "emotional clarity app",
-    "women emotional wellness",
-    "overachiever stress relief",
-
-    // Secondary keywords - specific features & benefits
-    "safe space for women online",
-    "emotional mirror app",
-    "emotional reflection tool",
-    "support for overwhelmed women",
-    "silent rules therapy",
-    "emotional patterns recognition",
-    "self-criticism help",
-    "internal pressure relief",
-    "emotional validation app",
-    "working women emotional support",
-
-    // Branding keywords - what Innuora is
-    "AI emotional companion",
-    "digital emotional support",
-    "emotional companion for women",
-    "compassionate AI support",
-    "emotional awareness tool",
-    "emotional insight companion",
-    "gentle emotional guidance",
-    "emotional safe space app",
-    "emotional wellness companion",
-
-    // Long-tail problem-focused keywords
-    "app for emotionally exhausted women",
-    "support for high-functioning anxiety",
-    "emotional burnout recovery for women",
-    "help with perfectionist tendencies",
-    "emotional overwhelm support app",
-    "cognitive distortion awareness tool",
-    "safe space for emotional reflection",
-    "support for women carrying expectations",
-    "emotional clarity for working women",
-    "help with silent emotional rules",
-
-    // Core identity
-    APP_CONFIG.name,
-    "emotional companion",
-    "women emotional clarity",
-  ],
+  keywords: [...APP_CONFIG.seo.primaryKeywords],
 
   applicationName: APP_CONFIG.name,
   authors: [{ name: APP_CONFIG.company.founder }],
@@ -70,6 +18,7 @@ export const METADATA: Metadata = {
       en: "/en",
       ar: "/ar",
       fr: "/fr",
+      "x-default": "/en",
     },
   },
 

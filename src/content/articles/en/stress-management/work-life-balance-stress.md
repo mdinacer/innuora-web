@@ -1,17 +1,31 @@
 ---
 title: "Achieving Work-Life Balance: Managing Professional Stress"
-description: "Practical strategies for creating healthy boundaries between work and personal life. Reduce burnout and improve well-being with evidence-based techniques."
-slug: "work-life-balance-stress"
-category: "stress-management"
-contentType: "article"
-intent: "professional/actionable"
-keywords: ["work life balance", "work stress", "burnout prevention", "professional wellness"]
+description: >-
+  Practical strategies for creating healthy boundaries between work and personal life. Reduce burnout and improve
+  well-being with evidence-based techniques.
+slug: work-life-balance-stress
+category: stress-management
+contentType: article
+intent: actionable
+keywords:
+  - work life balance
+  - work stress
+  - burnout prevention
+  - professional wellness
 searchVolume: 13500
-priority: "high"
+priority: high
 featured: true
 readingTime: 12
-relatedCbtModules: ["stress", "boundaries", "values", "behavioral"]
-targetEmotions: ["burnout", "overwhelm", "stress", "exhaustion"]
+relatedCbtModules:
+  - stress
+  - boundaries
+  - values
+  - behavioral
+targetEmotions:
+  - burnout
+  - overwhelm
+  - stress
+  - exhaustion
 publishedAt: "2025-01-27"
 draft: false
 ---

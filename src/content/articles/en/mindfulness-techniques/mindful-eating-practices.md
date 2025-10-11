@@ -1,17 +1,31 @@
 ---
 title: "Mindful Eating: Transform Your Relationship with Food"
-description: "Learn mindful eating practices to improve digestion, reduce emotional eating, and develop a healthier relationship with food. Practical techniques for every meal."
-slug: "mindful-eating-practices"
-category: "mindfulness-techniques"
-contentType: "article"
-intent: "actionable/lifestyle"
-keywords: ["mindful eating", "emotional eating", "conscious eating", "healthy eating habits"]
+description: >-
+  Learn mindful eating practices to improve digestion, reduce emotional eating, and develop a healthier relationship
+  with food. Practical techniques for every meal.
+slug: mindful-eating-practices
+category: mindfulness-techniques
+contentType: article
+intent: actionable
+keywords:
+  - mindful eating
+  - emotional eating
+  - conscious eating
+  - healthy eating habits
 searchVolume: 9500
-priority: "high"
+priority: high
 featured: true
 readingTime: 12
-relatedCbtModules: ["mindfulness", "emotional", "habits", "body_awareness"]
-targetEmotions: ["food anxiety", "guilt", "disconnection", "awareness"]
+relatedCbtModules:
+  - mindfulness
+  - emotional
+  - habits
+  - body_awareness
+targetEmotions:
+  - food anxiety
+  - guilt
+  - disconnection
+  - awareness
 publishedAt: "2025-01-27"
 draft: false
 ---

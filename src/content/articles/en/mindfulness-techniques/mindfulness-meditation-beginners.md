@@ -1,17 +1,31 @@
 ---
 title: "Mindfulness Meditation for Beginners: A Complete Guide"
-description: "Learn mindfulness meditation from scratch with step-by-step instructions, common challenges, and practical tips for building a sustainable practice."
-slug: "mindfulness-meditation-beginners"
-category: "mindfulness-techniques"
-contentType: "article"
-intent: "instructional"
-keywords: ["mindfulness meditation", "meditation beginners", "mindfulness practice", "how to meditate"]
+description: >-
+  Learn mindfulness meditation from scratch with step-by-step instructions, common challenges, and practical tips for
+  building a sustainable practice.
+slug: mindfulness-meditation-beginners
+category: mindfulness-techniques
+contentType: article
+intent: instructional
+keywords:
+  - mindfulness meditation
+  - meditation beginners
+  - mindfulness practice
+  - how to meditate
 searchVolume: 22000
-priority: "high"
+priority: high
 featured: true
 readingTime: 12
-relatedCbtModules: ["mindfulness", "anxiety", "stress", "present_moment"]
-targetEmotions: ["stress", "anxiety", "overwhelm", "curiosity"]
+relatedCbtModules:
+  - mindfulness
+  - anxiety
+  - stress
+  - present_moment
+targetEmotions:
+  - stress
+  - anxiety
+  - overwhelm
+  - curiosity
 publishedAt: "2025-01-27"
 draft: false
 ---

@@ -11,6 +11,7 @@ import i18nConfig from "@/lib/i18n/config";
 import { notFound } from "next/navigation";
 import "../globals.css";
 import LayoutFooter from "@/components/layout/footer";
+import LayoutHeader from "@/components/layout/header";
 
 export function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ locale }));
@@ -50,7 +51,7 @@ export default async function RootLayout({
             resources={resources}
             namespaces={i18nNamespaces}
           >
-            {/* <LayoutHeader locale={locale as AppLocales} /> */}
+            <LayoutHeader locale={locale as AppLocales} />
             {children}
             <LayoutFooter locale={locale as AppLocales} />
           </TranslationProvider>

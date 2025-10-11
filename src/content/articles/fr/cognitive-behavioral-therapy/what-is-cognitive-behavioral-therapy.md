@@ -1,17 +1,15 @@
 ---
-title: Qu'est-ce que la Thérapie Cognitivo-Comportementale ? Guide Complet
-description: >-
-  Cet article est en cours de traduction. La version française sera bientôt
-  disponible avec un contenu adapté et de qualité en santé mentale.
+title: "Qu’est-ce que la thérapie cognitivo-comportementale ? Guide complet"
+description: "Comprenez les principes de la TCC, comment elle fonctionne et pourquoi elle est l’une des thérapies les plus efficaces pour l’anxiété et la dépression."
 slug: what-is-cognitive-behavioral-therapy
 category: cognitive-behavioral-therapy
 contentType: article
 intent: informational
 keywords:
-  - what is CBT
-  - cognitive behavioral therapy
-  - CBT therapy
-  - CBT explained
+  - thérapie cognitivo-comportementale
+  - TCC
+  - traitement anxiété
+  - thérapie brève
 searchVolume: 45000
 priority: high
 featured: true
@@ -26,31 +24,51 @@ targetEmotions:
   - learning
 publishedAt: "2025-01-27"
 draft: false
-placeholder: true
 ---
 
-# Contenu disponible prochainement
+# Qu’est-ce que la thérapie cognitivo-comportementale ?
 
-## Cet article est en cours de traduction
+La TCC est une forme de psychothérapie structurée et brève qui établit un lien entre nos pensées, nos émotions et nos comportements. En modifiant l’un de ces éléments, on influence les deux autres.
 
-Nous travaillons actuellement sur la version française de cet article pour vous offrir le meilleur contenu en santé mentale et thérapie cognitivo-comportementale.
+## Principes clés
 
-### En attendant, vous pouvez :
+- **Focus sur l’ici et maintenant** : le passé peut être évoqué, mais l’accent est mis sur les difficultés actuelles.
+- **Collaboration** : thérapeute et patient travaillent ensemble, avec des objectifs clairs.
+- **Outils concrets** : fiches de pensées, exercices comportementaux, plans d’action.
+- **Autonomisation** : l’objectif est de vous rendre autonome avec des techniques réutilisables.
 
-- **Consulter la version anglaise** de cet article pour accéder au contenu complet
-- **Explorer nos autres ressources** disponibles en français
-- **Vous inscrire** pour recevoir une notification lorsque la traduction sera terminée
+## Pour quels troubles ?
 
-### Pourquoi cette approche ?
+- Anxiété (GAD, phobies, panique, TOC)
+- Dépression légère à modérée
+- Stress post-traumatique
+- Troubles alimentaires (avec protocole adapté)
+- Gestion du stress, insomnie, douleurs chroniques
 
-Chez Innuora, nous nous engageons à fournir des ressources de qualité en santé mentale. Plutôt que de publier des traductions automatiques de mauvaise qualité, nous prenons le temps de créer des contenus adaptés culturellement et linguistiquement précis.
+## Comment se déroule une séance ?
 
-### Besoin d'aide immédiate ?
+1. **Check-in** : retour sur la semaine, émotions, incidents importants.
+2. **Agenda** : choix des thèmes à traiter ensemble.
+3. **Travail cognitif/comportemental** : analyse d’une situation, expérimentation de techniques.
+4. **Plan d’action** : tâches ou exercices à tester entre les séances.
 
-Notre plateforme de thérapie assistée par IA est disponible en français dès maintenant. Commencez une conversation thérapeutique personnalisée en français :
+## Durée
 
-**[Commencer une session →](/fr/join)**
+- Thérapie généralement brève (8 à 20 séances selon la problématique).
+- Possibilité de booster la TCC par des séances de rappel.
+
+## Pourquoi ça marche ?
+
+- Basée sur des preuves scientifiques solides.
+- Apprentissage actif : on expérimente, on corrige, on réessaie.
+- S’adapte à chaque personne (rythme, outils, objectifs).
+
+## Comment trouver un praticien ?
+
+- Psychologues ou psychiatres formés à la TCC.
+- Vérifiez les certifications et l’expérience avec votre problématique.
+- La relation thérapeutique doit vous sembler respectueuse et collaborative.
 
 ---
 
-_Cette page sert de marque-place pour assurer l'indexation des URLs pendant la traduction du contenu._
+_Ce guide est informatif. Consultez un professionnel qualifié pour un accompagnement personnalisé._

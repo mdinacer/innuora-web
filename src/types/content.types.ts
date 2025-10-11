@@ -25,6 +25,9 @@ export const ContentIntentSchema = z.enum([
   "informational",
   "actionable",
   "supportive",
+  "instructional",
+  "analytical",
+  "motivational",
   "therapeutic",
   "emergency",
 ]);
@@ -58,6 +61,7 @@ export const ContentMetadataSchema = z.object({
 
   // Publishing
   publishedAt: z.date().optional(),
+  updatedAt: z.date().optional(),
   draft: z.boolean().default(true),
 });
 
@@ -67,10 +71,16 @@ export type ContentMetadata = z.infer<typeof ContentMetadataSchema>;
 // Content Item Structure
 // =========================
 
+export interface LocalizedMetadataOverride {
+  title?: string;
+  description?: string;
+  excerpt?: string;
+}
+
 export interface ContentItem {
   metadata: ContentMetadata;
   excerpt?: string;
-  // Full content will be loaded dynamically when needed
+  localized?: Partial<Record<string, LocalizedMetadataOverride>>;
 }
 
 // =========================

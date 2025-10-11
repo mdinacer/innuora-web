@@ -1,18 +1,29 @@
 ---
 title: "Recognizing Your Thought Patterns: AI-Powered Pattern Analysis"
-description: "Learn how Innuora's AI identifies your recurring thought patterns, cognitive distortions, and emotional triggers to personalize your therapeutic journey."
-slug: "recognizing-your-thought-patterns"
-category: "pattern-recognition"
-contentType: "insight"
-intent: "informational"
+description: >-
+  Learn how Innuora's AI identifies your recurring thought patterns, cognitive distortions, and emotional triggers to
+  personalize your therapeutic journey.
+slug: recognizing-your-thought-patterns
+category: pattern-recognition
+contentType: insight
+intent: informational
 keywords:
-  ["thought patterns", "cognitive patterns", "AI pattern recognition", "mental health insights", "self-awareness"]
+  - thought patterns
+  - cognitive patterns
+  - AI pattern recognition
+  - mental health insights
+  - self-awareness
 searchVolume: 1500
-priority: "medium"
+priority: medium
 featured: true
 readingTime: 7
-relatedCbtModules: ["cognitive", "core_beliefs"]
-targetEmotions: ["curiosity", "self-awareness", "insight"]
+relatedCbtModules:
+  - cognitive
+  - core_beliefs
+targetEmotions:
+  - curiosity
+  - self-awareness
+  - insight
 publishedAt: "2025-01-27"
 draft: false
 ---
@@ -281,3 +292,7 @@ Review the insights with curiosity, not judgment.
 **Remember**: Pattern recognition is a superpower. It transforms "Why do I keep doing this?" into "I know why I do this, and here's how I can change it."
 
 **Explore your patterns** → Start your next Innuora session
+
+---
+
+_This insight is for educational purposes only and is not a substitute for professional mental health treatment. If you are experiencing mental health difficulties, please consult with a qualified clinician._

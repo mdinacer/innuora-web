@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 
+import { APP_CONFIG } from "@/config/app";
 import { ContentMetadata } from "@/types/content.types";
 
 // =========================
@@ -49,9 +50,7 @@ export class SEOGenerator {
         card: "summary_large_image",
         title: seoTitle,
         description: seoDescription,
-        images: [
-          `/api/og?title=${encodeURIComponent(title)}&category=${category}`,
-        ],
+        images: [`/api/og?title=${encodeURIComponent(title)}&category=${category}`],
       },
 
       // Canonical URL
@@ -87,21 +86,11 @@ export class SEOGenerator {
   /**
    * Generate structured data (JSON-LD) for articles
    */
-  static generateStructuredData(
-    contentMetadata: ContentMetadata,
-    content?: string,
-  ): object {
-    const {
-      title,
-      description,
-      keywords,
-      category,
-      slug,
-      publishedAt,
-      readingTime,
-    } = contentMetadata;
+  static generateStructuredData(contentMetadata: ContentMetadata, content?: string): object {
+    const { title, description, keywords, category, slug, publishedAt, updatedAt, readingTime } = contentMetadata;
 
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://innuora.com";
+    const baseUrl =
+      process.env.NEXT_PUBLIC_BASE_URL || APP_CONFIG.domains.primary;
     const articleUrl = `${baseUrl}/content/${category}/${slug}`;
 
     const structuredData: Record<string, any> = {
@@ -112,7 +101,7 @@ export class SEOGenerator {
       image: `${baseUrl}/api/og?title=${encodeURIComponent(title)}&category=${category}`,
       url: articleUrl,
       datePublished: publishedAt?.toISOString(),
-      dateModified: publishedAt?.toISOString(),
+      dateModified: (updatedAt ?? publishedAt)?.toISOString(),
       author: {
         "@type": "Organization",
         name: "Innuora",
@@ -161,7 +150,7 @@ export class SEOGenerator {
     priority: number;
     changeFrequency: "weekly" | "monthly" | "yearly";
   } {
-    const { category, slug, priority, publishedAt } = contentMetadata;
+    const { category, slug, priority, publishedAt, updatedAt } = contentMetadata;
 
     const priorityMap = {
       high: 0.8,
@@ -171,7 +160,7 @@ export class SEOGenerator {
 
     return {
       url: `/content/${category}/${slug}`,
-      lastModified: publishedAt || new Date(),
+      lastModified: updatedAt || publishedAt || new Date(),
       priority: priorityMap[priority],
       changeFrequency: "monthly",
     };
@@ -240,7 +229,7 @@ export class InternalLinkingHelper {
    */
   static generateLinkSuggestions(
     contentMetadata: ContentMetadata,
-    availableContent: ContentMetadata[],
+    availableContent: ContentMetadata[]
   ): Array<{
     anchor: string;
     url: string;
@@ -254,8 +243,7 @@ export class InternalLinkingHelper {
       relevance: number;
     }> = [];
 
-    const { keywords, relatedCbtModules, targetEmotions, category } =
-      contentMetadata;
+    const { keywords, relatedCbtModules, targetEmotions, category } = contentMetadata;
 
     for (const otherContent of availableContent) {
       if (otherContent.slug === contentMetadata.slug) continue;
@@ -270,7 +258,7 @@ export class InternalLinkingHelper {
       // Matching CBT modules
       if (relatedCbtModules && otherContent.relatedCbtModules) {
         const matchingModules = relatedCbtModules.filter((cbtModule: string) =>
-          otherContent.relatedCbtModules!.includes(cbtModule),
+          otherContent.relatedCbtModules!.includes(cbtModule)
         );
         relevance += matchingModules.length * 0.2;
       }
@@ -278,15 +266,13 @@ export class InternalLinkingHelper {
       // Matching emotions
       if (targetEmotions && otherContent.targetEmotions) {
         const matchingEmotions = targetEmotions.filter((emotion: string) =>
-          otherContent.targetEmotions!.includes(emotion),
+          otherContent.targetEmotions!.includes(emotion)
         );
         relevance += matchingEmotions.length * 0.15;
       }
 
       // Keyword overlap
-      const keywordOverlap = keywords.filter((keyword: string) =>
-        otherContent.keywords.includes(keyword),
-      );
+      const keywordOverlap = keywords.filter((keyword: string) => otherContent.keywords.includes(keyword));
       relevance += keywordOverlap.length * 0.1;
 
       // Only suggest if relevance is significant

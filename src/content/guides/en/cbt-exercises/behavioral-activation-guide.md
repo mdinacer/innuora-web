@@ -1,18 +1,30 @@
 ---
 title: "Behavioral Activation Guide: Break the Depression Cycle with Action"
-description: "Evidence-based behavioral activation technique for depression. Learn to schedule activities that improve mood and restore engagement with life."
-slug: "behavioral-activation-guide"
-category: "cbt-exercises"
-contentType: "guide"
-intent: "actionable"
+description: >-
+  Evidence-based behavioral activation technique for depression. Learn to schedule activities that improve mood and
+  restore engagement with life.
+slug: behavioral-activation-guide
+category: cbt-exercises
+contentType: guide
+intent: actionable
 keywords:
-  ["behavioral activation", "depression activities", "mood improvement", "activity scheduling", "overcoming depression"]
+  - behavioral activation
+  - depression activities
+  - mood improvement
+  - activity scheduling
+  - overcoming depression
 searchVolume: 2100
-priority: "high"
+priority: high
 featured: true
 readingTime: 9
-relatedCbtModules: ["behavioral_activation", "cognitive"]
-targetEmotions: ["depression", "apathy", "fatigue", "hopelessness"]
+relatedCbtModules:
+  - behavioral_activation
+  - cognitive
+targetEmotions:
+  - depression
+  - apathy
+  - fatigue
+  - hopelessness
 publishedAt: "2025-01-27"
 draft: false
 ---
@@ -296,3 +308,7 @@ Evening reflection: I will note what I learned
 **Start now**: Choose one activity from your hierarchy and do it within the next hour.
 
 **Need accountability?** Share your behavioral activation plan in your next Innuora session →
+
+---
+
+_This guide is for educational purposes only and is not a substitute for professional mental health treatment. If you are experiencing mental health difficulties, please consult with a qualified clinician._

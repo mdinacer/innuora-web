@@ -65,6 +65,32 @@
                 }
             ]
         },
+        "quickLinks": {
+            "badge": "Start exploring",
+            "title": "Choose your next step",
+            "subtitle": "Jump into a live demo or browse our localized content library.",
+            "items": [
+                {
+                    "title": "Experience the caregiver demo",
+                    "body": "Walk through a real high-functioning caregiver session and see diagnostics appear in real time.",
+                    "action": "Open the demo",
+                    "href": "/demo"
+                },
+                {
+                    "title": "Browse the content library",
+                    "body": "Guides, CBT skills, and therapeutic insights in English, Arabic, and French.",
+                    "action": "Explore articles",
+                    "href": "/content"
+                }
+            ]
+        },
+        "testerInvite": {
+            "badge": "Join the tester group",
+            "title": "We’re onboarding a small group of advanced testers",
+            "description": "If you’re excited to shape {{app_name}} from the inside, apply to join the advanced testing program and share your feedback directly with the team.",
+            "button": "Apply to be a tester",
+            "disclaimer": "Limited spots · we review every application manually"
+        },
         "howItWorks": {
             "badge": "From reflection to quiet self-trust",
             "title": "How emotional clarity unfolds inside {{app_name}}",
@@ -209,6 +235,537 @@
             "subtitle": "{{app_name}} exists to make emotional clarity accessible, private, and intelligent. We combine therapeutic insight with empathic AI design, helping women understand themselves more deeply and professionals support them more effectively."
         }
     },
+    "demo": {
+        "messages": [
+            {
+                "headline": "Chest feels like it’s holding a fuse.",
+                "user": "I don't really know how to answer that. Everyone says I'm \"handling it,\" but I feel like I'm sleepwalking through the week. I get up, do the meetings, send the emails, and meanwhile my chest feels like it's holding a fuse that's almost out. I can't even explain what exactly is wrong.",
+                "genericProductivity": "Try breaking tasks into smaller action items and set calendar reminders so nothing slips. Once you finish a task, check it off and reward yourself with a short break.",
+                "genericWellness": "Take a slow breath in for four, out for six. Notice one small spot in your chest that feels even slightly softer.",
+                "app": "It sounds like you're keeping everything moving on the outside while carrying a lot of pressure inside. When that fuse in your chest feeling shows up, what do you notice happening around you or inside your body?"
+            },
+            {
+                "headline": "Outside I’m fine, inside I’m hollow.",
+                "user": "Usually nothing dramatic. I'm just sitting in a meeting nodding along, or finishing slide decks at midnight. On the outside I'm fine. Inside it feels jittery and hollow, like I'm waiting for someone to notice I'm not okay, but if they did I'd probably freeze because I don't know how to explain it.",
+                "genericProductivity": "Consider sharing a status update with your manager or a teammate so expectations stay aligned. Scheduling a daily recap could help you communicate the pressure before it builds.",
+                "genericWellness": "Place a hand on your chest and take one gentle breath. Let your shoulders drop a little as you exhale.",
+                "app": "That sounds so lonely. Craving someone to notice while also not having words ready. Your body sounds like it's on high alert even in calm moments. How long have you been carrying that restless, hollow feeling?"
+            },
+            {
+                "headline": "I volunteered and never stopped.",
+                "user": "I think it started when Mom had her surgery last winter. I volunteered to organize everything for a few months. It's almost a year later, and I'm still the one keeping everyone on track at home and at work. I keep telling myself it's temporary, but nothing is easing.",
+                "genericProductivity": "Try creating a delegation plan so tasks can be reassigned over time. A shared spreadsheet or project board might help others pick up responsibilities.",
+                "genericWellness": "You’ve been carrying a lot. Write down one task someone else could do, even if you don’t hand it off yet.",
+                "app": "You stepped in to hold so much for everyone, and it never really paused. No wonder your system is tired. What happens inside you when you imagine letting some of those plates slow down, even for a minute?"
+            },
+            {
+                "headline": "Saying yes keeps everyone calm.",
+                "user": "If I even hint at slowing down, everyone looks at me like I have the master plan. My siblings ping me for updates, my team asks if I signed off. It's easier to just keep saying yes than feel the panic in the room when I pause.",
+                "genericProductivity": "Practice assertive communication. Try phrases like ‘I’ll review that tomorrow’ so you can manage expectations without feeling like you’re letting people down.",
+                "genericWellness": "Before answering, pause for one breath and feel your feet on the ground. Then speak when it feels right.",
+                "app": "Staying on point sounds like the quickest way to keep everyone calm, even if it drains you. When you give that quick yes, what signals show up in your body afterward?"
+            },
+            {
+                "headline": "Hidden lists, scrolling until my eyes burn.",
+                "user": "I hear myself doing these tiny sighs all day. I keep extra lists hidden in my notebook so my team doesn't see me scrambling. At night I scroll until my eyes burn because if I put the phone down the quiet gets too loud and I start thinking about everything I missed.",
+                "genericProductivity": "Consider batching your to-dos and using focus timers so you can wind down earlier. Try a blue-light filter or set ‘no phone’ time before bed.",
+                "genericWellness": "Set a short timer tonight. When it rings, rest your phone down and name three things you can hear.",
+                "app": "Those hidden lists and late-night scrolling sound like ways to keep the volume down on that loud quiet. When the quiet sneaks in, what feelings or memories start to show up?"
+            },
+            {
+                "headline": "Promises to myself keep slipping.",
+                "user": "The quiet reminds me of promises I made to myself. Paint more. Call my sister back. Sleep eight hours. Instead I end up re-washing dishes or double-checking calendars. Then I feel guilty for even wanting rest when people are counting on me.",
+                "genericProductivity": "Block time on your calendar for creative work so it becomes non-negotiable. Treat it like any other important meeting.",
+                "genericWellness": "Before bed, write one kind sentence to yourself. Read it slowly and notice your shoulders ease a bit.",
+                "app": "There's such a tender mix there, wanting simple care for yourself and then feeling guilty for even considering it. That guilt sounds heavy. What does your body do when you notice it?"
+            },
+            {
+                "headline": "My shoulders spike, my throat locks.",
+                "user": "It spikes up through my shoulders and into my throat. I start rubbing the back of my neck so hard it stings, and I chew the inside of my cheek until I taste metal. It's like my body is bracing for someone to be disappointed.",
+                "genericProductivity": "When you notice tension, pause and stretch or use a relaxation app to loosen those muscles before continuing.",
+                "genericWellness": "Take one slow breath. As you exhale, whisper 'soften' and let your shoulders drop slightly.",
+                "app": "That bracing shows how prepared you are for backlash, even when no one is actually upset. Can you remember a recent moment when that tension took over the rest of your day?"
+            },
+            {
+                "headline": "My day off turned into another shift.",
+                "user": "I tried taking a Friday off last month. I spent the morning checking email 'just in case,' then I reorganized the pantry, then I cleaned the garage. By dinner I was more exhausted than if I'd gone to work.",
+                "genericProductivity": "Plan unstructured time like any other appointment. Add ‘rest blocks’ to your calendar so you have a reminder not to fill them.",
+                "genericWellness": "Before your next day off, choose one small restful thing you’d like to do. Keep it simple and easy to start.",
+                "app": "That day off turned into another full shift of caretaking and control. It makes sense your body didn't get the rest it craved. If rest felt safer, what might you have needed most that day?"
+            },
+            {
+                "headline": "I snapped, then over-corrected.",
+                "user": "Yeah. Last Sunday I tried to nap while the laundry ran, and my daughter walked in asking where her uniform was. I snapped, then spent the rest of the night re-folding everything so no one would think I was slacking.",
+                "genericProductivity": "Create a shared task list so everyone knows where things are. If you document the system, you won’t feel pressure to redo it after a mistake.",
+                "genericWellness": "After a tense moment, breathe out slowly and tell yourself, 'It’s okay to start fresh now.'",
+                "app": "Snapping and then over-correcting sounds exhausting and lonely, like you had to prove the kindness again. What did that part of you need in that moment besides refolding everything?"
+            },
+            {
+                "headline": "I wish for a fever just to rest.",
+                "user": "Part of me wishes I'd just wake up with a fever so I could stay in bed and no one would argue. Then I feel awful for even thinking that because people deal with real emergencies.",
+                "genericProductivity": "Keep a list of everything you’ve accomplished recently. Seeing proof of your effort can reduce the guilt you feel about taking breaks.",
+                "genericWellness": "When that thought shows up, place a hand on your heart and say, 'Wanting rest makes sense.'",
+                "app": "That wish shows how much permission your body is begging for, and how quickly you judge yourself for needing it. There's a voice that says rest has to be justified by illness. What do you think that voice is trying to protect?"
+            },
+            {
+                "headline": "The voice says don’t be dramatic.",
+                "user": "I keep picturing myself sitting in the car for a minute before walking inside, just breathing. But immediately I hear, 'don't be dramatic, dinner won't cook itself.' I don't know how to disagree with that voice without feeling lazy.",
+                "genericProductivity": "Use motivational affirmations like ‘I earn rest by working smart.’ Repeat them before you get out of the car to shift your mindset.",
+                "genericWellness": "When that voice appears, take one calm breath and remind yourself, 'It’s okay to pause for a minute.'",
+                "app": "That voice sounds strict and familiar, maybe an old rule about proving your worth by always moving. If you could give that voice a gentle nod, what might another, quieter part of you say about pausing in the car?"
+            },
+            {
+                "headline": "What if I fail at relaxing?",
+                "user": "Maybe it would say it's only two minutes and no one will even notice. I could just sit there with my phone off and feel the steering wheel and check in with my shoulders. I'm scared I'll fail at relaxing too, which sounds ridiculous even as I say it.",
+                "genericProductivity": "Set a daily reminder in your phone and track whether you complete the pause. Seeing streaks build can keep you motivated.",
+                "genericWellness": "Set a two-minute timer. Close your eyes and repeat one calm word, like 'steady,' as you breathe.",
+                "app": "It isn't ridiculous at all. It shows how rest has been turned into another performance. Sitting in the car for two quiet minutes, just noticing your shoulders, could be a small experiment, not a test. How would it be to treat that pause like a gift you're allowed to receive, even if it feels unfamiliar?"
+            },
+            {
+                "headline": "The eye-roll voice is loud.",
+                "user": "Even hearing that, there's a voice rolling its eyes. It says, 'two minutes won't fix years of backlog, you're being dramatic.' That voice is louder than anything else.",
+                "genericProductivity": "Reframe the thought quickly. Remind yourself that small steps compound. Repeat ‘every pause is progress’ whenever doubt shows up.",
+                "genericWellness": "When that inner critic speaks, breathe out slowly and say, 'Every small pause matters.'",
+                "app": "That eye-roll is so sharp, and it has probably kept you moving for years. If we thanked it for working so hard, what tiny sign would let you know it's safe to ease for just a moment?"
+            },
+            {
+                "headline": "Maybe my hands would stop buzzing.",
+                "user": "Maybe my hands would stop buzzing. Last weekend I dropped a pot and just stood there shaking. If they could rest on my lap without twitching, that would feel like proof I'm not about to lose control.",
+                "genericProductivity": "If your hands feel shaky, squeeze a stress ball or use grounding tools so you can refocus quickly.",
+                "genericWellness": "Rest both hands on your lap. Take one deep breath and feel them grow a little heavier as you exhale.",
+                "app": "Hands resting without buzzing sounds like the permission you're craving. Who, if anyone, could sit beside you in that pause or help guard that space so it doesn't get filled immediately?"
+            },
+            {
+                "headline": "My sister offered to help, I said no.",
+                "user": "My sister actually offered to handle Thursday dinners but I told her I had it. Asking now feels so late, like I'm admitting I never had it together.",
+                "genericProductivity": "If someone offers help, create a quick checklist they can follow. Delegating with clear instructions keeps everything on track.",
+                "genericWellness": "Before you text your sister, take one steady breath. Imagine her saying yes and let that thought soften your chest.",
+                "app": "Admitting it now could also be you trusting her with the truth. Would you be open to testing it here, maybe drafting the text while we breathe, and noticing how your body responds?"
+            },
+            {
+                "headline": "The fuse feeling flickered softer.",
+                "user": "While you were talking I let my hands rest in my lap and typed out the text to my sister without sending it. The fuse feeling didn't disappear, but it flickered softer for a second. Maybe two minutes in the car won't make everything fall apart.",
+                "genericProductivity": "Use a digital reminder to prompt the pause each day. Pair it with a checklist so you can measure progress.",
+                "genericWellness": "Take a breath and whisper a calm word, like 'soften.' Notice one small place that feels lighter after you do.",
+                "app": "That flicker softening shows your body can respond even to a single breath. If you were to honor that pause after work, what could remind you to take it and who might help carry one small piece while you do?"
+            },
+            {
+                "headline": "Two-minute defrost, text drafted.",
+                "user": "I can set a little reminder that pops up before I park. I'll call it my \"two-minute defrost.\" And I'm going to text my sister to take Thursday dinner next week. Saying it is wobbly, but it feels like air getting back in.",
+                "genericProductivity": "Celebrate the small win by logging it in a habit tracker. Regular tracking keeps momentum strong.",
+                "genericWellness": "After sending the text, take one slow breath in and out. Say quietly, 'This space is mine to breathe.'",
+                "app": "You just gave yourself permission in real time and lined up support to protect it. Notice how your chest and shoulders feel as you imagine that reminder and your sister stepping in. What do you want to hold onto from this moment?"
+            },
+            {
+                "headline": "Hands heavier, not buzzing.",
+                "user": "There's still a tired ache around my ribs, but it's steadier. I'm going to send the text after we finish and actually wait for her reply instead of filling the space. I'm holding onto how my hands feel heavier, not buzzing.",
+                "genericProductivity": "Track the outcome in a reflection journal so you can see patterns over time. Consistency will reinforce the habit.",
+                "genericWellness": "Each evening, rest your palm on the area that feels calm and take one long, quiet breath before sleep.",
+                "app": "That steadier ache and the heavier hands are signals that your body believes this pause is real. Keep checking in with that \"defrost\" reminder tonight, and let the help you invited in stay beside you."
+            }
+        ],
+        "meta": {
+            "badge": "Care Network Check-in · 37 messages · ~13 minutes",
+            "title": "When an over-functioning caregiver finally breathes out",
+            "description": "This live exchange is shared with consent from a tester who partnered with {{app_name}} while she carried her family’s logistics after her mother’s surgery. Every user message below is real. Next to each one you’ll see how a generic productivity bot or a generic mental health app might respond, and how {{app_name}} actually did."
+        },
+        "conversation": {
+            "badge": "Conversation walkthrough",
+            "title": "Every user message, three perspectives",
+            "description": "Generic responses are illustrative composites. {{app_name}}’s replies are quoted verbatim from user session (Tester).",
+            "userReflection": "User reflection",
+            "appVerbatim": "{{app_name}} (verbatim)",
+            "vs": "vs",
+            "vsLabel": "How generic tools would respond",
+            "genericProductivity": "Generic productivity bot",
+            "genericWellness": "Generic mental health app"
+        },
+        "highlights": {
+            "badge": "Session highlights",
+            "title": "Key shifts captured in real time",
+            "items": [
+                {
+                    "title": "Silent rules made visible",
+                    "body": "{{app_name}} names the governing rules, rest must be earned by crisis and don’t add to anyone else’s load, so the user can see why every pause has felt unsafe."
+                },
+                {
+                    "title": "Micro-rest ritual protected",
+                    "body": "The two-minute defrost in the car is anchored to somatic cues (buzzing hands → heavier hands) so the body trusts the experiment."
+                },
+                {
+                    "title": "Delegation rehearsal completed",
+                    "body": "Within the session she drafts the text handing Thursday dinner to her sister, rehearses sending it, and names the support she’ll accept."
+                }
+            ]
+        },
+        "chart": {
+            "analytics": {
+                "header": {
+                    "title": "Key Therapeutic Indicators Over Time",
+                    "subtitle": "Each point represents one user message and its corresponding analysis."
+                },
+                "metrics": {
+                    "emotional_cognitive": {
+                        "title": "Emotional & Cognitive Trends",
+                        "badge": "Balanced",
+                        "rows": {
+                            "emotional_intensity": {
+                                "label": "Emotional Intensity",
+                                "value": "↓ 60% (steady decline)"
+                            },
+                            "cognitive_load": {
+                                "label": "Cognitive Load",
+                                "value": "↓ 65% (clear reduction)"
+                            },
+                            "overall_regulation": {
+                                "label": "Overall Regulation",
+                                "value": "Improved"
+                            }
+                        }
+                    },
+                    "readiness": {
+                        "title": "Therapeutic Readiness",
+                        "badge": "Improved",
+                        "rows": {
+                            "engaged": {
+                                "label": "Engaged",
+                                "value": "68% of session"
+                            },
+                            "ambivalent": {
+                                "label": "Ambivalent",
+                                "value": "32% of session"
+                            },
+                            "final_state": {
+                                "label": "Final State",
+                                "value": "Fully Engaged"
+                            }
+                        }
+                    },
+                    "integration": {
+                        "title": "Insight Integration",
+                        "badge": "9 Moments",
+                        "rows": {
+                            "early_insights": {
+                                "label": "Early Micro-Insights",
+                                "value": "3 key reflections"
+                            },
+                            "mid_breakthroughs": {
+                                "label": "Mid-Session Breakthroughs",
+                                "value": "4 integrations"
+                            },
+                            "sustained_insight": {
+                                "label": "Sustained Insight",
+                                "value": "2 deep shifts"
+                            }
+                        }
+                    }
+                },
+                "insights": {
+                    "title": "Key Insights from Emotional Progression",
+                    "list": [
+                        "Readiness improved from ambivalent to engaged by exchange 6, reflecting growing trust and openness.",
+                        "Cognitive load decreased significantly, showing reduced rumination and better self-regulation.",
+                        "Emotional intensity softened across exchanges, suggesting stabilization and containment of affect.",
+                        "Integration moments increased toward the end, indicating sustained reflection and internalization of insight."
+                    ]
+                }
+            },
+            "header": {
+                "badge": "Session Analytics",
+                "title": "Therapeutic Progress Throughout the Session",
+                "subtitle": "Each point represents one user message and its corresponding emotional analysis."
+            },
+            "axes": {
+                "x_label": "Exchange",
+                "y_label": "Level"
+            },
+            "tooltip": {
+                "label_prefix": "Exchange"
+            },
+            "legend": {
+                "emotional_intensity": "Emotional Intensity",
+                "cognitive_load": "Cognitive Load",
+                "readiness": "Therapeutic Readiness",
+                "integration": "Insight Milestones"
+            },
+            "chart_config": {
+                "emotionalIntensity": "Emotional Intensity",
+                "cognitiveLoad": "Cognitive Load",
+                "readiness": "Therapeutic Readiness",
+                "integration": "Insight Milestones"
+            }
+        },
+        "diagnostics": {
+            "badge": "Diagnostics distilled",
+            "title": "Two lenses on the same conversation",
+            "description": "Tap through the tabs to see both full diagnostics exactly as the app renders them.",
+            "labels": {
+                "rigidity": {
+                    "rigid": "Rigid rule",
+                    "moderate": "Moderately rigid",
+                    "flexible": "Flexible rule"
+                },
+                "confidence": {
+                    "high": "High confidence",
+                    "medium": "Medium confidence",
+                    "low": "Low confidence"
+                }
+            },
+            "confidenceValue": "{{value}} Confidence",
+            "basic": {
+                "title": "Basic diagnostic",
+                "now": {
+                    "title": "What’s happening right now",
+                    "points": [
+                        "Sustained caregiving and work demands sit alongside chronic tension and a composed exterior, creating a quiet loneliness behind her competence.",
+                        "She’s caught in an inner conflict, craving rest while an inner critic insists she keep producing, triggering guilt and a hyper-responsibility rebound.",
+                        "Micro-experiments, pausing in the driveway or texting her sister, prove gentle self-care and shared support already soften the load."
+                    ]
+                },
+                "rules": {
+                    "title": "Hidden rules driving the weight",
+                    "items": [
+                        {
+                            "title": "Rest must be earned by crisis",
+                            "rigidity": "rigid",
+                            "confidence": "high",
+                            "body": "This rule convinces her she can slow down only when everything breaks. Perfectionism and rumination then keep the system in overdrive."
+                        },
+                        {
+                            "title": "Don’t add to anyone else’s load",
+                            "rigidity": "moderate",
+                            "confidence": "high",
+                            "body": "The rule silences her needs to protect others, making every help request feel dangerous and increasing the internal pressure to perform."
+                        }
+                    ]
+                },
+                "why": {
+                    "title": "Why it feels heavy",
+                    "item": {
+                        "title": "The weight of the invisible load",
+                        "body": "Caregiving + work + guilt loop through guilt → tension → avoidance of rest → deeper exhaustion. The body stays braced even when nothing is wrong."
+                    }
+                },
+                "meta": {
+                    "title": "Meta-pattern to watch",
+                    "item": {
+                        "title": "The hidden caretaker cycle",
+                        "body": "She manages every role silently, avoids rest because of inner rules, then experiments cautiously with self-care. The cycle maintains the belief that worth equals keeping everything running."
+                    }
+                },
+                "leverage": {
+                    "title": "Leverage points",
+                    "points": [
+                        "The two-minute pause before home interrupts automatic tension and turns rest into an embodied experience instead of a performance.",
+                        "Asking for help (Thursday dinner) cracks the rule against sharing the load and invites connection."
+                    ]
+                },
+                "start": {
+                    "title": "Where to start",
+                    "points": [
+                        "Practice the two-minute pause before entering the house. It’s brief, self-directed, and builds trust in slowing down. Difficulty: gentle.",
+                        "Send one help request, the Thursday dinner text, to challenge the rule against burdening others. Difficulty: gentle.",
+                        "Notice one moment of tension, shoulders or throat, and greet it with curiosity. Difficulty: gentle."
+                    ]
+                },
+                "resources": {
+                    "title": "Resources suggested",
+                    "points": [
+                        "Self-compassion · Cultivate kindness toward the exhausted inner critic. Beginner.",
+                        "Mindfulness techniques · Short pauses and body awareness to reduce overwhelm. Beginner.",
+                        "Anxiety management · Gently challenge anticipatory fear and negative self-talk. Intermediate."
+                    ]
+                }
+            },
+            "advanced": {
+                "title": "Advanced diagnostic",
+                "state": {
+                    "title": "Emotional state and risk",
+                    "labels": {
+                        "primary": "Primary",
+                        "secondary": "Secondary",
+                        "risk": "Risk"
+                    },
+                    "values": {
+                        "primary": "moderate emotional exhaustion",
+                        "secondary": "guilt · anxiety about burdening others · ambivalence about rest",
+                        "risk_body": "Level: low. No crisis observed; emotional intensity is moderate and congruent. User is engaged and responsive to therapeutic experiments."
+                    }
+                },
+                "themes": {
+                    "title": "Themes (4)",
+                    "items": [
+                        {
+                            "title": "Emotional exhaustion under a composed exterior",
+                            "severity": "Severity: high",
+                            "trajectory": "Trajectory: stable",
+                            "points": [
+                                "Carrying family logistics since her mother’s surgery.",
+                                "Snapping when fatigued, then over-correcting to appear reliable.",
+                                "Guilt whenever she contemplates rest."
+                            ]
+                        },
+                        {
+                            "title": "Chronic physical tension and somatic holding",
+                            "severity": "Severity: high",
+                            "trajectory": "Trajectory: stable",
+                            "points": [
+                                "Shoulder and throat tightness, cheek biting, buzzing hands.",
+                                "Tension eases when micro-rest rituals land.",
+                                "Body braces for anticipated disappointment."
+                            ]
+                        },
+                        {
+                            "title": "Overresponsibility and indispensability beliefs",
+                            "severity": "Severity: high",
+                            "trajectory": "Trajectory: stable",
+                            "points": [
+                                "Hidden to-do lists; reluctance to delegate to sister or team.",
+                                "Core beliefs: If I slow down, everything falls apart and My worth depends on keeping everything running.",
+                                "Silent rules: rest must be earned; don’t add to anyone else’s load."
+                            ]
+                        },
+                        {
+                            "title": "Avoidance behaviors and inner critic resistance to rest",
+                            "severity": "Severity: medium",
+                            "trajectory": "Trajectory: stable",
+                            "points": [
+                                "Late-night scrolling, productivity loops, ambivalence toward pausing.",
+                                "Inner critic dismisses rest as dramatic.",
+                                "Micro-rest experiments show emerging readiness."
+                            ]
+                        }
+                    ]
+                },
+                "distortions": {
+                    "title": "Cognitive distortions (5)",
+                    "items": [
+                        "Should statements · Frequency: 6 · Severity: moderate. Productivity rules define worth.",
+                        "Personalization · Frequency: 5 · Severity: moderate. Interprets every burden as her responsibility.",
+                        "Emotional reasoning · Frequency: 5 · Severity: moderate. Reads tension as proof she’s failing.",
+                        "Mental filter · Frequency: 4 · Severity: moderate. Focuses on risks of rest, overlooks wins.",
+                        "Catastrophizing · Frequency: 3 · Severity: moderate. Anticipates collapse if she slows down."
+                    ]
+                },
+                "therapist_focus": {
+                    "title": "Therapist focus",
+                    "points": [
+                        "Target indispensability beliefs and rest-related guilt.",
+                        "Pair compassion work with body regulation practices.",
+                        "Reinforce micro-rest rituals and somatic check-ins.",
+                        "Challenge should statements and catastrophizing.",
+                        "Support gradual delegation and shared support experiments."
+                    ]
+                },
+                "clinical_interpretations": {
+                    "title": "Clinical interpretations",
+                    "points": [
+                        "Perfectionism plus caretaking burden sustain chronic arousal.",
+                        "Silent rules maintain avoidance of rest and help.",
+                        "Distortions amplify guilt and difficulty disengaging.",
+                        "Behavioral experiments signal readiness for deeper change."
+                    ]
+                },
+                "treatment_recommendations": {
+                    "title": "Treatment recommendations",
+                    "points": [
+                        "Cognitive restructuring for should statements and catastrophizing around delegation.",
+                        "Compassion-focused interventions to soften the critic.",
+                        "Consistent micro-rest rituals and body awareness techniques.",
+                        "Guided help-seeking experiments to dismantle overresponsibility.",
+                        "Monitor emotional intensity and ambivalence toward rest to pace work."
+                    ]
+                },
+                "professional_language": {
+                    "title": "Professional language",
+                    "points": [
+                        "Chronic caregiving burden with perfectionism sustains sympathetic activation.",
+                        "Core schemas of indispensability and conditional self-worth inhibit help-seeking.",
+                        "Distortions (should statements, personalization, catastrophizing) perpetuate maladaptive coping.",
+                        "Therapeutic engagement is moderate-high with emerging behavioral activation.",
+                        "Low acute risk supports CBT and compassion-based approaches."
+                    ]
+                },
+                "clinical_insights": {
+                    "title": "Clinical insights",
+                    "points": [
+                        "Mind–body integration is essential given somatic tension.",
+                        "Rest ambivalence stems from internalized silent rules.",
+                        "Micro-rest successes show leverage for core belief shifts.",
+                        "Ongoing monitoring of intensity will guide pacing and intervention depth."
+                    ]
+                }
+            }
+        },
+        "cta": {
+            "title": "Bring {{app_name}} into your own context",
+            "description": "Share a live scenario. We’ll mirror the emotional pattern, surface silent rules, and return user- and clinician-ready diagnostics in under fifteen minutes.",
+            "button": "Request an invitation",
+            "disclaimer": "Reflective intelligence · not a crisis service"
+        }
+    },
+    "advancedTester": {
+        "hero": {
+            "badge": "Advanced Testing",
+            "title": "Help shape {{app_name}}'s future",
+            "description": "Join our advanced testing program and provide valuable feedback as we refine {{app_name}}'s reflective AI conversations. Your insights will directly influence how we build this emotional support tool."
+        },
+        "form": {
+            "email": {
+                "label": "Email Address",
+                "placeholder": "you@example.com",
+                "required": "Email is required"
+            },
+            "occupation": {
+                "label": "Occupation / Role",
+                "placeholder": "e.g., Software Engineer, Teacher, Student, etc.",
+                "helpText": "Helps us understand different user perspectives and needs."
+            },
+            "struggles": {
+                "label": "General Struggles / Emotional Challenges",
+                "placeholder": "What emotional challenges or life situations would you like support with? (e.g., work stress, relationship concerns, decision-making, etc.)",
+                "helpText": "Share what you'd like help processing or reflecting on. This helps us understand your needs."
+            },
+            "coping": {
+                "label": "Coping Mechanisms / How You Manage Stress",
+                "placeholder": "How do you currently handle stress or difficult emotions? (e.g., journaling, exercise, talking to friends, meditation, etc.)",
+                "helpText": "Understanding your current strategies helps us build better complementary tools."
+            },
+            "source": {
+                "label": "How Did You Hear About {{app_name}}?",
+                "placeholder": "e.g., Twitter, friend referral, blog post, etc.",
+                "helpText": "Helps us understand which outreach efforts are most effective."
+            },
+            "notes": {
+                "label": "Additional Comments / Notes",
+                "placeholder": "Anything else you'd like us to know about your interest in {{app_name}} or feedback on emotional AI tools?",
+                "helpText": "Share any other thoughts, questions, or specific areas you'd like to focus on during testing."
+            },
+            "submitButton": "Submit Application",
+            "thankYouNote": "Thank you for your interest in helping shape {{app_name}}. We'll review applications and reach out to selected testers as we expand our program. Remember, {{app_name}} is not therapy or a crisis service."
+        },
+        "messages": {
+            "success": "Application submitted",
+            "pending": "Submitting...",
+            "error": "Submission failed"
+        },
+        "nextSteps": {
+            "viewDemo": "See the caregiver demo",
+            "browseLibrary": "Explore the content library",
+            "submitAnother": "Submit another application"
+        }
+    },
+    "header": {
+        "wordmark": "Reflective intelligence",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu",
+        "links": {
+            "home": "Home",
+            "demo": "Demo",
+            "library": "Content library",
+            "join": "Join beta"
+        }
+    },
     "footer": {
         "disclaimer": {
             "label": "Important: ",
@@ -216,6 +773,8 @@
         },
         "questions": "Questions about this {{currentPage}}?",
         "contact_email": "Contact us at ",
+        "navigationHeading": "Navigate",
+        "legalHeading": "Legal",
         "links": {
             "eula": "End User License Agreement",
             "privacy": "Privacy Policy",

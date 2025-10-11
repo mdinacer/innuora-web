@@ -1,17 +1,15 @@
 ---
-title: 10 Stratégies d'Auto-Assistance Fondées sur des Preuves pour la Dépression
-description: >-
-  Cet article est en cours de traduction. La version française sera bientôt
-  disponible avec un contenu adapté et de qualité en santé mentale.
+title: "10 stratégies d’autosoins basées sur la science pour la dépression"
+description: "Des techniques éprouvées que vous pouvez appliquer chez vous pour réduire les symptômes dépressifs et soutenir un suivi professionnel."
 slug: depression-self-help-strategies
 category: depression-support
 contentType: article
 intent: actionable
 keywords:
-  - depression self help
-  - dealing with depression
-  - depression coping
-  - depression strategies
+  - auto aide dépression
+  - stratégies dépression
+  - outils anti dépression
+  - gestion humeur
 searchVolume: 27000
 priority: high
 featured: true
@@ -27,31 +25,60 @@ targetEmotions:
   - low energy
 publishedAt: "2025-01-27"
 draft: false
-placeholder: true
 ---
 
-# Contenu disponible prochainement
+# 10 stratégies d’autosoins basées sur la science pour la dépression
 
-## Cet article est en cours de traduction
+> ⚠️ Si vous traversez une dépression sévère, avez des pensées suicidaires ou ne parvenez plus à assurer vos besoins de base, contactez immédiatement un professionnel ou les services d’urgence. Ces conseils complètent un suivi, ils ne le remplacent pas.
 
-Nous travaillons actuellement sur la version française de cet article pour vous offrir le meilleur contenu en santé mentale et thérapie cognitivo-comportementale.
+## 1. Activation comportementale
+- Noter vos activités pendant 7 jours (journal d’activité/humeur).
+- Ajouter chaque jour une action plaisante et une action utile.
+- Observer l’évolution de l’humeur pour renforcer ce qui fonctionne.
 
-### En attendant, vous pouvez :
+## 2. Restructuration cognitive
+- Identifier les pensées négatives automatiques.
+- Utiliser une fiche de pensée pour rééquilibrer le dialogue interne.
+- Se rappeler que les pensées ne sont pas des faits.
 
-- **Consulter la version anglaise** de cet article pour accéder au contenu complet
-- **Explorer nos autres ressources** disponibles en français
-- **Vous inscrire** pour recevoir une notification lorsque la traduction sera terminée
+## 3. Mindfulness
+- 5 à 10 minutes de pleine conscience par jour (respiration, scan corporel).
+- Objectif : noter les pensées sans s’y accrocher, développer l’acceptation.
 
-### Pourquoi cette approche ?
+## 4. Activité physique adaptée
+- 3 séances de 20 minutes par semaine (marche, vélo, yoga).
+- Dose équivalente à un antidépresseur léger pour certaines personnes.
+- Commencez par 5 minutes si nécessaire et augmentez progressivement.
 
-Chez Innuora, nous nous engageons à fournir des ressources de qualité en santé mentale. Plutôt que de publier des traductions automatiques de mauvaise qualité, nous prenons le temps de créer des contenus adaptés culturellement et linguistiquement précis.
+## 5. Sommeil
+- Routine régulière, heure de lever identique même le week-end.
+- Rituel apaisant le soir (lumière douce, lecture).
+- Éviter écrans/caféine au moins 60 minutes avant le coucher.
 
-### Besoin d'aide immédiate ?
+## 6. Nutrition bienveillante
+- Repas réguliers, même simples : protéines, fibres, bonnes graisses.
+- Prévoir des collations saines pour éviter les hypoglycémies.
+- S’hydrater régulièrement (eau, infusions).
 
-Notre plateforme de thérapie assistée par IA est disponible en français dès maintenant. Commencez une conversation thérapeutique personnalisée en français :
+## 7. Journal de gratitude réaliste
+- Chaque soir, noter 3 petites choses positives ou utiles.
+- Se concentrer sur des faits concrets (un geste, un moment calme).
 
-**[Commencer une session →](/fr/join)**
+## 8. Réseau de soutien
+- Partager vos besoins avec deux personnes de confiance.
+- Planifier des interactions courtes si la socialisation vous épuise.
+- Rejoindre un groupe de soutien en ligne ou en présentiel.
+
+## 9. Objectifs SMART
+- Spécifiques, Mesurables, Atteignables, Réalistes, Temporels.
+- Exemple : “Marcher 10 minutes lundi, mercredi et vendredi à 17 h.”
+- Célébrez chaque étape franchie, même si elle vous semble petite.
+
+## 10. Aide professionnelle
+- Thérapies recommandées : TCC, ACT, pleine conscience.
+- Évaluer l’option médicamenteuse avec un médecin si besoin.
+- Suivre les recommandations et être transparent sur l’évolution.
 
 ---
 
-_Cette page sert de marque-place pour assurer l'indexation des URLs pendant la traduction du contenu._
+_Prenez soin de vous avec patience. La progression est rarement linéaire ; l’important est de continuer à tester ce qui vous aide._

@@ -1,17 +1,17 @@
 ---
-title: 7 Exercices Puissants d'Auto-Compassion pour la Pratique Quotidienne
+title: "7 exercices de compassion envers soi pour le quotidien"
 description: >-
-  Cet article est en cours de traduction. La version française sera bientôt
-  disponible avec un contenu adapté et de qualité en santé mentale.
+  Transformez le dialogue intérieur critique en soutien grâce à ces pratiques de compassion envers soi, simples à
+  intégrer dans votre routine.
 slug: self-compassion-exercises
 category: self-compassion
 contentType: article
 intent: actionable
 keywords:
-  - self compassion exercises
-  - self kindness practice
-  - self love
-  - emotional healing
+  - exercices compassion
+  - auto bienveillance
+  - self compassion
+  - guérison émotionnelle
 searchVolume: 5200
 priority: high
 featured: true
@@ -28,31 +28,18 @@ targetEmotions:
   - healing
 publishedAt: "2025-01-27"
 draft: false
-placeholder: true
 ---
 
-# Contenu disponible prochainement
+# 7 exercices de compassion envers soi pour le quotidien
 
-## Cet article est en cours de traduction
-
-Nous travaillons actuellement sur la version française de cet article pour vous offrir le meilleur contenu en santé mentale et thérapie cognitivo-comportementale.
-
-### En attendant, vous pouvez :
-
-- **Consulter la version anglaise** de cet article pour accéder au contenu complet
-- **Explorer nos autres ressources** disponibles en français
-- **Vous inscrire** pour recevoir une notification lorsque la traduction sera terminée
-
-### Pourquoi cette approche ?
-
-Chez Innuora, nous nous engageons à fournir des ressources de qualité en santé mentale. Plutôt que de publier des traductions automatiques de mauvaise qualité, nous prenons le temps de créer des contenus adaptés culturellement et linguistiquement précis.
-
-### Besoin d'aide immédiate ?
-
-Notre plateforme de thérapie assistée par IA est disponible en français dès maintenant. Commencez une conversation thérapeutique personnalisée en français :
-
-**[Commencer une session →](/fr/join)**
+1. **Pause compassion** : main sur le cœur, respirez profondément, dites “Ceci est difficile. Je suis humaine. Puis-je me traiter avec douceur ?”
+2. **Lettre à soi** : écrivez-vous du point de vue d’un ami bienveillant, relisez-la dans les moments de doute.
+3. **Respiration compassionnelle** : inspirez en pensant “j’accueille”, expirez “je relâche”.
+4. **Gratitude envers soi** : chaque soir, notez trois choses que vous avez faites ou ressenties avec gentillesse.
+5. **Dialogue transformé** : notez une critique, reformulez-la : “tu as toujours tout raté” → “tu apprends encore, tu progresses”.
+6. **Soin de soi intentionnel** : planifiez chaque jour un geste rien que pour vous (thé favori, marche, bain).
+7. **Méditation de l’amour bienveillant** : répétez “Que je sois en sécurité, que je sois en paix, que je sois libre de la souffrance”.
 
 ---
 
-_Cette page sert de marque-place pour assurer l'indexation des URLs pendant la traduction du contenu._
+_Pratiquer la compassion envers soi est un entraînement : commencez petit, soyez constant, et observez votre rapport à vous-même évoluer._

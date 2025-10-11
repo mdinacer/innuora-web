@@ -1,17 +1,31 @@
 ---
-title: "15 Science-Backed Stress Reduction Techniques for Daily Life"
-description: "Discover proven stress relief methods you can use anywhere. Quick techniques for immediate relief plus long-term strategies for lasting calm."
-slug: "stress-reduction-techniques"
-category: "stress-management"
-contentType: "article"
-intent: "actionable"
-keywords: ["stress reduction", "stress relief", "relaxation techniques", "stress management"]
+title: 15 Science-Backed Stress Reduction Techniques for Daily Life
+description: >-
+  Discover proven stress relief methods you can use anywhere. Quick techniques for immediate relief plus long-term
+  strategies for lasting calm.
+slug: stress-reduction-techniques
+category: stress-management
+contentType: article
+intent: actionable
+keywords:
+  - stress reduction
+  - stress relief
+  - relaxation techniques
+  - stress management
 searchVolume: 19000
-priority: "high"
+priority: high
 featured: true
 readingTime: 11
-relatedCbtModules: ["stress", "mindfulness", "behavioral", "relaxation"]
-targetEmotions: ["stress", "tension", "overwhelm", "anxiety"]
+relatedCbtModules:
+  - stress
+  - mindfulness
+  - behavioral
+  - relaxation
+targetEmotions:
+  - stress
+  - tension
+  - overwhelm
+  - anxiety
 publishedAt: "2025-01-27"
 draft: false
 ---

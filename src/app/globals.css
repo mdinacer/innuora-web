@@ -137,6 +137,12 @@
     var(--color-accent-600),
     var(--color-accent-400)
   );
+
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
 }
 
 .dark {
@@ -159,6 +165,12 @@
   --color-border: #1f2a44;
   --color-input: #24314f;
   --color-ring: var(--color-brand-600);
+
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -177,6 +189,26 @@
   }
   body {
     /* @apply font-sans; */
+  }
+
+  body[dir="rtl"] {
+    font-family: var(--font-arabic-body);
+    font-size: clamp(1.05rem, 0.98rem + 0.3vw, 1.15rem);
+    line-height: 1.9;
+    font-weight: 400;
+  }
+
+  [dir="rtl"] h1,
+  [dir="rtl"] h2,
+  [dir="rtl"] h3,
+  [dir="rtl"] h4,
+  [dir="rtl"] .rtl\:font-arabic-title {
+    font-family: var(--font-arabic-title);
+    letter-spacing: -0.015em;
+  }
+
+  [dir="rtl"] strong {
+    font-weight: 600;
   }
 }
 
@@ -317,4 +349,62 @@
 }
 .bg-muted {
   background-color: var(--color-muted);
+}
+
+@layer utilities {
+  [dir="rtl"] .text-xs {
+    font-size: 0.8rem;
+  }
+
+  [dir="rtl"] .text-sm {
+    font-size: 0.95rem;
+  }
+
+  [dir="rtl"] .text-base {
+    font-size: 1.05rem;
+  }
+
+  [dir="rtl"] .text-lg {
+    font-size: 1.2rem;
+  }
+
+  [dir="rtl"] .text-xl {
+    font-size: 1.4rem;
+  }
+
+  [dir="rtl"] .text-2xl {
+    font-size: 1.6rem;
+  }
+
+  [dir="rtl"] .text-3xl {
+    font-size: 1.9rem;
+  }
+
+  [dir="rtl"] .text-4xl {
+    font-size: 2.2rem;
+  }
+
+  [dir="rtl"] .leading-relaxed {
+    line-height: 1.95;
+  }
+
+  [dir="rtl"] .leading-snug {
+    line-height: 1.7;
+  }
+
+  [dir="rtl"] .leading-tight {
+    line-height: 1.45;
+  }
+
+  [dir="rtl"] .tracking-\[0\.3em\] {
+    letter-spacing: 0.18em;
+  }
+
+  [dir="rtl"] .tracking-\[0\.25em\] {
+    letter-spacing: 0.15em;
+  }
+
+  [dir="rtl"] .tracking-\[0\.2em\] {
+    letter-spacing: 0.12em;
+  }
 }

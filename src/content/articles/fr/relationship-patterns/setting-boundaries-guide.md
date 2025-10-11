@@ -1,17 +1,17 @@
 ---
-title: "Comment Établir des Limites Saines : Guide Complet"
+title: "Poser des limites saines : guide complet"
 description: >-
-  Cet article est en cours de traduction. La version française sera bientôt
-  disponible avec un contenu adapté et de qualité en santé mentale.
+  Définir, communiquer et maintenir des limites claires pour protéger votre énergie, respecter vos valeurs et préserver
+  vos relations.
 slug: setting-boundaries-guide
 category: relationship-patterns
 contentType: article
 intent: actionable
 keywords:
-  - setting boundaries
-  - healthy boundaries
-  - boundary setting
-  - personal boundaries
+  - poser limites
+  - boundaries relationnelles
+  - dire non
+  - affirmation personnelle
 searchVolume: 16000
 priority: high
 featured: true
@@ -28,31 +28,42 @@ targetEmotions:
   - relief
 publishedAt: "2025-01-27"
 draft: false
-placeholder: true
 ---
 
-# Contenu disponible prochainement
+# Poser des limites saines : guide complet
 
-## Cet article est en cours de traduction
+## Pourquoi les limites sont essentielles
 
-Nous travaillons actuellement sur la version française de cet article pour vous offrir le meilleur contenu en santé mentale et thérapie cognitivo-comportementale.
+- Elles protègent votre santé mentale et physique.
+- Elles clarifient ce qui est acceptable ou non dans vos relations.
+- Elles augmentent la confiance et l’authenticité.
 
-### En attendant, vous pouvez :
+## Types de limites
 
-- **Consulter la version anglaise** de cet article pour accéder au contenu complet
-- **Explorer nos autres ressources** disponibles en français
-- **Vous inscrire** pour recevoir une notification lorsque la traduction sera terminée
+- **Physiques** (espace personnel, toucher).
+- **Émotionnelles** (partage d’informations, temps de réponse).
+- **Matérielles** (prêt d’argent, d’objets).
+- **Temporelles** (disponibilité, heures de travail).
+- **Digitales** (accès à vos appareils, photos, réseaux).
 
-### Pourquoi cette approche ?
+## Comment les formuler
 
-Chez Innuora, nous nous engageons à fournir des ressources de qualité en santé mentale. Plutôt que de publier des traductions automatiques de mauvaise qualité, nous prenons le temps de créer des contenus adaptés culturellement et linguistiquement précis.
+1. Identifiez ce qui vous met mal à l’aise (signaux de corps, émotion de colère ou fatigue).
+2. Clarifiez ce que vous souhaitez à la place.
+3. Communiquez calmement, avec une phrase simple : “Je ne suis pas disponible après 20 h pour le travail. Parlons-en demain matin.”
 
-### Besoin d'aide immédiate ?
+## Maintenir ses limites
 
-Notre plateforme de thérapie assistée par IA est disponible en français dès maintenant. Commencez une conversation thérapeutique personnalisée en français :
+- Répétez votre position si elle est testée (“Comme je l’ai indiqué, je ne partagerai pas ce mot de passe”).
+- Appliquez la conséquence annoncée (se retirer de la conversation, reporter une tâche).
+- Faites preuve de constance mais aussi de flexibilité lorsque la situation change.
 
-**[Commencer une session →](/fr/join)**
+## Surmonter les obstacles
+
+- **Culpabilité** : rappelez-vous qu’une limite protège la relation autant que vous-même.
+- **Peur du rejet** : observez qui respecte votre limite – cela révèle la qualité du lien.
+- **Pression sociale** : entourez-vous de personnes qui valorisent le respect mutuel.
 
 ---
 
-_Cette page sert de marque-place pour assurer l'indexation des URLs pendant la traduction du contenu._
+_Poser des limites est une preuve de maturité relationnelle. Si c’est difficile ou que la situation est abusive, faites-vous accompagner par un professionnel._

@@ -1,10 +1,7 @@
 import { Metadata } from "next";
 
 import ContentLibraryLayout from "@/components/content/content-library-layout";
-import {
-  initializeContentRegistry,
-  loadLocalizedMetadata,
-} from "@/lib/content/content-loader";
+import { initializeContentRegistry } from "@/lib/content/content-loader";
 import { contentRegistry } from "@/lib/content/content-registry";
 
 // =========================
@@ -21,9 +18,7 @@ interface ContentLibraryPageProps {
 // Metadata Generation
 // =========================
 
-export async function generateMetadata({
-  params,
-}: ContentLibraryPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: ContentLibraryPageProps): Promise<Metadata> {
   const { locale } = await params;
   const { default: initTranslations } = await import("@/lib/i18n");
   const { t } = await initTranslations(locale, ["seo"]);
@@ -39,11 +34,12 @@ export async function generateMetadata({
       locale: locale === "ar" ? "ar_AR" : locale === "fr" ? "fr_FR" : "en_US",
     },
     alternates: {
-      canonical: "/content",
+      canonical: `/${locale}/content`,
       languages: {
         en: "/en/content",
         ar: "/ar/content",
         fr: "/fr/content",
+        "x-default": "/en/content",
       },
     },
   };
@@ -53,9 +49,7 @@ export async function generateMetadata({
 // Page Component
 // =========================
 
-export default async function ContentLibraryPage({
-  params,
-}: ContentLibraryPageProps) {
+export default async function ContentLibraryPage({ params }: ContentLibraryPageProps) {
   const { locale } = await params;
 
   // Initialize content registry
@@ -65,44 +59,8 @@ export default async function ContentLibraryPage({
   const allContent = contentRegistry.getAll();
   const featuredContent = contentRegistry.getFeatured();
 
-  // Load localized metadata for all articles
-  const localizedContent = allContent.map((item) => {
-    const localizedMeta = loadLocalizedMetadata(
-      item.metadata.category,
-      item.metadata.slug,
-      locale,
-    );
-    if (localizedMeta) {
-      return {
-        ...item,
-        metadata: {
-          ...item.metadata,
-          title: localizedMeta.title,
-          description: localizedMeta.description,
-        },
-      };
-    }
-    return item;
-  });
-
-  const localizedFeatured = featuredContent.map((item) => {
-    const localizedMeta = loadLocalizedMetadata(
-      item.metadata.category,
-      item.metadata.slug,
-      locale,
-    );
-    if (localizedMeta) {
-      return {
-        ...item,
-        metadata: {
-          ...item.metadata,
-          title: localizedMeta.title,
-          description: localizedMeta.description,
-        },
-      };
-    }
-    return item;
-  });
+  const localizedContent = contentRegistry.applyLocaleOverrides(allContent, locale);
+  const localizedFeatured = contentRegistry.applyLocaleOverrides(featuredContent, locale);
 
   // Group localized content by category
   const contentByCategory = localizedContent.reduce(
@@ -114,7 +72,7 @@ export default async function ContentLibraryPage({
       acc[category].push(item);
       return acc;
     },
-    {} as Record<string, typeof localizedContent>,
+    {} as Record<string, typeof localizedContent>
   );
 
   return (

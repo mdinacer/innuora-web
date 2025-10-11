@@ -1,18 +1,30 @@
 ---
 title: "Making the Most of AI Therapy: Tips for Maximum Benefit with Innuora"
-description: "Proven strategies to get better results from AI-powered CBT. Learn how to engage effectively, track progress, and accelerate your therapeutic growth."
-slug: "making-the-most-of-ai-therapy"
-category: "getting-started"
-contentType: "guide"
-intent: "actionable"
+description: >-
+  Proven strategies to get better results from AI-powered CBT. Learn how to engage effectively, track progress, and
+  accelerate your therapeutic growth.
+slug: making-the-most-of-ai-therapy
+category: getting-started
+contentType: guide
+intent: actionable
 keywords:
-  ["AI therapy tips", "CBT effectiveness", "therapy best practices", "mental health progress", "online therapy success"]
+  - AI therapy tips
+  - CBT effectiveness
+  - therapy best practices
+  - mental health progress
+  - online therapy success
 searchVolume: 1800
-priority: "medium"
+priority: medium
 featured: false
 readingTime: 8
-relatedCbtModules: ["cognitive", "behavioral_activation", "values_clarification"]
-targetEmotions: ["determination", "hope", "commitment"]
+relatedCbtModules:
+  - cognitive
+  - behavioral_activation
+  - values_clarification
+targetEmotions:
+  - determination
+  - hope
+  - commitment
 publishedAt: "2025-01-27"
 draft: false
 ---
@@ -372,3 +384,7 @@ Your challenge:
 ---
 
 **Remember**: Therapy isn't something done TO you—it's something you actively DO. Engage fully, practice consistently, and trust the process. You've got this.
+
+---
+
+_This guide is for educational purposes only and is not a substitute for professional mental health treatment. If you are experiencing mental health difficulties, please consult with a qualified clinician._

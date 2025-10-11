@@ -1,17 +1,31 @@
 ---
 title: "Overcoming Social Anxiety: Evidence-Based Strategies That Work"
-description: "Practical CBT techniques for managing social anxiety. Learn to build confidence in social situations and reduce fear of judgment."
-slug: "social-anxiety-strategies"
-category: "anxiety-management"
-contentType: "article"
-intent: "actionable"
-keywords: ["social anxiety", "social phobia", "social confidence", "overcome shyness"]
+description: >-
+  Practical CBT techniques for managing social anxiety. Learn to build confidence in social situations and reduce fear
+  of judgment.
+slug: social-anxiety-strategies
+category: anxiety-management
+contentType: article
+intent: actionable
+keywords:
+  - social anxiety
+  - social phobia
+  - social confidence
+  - overcome shyness
 searchVolume: 15000
-priority: "high"
+priority: high
 featured: true
 readingTime: 11
-relatedCbtModules: ["cognitive", "behavioral", "exposure", "confidence"]
-targetEmotions: ["anxiety", "embarrassment", "fear", "self-consciousness"]
+relatedCbtModules:
+  - cognitive
+  - behavioral
+  - exposure
+  - confidence
+targetEmotions:
+  - anxiety
+  - embarrassment
+  - fear
+  - self-consciousness
 publishedAt: "2025-01-27"
 draft: false
 ---

@@ -1,17 +1,17 @@
 ---
-title: "Surmonter l'Anxiété Sociale : Stratégies Fondées sur des Preuves"
+title: "Surmonter l’anxiété sociale : stratégies validées pour gagner en assurance"
 description: >-
-  Cet article est en cours de traduction. La version française sera bientôt
-  disponible avec un contenu adapté et de qualité en santé mentale.
+  Techniques de TCC pour réduire la peur du jugement, se sentir plus à l’aise en société et élargir progressivement sa
+  zone de confort.
 slug: social-anxiety-strategies
 category: anxiety-management
 contentType: article
 intent: actionable
 keywords:
-  - social anxiety
-  - social phobia
-  - social confidence
-  - overcome shyness
+  - anxiété sociale
+  - phobie sociale
+  - confiance relationnelle
+  - surmonter timidité
 searchVolume: 15000
 priority: high
 featured: true
@@ -28,31 +28,70 @@ targetEmotions:
   - self-consciousness
 publishedAt: "2025-01-27"
 draft: false
-placeholder: true
 ---
 
-# Contenu disponible prochainement
+# Surmonter l’anxiété sociale : stratégies validées pour gagner en assurance
 
-## Cet article est en cours de traduction
+## Comprendre l’anxiété sociale
 
-Nous travaillons actuellement sur la version française de cet article pour vous offrir le meilleur contenu en santé mentale et thérapie cognitivo-comportementale.
+L’anxiété sociale se manifeste par une peur intense d’être jugé ou humilié dans les interactions. Elle entraîne souvent une hypervigilance, des symptômes physiques (rougeurs, tremblements, voix tremblante) et des comportements d’évitement.
 
-### En attendant, vous pouvez :
+### Pensées fréquentes
 
-- **Consulter la version anglaise** de cet article pour accéder au contenu complet
-- **Explorer nos autres ressources** disponibles en français
-- **Vous inscrire** pour recevoir une notification lorsque la traduction sera terminée
+- “Je vais dire quelque chose de stupide.”
+- “Tout le monde remarque que je suis nervieux.”
+- “Ils vont penser que je ne suis pas intéressant.”
 
-### Pourquoi cette approche ?
+## Étape 1 : identifier les déclencheurs
 
-Chez Innuora, nous nous engageons à fournir des ressources de qualité en santé mentale. Plutôt que de publier des traductions automatiques de mauvaise qualité, nous prenons le temps de créer des contenus adaptés culturellement et linguistiquement précis.
+- Tenez un journal des situations stressantes (réunion, appel téléphonique, repas d’équipe).
+- Évaluez l’intensité de la peur (0-10) et les pensées automatiques associées.
+- Notez vos comportements de sécurité (regarder son téléphone, éviter le contact visuel, préparer un discours mot à mot).
 
-### Besoin d'aide immédiate ?
+## Étape 2 : restructurer les pensées
 
-Notre plateforme de thérapie assistée par IA est disponible en français dès maintenant. Commencez une conversation thérapeutique personnalisée en français :
+- Questionnez vos croyances : “Quelles preuves ai-je que tout le monde me juge ?”
+- Cherchez des alternatives : “Il est normal d’être nerveux dans une nouvelle situation.”
+- Appliquez la technique du “meilleur ami” : que diriez-vous à une personne que vous aimez dans la même situation ?
 
-**[Commencer une session →](/fr/join)**
+## Étape 3 : exposition graduée
+
+Créez une “échelle d’anxiété” de 1 à 10. Commencez par des situations peu stressantes et montez progressivement.
+
+Exemples de progression :
+
+1. Dire bonjour à un voisin.
+2. Poser une question simple en magasin.
+3. Partager une idée lors d’une réunion restreinte.
+4. Inviter un collègue à boire un café.
+5. Prendre la parole lors d’une réunion plus large.
+
+**Règle d’or** : restez dans la situation jusqu’à ce que l’anxiété commence à décroître. L’objectif est d’apprendre que la peur baisse naturellement.
+
+## Étape 4 : développer des compétences sociales
+
+- Préparez quelques sujets de conversation légers (actualité positive, projets, loisirs).
+- Entraînez-vous à l’écoute active (reformulation, questions ouvertes).
+- Travaillez le langage non verbal : posture ouverte, sourire léger, regard soutenu mais détendu.
+
+## Étape 5 : gérer la réaction physique
+
+- Respiration 4-6 avant d’entrer dans une pièce.
+- Relâchement musculaire (contracter-relâcher les mains discrètement).
+- Visualisation : imaginez-vous traversant la scène avec assurance.
+
+## Étape 6 : auto-compassion
+
+- Rappelez-vous que l’erreur est humaine et ne détruit pas une relation.
+- Remplacez la critique intérieure par un message de soutien (“C’était inconfortable, mais j’ai osé”).
+- Célébrez les micro-progrès (avoir posé une question, être resté dans la pièce).
+
+## Ressources supplémentaires
+
+- Thérapies recommandées : TCC, thérapie de groupe, ACT, programmes en ligne validés.
+- Livres et podcasts sur la confiance relationnelle.
+- Groupes de pratique (toastmasters, ateliers de théâtre, clubs de conversation).
 
 ---
 
-_Cette page sert de marque-place pour assurer l'indexation des URLs pendant la traduction du contenu._
+_Si l’anxiété sociale vous empêche de travailler ou de maintenir des liens, envisagez un accompagnement professionnel._

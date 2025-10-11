@@ -1,17 +1,31 @@
 ---
 title: "How to Analyze Your Mood Patterns: A Step-by-Step Guide"
-description: "Learn to identify meaningful patterns in your mood data to improve mental health. Discover triggers, cycles, and insights from your mood tracking journey."
-slug: "mood-pattern-analysis"
-category: "mood-tracking"
-contentType: "article"
-intent: "analytical"
-keywords: ["mood patterns", "mood analysis", "emotional patterns", "mood data interpretation"]
+description: >-
+  Learn to identify meaningful patterns in your mood data to improve mental health. Discover triggers, cycles, and
+  insights from your mood tracking journey.
+slug: mood-pattern-analysis
+category: mood-tracking
+contentType: article
+intent: analytical
+keywords:
+  - mood patterns
+  - mood analysis
+  - emotional patterns
+  - mood data interpretation
 searchVolume: 3900
-priority: "medium"
+priority: medium
 featured: false
 readingTime: 12
-relatedCbtModules: ["patterns", "awareness", "cognitive", "data_analysis"]
-targetEmotions: ["curiosity", "insight", "empowerment", "understanding"]
+relatedCbtModules:
+  - patterns
+  - awareness
+  - cognitive
+  - data_analysis
+targetEmotions:
+  - curiosity
+  - insight
+  - empowerment
+  - understanding
 publishedAt: "2025-01-27"
 draft: false
 ---

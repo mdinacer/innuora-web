@@ -1,17 +1,31 @@
 ---
-title: "Feeling Overwhelmed? A Step-by-Step Recovery Guide"
-description: "Practical strategies to manage overwhelming feelings and regain control. Break the cycle of overwhelm with evidence-based techniques and clear action steps."
-slug: "overwhelm-management-guide"
-category: "stress-management"
-contentType: "article"
-intent: "actionable/supportive"
-keywords: ["feeling overwhelmed", "overwhelm relief", "too much stress", "manage overwhelm"]
+title: Feeling Overwhelmed? A Step-by-Step Recovery Guide
+description: >-
+  Practical strategies to manage overwhelming feelings and regain control. Break the cycle of overwhelm with
+  evidence-based techniques and clear action steps.
+slug: overwhelm-management-guide
+category: stress-management
+contentType: article
+intent: supportive
+keywords:
+  - feeling overwhelmed
+  - overwhelm relief
+  - too much stress
+  - manage overwhelm
 searchVolume: 8500
-priority: "high"
+priority: high
 featured: true
 readingTime: 10
-relatedCbtModules: ["stress", "cognitive", "behavioral", "priorities"]
-targetEmotions: ["overwhelm", "stress", "panic", "exhaustion"]
+relatedCbtModules:
+  - stress
+  - cognitive
+  - behavioral
+  - priorities
+targetEmotions:
+  - overwhelm
+  - stress
+  - panic
+  - exhaustion
 publishedAt: "2025-01-27"
 draft: false
 ---

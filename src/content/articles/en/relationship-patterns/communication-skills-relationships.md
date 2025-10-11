@@ -1,17 +1,31 @@
 ---
-title: "Essential Communication Skills for Healthy Relationships"
-description: "Master the communication techniques that strengthen relationships. Learn active listening, assertiveness, conflict resolution, and emotional validation skills."
-slug: "communication-skills-relationships"
-category: "relationship-patterns"
-contentType: "article"
-intent: "actionable/relationship"
-keywords: ["communication skills", "relationship communication", "conflict resolution", "active listening"]
+title: Essential Communication Skills for Healthy Relationships
+description: >-
+  Master the communication techniques that strengthen relationships. Learn active listening, assertiveness, conflict
+  resolution, and emotional validation skills.
+slug: communication-skills-relationships
+category: relationship-patterns
+contentType: article
+intent: supportive
+keywords:
+  - communication skills
+  - relationship communication
+  - conflict resolution
+  - active listening
 searchVolume: 14500
-priority: "high"
+priority: high
 featured: true
 readingTime: 12
-relatedCbtModules: ["communication", "relationships", "emotional", "conflict"]
-targetEmotions: ["frustration", "misunderstanding", "connection", "hope"]
+relatedCbtModules:
+  - communication
+  - relationships
+  - emotional
+  - conflict
+targetEmotions:
+  - frustration
+  - misunderstanding
+  - connection
+  - hope
 publishedAt: "2025-01-27"
 draft: false
 ---

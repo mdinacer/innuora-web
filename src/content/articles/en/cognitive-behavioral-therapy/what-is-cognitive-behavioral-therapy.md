@@ -1,17 +1,27 @@
 ---
-title: "What is Cognitive Behavioral Therapy? A Complete Guide"
+title: What is Cognitive Behavioral Therapy? A Complete Guide
 description: "Learn the fundamentals of CBT, how it works, and how it can help improve your mental health and emotional wellbeing."
-slug: "what-is-cognitive-behavioral-therapy"
-category: "cognitive-behavioral-therapy"
-contentType: "article"
-intent: "informational"
-keywords: ["what is CBT", "cognitive behavioral therapy", "CBT therapy", "CBT explained"]
+slug: what-is-cognitive-behavioral-therapy
+category: cognitive-behavioral-therapy
+contentType: article
+intent: informational
+keywords:
+  - what is CBT
+  - cognitive behavioral therapy
+  - CBT therapy
+  - CBT explained
 searchVolume: 45000
-priority: "high"
+priority: high
 featured: true
 readingTime: 8
-relatedCbtModules: ["cognitive", "behavioral", "core_beliefs"]
-targetEmotions: ["confusion", "seeking help", "learning"]
+relatedCbtModules:
+  - cognitive
+  - behavioral
+  - core_beliefs
+targetEmotions:
+  - confusion
+  - seeking help
+  - learning
 publishedAt: "2025-01-27"
 draft: false
 ---

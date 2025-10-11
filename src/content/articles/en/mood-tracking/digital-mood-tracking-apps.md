@@ -1,17 +1,31 @@
 ---
 title: "Best Digital Mood Tracking Apps: Features and Comparison Guide"
-description: "Compare top mood tracking apps including Daylio, Mood Meter, and Sanvello. Find the perfect digital tool to monitor your mental health and emotional patterns."
-slug: "digital-mood-tracking-apps"
-category: "mood-tracking"
-contentType: "article"
-intent: "comparative/actionable"
-keywords: ["mood tracking apps", "digital mood tracker", "mental health apps", "mood diary app"]
+description: >-
+  Compare top mood tracking apps including Daylio, Mood Meter, and Sanvello. Find the perfect digital tool to monitor
+  your mental health and emotional patterns.
+slug: digital-mood-tracking-apps
+category: mood-tracking
+contentType: article
+intent: analytical
+keywords:
+  - mood tracking apps
+  - digital mood tracker
+  - mental health apps
+  - mood diary app
 searchVolume: 7300
-priority: "high"
+priority: high
 featured: false
 readingTime: 13
-relatedCbtModules: ["mood", "technology", "habits", "data_analysis"]
-targetEmotions: ["curiosity", "overwhelm", "decision-making", "hope"]
+relatedCbtModules:
+  - mood
+  - technology
+  - habits
+  - data_analysis
+targetEmotions:
+  - curiosity
+  - overwhelm
+  - decision-making
+  - hope
 publishedAt: "2025-01-27"
 draft: false
 ---

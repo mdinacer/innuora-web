@@ -1,17 +1,31 @@
 ---
 title: "Recovering from Perfectionism: Embracing Good Enough"
-description: "Break free from perfectionist patterns that create anxiety and paralysis. Learn to set realistic standards while maintaining high quality and achievement."
-slug: "perfectionism-recovery"
-category: "self-compassion"
-contentType: "article"
-intent: "actionable/recovery"
-keywords: ["perfectionism", "perfectionist recovery", "letting go control", "high achiever"]
+description: >-
+  Break free from perfectionist patterns that create anxiety and paralysis. Learn to set realistic standards while
+  maintaining high quality and achievement.
+slug: perfectionism-recovery
+category: self-compassion
+contentType: article
+intent: actionable
+keywords:
+  - perfectionism
+  - perfectionist recovery
+  - letting go control
+  - high achiever
 searchVolume: 4800
-priority: "high"
+priority: high
 featured: true
 readingTime: 13
-relatedCbtModules: ["perfectionism", "cognitive", "anxiety", "self_compassion"]
-targetEmotions: ["anxiety", "overwhelm", "perfectionist stress", "liberation"]
+relatedCbtModules:
+  - perfectionism
+  - cognitive
+  - anxiety
+  - self_compassion
+targetEmotions:
+  - anxiety
+  - overwhelm
+  - perfectionist stress
+  - liberation
 publishedAt: "2025-01-27"
 draft: false
 ---

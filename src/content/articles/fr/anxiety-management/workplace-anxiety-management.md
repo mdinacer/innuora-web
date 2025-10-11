@@ -1,17 +1,17 @@
 ---
-title: "Gérer l'Anxiété au Travail : Stratégies Professionnelles pour Réussir"
+title: "Gérer l’anxiété au travail : stratégies professionnelles pour réussir"
 description: >-
-  Cet article est en cours de traduction. La version française sera bientôt
-  disponible avec un contenu adapté et de qualité en santé mentale.
+  Techniques concrètes pour réduire l’anxiété liée au travail, renforcer sa confiance et protéger son équilibre sans
+  compromettre ses ambitions.
 slug: workplace-anxiety-management
 category: anxiety-management
 contentType: article
-intent: actionable/professional
+intent: actionable
 keywords:
-  - workplace anxiety
-  - work stress
-  - job anxiety
-  - professional confidence
+  - anxiété au travail
+  - stress professionnel
+  - confiance au bureau
+  - gérer la pression
 searchVolume: 11000
 priority: high
 featured: true
@@ -28,31 +28,63 @@ targetEmotions:
   - imposter syndrome
 publishedAt: "2025-01-27"
 draft: false
-placeholder: true
 ---
 
-# Contenu disponible prochainement
+# Gérer l’anxiété au travail : stratégies professionnelles pour réussir
 
-## Cet article est en cours de traduction
+## Identifier vos déclencheurs
 
-Nous travaillons actuellement sur la version française de cet article pour vous offrir le meilleur contenu en santé mentale et thérapie cognitivo-comportementale.
+- **Performance** : peur de l’erreur, évaluations, prises de parole.
+- **Relations** : feedback, désaccords, dynamique d’équipe.
+- **Organisation** : charge de travail, imprévus, manque de clarté.
 
-### En attendant, vous pouvez :
+Tenez un journal une semaine pour repérer les situations qui font monter l’anxiété (notez situation, pensées, émotions, intensité 0-10).
 
-- **Consulter la version anglaise** de cet article pour accéder au contenu complet
-- **Explorer nos autres ressources** disponibles en français
-- **Vous inscrire** pour recevoir une notification lorsque la traduction sera terminée
+## Travailler sur les pensées anxieuses
 
-### Pourquoi cette approche ?
+- Détectez les distorsions (« Je dois être parfait », « Ils vont découvrir que je suis imposteur »).
+- Répondez-leur avec des faits (« On m’a confié ce dossier car j’ai les compétences », « J’ai déjà surmonté des imprévus »).
+- Adoptez le questionnement réaliste : « Qu’est-ce qui se passerait réellement si… ? »
 
-Chez Innuora, nous nous engageons à fournir des ressources de qualité en santé mentale. Plutôt que de publier des traductions automatiques de mauvaise qualité, nous prenons le temps de créer des contenus adaptés culturellement et linguistiquement précis.
+## Techniques de régulation rapides
 
-### Besoin d'aide immédiate ?
+- **Respiration cohérente** avant un rendez-vous important.
+- **Check-in corporel** : relâcher mâchoires, épaules, main dominante.
+- **Visualisation positive** : imaginez un déroulement fluide de la réunion.
 
-Notre plateforme de thérapie assistée par IA est disponible en français dès maintenant. Commencez une conversation thérapeutique personnalisée en français :
+## Gestion de la charge
 
-**[Commencer une session →](/fr/join)**
+- Priorisez avec la matrice urgent/important.
+- Découpez les missions volumineuses en tâches de 25 minutes (méthode Pomodoro).
+- Demandez des clarifications écrites pour éviter les malentendus.
+- Négociez le périmètre des demandes (« Je peux faire X maintenant, et Y demain »).
+
+## Prise de parole et réunions
+
+- Préparez trois points clés plutôt qu’un script complet.
+- Parlez dès le début de réunion pour diminuer l’anticipation anxieuse.
+- Utilisez la méthode PREP (Point, Raison, Exemple, Point) pour rester structuré.
+- Après coup, faites un retour objectif : ce qui a bien fonctionné, ce qui est à ajuster.
+
+## Construire un environnement soutenant
+
+- Identifiez un collègue ressource avec qui décompresser.
+- Convenez de créneaux sans notification (Deep Work) avec votre équipe.
+- Planifiez des pauses hors bureau (marche, lumière du jour).
+- Préparez une trousse d’urgence (musique apaisante, listes de réussites, laissez-passer pour respirer).
+
+## Syndrome de l’imposteur
+
+- Répertoriez vos réussites récentes, feedback positifs, compétences.
+- Faites la différence entre compétence et perfection.
+- Cherchez des mentors ou groupes de pairs pour normaliser ce ressenti.
+
+## Quand solliciter de l’aide
+
+- Thérapie cognitivo-comportementale, thérapie brève ou coaching spécialisé.
+- Consultation médicale si l’anxiété s’accompagne de symptômes physiques persistants.
+- Communication avec les RH si les conditions de travail sont sources d’anxiété structurelle.
 
 ---
 
-_Cette page sert de marque-place pour assurer l'indexation des URLs pendant la traduction du contenu._
+_Ces conseils ne remplacent pas un avis médical. Consultez un professionnel si l’anxiété perturbe votre santé ou votre carrière._

@@ -1,17 +1,29 @@
 ---
 title: "Complete Mood Tracking Guide: Monitor Your Mental Health Effectively"
-description: "Learn how to track your mood, identify patterns, and use data to improve your mental health. Includes tracking templates and analysis strategies."
-slug: "mood-tracking-guide"
-category: "self-help-tools"
-contentType: "guide"
-intent: "actionable"
-keywords: ["mood tracking", "mental health tracking", "mood journal", "emotional awareness", "depression tracking"]
+description: >-
+  Learn how to track your mood, identify patterns, and use data to improve your mental health. Includes tracking
+  templates and analysis strategies.
+slug: mood-tracking-guide
+category: self-help-tools
+contentType: guide
+intent: actionable
+keywords:
+  - mood tracking
+  - mental health tracking
+  - mood journal
+  - emotional awareness
+  - depression tracking
 searchVolume: 4200
-priority: "high"
+priority: high
 featured: true
 readingTime: 8
-relatedCbtModules: ["cognitive", "behavioral_activation"]
-targetEmotions: ["confusion", "seeking patterns", "self-awareness"]
+relatedCbtModules:
+  - cognitive
+  - behavioral_activation
+targetEmotions:
+  - confusion
+  - seeking patterns
+  - self-awareness
 publishedAt: "2025-01-27"
 draft: false
 ---
@@ -324,3 +336,7 @@ After 2-3 months of data:
 **Start tracking today** with just one number: How do you feel right now (0-10)?
 
 **Track in your next Innuora session** → We'll help you analyze patterns and create action plans.
+
+---
+
+_This guide is for educational purposes only and is not a substitute for professional mental health treatment. If you are experiencing mental health difficulties, please consult with a qualified clinician._

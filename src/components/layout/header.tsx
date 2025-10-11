@@ -1,84 +1,224 @@
 "use client";
 
 import { APP_CONFIG } from "@/config/app";
+import type { AppLocales } from "@/lib/i18n";
+import { buildLocalizedPath } from "@/lib/i18n/paths";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
-import React from "react";
-import ThemeToggle from "../theme-toggle";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import { AppLocales } from "@/lib/i18n";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import React from "react";
+import { useTranslation } from "react-i18next";
 import LanguagePicker from "../language-dropdown";
+import ThemeToggle from "../theme-toggle";
+
+type HeaderLink = {
+  href: string;
+  label: string;
+  variant?: "link" | "button";
+};
 
 interface Props {
   className?: string;
   locale?: AppLocales;
-  links?: { href: string; label: string }[];
+  links?: HeaderLink[];
 }
 
-const sections = [
-  {
-    id: "how-it-works",
-    label: "How It Works",
-  },
-  {
-    id: "demo",
-    label: "Demo",
-  },
-  {
-    id: "early-access",
-    label: "Early Access",
-  },
-  {
-    id: "faq",
-    label: "FAQ",
-  },
-];
-
 const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
+  const { t } = useTranslation("pages", { keyPrefix: "header" });
+  const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const navLinks = React.useMemo<HeaderLink[]>(() => {
+    if (links && links.length > 0) {
+      return links.map((link) => ({
+        ...link,
+        variant: link.variant ?? "link",
+      }));
+    }
+
+    return [
+      {
+        href: buildLocalizedPath(locale, "/"),
+        label: t("links.home"),
+        variant: "link",
+      },
+      {
+        href: buildLocalizedPath(locale, "/demo"),
+        label: t("links.demo"),
+        variant: "link",
+      },
+      {
+        href: buildLocalizedPath(locale, "/content"),
+        label: t("links.library"),
+        variant: "link",
+      },
+      {
+        href: buildLocalizedPath(locale, "/join"),
+        label: t("links.join"),
+        variant: "button",
+      },
+    ];
+  }, [links, locale, t]);
+
+  React.useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
+  const toggleMenu = React.useCallback(() => {
+    setIsMenuOpen((open) => !open);
+  }, []);
+
+  const normalize = React.useCallback((value: string) => {
+    if (!value) {
+      return "/";
+    }
+    if (value.length > 1 && value.endsWith("/")) {
+      return value.slice(0, -1);
+    }
+    return value;
+  }, []);
+
+  const isActiveLink = React.useCallback(
+    (href: string) => {
+      if (!href.startsWith("/")) {
+        return false;
+      }
+
+      const target = normalize(href.split("#")[0] || "/");
+      const current = normalize(pathname || "/");
+
+      if (target === "/") {
+        return current === "/";
+      }
+
+      return current === target || current.startsWith(`${target}/`);
+    },
+    [normalize, pathname]
+  );
+
+  const renderLink = React.useCallback(
+    (link: HeaderLink, index: number, isDesktop = false) => {
+      const isButton = link.variant === "button";
+      const active = isActiveLink(link.href);
+
+      if (isButton) {
+        const buttonClasses = cn(
+          "inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold transition",
+          "shadow-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60",
+          isDesktop
+            ? "bg-primary text-primary-foreground hover:bg-primary/90"
+            : "w-full bg-primary text-primary-foreground hover:bg-primary/90",
+          active && "ring-2 ring-primary/50"
+        );
+
+        return (
+          <Link
+            key={`${link.href}-${index}`}
+            href={link.href}
+            className={buttonClasses}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            {link.label}
+          </Link>
+        );
+      }
+
+      const linkClasses = cn(
+        "relative inline-flex items-center justify-center rounded-full px-3 py-2 text-sm font-medium transition",
+        isDesktop
+          ? "text-muted-foreground hover:text-foreground"
+          : "w-full justify-start text-muted-foreground hover:text-foreground",
+        active && "text-foreground",
+        isDesktop &&
+          "after:absolute after:bottom-[2px] after:left-1/2 after:h-[2px] after:w-[70%] after:-translate-x-1/2 after:scale-x-0 after:bg-primary after:transition-transform after:duration-200 hover:after:scale-x-100",
+        isDesktop && active && "after:scale-x-100"
+      );
+
+      return (
+        <Link
+          key={`${link.href}-${index}`}
+          href={link.href}
+          className={linkClasses}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          {link.label}
+        </Link>
+      );
+    },
+    [isActiveLink]
+  );
+
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 border-b border-b-inn-border-light/50 bg-inn-bg-primary/50 backdrop-blur-md backdrop-saturate-150",
-        className,
+        "sticky top-0 z-50 w-full backdrop-blur supports-[backdrop-filter]:bg-background/70",
+        className
       )}
     >
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
-        <Link
-          href={"/"}
-          className=" inline-flex items-center gap-x-4 sm:min-w-[150px]"
-        >
-          <Image
-            src={"/assets/images/logo.png"}
-            alt={APP_CONFIG.name}
-            className="object-cover object-center"
-            width={32}
-            height={32}
-          />
-          <div className=" text-inn-bg-accent font-sans text-2xl font-extrabold">
-            In<span className="text-inn-bg-flame">nu</span>ora
-          </div>
-        </Link>
+      <div className="border-b border-border/60 bg-background/80">
+        <div className="mx-auto flex max-w-7xl flex-col px-4 py-3 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <Link
+              href={buildLocalizedPath(locale, "/")}
+              className="group inline-flex items-center gap-3 rounded-full border border-border/70 bg-card/80 px-3 py-2 shadow-soft transition hover:border-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+            >
+              <span className="relative flex h-9 w-9 items-center justify-center rounded-full border border-primary/40 bg-primary/10">
+                <Image
+                  src="/assets/images/logo.png"
+                  alt={APP_CONFIG.name}
+                  width={28}
+                  height={28}
+                  className="h-7 w-7 object-contain"
+                />
+              </span>
+              <span className="flex flex-col leading-tight">
+                <span className="text-base font-semibold text-foreground">
+                  In<span className="text-primary">nu</span>ora
+                </span>
+                <span className="text-[0.68rem] sr-only sm:not-sr-only font-medium uppercase tracking-[0.35em] text-muted-foreground group-hover:text-foreground/80">
+                  {t("wordmark", { defaultValue: "AI Companion" })}
+                </span>
+              </span>
+            </Link>
 
-        {links && (
-          <nav className="sm:flex items-center gap-4  hidden">
-            {links.map((link, index) => (
-              <Link
-                key={index}
-                href={link.href}
-                className={cn(
-                  "relative transition-colors duration-200 ease-in",
-                  "text-sm font-medium text-inn-text-secondary hover:text-inn-text-primary",
-                  "after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-[2px] after:bg-inn-bg-accent after:scale-x-0 after:transition-transform after:duration-200 after:ease-in-out hover:after:scale-x-100",
-                )}
+            <nav className="hidden items-center gap-2 lg:flex">
+              {navLinks.map((link, index) => renderLink(link, index, true))}
+            </nav>
+
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="hidden sm:inline-flex">
+                <ThemeToggle />
+              </div>
+              <LanguagePicker />
+              <button
+                type="button"
+                onClick={toggleMenu}
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border/70 bg-card/80 text-muted-foreground transition hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 lg:hidden"
+                aria-label={
+                  isMenuOpen
+                    ? t("closeMenu", { defaultValue: "Close menu" })
+                    : t("openMenu", { defaultValue: "Open menu" })
+                }
+                aria-expanded={isMenuOpen}
               >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-        )}
-        <div className="sm:min-w-[150px] flex items-center gap-6 justify-end">
-          <ThemeToggle />
-          <LanguagePicker />
+                {isMenuOpen ? (
+                  <X className="h-5 w-5" aria-hidden="true" />
+                ) : (
+                  <Menu className="h-5 w-5" aria-hidden="true" />
+                )}
+              </button>
+            </div>
+          </div>
+
+          {isMenuOpen && (
+            <div className="mt-4 lg:hidden">
+              <nav className="flex flex-col gap-2 rounded-2xl border border-border/70 bg-card/95 p-3 shadow-soft">
+                {navLinks.map((link, index) => renderLink(link, index, false))}
+              </nav>
+            </div>
+          )}
         </div>
       </div>
     </header>

@@ -1,17 +1,31 @@
 ---
 title: "Seasonal Depression (SAD): Causes, Symptoms, and Treatment"
-description: "Complete guide to Seasonal Affective Disorder. Learn about light therapy, lifestyle changes, and evidence-based treatments for winter depression."
-slug: "seasonal-depression-guide"
-category: "depression-support"
-contentType: "article"
-intent: "informational/seasonal"
-keywords: ["seasonal depression", "SAD", "winter depression", "light therapy"]
+description: >-
+  Complete guide to Seasonal Affective Disorder. Learn about light therapy, lifestyle changes, and evidence-based
+  treatments for winter depression.
+slug: seasonal-depression-guide
+category: depression-support
+contentType: article
+intent: informational
+keywords:
+  - seasonal depression
+  - SAD
+  - winter depression
+  - light therapy
 searchVolume: 14000
-priority: "high"
+priority: high
 featured: true
 readingTime: 11
-relatedCbtModules: ["behavioral", "cognitive", "mood", "lifestyle"]
-targetEmotions: ["depression", "sadness", "lethargy", "hopelessness"]
+relatedCbtModules:
+  - behavioral
+  - cognitive
+  - mood
+  - lifestyle
+targetEmotions:
+  - depression
+  - sadness
+  - lethargy
+  - hopelessness
 publishedAt: "2025-01-27"
 draft: false
 ---

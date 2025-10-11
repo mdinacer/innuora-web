@@ -1,17 +1,31 @@
 ---
 title: "Managing Workplace Anxiety: Professional Strategies for Success"
-description: "Evidence-based techniques for managing anxiety at work. Build confidence, handle workplace stress, and maintain professional relationships while protecting your mental health."
-slug: "workplace-anxiety-management"
-category: "anxiety-management"
-contentType: "article"
-intent: "actionable/professional"
-keywords: ["workplace anxiety", "work stress", "job anxiety", "professional confidence"]
+description: >-
+  Evidence-based techniques for managing anxiety at work. Build confidence, handle workplace stress, and maintain
+  professional relationships while protecting your mental health.
+slug: workplace-anxiety-management
+category: anxiety-management
+contentType: article
+intent: actionable
+keywords:
+  - workplace anxiety
+  - work stress
+  - job anxiety
+  - professional confidence
 searchVolume: 11000
-priority: "high"
+priority: high
 featured: true
 readingTime: 13
-relatedCbtModules: ["cognitive", "behavioral", "confidence", "social"]
-targetEmotions: ["anxiety", "stress", "overwhelm", "imposter syndrome"]
+relatedCbtModules:
+  - cognitive
+  - behavioral
+  - confidence
+  - social
+targetEmotions:
+  - anxiety
+  - stress
+  - overwhelm
+  - imposter syndrome
 publishedAt: "2025-01-27"
 draft: false
 ---

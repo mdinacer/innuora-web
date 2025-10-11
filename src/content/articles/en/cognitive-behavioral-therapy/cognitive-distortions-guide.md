@@ -1,17 +1,30 @@
 ---
-title: "The 10 Most Common Cognitive Distortions and How to Overcome Them"
-description: "Learn to identify and challenge the thinking errors that fuel anxiety and depression. Evidence-based techniques for clearer, more balanced thinking."
-slug: "cognitive-distortions-guide"
-category: "cognitive-behavioral-therapy"
-contentType: "article"
-intent: "informational/actionable"
-keywords: ["cognitive distortions", "thinking errors", "negative thoughts", "CBT techniques"]
+title: The 10 Most Common Cognitive Distortions and How to Overcome Them
+description: >-
+  Learn to identify and challenge the thinking errors that fuel anxiety and depression. Evidence-based techniques for
+  clearer, more balanced thinking.
+slug: cognitive-distortions-guide
+category: cognitive-behavioral-therapy
+contentType: article
+intent: informational
+keywords:
+  - cognitive distortions
+  - thinking errors
+  - negative thoughts
+  - CBT techniques
 searchVolume: 12000
-priority: "high"
+priority: high
 featured: true
 readingTime: 10
-relatedCbtModules: ["cognitive", "core_beliefs", "mindfulness"]
-targetEmotions: ["anxiety", "depression", "self-doubt", "worry"]
+relatedCbtModules:
+  - cognitive
+  - core_beliefs
+  - mindfulness
+targetEmotions:
+  - anxiety
+  - depression
+  - self-doubt
+  - worry
 publishedAt: "2025-01-27"
 draft: false
 ---

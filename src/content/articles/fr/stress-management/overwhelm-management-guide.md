@@ -1,17 +1,17 @@
 ---
-title: Vous Sentez-Vous Dépassé ? Guide de Récupération Pas à Pas
+title: "Quand tout devient trop : plan d’action pour sortir du débordement"
 description: >-
-  Cet article est en cours de traduction. La version française sera bientôt
-  disponible avec un contenu adapté et de qualité en santé mentale.
+  Un guide en étapes pour reprendre le contrôle lorsque vous vous sentez submergé, avec des techniques immédiates et des
+  ajustements durables.
 slug: overwhelm-management-guide
 category: stress-management
 contentType: article
-intent: actionable/supportive
+intent: supportive
 keywords:
-  - feeling overwhelmed
-  - overwhelm relief
-  - too much stress
-  - manage overwhelm
+  - submersion mentale
+  - débordement
+  - gérer trop de choses
+  - sortir du stress
 searchVolume: 8500
 priority: high
 featured: true
@@ -28,31 +28,40 @@ targetEmotions:
   - exhaustion
 publishedAt: "2025-01-27"
 draft: false
-placeholder: true
 ---
 
-# Contenu disponible prochainement
+# Quand tout devient trop : plan d’action pour sortir du débordement
 
-## Cet article est en cours de traduction
+## Étape 1 : pause instantanée
 
-Nous travaillons actuellement sur la version française de cet article pour vous offrir le meilleur contenu en santé mentale et thérapie cognitivo-comportementale.
+- Stoppez l’activité, respirez profondément 5 fois.
+- Nommez ce que vous ressentez (“Je suis submergé”).
+- Buvez un verre d’eau, ancrez-vous dans l’instant.
 
-### En attendant, vous pouvez :
+## Étape 2 : vider votre tête
 
-- **Consulter la version anglaise** de cet article pour accéder au contenu complet
-- **Explorer nos autres ressources** disponibles en français
-- **Vous inscrire** pour recevoir une notification lorsque la traduction sera terminée
+- Écrivez tout ce qui tourne dans votre esprit (sans filtre).
+- Classez en trois colonnes : à faire aujourd’hui / plus tard / pas nécessaire.
+- Choisissez UNE action réalisable immédiatement.
 
-### Pourquoi cette approche ?
+## Étape 3 : organiser l’action
 
-Chez Innuora, nous nous engageons à fournir des ressources de qualité en santé mentale. Plutôt que de publier des traductions automatiques de mauvaise qualité, nous prenons le temps de créer des contenus adaptés culturellement et linguistiquement précis.
+- Appliquez la règle 2-30 : si cela dure moins de 2 minutes, faites-le ; sinon, planifiez-le.
+- Utilisez la méthode Pomodoro (25 minutes focus + 5 minutes pause).
+- Réduisez la multitâche : un onglet à la fois.
 
-### Besoin d'aide immédiate ?
+## Étape 4 : vous protéger
 
-Notre plateforme de thérapie assistée par IA est disponible en français dès maintenant. Commencez une conversation thérapeutique personnalisée en français :
+- Identifiez vos limites (temps, énergie, disponibilité émotionnelle).
+- Communiquez-les (“Je peux livrer X vendredi, pas avant”).
+- Déléguez ou négociez ce qui dépasse votre capacité.
 
-**[Commencer une session →](/fr/join)**
+## Étape 5 : routines préventives
+
+- Rituel matin/soir pour préparer la journée et vous décharger mentalement.
+- Revues hebdomadaires pour anticiper l’organisation.
+- Espace de décompression quotidien (marche, lecture, respiration).
 
 ---
 
-_Cette page sert de marque-place pour assurer l'indexation des URLs pendant la traduction du contenu._
+_La sensation de débordement est un signal, pas une fatalité. Avec des gestes simples répétés, vous pouvez retrouver de la clarté et de l’apaisement._

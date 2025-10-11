@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-import { ContentCategory, ContentMetadata } from "@/types/content.types";
+import { ContentCategory, ContentCategorySchema, ContentMetadata } from "@/types/content.types";
 import { contentRegistry } from "./content-registry";
 
 /* eslint-disable @typescript-eslint/no-use-before-define */
@@ -33,19 +33,11 @@ export async function initializeContentRegistry(): Promise<void> {
 
   try {
     // Get the content directory path - now using /en/ subdirectory as the source of truth
-    const contentDir = path.join(
-      process.cwd(),
-      "src",
-      "content",
-      "articles",
-      "en",
-    );
+    const contentDir = path.join(process.cwd(), "src", "content", "articles", "en");
 
     // Check if content directory exists
     if (!fs.existsSync(contentDir)) {
-      console.warn(
-        "English content directory not found, falling back to taxonomy",
-      );
+      console.warn("English content directory not found, falling back to taxonomy");
       await initializeFromTaxonomy();
       return;
     }
@@ -60,24 +52,34 @@ export async function initializeContentRegistry(): Promise<void> {
 
     for (const category of categories) {
       const categoryDir = path.join(contentDir, category);
-      const files = fs
-        .readdirSync(categoryDir)
-        .filter((file) => file.endsWith(".md"));
+      const files = fs.readdirSync(categoryDir).filter((file) => file.endsWith(".md"));
 
       for (const file of files) {
         const filePath = path.join(categoryDir, file);
         const fileContent = fs.readFileSync(filePath, "utf-8");
-        const { data: frontmatter, excerpt: fileExcerpt } = matter(
-          fileContent,
-          { excerpt: true },
-        );
+        const stats = fs.statSync(filePath);
+        const { data: frontmatter, excerpt: fileExcerpt } = matter(fileContent, { excerpt: true });
+
+        const categoryResult = ContentCategorySchema.safeParse(frontmatter.category);
+        if (!categoryResult.success) {
+          console.warn(
+            `Skipping content registration for ${filePath} - unrecognized category "${frontmatter.category}"`
+          );
+          continue;
+        }
+
+        const category = categoryResult.data;
+        const publishedAt = frontmatter.publishedAt
+          ? new Date(frontmatter.publishedAt)
+          : stats.birthtime || stats.mtime;
+        const updatedAt = frontmatter.updatedAt ? new Date(frontmatter.updatedAt) : stats.mtime;
 
         // Parse frontmatter into ContentMetadata
         const metadata: ContentMetadata = {
           title: frontmatter.title,
           description: frontmatter.description,
           slug: frontmatter.slug,
-          category: frontmatter.category as ContentCategory,
+          category,
           contentType: frontmatter.contentType || "article",
           intent: frontmatter.intent,
           keywords: frontmatter.keywords || [],
@@ -88,17 +90,52 @@ export async function initializeContentRegistry(): Promise<void> {
           draft: frontmatter.draft || false,
           relatedCbtModules: frontmatter.relatedCbtModules || [],
           targetEmotions: frontmatter.targetEmotions || [],
-          publishedAt: frontmatter.publishedAt
-            ? new Date(frontmatter.publishedAt)
-            : new Date(),
+          publishedAt: publishedAt ? new Date(publishedAt) : new Date(),
+          updatedAt: updatedAt ? new Date(updatedAt) : undefined,
         };
 
         // Only register non-draft articles for sitemap
         if (!metadata.draft) {
-          const excerpt =
-            fileExcerpt || generateExcerpt(metadata.title, metadata.category);
+          const excerpt = fileExcerpt || generateExcerpt(metadata.title, metadata.category);
           contentRegistry.register(metadata, excerpt);
           totalArticles++;
+        }
+      }
+    }
+
+    // Register localized metadata for other locales
+    for (const locale of SUPPORTED_CONTENT_LOCALES) {
+      if (locale === "en") continue;
+
+      const localizedDir = path.join(process.cwd(), "src", "content", "articles", locale);
+      if (!fs.existsSync(localizedDir)) {
+        continue;
+      }
+
+      const localizedCategories = fs
+        .readdirSync(localizedDir, { withFileTypes: true })
+        .filter((dirent) => dirent.isDirectory())
+        .map((dirent) => dirent.name);
+
+      for (const category of localizedCategories) {
+        const categoryDir = path.join(localizedDir, category);
+        const files = fs.readdirSync(categoryDir).filter((file) => file.endsWith(".md"));
+
+        for (const file of files) {
+          const filePath = path.join(categoryDir, file);
+          const fileContent = fs.readFileSync(filePath, "utf-8");
+          const { data: frontmatter } = matter(fileContent);
+          const slug = frontmatter.slug;
+
+          if (!slug || !contentRegistry.getBySlug(slug)) {
+            continue;
+          }
+
+          contentRegistry.addLocalizedMetadata(slug, locale, {
+            title: frontmatter.title,
+            description: frontmatter.description,
+            excerpt: frontmatter.description || undefined,
+          });
         }
       }
     }
@@ -106,9 +143,7 @@ export async function initializeContentRegistry(): Promise<void> {
     // Mark as initialized
     contentRegistry.markInitialized();
 
-    console.log(
-      `Initialized content registry with ${totalArticles} published articles`,
-    );
+    console.log(`Initialized content registry with ${totalArticles} published articles`);
   } catch (error) {
     console.error("Failed to initialize content registry:", error);
     // Fallback to taxonomy if file reading fails
@@ -123,7 +158,7 @@ export async function initializeContentRegistry(): Promise<void> {
 export function loadLocalizedContent(
   category: string,
   slug: string,
-  locale: string = "en",
+  locale: string = "en"
 ): { content: string; locale: string } | null {
   try {
     // Normalize locale to supported locale
@@ -137,7 +172,7 @@ export function loadLocalizedContent(
       "articles",
       normalizedLocale,
       category,
-      `${slug}.md`,
+      `${slug}.md`
     );
 
     if (fs.existsSync(localizedPath)) {
@@ -148,15 +183,7 @@ export function loadLocalizedContent(
 
     // Fallback to English if locale not found
     if (normalizedLocale !== "en") {
-      const englishPath = path.join(
-        process.cwd(),
-        "src",
-        "content",
-        "articles",
-        "en",
-        category,
-        `${slug}.md`,
-      );
+      const englishPath = path.join(process.cwd(), "src", "content", "articles", "en", category, `${slug}.md`);
 
       if (fs.existsSync(englishPath)) {
         const fileContent = fs.readFileSync(englishPath, "utf-8");
@@ -167,10 +194,7 @@ export function loadLocalizedContent(
 
     return null;
   } catch (error) {
-    console.error(
-      `Failed to load content for ${category}/${slug} in locale ${locale}:`,
-      error,
-    );
+    console.error(`Failed to load content for ${category}/${slug} in locale ${locale}:`, error);
     return null;
   }
 }
@@ -178,11 +202,7 @@ export function loadLocalizedContent(
 /**
  * Check if content exists in a specific locale
  */
-export function contentExistsInLocale(
-  category: string,
-  slug: string,
-  locale: string,
-): boolean {
+export function contentExistsInLocale(category: string, slug: string, locale: string): boolean {
   const normalizedLocale = normalizeLocale(locale);
   const localizedPath = path.join(
     process.cwd(),
@@ -191,7 +211,7 @@ export function contentExistsInLocale(
     "articles",
     normalizedLocale,
     category,
-    `${slug}.md`,
+    `${slug}.md`
   );
   return fs.existsSync(localizedPath);
 }
@@ -199,10 +219,7 @@ export function contentExistsInLocale(
 /**
  * Get available locales for a specific article
  */
-export function getAvailableLocales(
-  category: string,
-  slug: string,
-): SupportedContentLocale[] {
+export function getAvailableLocales(category: string, slug: string): SupportedContentLocale[] {
   const availableLocales: SupportedContentLocale[] = [];
 
   for (const locale of SUPPORTED_CONTENT_LOCALES) {
@@ -220,10 +237,16 @@ export function getAvailableLocales(
 export function loadLocalizedMetadata(
   category: string,
   slug: string,
-  locale: string = "en",
+  locale: string = "en"
 ): { title: string; description: string } | null {
   try {
     const normalizedLocale = normalizeLocale(locale);
+    const registryItem = contentRegistry.getItemForLocale(slug, normalizedLocale);
+    if (registryItem) {
+      const { title, description } = registryItem.metadata;
+      return { title, description };
+    }
+
     const localizedPath = path.join(
       process.cwd(),
       "src",
@@ -231,7 +254,7 @@ export function loadLocalizedMetadata(
       "articles",
       normalizedLocale,
       category,
-      `${slug}.md`,
+      `${slug}.md`
     );
 
     if (fs.existsSync(localizedPath)) {
@@ -242,15 +265,7 @@ export function loadLocalizedMetadata(
 
     // Fallback to English
     if (normalizedLocale !== "en") {
-      const englishPath = path.join(
-        process.cwd(),
-        "src",
-        "content",
-        "articles",
-        "en",
-        category,
-        `${slug}.md`,
-      );
+      const englishPath = path.join(process.cwd(), "src", "content", "articles", "en", category, `${slug}.md`);
       if (fs.existsSync(englishPath)) {
         const fileContent = fs.readFileSync(englishPath, "utf-8");
         const { data } = matter(fileContent);
@@ -270,9 +285,7 @@ export function loadLocalizedMetadata(
  */
 function normalizeLocale(locale: string): SupportedContentLocale {
   const normalized = locale.toLowerCase().split("-")[0]; // "en-US" -> "en"
-  return SUPPORTED_CONTENT_LOCALES.includes(
-    normalized as SupportedContentLocale,
-  )
+  return SUPPORTED_CONTENT_LOCALES.includes(normalized as SupportedContentLocale)
     ? (normalized as SupportedContentLocale)
     : "en";
 }
@@ -283,53 +296,44 @@ function normalizeLocale(locale: string): SupportedContentLocale {
 async function initializeFromTaxonomy(): Promise<void> {
   try {
     // Import the content taxonomy
-    const { default: taxonomy } = await import(
-      "@/content/content-taxonomy.json"
-    );
+    const { default: taxonomy } = await import("@/content/content-taxonomy.json");
 
     // Register all articles from taxonomy
-    Object.entries(taxonomy.contentTaxonomy.primaryCategories).forEach(
-      ([categoryKey, categoryData]) => {
-        const category = categoryKey as ContentCategory;
+    Object.entries(taxonomy.contentTaxonomy.primaryCategories).forEach(([categoryKey, categoryData]) => {
+      const category = categoryKey as ContentCategory;
 
-        categoryData.articles.forEach((articleData: any) => {
-          const metadata: ContentMetadata = {
-            title: articleData.title,
-            description: `Learn about ${articleData.title.toLowerCase()}`,
-            slug: articleData.slug,
-            category,
-            contentType: "article",
-            intent: mapIntent(articleData.intent),
-            keywords: articleData.keywords,
-            searchVolume: categoryData.searchVolume,
-            priority: categoryData.priority === "high" ? "high" : "medium",
-            featured: false,
-            readingTime: estimateReadingTime(articleData.title),
-            draft: true, // All content starts as draft until written
-            relatedCbtModules: inferCbtModules(category),
-            targetEmotions: inferTargetEmotions(category),
-            publishedAt: new Date(), // Add current date as placeholder
-          };
+      categoryData.articles.forEach((articleData: any) => {
+        const metadata: ContentMetadata = {
+          title: articleData.title,
+          description: `Learn about ${articleData.title.toLowerCase()}`,
+          slug: articleData.slug,
+          category,
+          contentType: "article",
+          intent: mapIntent(articleData.intent),
+          keywords: articleData.keywords,
+          searchVolume: categoryData.searchVolume,
+          priority: categoryData.priority === "high" ? "high" : "medium",
+          featured: false,
+          readingTime: estimateReadingTime(articleData.title),
+          draft: true, // All content starts as draft until written
+          relatedCbtModules: inferCbtModules(category),
+          targetEmotions: inferTargetEmotions(category),
+          publishedAt: new Date(), // Add current date as placeholder
+        };
 
-          // Generate brief excerpt from title
-          const excerpt = generateExcerpt(articleData.title, category);
+        // Generate brief excerpt from title
+        const excerpt = generateExcerpt(articleData.title, category);
 
-          contentRegistry.register(metadata, excerpt);
-        });
-      },
-    );
+        contentRegistry.register(metadata, excerpt);
+      });
+    });
 
     // Mark as initialized
     contentRegistry.markInitialized();
 
-    console.log(
-      `Initialized content registry with ${contentRegistry.getAll().length} articles from taxonomy`,
-    );
+    console.log(`Initialized content registry with ${contentRegistry.getAll().length} articles from taxonomy`);
   } catch (error) {
-    console.error(
-      "Failed to initialize content registry from taxonomy:",
-      error,
-    );
+    console.error("Failed to initialize content registry from taxonomy:", error);
   }
 }
 
@@ -382,17 +386,9 @@ function inferCbtModules(category: ContentCategory): string[] {
   const moduleMap: Record<ContentCategory, string[]> = {
     "cognitive-behavioral-therapy": ["cognitive", "behavioral", "core_beliefs"],
     "anxiety-management": ["mindfulness", "behavioral_activation", "cognitive"],
-    "depression-support": [
-      "behavioral_activation",
-      "cognitive",
-      "values_clarification",
-    ],
+    "depression-support": ["behavioral_activation", "cognitive", "values_clarification"],
     "stress-management": ["mindfulness", "cognitive", "behavioral"],
-    "relationship-patterns": [
-      "core_beliefs",
-      "cognitive",
-      "values_clarification",
-    ],
+    "relationship-patterns": ["core_beliefs", "cognitive", "values_clarification"],
     "self-compassion": ["core_beliefs", "cognitive", "mindfulness"],
     "mindfulness-techniques": ["mindfulness", "cognitive"],
     "mood-tracking": ["behavioral_activation", "cognitive"],

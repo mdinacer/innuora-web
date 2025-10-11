@@ -1,17 +1,32 @@
 ---
 title: "Postpartum Depression: Recognition, Support, and Recovery"
-description: "Comprehensive guide to postpartum depression. Learn to recognize symptoms, find support, and access effective treatments for maternal mental health."
-slug: "postpartum-depression-support"
-category: "depression-support"
-contentType: "article"
-intent: "supportive/informational"
-keywords: ["postpartum depression", "new mom depression", "maternal mental health", "PPD help"]
+description: >-
+  Comprehensive guide to postpartum depression. Learn to recognize symptoms, find support, and access effective
+  treatments for maternal mental health.
+slug: postpartum-depression-support
+category: depression-support
+contentType: article
+intent: informational
+keywords:
+  - postpartum depression
+  - new mom depression
+  - maternal mental health
+  - PPD help
 searchVolume: 12000
-priority: "high"
+priority: high
 featured: true
 readingTime: 13
-relatedCbtModules: ["depression", "anxiety", "support", "behavioral"]
-targetEmotions: ["depression", "anxiety", "guilt", "overwhelm", "shame"]
+relatedCbtModules:
+  - depression
+  - anxiety
+  - support
+  - behavioral
+targetEmotions:
+  - depression
+  - anxiety
+  - guilt
+  - overwhelm
+  - shame
 publishedAt: "2025-01-27"
 draft: false
 ---

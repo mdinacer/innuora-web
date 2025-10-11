@@ -1,17 +1,17 @@
 ---
-title: "Méthodes de Journal de l'Humeur : Trouvez Votre Style de Suivi Parfait"
+title: "Carnets d’humeur : trouvez la méthode de suivi qui vous correspond"
 description: >-
-  Cet article est en cours de traduction. La version française sera bientôt
-  disponible avec un contenu adapté et de qualité en santé mentale.
+  Tour d’horizon des méthodes de journalisation de l’humeur (notes numériques, papier, échelles, récits) pour choisir
+  celle qui s’intègre à votre quotidien.
 slug: mood-journal-methods
 category: mood-tracking
 contentType: article
 intent: instructional
 keywords:
-  - mood journal
-  - mood tracking methods
-  - digital mood tracking
-  - mood diary
+  - journal humeur
+  - suivi émotionnel
+  - carnet humeur
+  - mood tracking
 searchVolume: 4800
 priority: high
 featured: false
@@ -28,31 +28,46 @@ targetEmotions:
   - motivation
 publishedAt: "2025-01-27"
 draft: false
-placeholder: true
 ---
 
-# Contenu disponible prochainement
+# Carnets d’humeur : trouvez la méthode de suivi qui vous correspond
 
-## Cet article est en cours de traduction
+## Pourquoi suivre son humeur ?
 
-Nous travaillons actuellement sur la version française de cet article pour vous offrir le meilleur contenu en santé mentale et thérapie cognitivo-comportementale.
+- Détecter les déclencheurs (sommeil, environnement, interactions).
+- Évaluer l’efficacité des traitements ou des outils d’autogestion.
+- Communiquer plus précisément avec votre thérapeute ou médecin.
 
-### En attendant, vous pouvez :
+## Gamme des méthodes
 
-- **Consulter la version anglaise** de cet article pour accéder au contenu complet
-- **Explorer nos autres ressources** disponibles en français
-- **Vous inscrire** pour recevoir une notification lorsque la traduction sera terminée
+1. **Échelles numériques** (1 à 10) – rapides, idéales pour tendances.
+2. **Codes couleur/émoticônes** – visuels, faciles à consulter.
+3. **Listes de mots** – enrichissent votre vocabulaire émotionnel.
+4. **Bullet points** – résument faits, émotions, comportements.
+5. **Questions guidées** – approfondissent l’analyse (Quoi ? Comment ? Pourquoi ?).
+6. **Narration libre** – journaling complet pour explorer les ressentis.
+7. **Multi-tracking** – humeur + sommeil + médicaments + événements.
 
-### Pourquoi cette approche ?
+## Comment choisir ?
 
-Chez Innuora, nous nous engageons à fournir des ressources de qualité en santé mentale. Plutôt que de publier des traductions automatiques de mauvaise qualité, nous prenons le temps de créer des contenus adaptés culturellement et linguistiquement précis.
+- **Temps disponible** : envie d’écrire ou besoin d’un suivi express ?
+- **Objectif** : observer une maladie, comprendre un schéma relationnel, partager en thérapie.
+- **Supports préférés** : papier, applications, tableur.
+- **Confort émotionnel** : certains préfèrent des notes factuelles, d’autres un récit.
 
-### Besoin d'aide immédiate ?
+## Exemples d’outils
 
-Notre plateforme de thérapie assistée par IA est disponible en français dès maintenant. Commencez une conversation thérapeutique personnalisée en français :
+- Carnet papier avec cases journalières.
+- Applications (Daylio, Bearable, Moodnotes).
+- Tableur Google ou Notion avec formules automatiques.
 
-**[Commencer une session →](/fr/join)**
+## Bonnes pratiques
+
+- Liez l’écriture à une routine (avant le coucher, après le déjeuner).
+- Notez contexte, intensité et réaction (exercices, soutien, sommeil).
+- Analysez chaque semaine pour détecter tendances et déclencheurs.
+- Emportez le carnet aux rendez-vous médicaux pour un suivi précis.
 
 ---
 
-_Cette page sert de marque-place pour assurer l'indexation des URLs pendant la traduction du contenu._
+_Le meilleur carnet d’humeur est celui que vous utiliserez régulièrement. Testez plusieurs formats et adaptez-les à vos besoins._

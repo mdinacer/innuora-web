@@ -1,17 +1,31 @@
 ---
 title: "Living with Generalized Anxiety Disorder: A Complete Guide"
-description: "Comprehensive guide to understanding and managing GAD. Learn evidence-based strategies for reducing chronic worry and reclaiming your life."
-slug: "generalized-anxiety-disorder-help"
-category: "anxiety-management"
-contentType: "article"
-intent: "informational/supportive"
-keywords: ["generalized anxiety disorder", "GAD", "chronic worry", "anxiety treatment"]
+description: >-
+  Comprehensive guide to understanding and managing GAD. Learn evidence-based strategies for reducing chronic worry and
+  reclaiming your life.
+slug: generalized-anxiety-disorder-help
+category: anxiety-management
+contentType: article
+intent: informational
+keywords:
+  - generalized anxiety disorder
+  - GAD
+  - chronic worry
+  - anxiety treatment
 searchVolume: 18000
-priority: "high"
+priority: high
 featured: true
 readingTime: 12
-relatedCbtModules: ["cognitive", "mindfulness", "behavioral", "worry"]
-targetEmotions: ["anxiety", "worry", "overwhelm", "uncertainty"]
+relatedCbtModules:
+  - cognitive
+  - mindfulness
+  - behavioral
+  - worry
+targetEmotions:
+  - anxiety
+  - worry
+  - overwhelm
+  - uncertainty
 publishedAt: "2025-01-27"
 draft: false
 ---

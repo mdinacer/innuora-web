@@ -1,17 +1,30 @@
 ---
 title: "How to Use Thought Records: Step-by-Step CBT Worksheet"
-description: "Master the thought record technique with our comprehensive guide. Download worksheet and learn to challenge negative thinking patterns effectively."
-slug: "thought-records-guide"
-category: "cognitive-behavioral-therapy"
-contentType: "article"
-intent: "actionable"
-keywords: ["thought record", "CBT worksheet", "thought challenging", "negative thoughts"]
+description: >-
+  Master the thought record technique with our comprehensive guide. Download worksheet and learn to challenge negative
+  thinking patterns effectively.
+slug: thought-records-guide
+category: cognitive-behavioral-therapy
+contentType: article
+intent: actionable
+keywords:
+  - thought record
+  - CBT worksheet
+  - thought challenging
+  - negative thoughts
 searchVolume: 6500
-priority: "high"
+priority: high
 featured: true
 readingTime: 9
-relatedCbtModules: ["cognitive", "core_beliefs", "behavioral"]
-targetEmotions: ["anxiety", "depression", "self-doubt", "overwhelm"]
+relatedCbtModules:
+  - cognitive
+  - core_beliefs
+  - behavioral
+targetEmotions:
+  - anxiety
+  - depression
+  - self-doubt
+  - overwhelm
 publishedAt: "2025-01-27"
 draft: false
 ---

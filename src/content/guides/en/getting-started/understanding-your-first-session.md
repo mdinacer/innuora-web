@@ -1,17 +1,30 @@
 ---
 title: "Understanding Your First Therapy Session: What to Expect with Innuora"
-description: "Detailed guide to your first AI therapy session. Learn what happens, how to prepare, and how to get the most value from your initial conversation."
-slug: "understanding-your-first-session"
-category: "getting-started"
-contentType: "guide"
-intent: "supportive"
-keywords: ["first therapy session", "what to expect therapy", "AI therapy first time", "therapy preparation"]
+description: >-
+  Detailed guide to your first AI therapy session. Learn what happens, how to prepare, and how to get the most value
+  from your initial conversation.
+slug: understanding-your-first-session
+category: getting-started
+contentType: guide
+intent: supportive
+keywords:
+  - first therapy session
+  - what to expect therapy
+  - AI therapy first time
+  - therapy preparation
 searchVolume: 2400
-priority: "high"
+priority: high
 featured: true
 readingTime: 6
-relatedCbtModules: ["cognitive", "behavioral_activation", "mindfulness"]
-targetEmotions: ["nervousness", "uncertainty", "hope", "readiness"]
+relatedCbtModules:
+  - cognitive
+  - behavioral_activation
+  - mindfulness
+targetEmotions:
+  - nervousness
+  - uncertainty
+  - hope
+  - readiness
 publishedAt: "2025-01-27"
 draft: false
 ---
@@ -331,3 +344,7 @@ After your first session:
 **Remember**: The first session is about understanding where you are, not where you'll end up. Trust the process, trust yourself, and trust that support is available whenever you need it.
 
 **Ready for your first session?** Begin now →
+
+---
+
+_This guide is for educational purposes only and is not a substitute for professional mental health treatment. If you are experiencing mental health difficulties, please consult with a qualified clinician._

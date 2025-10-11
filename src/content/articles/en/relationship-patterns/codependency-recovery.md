@@ -1,17 +1,31 @@
 ---
 title: "Breaking Free from Codependency: A Recovery Guide"
-description: "Understand codependent patterns and learn to build healthy, balanced relationships. Recovery strategies for developing independence while maintaining connection."
-slug: "codependency-recovery"
-category: "relationship-patterns"
-contentType: "article"
-intent: "actionable/recovery"
-keywords: ["codependency", "codependent relationships", "relationship recovery", "healthy relationships"]
+description: >-
+  Understand codependent patterns and learn to build healthy, balanced relationships. Recovery strategies for developing
+  independence while maintaining connection.
+slug: codependency-recovery
+category: relationship-patterns
+contentType: article
+intent: actionable
+keywords:
+  - codependency
+  - codependent relationships
+  - relationship recovery
+  - healthy relationships
 searchVolume: 8500
-priority: "high"
+priority: high
 featured: true
 readingTime: 14
-relatedCbtModules: ["relationships", "boundaries", "self_worth", "independence"]
-targetEmotions: ["confusion", "entanglement", "hope", "empowerment"]
+relatedCbtModules:
+  - relationships
+  - boundaries
+  - self_worth
+  - independence
+targetEmotions:
+  - confusion
+  - entanglement
+  - hope
+  - empowerment
 publishedAt: "2025-01-27"
 draft: false
 ---

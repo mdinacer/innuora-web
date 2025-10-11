@@ -1,29 +1,38 @@
 ---
 title: "High-Functioning Women and Burnout: Why Success Feels Like Exhaustion"
-description: "Discover why high-functioning women experience emotional exhaustion despite success. Learn to recognize hidden burnout patterns and find sustainable relief from perfectionism and overwhelm."
-slug: "high-functioning-women-burnout"
-category: "stress-management"
-contentType: "article"
-intent: "supportive"
+description: >-
+  Discover why high-functioning women experience emotional exhaustion despite success. Learn to recognize hidden burnout
+  patterns and find sustainable relief from perfectionism and overwhelm.
+slug: high-functioning-women-burnout
+category: stress-management
+contentType: article
+intent: supportive
 keywords:
-  [
-    "high functioning women",
-    "high functioning anxiety women",
-    "perfectionist burnout",
-    "emotional exhaustion women",
-    "overachiever stress",
-    "women burnout recovery",
-    "successful women mental health",
-    "high achiever burnout",
-    "emotional overwhelm professional women",
-    "silent burnout symptoms",
-  ]
+  - high functioning women
+  - high functioning anxiety women
+  - perfectionist burnout
+  - emotional exhaustion women
+  - overachiever stress
+  - women burnout recovery
+  - successful women mental health
+  - high achiever burnout
+  - emotional overwhelm professional women
+  - silent burnout symptoms
 searchVolume: 18000
-priority: "high"
+priority: high
 featured: true
 readingTime: 12
-relatedCbtModules: ["cognitive", "behavioral_activation", "core_beliefs", "values_clarification"]
-targetEmotions: ["exhaustion", "overwhelm", "perfectionism", "anxiety", "emptiness"]
+relatedCbtModules:
+  - cognitive
+  - behavioral_activation
+  - core_beliefs
+  - values_clarification
+targetEmotions:
+  - exhaustion
+  - overwhelm
+  - perfectionism
+  - anxiety
+  - emptiness
 publishedAt: "2025-01-27"
 draft: false
 ---

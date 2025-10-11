@@ -1,17 +1,31 @@
 ---
 title: "Mood Journaling Methods: Find Your Perfect Tracking Style"
-description: "Discover different mood journaling approaches from simple rating scales to detailed narrative entries. Compare digital vs paper methods and find what works for you."
-slug: "mood-journal-methods"
-category: "mood-tracking"
-contentType: "article"
-intent: "instructional"
-keywords: ["mood journal", "mood tracking methods", "digital mood tracking", "mood diary"]
+description: >-
+  Discover different mood journaling approaches from simple rating scales to detailed narrative entries. Compare digital
+  vs paper methods and find what works for you.
+slug: mood-journal-methods
+category: mood-tracking
+contentType: article
+intent: instructional
+keywords:
+  - mood journal
+  - mood tracking methods
+  - digital mood tracking
+  - mood diary
 searchVolume: 4800
-priority: "high"
+priority: high
 featured: false
 readingTime: 10
-relatedCbtModules: ["mood", "patterns", "awareness", "habits"]
-targetEmotions: ["curiosity", "confusion", "hope", "motivation"]
+relatedCbtModules:
+  - mood
+  - patterns
+  - awareness
+  - habits
+targetEmotions:
+  - curiosity
+  - confusion
+  - hope
+  - motivation
 publishedAt: "2025-01-27"
 draft: false
 ---

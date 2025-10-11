@@ -2,10 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import CategoryLayout from "@/components/content/category-layout";
-import {
-  initializeContentRegistry,
-  loadLocalizedMetadata,
-} from "@/lib/content/content-loader";
+import { initializeContentRegistry } from "@/lib/content/content-loader";
 import { contentRegistry } from "@/lib/content/content-registry";
 import { ContentCategory } from "@/types/content.types";
 
@@ -24,7 +21,7 @@ interface CategoryPageProps {
 // Category Metadata
 // =========================
 
-const categoryInfo: Record<string, { title: string; description: string }> = {
+const fallbackCategoryInfo: Record<string, { title: string; description: string }> = {
   "cognitive-behavioral-therapy": {
     title: "Cognitive Behavioral Therapy (CBT) Resources",
     description:
@@ -74,9 +71,9 @@ const categoryInfo: Record<string, { title: string; description: string }> = {
 export async function generateMetadata({
   params,
 }: CategoryPageProps): Promise<Metadata> {
-  const { category } = await params;
+  const { locale = "en", category } = await params;
 
-  const info = categoryInfo[category];
+  const info = fallbackCategoryInfo[category];
 
   if (!info) {
     return {
@@ -85,17 +82,38 @@ export async function generateMetadata({
     };
   }
 
+  const { default: initTranslations } = await import("@/lib/i18n");
+  const { t } = await initTranslations(locale, ["content"]);
+
+  const localizedTitle = t(`library.categories.${category}.title`, {
+    defaultValue: info.title,
+  });
+  const localizedDescription = t(
+    `library.categories.${category}.description`,
+    {
+      defaultValue: info.description,
+    },
+  );
+
   return {
-    title: `${info.title} | Innuora`,
-    description: info.description,
+    title: `${localizedTitle} | Innuora`,
+    description: localizedDescription,
     openGraph: {
-      title: info.title,
-      description: info.description,
+      title: localizedTitle,
+      description: localizedDescription,
       type: "website",
       siteName: "Innuora",
+      url: `/${locale}/content/${category}`,
+      locale: locale === "ar" ? "ar_AR" : locale === "fr" ? "fr_FR" : "en_US",
     },
     alternates: {
-      canonical: `/content/${category}`,
+      canonical: `/${locale}/content/${category}`,
+      languages: {
+        en: `/en/content/${category}`,
+        ar: `/ar/content/${category}`,
+        fr: `/fr/content/${category}`,
+        "x-default": `/en/content/${category}`,
+      },
     },
   };
 }
@@ -105,7 +123,7 @@ export async function generateMetadata({
 // =========================
 
 export async function generateStaticParams() {
-  return Object.keys(categoryInfo).map((category) => ({
+  return Object.keys(fallbackCategoryInfo).map((category) => ({
     category,
   }));
 }
@@ -118,46 +136,43 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   const { locale, category } = await params;
 
   // Validate category
-  if (!categoryInfo[category]) {
+  if (!fallbackCategoryInfo[category]) {
     notFound();
   }
+
+  const { default: initTranslations } = await import("@/lib/i18n");
+  const { t } = await initTranslations(locale, ["content"]);
+
+  const localizedCategoryInfo = {
+    title: t(`library.categories.${category}.title`, {
+      defaultValue: fallbackCategoryInfo[category].title,
+    }),
+    description: t(`library.categories.${category}.description`, {
+      defaultValue: fallbackCategoryInfo[category].description,
+    }),
+  };
 
   // Initialize content registry
   await initializeContentRegistry();
 
   // Get content for this category
   const categoryContent = contentRegistry.getByCategory(
-    category as ContentCategory,
+    category as ContentCategory
   );
 
-  // Load localized metadata
-  const localizedContent = categoryContent.map((item) => {
-    const localizedMeta = loadLocalizedMetadata(
-      item.metadata.category,
-      item.metadata.slug,
-      locale,
-    );
-    if (localizedMeta) {
-      return {
-        ...item,
-        metadata: {
-          ...item.metadata,
-          title: localizedMeta.title,
-          description: localizedMeta.description,
-        },
-      };
-    }
-    return item;
-  });
+  const localizedContent = contentRegistry.applyLocaleOverrides(
+    categoryContent,
+    locale
+  );
 
   const featuredContent = localizedContent.filter(
-    (item) => item.metadata.featured,
+    (item) => item.metadata.featured
   );
 
   return (
     <CategoryLayout
       category={category as ContentCategory}
-      categoryInfo={categoryInfo[category]}
+      categoryInfo={localizedCategoryInfo}
       content={localizedContent}
       featuredContent={featuredContent}
     />

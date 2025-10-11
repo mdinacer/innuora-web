@@ -1,17 +1,27 @@
 ---
 title: "How to Get Started with Innuora: Your Complete Beginner's Guide"
-description: "Learn how to begin your therapeutic journey with Innuora's AI-powered CBT platform. Step-by-step guide for new users."
-slug: "how-to-get-started-with-innuora"
-category: "getting-started"
-contentType: "guide"
-intent: "actionable"
-keywords: ["getting started", "Innuora guide", "AI therapy tutorial", "first session", "CBT platform"]
+description: Learn how to begin your therapeutic journey with Innuora's AI-powered CBT platform. Step-by-step guide for new users.
+slug: how-to-get-started-with-innuora
+category: getting-started
+contentType: guide
+intent: actionable
+keywords:
+  - getting started
+  - Innuora guide
+  - AI therapy tutorial
+  - first session
+  - CBT platform
 searchVolume: 1200
-priority: "high"
+priority: high
 featured: true
 readingTime: 7
-relatedCbtModules: ["cognitive", "behavioral_activation"]
-targetEmotions: ["uncertainty", "hope", "readiness"]
+relatedCbtModules:
+  - cognitive
+  - behavioral_activation
+targetEmotions:
+  - uncertainty
+  - hope
+  - readiness
 publishedAt: "2025-01-27"
 draft: false
 ---
@@ -258,3 +268,7 @@ Ready to begin? Here's your action plan:
 Your path to better mental health begins with a single conversation. Start yours today.
 
 **Ready to begin?** Start your first session →
+
+---
+
+_This guide is for educational purposes only and is not a substitute for professional mental health treatment. If you are experiencing mental health difficulties, please consult with a qualified clinician._

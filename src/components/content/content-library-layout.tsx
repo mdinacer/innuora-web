@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 "use client";
 
-import Link from "next/link";
 import { BookOpen, Clock, Star, TrendingUp } from "lucide-react";
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 import { ContentCategory, ContentItem } from "@/types/content.types";
 
@@ -20,50 +21,15 @@ interface ContentLibraryLayoutProps {
 // Category Information
 // =========================
 
-const categoryInfo: Record<
-  ContentCategory,
-  { title: string; description: string; icon: string }
-> = {
-  "cognitive-behavioral-therapy": {
-    title: "Cognitive Behavioral Therapy",
-    description: "Evidence-based CBT techniques and strategies",
-    icon: "🧠",
-  },
-  "anxiety-management": {
-    title: "Anxiety Management",
-    description: "Practical strategies for managing anxiety and worry",
-    icon: "🌊",
-  },
-  "depression-support": {
-    title: "Depression Support",
-    description: "Understanding and coping with depression",
-    icon: "🌱",
-  },
-  "stress-management": {
-    title: "Stress Management",
-    description: "Techniques for reducing stress and preventing burnout",
-    icon: "🧘",
-  },
-  "relationship-patterns": {
-    title: "Healthy Relationships",
-    description: "Building and maintaining healthy relationship patterns",
-    icon: "💝",
-  },
-  "self-compassion": {
-    title: "Self-Compassion",
-    description: "Developing kindness and acceptance toward yourself",
-    icon: "🤗",
-  },
-  "mindfulness-techniques": {
-    title: "Mindfulness & Meditation",
-    description: "Present-moment awareness and meditation practices",
-    icon: "🧘‍♀️",
-  },
-  "mood-tracking": {
-    title: "Mood Tracking",
-    description: "Understanding and monitoring emotional patterns",
-    icon: "📈",
-  },
+const CATEGORY_ICONS: Record<ContentCategory, string> = {
+  "cognitive-behavioral-therapy": "🧠",
+  "anxiety-management": "🌊",
+  "depression-support": "🌱",
+  "stress-management": "🧘",
+  "relationship-patterns": "💝",
+  "self-compassion": "🤗",
+  "mindfulness-techniques": "🧘‍♀️",
+  "mood-tracking": "📈",
 };
 
 // =========================
@@ -75,34 +41,34 @@ export default function ContentLibraryLayout({
   featuredContent,
   totalArticles,
 }: ContentLibraryLayoutProps) {
+  const { t } = useTranslation("content");
+
   return (
-    <div className="min-h-screen ">
-      <div className="container mx-auto px-4 py-8 max-w-7xl">
+    <div className="min-h-screen bg-background">
+      <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
         {/* Header */}
-        <header className="mb-12 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-inn-text-primary mb-4">
-            Content Library
-          </h1>
-          <p className="text-xl text-inn-text-secondary leading-relaxed max-w-3xl mx-auto mb-6">
-            Explore our comprehensive collection of mental health resources,
-            therapeutic guides, and practical tools to support your wellbeing
-            journey.
+        <header className="mb-12 space-y-6 text-center">
+          <h1 className="text-4xl font-serif-brand text-foreground md:text-6xl">{t("library.heading")}</h1>
+          <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted-foreground">
+            {t("library.intro")}
           </p>
 
           {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-inn-text-secondary">
-            <div className="flex items-center">
-              <BookOpen className="w-4 h-4 mr-2" />
-              {totalArticles} articles
+          <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1">
+              <BookOpen className="h-4 w-4 text-primary" />
+              {t("shared.articles", { count: totalArticles })}
             </div>
-            <div className="flex items-center">
-              <TrendingUp className="w-4 h-4 mr-2" />
-              {Object.keys(contentByCategory).length} categories
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1">
+              <TrendingUp className="h-4 w-4 text-primary" />
+              {t("library.stats.categories", {
+                count: Object.keys(contentByCategory).length,
+              })}
             </div>
             {featuredContent.length > 0 && (
-              <div className="flex items-center">
-                <Star className="w-4 h-4 mr-2" />
-                {featuredContent.length} featured
+              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1">
+                <Star className="h-4 w-4 text-primary" />
+                {t("shared.featured", { count: featuredContent.length })}
               </div>
             )}
           </div>
@@ -110,10 +76,10 @@ export default function ContentLibraryLayout({
 
         {/* Featured Content */}
         {featuredContent.length > 0 && (
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-inn-text-primary mb-6 flex items-center">
-              <Star className="w-6 h-6 mr-2 text-inn-bg-flame" />
-              Featured Articles
+          <section className="mb-12 space-y-6">
+            <h2 className="flex items-center gap-3 text-2xl font-serif-brand text-foreground">
+              <Star className="h-6 w-6 text-primary" />
+              {t("library.featuredHeading")}
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {featuredContent.slice(0, 6).map((item) => (
@@ -125,35 +91,29 @@ export default function ContentLibraryLayout({
 
         {/* Categories Grid */}
         <section>
-          <h2 className="text-2xl font-bold text-inn-text-primary mb-6">
-            Browse by Category
+          <h2 className="mb-6 text-2xl font-serif-brand text-foreground">
+            {t("library.browseHeading")}
           </h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {Object.entries(contentByCategory).map(([category, articles]) => (
-              <CategoryCard
-                key={category}
-                category={category as ContentCategory}
-                articles={articles}
-              />
+              <CategoryCard key={category} category={category as ContentCategory} articles={articles} />
             ))}
           </div>
         </section>
 
         {/* Call to Action */}
-        <section className="mt-16 text-center bg-inn-bg-card rounded-2xl border border-inn-border-light shadow-[0_2px_8px] shadow-inn-bg-accent/8 p-8">
-          <h3 className="text-2xl font-bold text-inn-text-primary mb-4">
-            Need Personalized Support?
+        <section className="mt-16 rounded-app border border-border bg-card p-10 text-center shadow-soft">
+          <h3 className="text-2xl font-serif-brand text-foreground">
+            {t("library.cta.title")}
           </h3>
-          <p className="text-inn-text-secondary mb-6 max-w-2xl mx-auto">
-            While our content library provides valuable insights, our AI-powered
-            therapeutic chat offers personalized guidance tailored to your
-            specific needs and situation.
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+            {t("library.cta.description")}
           </p>
           <Link
             href="/sessions"
-            className="inline-flex items-center px-6 py-3 bg-inn-bg-accent-dark text-white rounded-lg hover:bg-inn-bg-accent-dark transition-colors font-medium"
+            className="mt-6 inline-flex items-center rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft transition hover:opacity-90"
           >
-            Start a Session
+            {t("library.cta.button")}
           </Link>
         </section>
       </div>
@@ -171,43 +131,42 @@ interface FeaturedContentCardProps {
 
 function FeaturedContentCard({ item }: FeaturedContentCardProps) {
   const { metadata, excerpt } = item;
+  const { t } = useTranslation("content");
 
   return (
     <Link
       href={`/content/${metadata.category}/${metadata.slug}`}
-      className="block  bg-inn-bg-card rounded-2xl shadow-[0_2px_8px] shadow-inn-bg-accent/8  hover:shadow-[0_4px_20px] hover:shadow-inn-bg-accent/15 transition-all duration-200 overflow-hidden ring-1 ring-inn-bg-accent/40"
+      className="group block overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-soft ring-1 ring-primary/20 transition-all hover:-translate-y-1 hover:shadow-[0_18px_40px_-24px_rgba(15,23,42,0.35)]"
     >
-      <div className="p-6">
-        {/* Featured Badge */}
-        <div className="flex items-center mb-3">
-          <Star className="w-4 h-4 text-inn-bg-flame mr-2" />
-          <span className="text-xs font-medium text-inn-bg-flame">
-            Featured
+      {/* Featured Badge */}
+      <div className="mb-3 flex items-center gap-2 text-xs font-medium text-primary">
+        <Star className="h-4 w-4" />
+        {t("shared.featuredBadge")}
+      </div>
+
+      {/* Title */}
+      <h3 className="mb-3 line-clamp-2 font-semibold text-foreground leading-snug">
+        {metadata.title}
+      </h3>
+
+      {/* Description */}
+      <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+        {excerpt || metadata.description}
+      </p>
+
+      {/* Metadata */}
+      <div className="flex items-center justify-between text-xs text-muted-foreground">
+        <span className="capitalize opacity-80">
+          {t(`library.categories.${metadata.category}.title`, {
+            defaultValue: metadata.category.replace(/-/g, " "),
+          })}
+        </span>
+        {metadata.readingTime && (
+          <span className="inline-flex items-center gap-2 opacity-80">
+            <Clock className="h-3 w-3" />
+            {t("shared.minutes", { count: metadata.readingTime })}
           </span>
-        </div>
-
-        {/* Title */}
-        <h3 className="text-lg font-semibold text-inn-text-primary leading-tight line-clamp-2 mb-3">
-          {metadata.title}
-        </h3>
-
-        {/* Description */}
-        <p className="text-inn-text-secondary text-sm leading-relaxed mb-4 line-clamp-3">
-          {excerpt || metadata.description}
-        </p>
-
-        {/* Metadata */}
-        <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
-          <span className="capitalize">
-            {metadata.category.replace(/-/g, " ")}
-          </span>
-          {metadata.readingTime && (
-            <div className="flex items-center">
-              <Clock className="w-3 h-3 mr-1" />
-              {metadata.readingTime} min
-            </div>
-          )}
-        </div>
+        )}
       </div>
     </Link>
   );
@@ -223,39 +182,42 @@ interface CategoryCardProps {
 }
 
 function CategoryCard({ category, articles }: CategoryCardProps) {
-  const info = categoryInfo[category];
-  const featuredCount = articles.filter(
-    (article) => article.metadata.featured,
-  ).length;
+  const { t } = useTranslation("content");
+  const icon = CATEGORY_ICONS[category];
+  const featuredCount = articles.filter((article) => article.metadata.featured).length;
 
   return (
     <Link
       href={`/content/${category}`}
-      className="block bg-inn-bg-card border border-inn-border-light rounded-2xl shadow-[0_2px_8px] shadow-inn-bg-accent/8 hover:shadow-[0_4px_20px] hover:shadow-inn-bg-accent/15 transition-all hover:border-inn-bg-accent duration-200 p-6 group"
+      className="group block rounded-2xl border border-border bg-card p-6 shadow-soft transition hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_18px_40px_-24px_rgba(15,23,42,0.35)]"
     >
       {/* Icon and Title */}
-      <div className="flex items-center mb-3">
-        <span className="text-2xl mr-3">{info.icon}</span>
-        <h3 className="text-lg font-semibold text-inn-text-primary group-hover:text-inn-bg-accent transition-colors">
-          {info.title}
+      <div className="mb-3 flex items-center gap-3">
+        <span className="text-2xl">{icon}</span>
+        <h3 className="text-lg font-semibold text-foreground transition-colors group-hover:text-primary">
+          {t(`library.categories.${category}.title`, {
+            defaultValue: category.replace(/-/g, " "),
+          })}
         </h3>
       </div>
 
       {/* Description */}
-      <p className="text-inn-text-secondary text-sm leading-relaxed mb-4">
-        {info.description}
+      <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+        {t(`library.categories.${category}.description`, {
+          defaultValue: "",
+        })}
       </p>
 
       {/* Stats */}
-      <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
-        <div className="flex items-center">
-          <BookOpen className="w-3 h-3 mr-1" />
-          {articles.length} articles
+      <div className="flex items-center justify-between text-xs text-muted-foreground">
+        <div className="flex items-center gap-2 opacity-80">
+          <BookOpen className="h-3 w-3" />
+          {t("shared.articles", { count: articles.length })}
         </div>
         {featuredCount > 0 && (
-          <div className="flex items-center">
-            <Star className="w-3 h-3 mr-1" />
-            {featuredCount} featured
+          <div className="flex items-center gap-2 opacity-80">
+            <Star className="h-3 w-3" />
+            {t("shared.featured", { count: featuredCount })}
           </div>
         )}
       </div>

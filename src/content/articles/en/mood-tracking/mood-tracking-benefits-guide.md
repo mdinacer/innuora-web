@@ -1,17 +1,31 @@
 ---
 title: "The Science of Mood Tracking: Why It Works and How to Start"
-description: "Discover the evidence-based benefits of mood tracking for mental health. Learn how to identify patterns, improve emotional awareness, and enhance well-being."
-slug: "mood-tracking-benefits-guide"
-category: "mood-tracking"
-contentType: "article"
-intent: "informational/actionable"
-keywords: ["mood tracking", "emotional awareness", "mood journal", "mental health tracking"]
+description: >-
+  Discover the evidence-based benefits of mood tracking for mental health. Learn how to identify patterns, improve
+  emotional awareness, and enhance well-being.
+slug: mood-tracking-benefits-guide
+category: mood-tracking
+contentType: article
+intent: informational
+keywords:
+  - mood tracking
+  - emotional awareness
+  - mood journal
+  - mental health tracking
 searchVolume: 6200
-priority: "high"
+priority: high
 featured: true
 readingTime: 11
-relatedCbtModules: ["mood", "emotional", "patterns", "awareness"]
-targetEmotions: ["curiosity", "confusion", "hope", "motivation"]
+relatedCbtModules:
+  - mood
+  - emotional
+  - patterns
+  - awareness
+targetEmotions:
+  - curiosity
+  - confusion
+  - hope
+  - motivation
 publishedAt: "2025-01-27"
 draft: false
 ---

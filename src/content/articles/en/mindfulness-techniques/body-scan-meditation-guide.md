@@ -1,17 +1,31 @@
 ---
 title: "Body Scan Meditation: Complete Guide and Benefits"
-description: "Learn the body scan meditation technique for deep relaxation, stress relief, and body awareness. Step-by-step instructions and variations for all levels."
-slug: "body-scan-meditation-guide"
-category: "mindfulness-techniques"
-contentType: "article"
-intent: "instructional"
-keywords: ["body scan meditation", "progressive relaxation", "mindful body awareness", "stress relief"]
+description: >-
+  Learn the body scan meditation technique for deep relaxation, stress relief, and body awareness. Step-by-step
+  instructions and variations for all levels.
+slug: body-scan-meditation-guide
+category: mindfulness-techniques
+contentType: article
+intent: instructional
+keywords:
+  - body scan meditation
+  - progressive relaxation
+  - mindful body awareness
+  - stress relief
 searchVolume: 8200
-priority: "high"
+priority: high
 featured: true
 readingTime: 11
-relatedCbtModules: ["mindfulness", "relaxation", "body_awareness", "stress"]
-targetEmotions: ["tension", "stress", "disconnection", "relaxation"]
+relatedCbtModules:
+  - mindfulness
+  - relaxation
+  - body_awareness
+  - stress
+targetEmotions:
+  - tension
+  - stress
+  - disconnection
+  - relaxation
 publishedAt: "2025-01-27"
 draft: false
 ---

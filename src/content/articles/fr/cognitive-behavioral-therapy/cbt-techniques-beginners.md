@@ -1,17 +1,17 @@
 ---
-title: 7 Techniques TCC Essentielles Que Tout Débutant Devrait Connaître
+title: "7 techniques essentielles de TCC que tout débutant devrait connaître"
 description: >-
-  Cet article est en cours de traduction. La version française sera bientôt
-  disponible avec un contenu adapté et de qualité en santé mentale.
+  Les outils fondamentaux de la thérapie cognitivo-comportementale expliqués pas à pas pour apprendre à gérer ses
+  pensées et ses émotions au quotidien.
 slug: cbt-techniques-beginners
 category: cognitive-behavioral-therapy
 contentType: article
 intent: actionable
 keywords:
-  - CBT techniques
-  - cognitive therapy exercises
-  - thought challenging
-  - CBT skills
+  - techniques TCC
+  - exercices cognitifs
+  - restructuration cognitive
+  - outils anxiété
 searchVolume: 8500
 priority: high
 featured: true
@@ -28,31 +28,50 @@ targetEmotions:
   - curiosity
 publishedAt: "2025-01-27"
 draft: false
-placeholder: true
 ---
 
-# Contenu disponible prochainement
+# 7 techniques essentielles de TCC que tout débutant devrait connaître
 
-## Cet article est en cours de traduction
+## 1. Identification des pensées automatiques
+- Notez la situation, l’émotion et la pensée rapide qui surgit.
+- Exemple : “Mon collègue n’a pas répondu → Il m’en veut sûrement”.
+- Objectif : passer du flou émotionnel à une pensée claire que l’on peut travailler.
 
-Nous travaillons actuellement sur la version française de cet article pour vous offrir le meilleur contenu en santé mentale et thérapie cognitivo-comportementale.
+## 2. Restructuration cognitive
+- Listez les preuves pour et contre votre pensée.
+- Remplacez-la par une alternative réaliste (“Il est peut-être occupé, je verrai avec lui demain”).
+- Utilisez des fiches de pensées type pour vous guider.
 
-### En attendant, vous pouvez :
+## 3. Expériences comportementales
+- Testez vos prédictions pour créer des preuves concrètes (voir article dédié).
+- Exemple : exprimer une idée en réunion et observer si les critiques redoutées surviennent.
 
-- **Consulter la version anglaise** de cet article pour accéder au contenu complet
-- **Explorer nos autres ressources** disponibles en français
-- **Vous inscrire** pour recevoir une notification lorsque la traduction sera terminée
+## 4. Activation comportementale
+- Planifiez chaque jour une activité “Plaisir” et une activité “Sens/valeur”.
+- Utilisez une échelle de 0 à 10 pour noter l’humeur avant/après.
+- Progressez graduellement pour réintroduire énergie et motivation.
 
-### Pourquoi cette approche ?
+## 5. Exposition graduée
+- Créez une hiérarchie des situations anxiogènes.
+- Affrontez-les par étapes en restant jusqu’à la baisse de l’anxiété.
+- Tenez un journal pour constater vos progrès.
 
-Chez Innuora, nous nous engageons à fournir des ressources de qualité en santé mentale. Plutôt que de publier des traductions automatiques de mauvaise qualité, nous prenons le temps de créer des contenus adaptés culturellement et linguistiquement précis.
+## 6. Pleine conscience d’observation
+- 5 minutes par jour pour observer pensées et sensations sans juger.
+- Utilisez un support (respiration, sons, scan corporel).
+- But : augmenter la distance entre vous et vos ruminations.
 
-### Besoin d'aide immédiate ?
+## 7. Autocompassion
+- Remplacez la critique interne par une voix soutenante.
+- Exercice rapide : main sur le cœur, phrase de bienveillance (“Je traverse un moment difficile et je me soutiens”).
+- Renforce la persévérance et réduit la honte.
 
-Notre plateforme de thérapie assistée par IA est disponible en français dès maintenant. Commencez une conversation thérapeutique personnalisée en français :
+## Comment s’entraîner
 
-**[Commencer une session →](/fr/join)**
+- Choisissez deux techniques pour commencer et pratiquez-les quotidiennement pendant deux semaines.
+- Intégrez-les à une routine (ex : restructuration cognitive le soir, activation le week-end).
+- Travaillez avec un thérapeute pour personnaliser les exercices si nécessaire.
 
 ---
 
-_Cette page sert de marque-place pour assurer l'indexation des URLs pendant la traduction du contenu._
+_Ces techniques ne remplacent pas un suivi professionnel mais constituent une base solide pour mieux gérer vos pensées et émotions._

@@ -1,17 +1,31 @@
 ---
-title: "The Hidden Effects of Chronic Stress and How to Break Free"
-description: "Understand how chronic stress impacts your body and mind. Learn evidence-based strategies to break the stress cycle and restore balance."
-slug: "chronic-stress-effects-solutions"
-category: "stress-management"
-contentType: "article"
-intent: "informational/actionable"
-keywords: ["chronic stress", "stress effects", "stress management", "stress relief"]
+title: The Hidden Effects of Chronic Stress and How to Break Free
+description: >-
+  Understand how chronic stress impacts your body and mind. Learn evidence-based strategies to break the stress cycle
+  and restore balance.
+slug: chronic-stress-effects-solutions
+category: stress-management
+contentType: article
+intent: informational
+keywords:
+  - chronic stress
+  - stress effects
+  - stress management
+  - stress relief
 searchVolume: 16000
-priority: "high"
+priority: high
 featured: true
 readingTime: 12
-relatedCbtModules: ["stress", "behavioral", "cognitive", "mindfulness"]
-targetEmotions: ["stress", "overwhelm", "burnout", "tension"]
+relatedCbtModules:
+  - stress
+  - behavioral
+  - cognitive
+  - mindfulness
+targetEmotions:
+  - stress
+  - overwhelm
+  - burnout
+  - tension
 publishedAt: "2025-01-27"
 draft: false
 ---

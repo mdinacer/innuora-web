@@ -1,18 +1,30 @@
 ---
 title: "Thought Challenging Worksheet: Step-by-Step CBT Exercise"
-description: "Learn to identify and challenge negative automatic thoughts with this comprehensive CBT thought record worksheet and guided exercise."
-slug: "thought-challenging-worksheet"
-category: "cbt-exercises"
-contentType: "guide"
-intent: "actionable"
+description: >-
+  Learn to identify and challenge negative automatic thoughts with this comprehensive CBT thought record worksheet and
+  guided exercise.
+slug: thought-challenging-worksheet
+category: cbt-exercises
+contentType: guide
+intent: actionable
 keywords:
-  ["thought record", "cognitive restructuring", "challenge negative thoughts", "CBT worksheet", "thought challenging"]
+  - thought record
+  - cognitive restructuring
+  - challenge negative thoughts
+  - CBT worksheet
+  - thought challenging
 searchVolume: 3200
-priority: "high"
+priority: high
 featured: true
 readingTime: 10
-relatedCbtModules: ["cognitive", "core_beliefs"]
-targetEmotions: ["anxiety", "depression", "self-criticism", "rumination"]
+relatedCbtModules:
+  - cognitive
+  - core_beliefs
+targetEmotions:
+  - anxiety
+  - depression
+  - self-criticism
+  - rumination
 publishedAt: "2025-01-27"
 draft: false
 ---
@@ -380,3 +392,7 @@ Choose a situation that caused mild-moderate distress (don't start with your big
 
 **Download**: Printable thought record worksheet →
 **Practice**: Start a guided thought-challenging session →
+
+---
+
+_This guide is for educational purposes only and is not a substitute for professional mental health treatment. If you are experiencing mental health difficulties, please consult with a qualified clinician._

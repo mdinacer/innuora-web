@@ -1,17 +1,17 @@
 ---
-title: "Atteindre l'Équilibre Travail-Vie : Gérer le Stress Professionnel"
+title: "Trouver l’équilibre travail-vie personnelle : gérer le stress professionnel"
 description: >-
-  Cet article est en cours de traduction. La version française sera bientôt
-  disponible avec un contenu adapté et de qualité en santé mentale.
+  Construisez des limites réalistes, organisez votre énergie et prévenez le burnout grâce à des stratégies pratiques
+  facilement applicables.
 slug: work-life-balance-stress
 category: stress-management
 contentType: article
-intent: professional/actionable
+intent: actionable
 keywords:
-  - work life balance
-  - work stress
-  - burnout prevention
-  - professional wellness
+  - équilibre travail vie
+  - stress professionnel
+  - prévention burnout
+  - bien-être au travail
 searchVolume: 13500
 priority: high
 featured: true
@@ -28,31 +28,38 @@ targetEmotions:
   - exhaustion
 publishedAt: "2025-01-27"
 draft: false
-placeholder: true
 ---
 
-# Contenu disponible prochainement
+# Trouver l’équilibre travail-vie personnelle : gérer le stress professionnel
 
-## Cet article est en cours de traduction
+## Clarifier ce que signifie “équilibre”
 
-Nous travaillons actuellement sur la version française de cet article pour vous offrir le meilleur contenu en santé mentale et thérapie cognitivo-comportementale.
+- Pas de 50/50 parfait, mais un alignement avec vos priorités.
+- Une répartition qui change selon les périodes de vie.
+- Des limites claires entre temps de travail et temps perso.
 
-### En attendant, vous pouvez :
+## Stratégies clés
 
-- **Consulter la version anglaise** de cet article pour accéder au contenu complet
-- **Explorer nos autres ressources** disponibles en français
-- **Vous inscrire** pour recevoir une notification lorsque la traduction sera terminée
+1. **Audit hebdomadaire** : notez ce qui consomme votre temps/énergie, supprimez le superflu.
+2. **Blocage d’agenda** : réservez des créneaux pour tâches importantes, pauses, vie perso.
+3. **Rituels de transition** : fermer ordinateur, écrire 3 accomplissements, planifier le lendemain.
+4. **Communication assertive** : “Je suis disponible jusqu’à 18 h, ensuite je déconnecte.”
+5. **Micro-pauses** : 5 minutes toutes les 90 minutes pour bouger, boire, respirer.
+6. **Temps de récupération** : sport, hobby, amis, sommeil – traités comme des rendez-vous non négociables.
 
-### Pourquoi cette approche ?
+## Soutien organisationnel
 
-Chez Innuora, nous nous engageons à fournir des ressources de qualité en santé mentale. Plutôt que de publier des traductions automatiques de mauvaise qualité, nous prenons le temps de créer des contenus adaptés culturellement et linguistiquement précis.
+- Discuter charge et priorités avec le manager.
+- Utiliser les ressources (RH, programme d’aide, télétravail flexible).
+- Créer un réseau de collègues pour mutualiser les stratégies.
 
-### Besoin d'aide immédiate ?
+## Plan d’action
 
-Notre plateforme de thérapie assistée par IA est disponible en français dès maintenant. Commencez une conversation thérapeutique personnalisée en français :
-
-**[Commencer une session →](/fr/join)**
+- Définir vos 3 priorités personnelles et 3 professionnelles.
+- Choisir un rituel de début et de fin de journée.
+- Introduire une activité ressourçante en semaine (sieste, cours, sortie).
+- Évaluer chaque mois ce qui fonctionne ou non, ajuster.
 
 ---
 
-_Cette page sert de marque-place pour assurer l'indexation des URLs pendant la traduction du contenu._
+_L’équilibre se construit et se réajuste continuellement. Demandez du soutien si la charge reste excessive malgré vos efforts._

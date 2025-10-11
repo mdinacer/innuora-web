@@ -1,17 +1,17 @@
 ---
-title: Qu'est-ce que l'Auto-Compassion ? Guide pour Être Gentil avec Soi-Même
+title: "Qu’est-ce que la compassion envers soi ? Être son propre allié"
 description: >-
-  Cet article est en cours de traduction. La version française sera bientôt
-  disponible avec un contenu adapté et de qualité en santé mentale.
+  Découvrez la définition scientifique de la compassion envers soi et pourquoi elle est plus efficace que la critique
+  pour progresser et être heureux.
 slug: what-is-self-compassion
 category: self-compassion
 contentType: article
 intent: informational
 keywords:
-  - self compassion
-  - self kindness
-  - self acceptance
-  - emotional healing
+  - compassion envers soi
+  - bienveillance intérieure
+  - auto compassion
+  - acceptation de soi
 searchVolume: 7500
 priority: high
 featured: true
@@ -28,31 +28,36 @@ targetEmotions:
   - hope
 publishedAt: "2025-01-27"
 draft: false
-placeholder: true
 ---
 
-# Contenu disponible prochainement
+# Qu’est-ce que la compassion envers soi ?
 
-## Cet article est en cours de traduction
+Selon la chercheuse Kristin Neff, la compassion envers soi repose sur trois piliers :
 
-Nous travaillons actuellement sur la version française de cet article pour vous offrir le meilleur contenu en santé mentale et thérapie cognitivo-comportementale.
+1. **Bienveillance** plutôt que jugement.
+2. **Humanité partagée** : reconnaître que la souffrance fait partie de l’expérience humaine.
+3. **Pleine conscience** : observer ses émotions sans s’y perdre.
 
-### En attendant, vous pouvez :
+## Idées reçues à déconstruire
 
-- **Consulter la version anglaise** de cet article pour accéder au contenu complet
-- **Explorer nos autres ressources** disponibles en français
-- **Vous inscrire** pour recevoir une notification lorsque la traduction sera terminée
+- Ce n’est pas de la paresse ou de l’auto-indulgence.
+- Ce n’est pas ignorer ses responsabilités.
+- Ce n’est pas de l’égoïsme ou du narcissisme.
 
-### Pourquoi cette approche ?
+## Les bénéfices
 
-Chez Innuora, nous nous engageons à fournir des ressources de qualité en santé mentale. Plutôt que de publier des traductions automatiques de mauvaise qualité, nous prenons le temps de créer des contenus adaptés culturellement et linguistiquement précis.
+- Moins d’anxiété et de ruminations.
+- Motivation intrinsèque plus forte (on agit pour soi, pas par peur).
+- Relations plus apaisées (on reproche moins pour se sentir mieux).
+- Résilience face aux échecs et aux critiques.
 
-### Besoin d'aide immédiate ?
+## Comment la pratiquer au quotidien
 
-Notre plateforme de thérapie assistée par IA est disponible en français dès maintenant. Commencez une conversation thérapeutique personnalisée en français :
-
-**[Commencer une session →](/fr/join)**
+- Remarquez la voix intérieure qui juge et remplacez-la par “Je fais ce que je peux”.
+- Traitez-vous avec la même gentillesse qu’un ami cher.
+- Prenez soin du corps (sommeil, alimentation, repos) comme vous le feriez pour quelqu’un que vous aimez.
+- Cherchez du soutien professionnel si la honte ou l’auto-critique est trop envahissante.
 
 ---
 
-_Cette page sert de marque-place pour assurer l'indexation des URLs pendant la traduction du contenu._
+_La compassion envers soi n’est pas un luxe, mais une ressource qui renforce votre santé mentale et votre capacité à vous engager dans la vie._

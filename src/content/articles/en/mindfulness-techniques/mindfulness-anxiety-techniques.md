@@ -1,17 +1,31 @@
 ---
 title: "Using Mindfulness to Manage Anxiety: 6 Proven Techniques"
-description: "Learn evidence-based mindfulness techniques specifically designed to reduce anxiety. Quick practices for immediate relief and long-term anxiety management."
-slug: "mindfulness-anxiety-techniques"
-category: "mindfulness-techniques"
-contentType: "article"
-intent: "actionable"
-keywords: ["mindfulness anxiety", "mindful breathing", "anxiety mindfulness", "anxiety relief"]
+description: >-
+  Learn evidence-based mindfulness techniques specifically designed to reduce anxiety. Quick practices for immediate
+  relief and long-term anxiety management.
+slug: mindfulness-anxiety-techniques
+category: mindfulness-techniques
+contentType: article
+intent: actionable
+keywords:
+  - mindfulness anxiety
+  - mindful breathing
+  - anxiety mindfulness
+  - anxiety relief
 searchVolume: 11000
-priority: "high"
+priority: high
 featured: true
 readingTime: 10
-relatedCbtModules: ["mindfulness", "anxiety", "breathing", "grounding"]
-targetEmotions: ["anxiety", "panic", "worry", "calm"]
+relatedCbtModules:
+  - mindfulness
+  - anxiety
+  - breathing
+  - grounding
+targetEmotions:
+  - anxiety
+  - panic
+  - worry
+  - calm
 publishedAt: "2025-01-27"
 draft: false
 ---

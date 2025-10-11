@@ -1,17 +1,31 @@
 ---
 title: "How to Stop a Panic Attack: 8 Techniques That Work"
-description: "Learn immediate panic attack relief techniques and long-term strategies to prevent future episodes. Evidence-based methods that work in the moment."
-slug: "panic-attacks-guide"
-category: "anxiety-management"
-contentType: "article"
-intent: "actionable/emergency"
-keywords: ["panic attack help", "how to stop panic attack", "panic disorder", "anxiety relief"]
+description: >-
+  Learn immediate panic attack relief techniques and long-term strategies to prevent future episodes. Evidence-based
+  methods that work in the moment.
+slug: panic-attacks-guide
+category: anxiety-management
+contentType: article
+intent: actionable
+keywords:
+  - panic attack help
+  - how to stop panic attack
+  - panic disorder
+  - anxiety relief
 searchVolume: 22000
-priority: "high"
+priority: high
 featured: true
 readingTime: 10
-relatedCbtModules: ["anxiety", "behavioral", "mindfulness", "breathing"]
-targetEmotions: ["panic", "fear", "terror", "overwhelm"]
+relatedCbtModules:
+  - anxiety
+  - behavioral
+  - mindfulness
+  - breathing
+targetEmotions:
+  - panic
+  - fear
+  - terror
+  - overwhelm
 publishedAt: "2025-01-27"
 draft: false
 ---

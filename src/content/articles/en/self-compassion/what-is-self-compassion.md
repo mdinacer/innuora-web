@@ -1,17 +1,31 @@
 ---
-title: "What is Self-Compassion? A Guide to Being Kind to Yourself"
-description: "Learn the fundamentals of self-compassion and how treating yourself with kindness can improve mental health, relationships, and overall well-being."
-slug: "what-is-self-compassion"
-category: "self-compassion"
-contentType: "article"
-intent: "informational"
-keywords: ["self compassion", "self kindness", "self acceptance", "emotional healing"]
+title: What is Self-Compassion? A Guide to Being Kind to Yourself
+description: >-
+  Learn the fundamentals of self-compassion and how treating yourself with kindness can improve mental health,
+  relationships, and overall well-being.
+slug: what-is-self-compassion
+category: self-compassion
+contentType: article
+intent: informational
+keywords:
+  - self compassion
+  - self kindness
+  - self acceptance
+  - emotional healing
 searchVolume: 7500
-priority: "high"
+priority: high
 featured: true
 readingTime: 10
-relatedCbtModules: ["self_compassion", "emotional", "mindfulness", "core_beliefs"]
-targetEmotions: ["self-criticism", "shame", "guilt", "hope"]
+relatedCbtModules:
+  - self_compassion
+  - emotional
+  - mindfulness
+  - core_beliefs
+targetEmotions:
+  - self-criticism
+  - shame
+  - guilt
+  - hope
 publishedAt: "2025-01-27"
 draft: false
 ---

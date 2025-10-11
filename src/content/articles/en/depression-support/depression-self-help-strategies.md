@@ -1,17 +1,28 @@
 ---
-title: "10 Evidence-Based Self-Help Strategies for Depression"
+title: 10 Evidence-Based Self-Help Strategies for Depression
 description: "Practical, research-backed techniques you can use at home to manage depression symptoms and improve your mood."
-slug: "depression-self-help-strategies"
-category: "depression-support"
-contentType: "article"
-intent: "actionable"
-keywords: ["depression self help", "dealing with depression", "depression coping", "depression strategies"]
+slug: depression-self-help-strategies
+category: depression-support
+contentType: article
+intent: actionable
+keywords:
+  - depression self help
+  - dealing with depression
+  - depression coping
+  - depression strategies
 searchVolume: 27000
-priority: "high"
+priority: high
 featured: true
 readingTime: 12
-relatedCbtModules: ["behavioral_activation", "cognitive", "values_clarification"]
-targetEmotions: ["depression", "sadness", "hopelessness", "low energy"]
+relatedCbtModules:
+  - behavioral_activation
+  - cognitive
+  - values_clarification
+targetEmotions:
+  - depression
+  - sadness
+  - hopelessness
+  - low energy
 publishedAt: "2025-01-27"
 draft: false
 ---

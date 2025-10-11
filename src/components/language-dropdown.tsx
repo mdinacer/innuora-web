@@ -81,14 +81,14 @@ const LanguagePicker = () => {
         router.push("/" + newLocale + currentPathname);
       } else {
         router.push(
-          currentPathname.replace(`/${currentLocale}`, `/${newLocale}`),
+          currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
         );
       }
 
       setIsSwitching(false);
       router.refresh();
     },
-    [currentLocale, currentPathname, router],
+    [currentLocale, currentPathname, router]
   );
   return (
     <div className="relative rtl:font-arabic-body">
@@ -146,11 +146,11 @@ const LanguagePicker = () => {
         id="langDropdown"
         className={cn(
           "absolute top-[calc(100%_+_8px)] ltr:right-0 rtl:left-0 min-w-[200px] ",
-          "lang-dropdown rounded-2xl border border-inn-border-light bg-inn-bg-card shadow-floating",
+          "lang-dropdown rounded-2xl border border-inn-border-light bg-background shadow-floating",
           "transition-all duration-200 ease-in-out z-10",
           isOpen
             ? "opacity-100  visible translate-y-0"
-            : "opacity-0 hidden -translate-y-2.5 pointer-events-none",
+            : "opacity-0 hidden -translate-y-2.5 pointer-events-none"
         )}
       >
         <div className="p-2">
@@ -159,8 +159,8 @@ const LanguagePicker = () => {
               key={lang.locale}
               onClick={() => handleChange(lang.locale as AppLocales)}
               className={cn(
-                "lang-option active w-full flex items-center justify-between px-4 py-3 rounded-xl text-left hover:bg-inn-bg-secondary",
-                { "bg-inn-bg-accent": lang.locale === currentLocale },
+                "lang-option active w-full flex items-center justify-between px-4 py-3 rounded-xl text-left hover:bg-secondary",
+                { "bg-primary": lang.locale === currentLocale }
               )}
               data-lang={lang.locale}
               data-name={lang.nativeName}
@@ -169,19 +169,19 @@ const LanguagePicker = () => {
               <div
                 className={cn(
                   "flex items-center gap-3 w-full",
-                  lang.locale === "ar" ? "flex-row-reverse" : "flex-row",
+                  lang.locale === "ar" ? "flex-row-reverse" : "flex-row"
                 )}
               >
                 <span className="text-2xl">{lang.flag}</span>
                 <div
                   className={cn(
                     "flex-1",
-                    lang.locale === "ar" ? "text-right" : "text-left",
+                    lang.locale === "ar" ? "text-right" : "text-left"
                   )}
                 >
                   <div
                     className={cn(
-                      "font-medium font-sans text-sm sm:rtl:font-arabic",
+                      "font-medium font-sans text-sm sm:rtl:font-arabic"
                     )}
                   >
                     {lang.label}

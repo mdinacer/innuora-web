@@ -1,17 +1,31 @@
 ---
-title: "Understanding Attachment Styles in Adult Relationships"
-description: "Learn how early attachment patterns shape adult relationships. Discover your attachment style and develop healthier relationship patterns."
-slug: "attachment-styles-relationships"
-category: "relationship-patterns"
-contentType: "article"
-intent: "informational/relationship"
-keywords: ["attachment styles", "relationship patterns", "attachment theory", "relationship psychology"]
+title: Understanding Attachment Styles in Adult Relationships
+description: >-
+  Learn how early attachment patterns shape adult relationships. Discover your attachment style and develop healthier
+  relationship patterns.
+slug: attachment-styles-relationships
+category: relationship-patterns
+contentType: article
+intent: informational
+keywords:
+  - attachment styles
+  - relationship patterns
+  - attachment theory
+  - relationship psychology
 searchVolume: 11000
-priority: "high"
+priority: high
 featured: true
 readingTime: 13
-relatedCbtModules: ["relationships", "core_beliefs", "emotional", "communication"]
-targetEmotions: ["insecurity", "relationship anxiety", "confusion", "hope"]
+relatedCbtModules:
+  - relationships
+  - core_beliefs
+  - emotional
+  - communication
+targetEmotions:
+  - insecurity
+  - relationship anxiety
+  - confusion
+  - hope
 publishedAt: "2025-01-27"
 draft: false
 ---

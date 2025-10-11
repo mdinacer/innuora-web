@@ -15,54 +15,11 @@ export async function generateMetadata({
   return {
     title: t("seo:home.title"),
     description: t("seo:home.description"),
-    keywords: [
-      // Primary - Core problems this solves
-      "emotional burnout support",
-      "women burnout recovery",
-      "high-functioning women support",
-      "emotional overwhelm relief",
-      "perfectionist burnout help",
-      "emotional exhaustion support",
-      "cognitive distortions help",
-      "emotional clarity app",
-      "overachiever stress relief",
-
-      // Secondary - Specific features & benefits
-      "safe space for women online",
-      "emotional mirror app",
-      "emotional reflection tool",
-      "support for overwhelmed women",
-      "silent rules therapy",
-      "emotional patterns recognition",
-      "self-criticism help",
-      "internal pressure relief",
-      "emotional validation app",
-
-      // What this app uniquely provides
-      "AI emotional companion",
-      "digital emotional support",
-      "emotional companion for women",
-      "compassionate AI support",
-      "emotional awareness tool",
-      "gentle emotional guidance",
-      "emotional safe space app",
-      "emotional wellness companion",
-
-      // Problem-focused long-tail
-      "app for emotionally exhausted women",
-      "support for high-functioning anxiety",
-      "help with perfectionist tendencies",
-      "emotional overwhelm support app",
-      "safe space for emotional reflection",
-      "support for women carrying expectations",
-      "emotional clarity for working women",
-      "help with silent emotional rules",
-      "working women emotional support",
-    ],
+    keywords: [...APP_CONFIG.seo.primaryKeywords],
     openGraph: {
       title: t("seo:home.title"),
       description: t("seo:home.description"),
-      url: APP_CONFIG.domains.primary,
+      url: `/${locale}`,
       siteName: APP_CONFIG.name,
       images: [
         {
@@ -83,7 +40,13 @@ export async function generateMetadata({
       creator: APP_CONFIG.social.twitter.creator,
     },
     alternates: {
-      canonical: APP_CONFIG.domains.canonical,
+      canonical: `/${locale}`,
+      languages: {
+        en: "/en",
+        fr: "/fr",
+        ar: "/ar",
+        "x-default": "/en",
+      },
     },
   };
 }
@@ -106,7 +69,9 @@ export default async function Home({
     pricing,
     testimonials,
     cta,
+    quickLinks,
     about,
+    testerInvite,
   } = {
     hero: {
       badge: t("home.hero.badge"),
@@ -216,6 +181,30 @@ export default async function Home({
         quote: string;
         author: string;
       }[],
+    },
+
+    quickLinks: {
+      badge: t("home.quickLinks.badge"),
+      title: t("home.quickLinks.title"),
+      subtitle: t("home.quickLinks.subtitle"),
+      items: t("home.quickLinks.items", {
+        returnObjects: true,
+      }) as {
+        title: string;
+        body: string;
+        action: string;
+        href: string;
+      }[],
+    },
+
+    testerInvite: {
+      badge: t("home.testerInvite.badge"),
+      title: t("home.testerInvite.title"),
+      description: t("home.testerInvite.description", {
+        app_name: APP_CONFIG.name,
+      }),
+      button: t("home.testerInvite.button"),
+      disclaimer: t("home.testerInvite.disclaimer"),
     },
 
     cta: {
@@ -371,6 +360,75 @@ export default async function Home({
         </div>
       </section>
 
+      {/* <!-- Tester Invite --> */}
+      <section id="join-testers" className="border-t bg-background py-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-app border border-dashed border-primary/40 bg-card p-10 text-center shadow-soft">
+            <p className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-primary">
+              {testerInvite.badge}
+            </p>
+            <h2 className="mt-6 text-3xl font-serif-brand text-foreground md:text-4xl">
+              {testerInvite.title}
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              {testerInvite.description}
+            </p>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+              <Link
+                href={`/${locale}/join`}
+                className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft transition hover:opacity-90"
+              >
+                {testerInvite.button}
+              </Link>
+            </div>
+            <p className="mt-4 text-xs uppercase tracking-[0.4em] text-muted-foreground">
+              {testerInvite.disclaimer}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* <!-- Quick Links --> */}
+      <section id="explore" className="border-t bg-background py-16">
+        <div className="mx-auto max-w-6xl space-y-10 px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-4">
+            <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.3em] text-muted-foreground">
+              {quickLinks.badge}
+            </p>
+            <h2 className="text-3xl md:text-4xl ltr:font-serif-brand rtl:font-arabic-title">
+              {quickLinks.title}
+            </h2>
+            <p className="mx-auto max-w-3xl text-muted-foreground">
+              {quickLinks.subtitle}
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            {quickLinks.items.map(({ title, body, action, href }, index) => (
+              <article
+                key={index}
+                className="flex h-full flex-col justify-between rounded-app border border-border bg-card p-6 shadow-soft transition hover:-translate-y-1 hover:border-primary/40"
+              >
+                <div className="space-y-3">
+                  <h3 className="text-xl font-semibold rtl:font-arabic-title text-foreground">
+                    {title}
+                  </h3>
+                  <p className="text-muted-foreground">{body}</p>
+                </div>
+                <div className="mt-6">
+                  <Link
+                    href={`/${locale}${href}`}
+                    className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-4 py-2 text-sm font-medium text-foreground transition hover:border-primary/40 hover:text-primary"
+                  >
+                    {action}
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* <!-- Feature Grid --> */}
       <section id="features" className="border-t bg-card py-16 ">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
@@ -504,35 +562,58 @@ export default async function Home({
         </div>
       </section>
 
-      {/* <!-- Pricing --> */}
-      <section id="pricing" className="py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8">
-          <div className="text-center space-y-4">
-            <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.3em] text-muted-foreground">
-              {pricing.badge}
-            </p>
-            <h2 className="text-3xl md:text-4xl rtl:font-arabic-title ltr:font-serif-brand">
-              {pricing.title}
-            </h2>
-            <p className="mx-auto max-w-3xl text-muted-foreground">
-              {pricing.subtitle}
-            </p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {pricing.plans.map((plan, index) => {
-              if (plan.popular) {
+      {/* <!-- Pricing (commented for early tester phase) --> */}
+      {false && (
+        <section id="pricing" className="py-16">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8">
+            <div className="text-center space-y-4">
+              <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.3em] text-muted-foreground">
+                {pricing.badge}
+              </p>
+              <h2 className="text-3xl md:text-4xl rtl:font-arabic-title ltr:font-serif-brand">
+                {pricing.title}
+              </h2>
+              <p className="mx-auto max-w-3xl text-muted-foreground">
+                {pricing.subtitle}
+              </p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-3">
+              {pricing.plans.map((plan, index) => {
+                if (plan.popular) {
+                  return (
+                    <article
+                      key={index}
+                      className="rounded-app border-2 border-primary p-6 shadow-elevated bg-background relative"
+                    >
+                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 text-xs text-primary-foreground shadow-soft">
+                        {pricing.popular}
+                      </span>
+                      <p className="text-sm rtl:text-base uppercase tracking-[0.25em] text-muted-foreground">
+                        {plan.name}
+                      </p>
+                      <h3 className="mt-3 text-xl font-semibold rtl:font-arabic-title text-foreground">
+                        {plan.credits}
+                      </h3>
+                      <p className="mt-3 text-muted-foreground">{plan.desc}</p>
+                      <ul className="mt-4 space-y-2 text-sm rtl:text-base text-muted-foreground list-disc list-inside">
+                        {plan.features.map((feature, index) => (
+                          <li className="list-item" key={index}>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </article>
+                  );
+                }
                 return (
                   <article
                     key={index}
-                    className="rounded-app border-2 border-primary p-6 shadow-elevated bg-background relative"
+                    className="rounded-app border p-6 shadow-soft bg-background"
                   >
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 text-xs text-primary-foreground shadow-soft">
-                      {pricing.popular}
-                    </span>
                     <p className="text-sm rtl:text-base uppercase tracking-[0.25em] text-muted-foreground">
                       {plan.name}
                     </p>
-                    <h3 className="mt-3 text-xl font-semibold rtl:font-arabic-title text-foreground">
+                    <h3 className="mt-3 text-xl rtl:font-arabic-title font-semibold text-foreground">
                       {plan.credits}
                     </h3>
                     <p className="mt-3 text-muted-foreground">{plan.desc}</p>
@@ -545,95 +626,77 @@ export default async function Home({
                     </ul>
                   </article>
                 );
-              }
-              return (
-                <article
-                  key={index}
-                  className="rounded-app border p-6 shadow-soft bg-background"
-                >
-                  <p className="text-sm rtl:text-base uppercase tracking-[0.25em] text-muted-foreground">
-                    {plan.name}
-                  </p>
-                  <h3 className="mt-3 text-xl rtl:font-arabic-title font-semibold text-foreground">
-                    {plan.credits}
-                  </h3>
-                  <p className="mt-3 text-muted-foreground">{plan.desc}</p>
-                  <ul className="mt-4 space-y-2 text-sm rtl:text-base text-muted-foreground list-disc list-inside">
-                    {plan.features.map((feature, index) => (
-                      <li className="list-item" key={index}>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              );
-            })}
-          </div>
-          <p className="text-center space-x-2 text-sm rtl:text-base text-muted-foreground">
-            <span>{pricing.footer}</span>
-            <Link
-              href="mailto:hello@innuora.com"
-              className="underline underline-offset-2 decoration-dotted hover:text-primary"
-            >
-              {pricing.link}
-            </Link>
-            .
-          </p>
-        </div>
-      </section>
-
-      {/* <!-- Testimonials --> */}
-      <section id="stories" className="border-t bg-card py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-12">
-          <div className="text-center space-y-4">
-            <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.3em] text-muted-foreground">
-              {testimonials.badge}
-            </p>
-            <h2 className="text-3xl md:text-4xl ltr:font-serif-brand rtl:font-arabic-title">
-              {testimonials.title}
-            </h2>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {testimonials.items.map((item, index) => (
-              <blockquote
-                key={index}
-                className="rounded-app flex flex-col border bg-background p-6 shadow-soft text-sm rtl:text-base text-muted-foreground"
+              })}
+            </div>
+            <p className="text-center space-x-2 text-sm rtl:text-base text-muted-foreground">
+              <span>{pricing.footer}</span>
+              <Link
+                href="mailto:hello@innuora.com"
+                className="underline underline-offset-2 decoration-dotted hover:text-primary"
               >
-                <div className="flex-1">
-                  <p>{item.quote}</p>
-                </div>
-                <footer className="mt-4 text-xs rtl:text-sm rtl:font-arabic-title text-foreground">
-                  {`- ${item.author}`}
-                </footer>
-              </blockquote>
-            ))}
+                {pricing.link}
+              </Link>
+              .
+            </p>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
-      {/* <!-- CTA --> */}
-      <section id="cta" className="py-16">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-app bg-flame-gradient p-1 shadow-elevated">
-            <div className="rounded-app bg-card p-8 md:p-12 grid md:grid-cols-3 gap-8 items-center">
-              <div className="md:col-span-2">
-                <h2 className="text-2xl md:text-3xl rtl:font-arabic-title ltr:font-serif-brand">
-                  {cta.title}
+      {/* <!-- Testimonials (commented until live user feedback) --> */}
+      {false && (
+        <>
+          <section id="stories" className="border-t bg-card py-16">
+            <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-12">
+              <div className="text-center space-y-4">
+                <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.3em] text-muted-foreground">
+                  {testimonials.badge}
+                </p>
+                <h2 className="text-3xl md:text-4xl ltr:font-serif-brand rtl:font-arabic-title">
+                  {testimonials.title}
                 </h2>
-                <p className="mt-2 text-muted-foreground">{cta.subtitle}</p>
               </div>
-              <div className="flex md:justify-end">
-                <Link
-                  href="#"
-                  className="rounded-lg bg-primary  px-6 py-3 text-primary-foreground shadow-soft hover:opacity-90"
-                >
-                  {cta.cta}
-                </Link>
+              <div className="grid gap-6 md:grid-cols-3">
+                {testimonials.items.map((item, index) => (
+                  <blockquote
+                    key={index}
+                    className="rounded-app flex flex-col border bg-background p-6 shadow-soft text-sm rtl:text-base text-muted-foreground"
+                  >
+                    <div className="flex-1">
+                      <p>{item.quote}</p>
+                    </div>
+                    <footer className="mt-4 text-xs rtl:text-sm rtl:font-arabic-title text-foreground">
+                      {`- ${item.author}`}
+                    </footer>
+                  </blockquote>
+                ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
+
+          <section id="cta" className="py-16">
+            <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+              <div className="rounded-app bg-flame-gradient p-1 shadow-elevated">
+                <div className="rounded-app bg-card p-8 md:p-12 grid md:grid-cols-3 gap-8 items-center">
+                  <div className="md:col-span-2">
+                    <h2 className="text-2xl md:text-3xl rtl:font-arabic-title ltr:font-serif-brand">
+                      {cta.title}
+                    </h2>
+                    <p className="mt-2 text-muted-foreground">{cta.subtitle}</p>
+                  </div>
+                  <div className="flex md:justify-end">
+                    <Link
+                      href="#"
+                      className="rounded-lg bg-primary  px-6 py-3 text-primary-foreground shadow-soft hover:opacity-90"
+                    >
+                      {cta.cta}
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </>
+      )}
 
       {/* <!-- About --> */}
       <section id="about" className="py-16">

@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 "use client";
 
-import Link from "next/link";
 import { ArrowLeft, Clock, Tag } from "lucide-react";
 import Markdown from "markdown-to-jsx";
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 import { ContentCategory, ContentItem } from "@/types/content.types";
 
@@ -31,58 +32,70 @@ export default function ArticleLayout({
   markdownContent,
 }: ArticleLayoutProps) {
   const { metadata } = contentItem;
+  const { t } = useTranslation("content");
+  const formattedCategory = t(`library.categories.${category}.title`, {
+    defaultValue: category.replace(/-/g, " "),
+  });
+  const readingTimeLabel =
+    metadata.readingTime !== undefined
+      ? t("shared.readingTime", { count: metadata.readingTime })
+      : null;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br ">
-      <div className="container mx-auto px-4 py-8 max-w-4xl">
+    <div className="min-h-screen bg-background">
+      <div className="mx-auto grid max-w-5xl gap-8 px-4 py-12 lg:px-0">
         {/* Breadcrumb Navigation */}
-        <nav className="mb-6">
+        <nav className="text-sm text-muted-foreground">
           <Link
             href={`/content/${category}`}
-            className="inline-flex items-center text-sm text-inn-bg-accent-dark hover:text-inn-bg-accent transition-colors"
+            className="inline-flex items-center gap-2 transition text-muted-foreground hover:text-primary"
           >
-            <ArrowLeft className="w-4 h-4 mr-1" />
-            Back to {category.replace(/-/g, " ")}
+            <ArrowLeft className="h-4 w-4" />
+            {t("article.breadcrumb", { category: formattedCategory })}
           </Link>
         </nav>
 
         {/* Article Header */}
-        <header className="mb-8">
-          <div className="flex flex-wrap items-center gap-4 mb-4 text-sm ">
+        <header className="space-y-6 rounded-app border border-border bg-card p-8 shadow-soft">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
             {/* Category Badge */}
-            <span className="inline-flex items-center capitalize px-3 py-1 rounded-full bg-inn-bg-soft border-inn-border-light text-inn-bg-accent">
-              <Tag className="w-4 h-4 mr-1" />
-              {category.replace(/-/g, " ")}
+            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 capitalize">
+              <Tag className="h-4 w-4 text-primary" />
+              {formattedCategory}
             </span>
 
             {/* Reading Time */}
-            {metadata.readingTime && (
-              <span className="inline-flex items-center text-inn-text-secondary">
-                <Clock className="w-4 h-4 mr-1" />
-                {metadata.readingTime} min read
+            {readingTimeLabel && (
+              <span className="inline-flex items-center gap-2">
+                <Clock className="h-4 w-4" />
+                {readingTimeLabel}
               </span>
             )}
 
             {/* Intent Badge */}
             <span
-              className={`px-3 py-1 rounded capitalize text-xs font-medium ${getIntentColor(metadata.intent)}`}
+              className={`px-3 py-1 rounded capitalize text-xs font-medium ${getIntentColor(
+                metadata.intent
+              )}`}
             >
-              {metadata.intent}
+              {t(`shared.intent.${metadata.intent}`, {
+                defaultValue: metadata.intent,
+              })}
             </span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+          <h1 className="text-3xl font-serif-brand text-foreground md:text-4xl">
             {metadata.title}
           </h1>
 
-          <p className="text-lg text-inn-text-secondary leading-relaxed">
+          <p className="text-lg leading-relaxed text-muted-foreground">
             {metadata.description}
           </p>
         </header>
 
         {/* Content Area */}
-        <main className="border-inn-border-light border bg-inn-bg-card rounded-lg shadow-[0_2px_8px] shadow-inn-bg-accent/10 p-8 mb-8">
-          <div className="prose prose-lg dark:prose-invert max-w-none">
+        <main className="rounded-app border border-border bg-card p-8 shadow-soft md:p-10">
+          <div className="prose prose-lg max-w-none text-muted-foreground">
             {markdownContent ? (
               <Markdown
                 options={{ forceBlock: true, disableParsingRawHTML: true }}
@@ -90,28 +103,27 @@ export default function ArticleLayout({
                 {markdownContent}
               </Markdown>
             ) : (
-              <div className="bg-inn-bg-soft border-l-4 border-inn-bg-accent p-4 mb-6">
-                <h3 className="text-inn-text-primary font-semibold mb-2">
-                  Content Loading...
+              <div className="rounded-2xl border border-border bg-background p-4">
+                <h3 className="font-semibold text-foreground">
+                  {t("article.loading.title")}
                 </h3>
-                <p className="text-inn-text-secondary">
-                  Unable to load article content. Please check if the file
-                  exists.
+                <p className="text-muted-foreground">
+                  {t("article.loading.description")}
                 </p>
               </div>
             )}
 
             {/* Keywords */}
             {metadata.keywords.length > 0 && (
-              <div className="mt-8 pt-6 border-t border-inn-border-light">
-                <h4 className="text-sm font-semibold text-inn-text-secondary mb-3">
-                  Related Topics
+              <div className="mt-10 border-t border-border pt-6">
+                <h4 className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+                  {t("article.relatedTopics")}
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {metadata.keywords.map((keyword) => (
                     <span
                       key={keyword}
-                      className="px-3 py-1 bg-inn-bg-soft border border-inn-border-light text-inn-text-secondary capitalize rounded-full text-sm"
+                      className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-sm capitalize text-muted-foreground"
                     >
                       {keyword}
                     </span>
@@ -124,32 +136,44 @@ export default function ArticleLayout({
 
         {/* Related Content */}
         {relatedContent.length > 0 && (
-          <section className="bg-inn-bg-card border border-inn-border-light rounded-lg shadow-[0_2px_8px] shadow-inn-bg-accent/10 p-8">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Related Articles
+          <section className="rounded-app border border-border bg-card p-8 shadow-soft">
+            <h2 className="mb-6 text-2xl font-serif-brand text-foreground">
+              {t("article.relatedHeading")}
             </h2>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-5 md:grid-cols-2">
               {relatedContent.map((item) => (
                 <Link
                   key={item.metadata.slug}
                   href={`/content/${item.metadata.category}/${item.metadata.slug}`}
-                  className="block p-4 border border-inn-border-light rounded-2xl bg-inn-bg-soft hover:shadow-[0_4px_20px] hover:shadow-inn-bg-accent/15 hover:border-inn-bg-accent transition-shadow"
+                  className="group block rounded-2xl border border-border bg-background p-5 transition hover:border-primary/40 hover:shadow-[0_8px_24px_-16px] hover:shadow-primary/40"
                 >
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2">
+                  <h3 className="mb-2 line-clamp-2 font-semibold text-foreground">
                     {item.metadata.title}
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-3">
+                  <p className="line-clamp-3 text-sm text-muted-foreground">
                     {item.metadata.description}
                   </p>
-                  <div className="mt-3 flex items-center text-xs text-gray-500">
-                    <span className="capitalize">
-                      {item.metadata.category.replace(/-/g, " ")}
+                  <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
+                    <span className="capitalize opacity-80">
+                      {t(
+                        `library.categories.${item.metadata.category}.title`,
+                        {
+                          defaultValue: item.metadata.category.replace(
+                            /-/g,
+                            " "
+                          ),
+                        }
+                      )}
                     </span>
                     {item.metadata.readingTime && (
-                      <>
-                        <span className="mx-2">•</span>
-                        <span>{item.metadata.readingTime} min</span>
-                      </>
+                      <span className="flex items-center gap-2">
+                        <span className="opacity-40">•</span>
+                        <span>
+                          {t("shared.minutes", {
+                            count: item.metadata.readingTime,
+                          })}
+                        </span>
+                      </span>
                     )}
                   </div>
                 </Link>
@@ -168,14 +192,11 @@ export default function ArticleLayout({
 
 function getIntentColor(intent: string): string {
   const colors = {
-    informational: "bg-inn-bg-soft text-inn-bg-accent",
-    actionable:
-      "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
-    supportive:
-      "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
-    therapeutic:
-      "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200",
-    emergency: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
+    informational: "bg-primary/10 text-primary",
+    actionable: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-200",
+    supportive: "bg-violet-100 text-violet-800 dark:bg-violet-900/60 dark:text-violet-200",
+    therapeutic: "bg-sky-100 text-sky-800 dark:bg-sky-900/60 dark:text-sky-200",
+    emergency: "bg-rose-100 text-rose-800 dark:bg-rose-900/60 dark:text-rose-200",
   };
 
   return colors[intent as keyof typeof colors] || colors.informational;

@@ -1,0 +1,96 @@
+{
+  "shared": {
+    "readingTime_one": "{{count}} min de lecture",
+    "readingTime_other": "{{count}} min de lecture",
+    "minutes_one": "{{count}} min",
+    "minutes_other": "{{count}} min",
+    "articles_one": "{{count}} article",
+    "articles_other": "{{count}} articles",
+    "featured_one": "{{count}} contenu mis en avant",
+    "featured_other": "{{count}} contenus mis en avant",
+    "libraryRoot": "Bibliothèque de contenus",
+    "featuredBadge": "Mis en avant",
+    "priority": {
+      "high": "Priorité élevée",
+      "medium": "Priorité moyenne",
+      "low": "Priorité faible"
+    },
+    "intent": {
+      "informational": "Informationnel",
+      "actionable": "Orienté action",
+      "supportive": "Soutien",
+      "therapeutic": "Thérapeutique",
+      "emergency": "Urgence"
+    }
+  },
+  "article": {
+    "breadcrumb": "Retour à {{category}}",
+    "relatedTopics": "Sujets associés",
+    "loading": {
+      "title": "Chargement du contenu...",
+      "description": "Impossible de charger l’article. Vérifiez que le fichier existe."
+    },
+    "relatedHeading": "Articles associés"
+  },
+  "category": {
+    "featuredHeading": "Articles mis en avant",
+    "allHeading": "Tous les articles",
+    "empty": {
+      "title": "Contenu à venir",
+      "description": "Nous préparons actuellement des ressources complètes pour cette catégorie. Revenez bientôt pour découvrir de nouveaux articles et guides."
+    }
+  },
+  "library": {
+    "heading": "Bibliothèque de contenus",
+    "intro": "Explore une collection complète de ressources en santé mentale, de guides thérapeutiques et d’outils pratiques pour accompagner ton cheminement.",
+    "featuredHeading": "Articles mis en avant",
+    "browseHeading": "Explorer par catégorie",
+    "stats": {
+      "categories_one": "{{count}} catégorie",
+      "categories_other": "{{count}} catégories"
+    },
+    "cta": {
+      "title": "Besoin d’un accompagnement personnalisé ?",
+      "description": "Notre bibliothèque offre des repères précieux, mais notre chat thérapeutique propulsé par l’IA propose un accompagnement sur mesure adapté à ta situation.",
+      "button": "Commencer une session"
+    },
+    "categories": {
+      "cognitive-behavioral-therapy": {
+        "title": "Thérapie cognitivo-comportementale",
+        "description": "Techniques et stratégies TCC fondées sur les preuves."
+      },
+      "anxiety-management": {
+        "title": "Gestion de l’anxiété",
+        "description": "Stratégies concrètes pour apprivoiser l’anxiété et les inquiétudes."
+      },
+      "depression-support": {
+        "title": "Accompagnement de la dépression",
+        "description": "Comprendre et apprivoiser la dépression avec des approches éprouvées."
+      },
+      "stress-management": {
+        "title": "Gestion du stress",
+        "description": "Techniques pour réduire le stress et prévenir l’épuisement."
+      },
+      "relationship-patterns": {
+        "title": "Relations saines",
+        "description": "Comprendre les dynamiques relationnelles et bâtir des liens plus équilibrés."
+      },
+      "self-compassion": {
+        "title": "Auto-compassion",
+        "description": "Développer la bienveillance et l’acceptation envers toi-même."
+      },
+      "mindfulness-techniques": {
+        "title": "Pleine conscience & méditation",
+        "description": "Pratiques de présence et techniques de pleine conscience."
+      },
+      "mood-tracking": {
+        "title": "Suivi de l’humeur",
+        "description": "Observer et comprendre tes variations émotionnelles."
+      }
+    }
+  },
+  "layout": {
+    "educationalNotice": "Ce contenu est proposé à titre informatif et ne remplace pas un accompagnement professionnel en santé mentale.",
+    "privacyNotice": "© {{year}} {{company}}. Votre vie privée compte."
+  }
+}

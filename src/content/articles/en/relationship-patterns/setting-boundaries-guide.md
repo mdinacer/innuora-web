@@ -1,17 +1,31 @@
 ---
 title: "How to Set Healthy Boundaries: A Complete Guide"
-description: "Learn to establish and maintain healthy boundaries in all relationships. Practical techniques for protecting your well-being while maintaining connections."
-slug: "setting-boundaries-guide"
-category: "relationship-patterns"
-contentType: "article"
-intent: "actionable"
-keywords: ["setting boundaries", "healthy boundaries", "boundary setting", "personal boundaries"]
+description: >-
+  Learn to establish and maintain healthy boundaries in all relationships. Practical techniques for protecting your
+  well-being while maintaining connections.
+slug: setting-boundaries-guide
+category: relationship-patterns
+contentType: article
+intent: actionable
+keywords:
+  - setting boundaries
+  - healthy boundaries
+  - boundary setting
+  - personal boundaries
 searchVolume: 16000
-priority: "high"
+priority: high
 featured: true
 readingTime: 11
-relatedCbtModules: ["boundaries", "assertiveness", "self_care", "relationships"]
-targetEmotions: ["overwhelm", "resentment", "empowerment", "relief"]
+relatedCbtModules:
+  - boundaries
+  - assertiveness
+  - self_care
+  - relationships
+targetEmotions:
+  - overwhelm
+  - resentment
+  - empowerment
+  - relief
 publishedAt: "2025-01-27"
 draft: false
 ---

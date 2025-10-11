@@ -29,7 +29,7 @@ interface ContentPageProps {
 export async function generateMetadata({
   params,
 }: ContentPageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale = "en", slug } = await params;
 
   // Initialize content registry if needed
   await initializeContentRegistry();
@@ -44,9 +44,32 @@ export async function generateMetadata({
     };
   }
 
+  const localizedContentItem =
+    contentRegistry.getItemForLocale(slug, locale) || contentItem;
+
   // Use SEOGenerator for comprehensive metadata
   const { SEOGenerator } = await import("@/lib/content/seo-generator");
-  return SEOGenerator.generateMetadata(contentItem.metadata);
+  const baseMetadata = SEOGenerator.generateMetadata(
+    localizedContentItem.metadata
+  );
+  const canonicalPath = `/content/${contentItem.metadata.category}/${contentItem.metadata.slug}`;
+
+  return {
+    ...baseMetadata,
+    openGraph: {
+      ...baseMetadata.openGraph,
+      url: `/${locale}${canonicalPath}`,
+    },
+    alternates: {
+      canonical: `/${locale}${canonicalPath}`,
+      languages: {
+        en: `/en${canonicalPath}`,
+        ar: `/ar${canonicalPath}`,
+        fr: `/fr${canonicalPath}`,
+        "x-default": `/en${canonicalPath}`,
+      },
+    },
+  };
 }
 
 // =========================
@@ -104,17 +127,24 @@ export default async function ContentPage({ params }: ContentPageProps) {
 
   const { content: markdownContent, locale: actualLocale } = contentResult;
 
+  // Merge localized metadata for current article
+  const localizedContentItem =
+    contentRegistry.getItemForLocale(slug, actualLocale) || contentItem;
+
   // Get available locales for this article (for language switcher if needed)
   const availableLocales = getAvailableLocales(category, slug);
 
   // Get related content
-  const relatedContent = contentRegistry.getRelated(contentItem);
+  const relatedContent = contentRegistry.applyLocaleOverrides(
+    contentRegistry.getRelated(contentItem),
+    locale
+  );
 
   // Generate structured data for SEO
   const { SEOGenerator } = await import("@/lib/content/seo-generator");
   const structuredData = SEOGenerator.generateStructuredData(
-    contentItem.metadata,
-    markdownContent,
+    localizedContentItem.metadata,
+    markdownContent
   );
 
   return (
@@ -125,7 +155,7 @@ export default async function ContentPage({ params }: ContentPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <ArticleLayout
-        contentItem={contentItem}
+        contentItem={localizedContentItem}
         relatedContent={relatedContent}
         category={category as ContentCategory}
         markdownContent={markdownContent}

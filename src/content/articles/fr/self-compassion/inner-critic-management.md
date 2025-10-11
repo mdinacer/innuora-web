@@ -1,17 +1,17 @@
 ---
-title: "Apprivoiser Votre Critique Intérieur : De l'Auto-Attaque au Soutien de Soi"
+title: "Apprivoiser votre critique intérieur : du sabotage à l’autosoutien"
 description: >-
-  Cet article est en cours de traduction. La version française sera bientôt
-  disponible avec un contenu adapté et de qualité en santé mentale.
+  Comprenez l’origine du critique intérieur, identifiez ses messages et transformez-les en un dialogue interne plus
+  encourageant grâce à des exercices pratiques.
 slug: inner-critic-management
 category: self-compassion
 contentType: article
-intent: actionable/transformational
+intent: actionable
 keywords:
-  - inner critic
-  - negative self talk
-  - self criticism
-  - inner voice
+  - critique intérieur
+  - dialogue interne
+  - auto compassion
+  - pensées négatives
 searchVolume: 6800
 priority: high
 featured: true
@@ -28,31 +28,46 @@ targetEmotions:
   - empowerment
 publishedAt: "2025-01-27"
 draft: false
-placeholder: true
 ---
 
-# Contenu disponible prochainement
+# Apprivoiser votre critique intérieur : du sabotage à l’autosoutien
 
-## Cet article est en cours de traduction
+## Qu’est-ce que le critique intérieur ?
 
-Nous travaillons actuellement sur la version française de cet article pour vous offrir le meilleur contenu en santé mentale et thérapie cognitivo-comportementale.
+- Voix interne qui juge, compare, prédit le pire.
+- Souvent héritée de messages parentaux, scolaires ou sociétaux.
+- Voulait parfois nous protéger, mais crée aujourd’hui stress et blocages.
 
-### En attendant, vous pouvez :
+## Étape 1 : le reconnaître
 
-- **Consulter la version anglaise** de cet article pour accéder au contenu complet
-- **Explorer nos autres ressources** disponibles en français
-- **Vous inscrire** pour recevoir une notification lorsque la traduction sera terminée
+- Notez ses phrases typiques (“Tu n’en fais jamais assez”).
+- Repérez les situations qui l’activent (feedback, erreurs, repos).
+- Donnez-lui un surnom pour prendre de la distance.
 
-### Pourquoi cette approche ?
+## Étape 2 : vérifier les faits
 
-Chez Innuora, nous nous engageons à fournir des ressources de qualité en santé mentale. Plutôt que de publier des traductions automatiques de mauvaise qualité, nous prenons le temps de créer des contenus adaptés culturellement et linguistiquement précis.
+- Quelles preuves tangibles corroborent ce qu’il dit ?
+- Que diriez-vous à un ami qui prononcerait ces mots à son sujet ?
+- Cherchez des preuves alternatives (“J’ai réussi X, j’apprends de Y”).
 
-### Besoin d'aide immédiate ?
+## Étape 3 : lui répondre autrement
 
-Notre plateforme de thérapie assistée par IA est disponible en français dès maintenant. Commencez une conversation thérapeutique personnalisée en français :
+- Remplacez “Je dois” par “J’aimerais” ou “J’ai le droit”.
+- Transformez le reproche en intention (“Tu veux que je sois en sécurité. Et si on y arrivait autrement ?”).
+- Utilisez l’auto-compassion (« C’est difficile, mais je m’encourage »).
 
-**[Commencer une session →](/fr/join)**
+## Exercices
+
+- **Journal à deux colonnes** : gauche = propos du critique, droite = réponse bienveillante.
+- **Lettre du meilleur ami** : écrivez-vous du point de vue d’une personne aimante.
+- **Ancrage corporel** : main sur le cœur, respiration lente, phrase de soutien.
+
+## Quand demander de l’aide
+
+- Si les pensées deviennent intrusives, obsédantes ou violentes.
+- Si vous avez vécu des traumatismes ou abus émotionnels.
+- Les thérapies recommandées : TCC, thérapie des schémas, compassion focused therapy.
 
 ---
 
-_Cette page sert de marque-place pour assurer l'indexation des URLs pendant la traduction du contenu._
+_Transformer le dialogue interne prend du temps. Chaque réponse bienveillante répétée renforce la nouvelle voie neuronale._

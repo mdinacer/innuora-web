@@ -1,17 +1,30 @@
 ---
-title: "5 Breathing Techniques That Actually Work for Anxiety"
-description: "Learn proven breathing exercises to calm anxiety and panic attacks quickly. Evidence-based techniques you can use anywhere."
-slug: "anxiety-breathing-techniques"
-category: "anxiety-management"
-contentType: "article"
-intent: "actionable"
-keywords: ["breathing exercises anxiety", "anxiety relief", "panic attack breathing", "calm anxiety"]
+title: 5 Breathing Techniques That Actually Work for Anxiety
+description: >-
+  Learn proven breathing exercises to calm anxiety and panic attacks quickly. Evidence-based techniques you can use
+  anywhere.
+slug: anxiety-breathing-techniques
+category: anxiety-management
+contentType: article
+intent: actionable
+keywords:
+  - breathing exercises anxiety
+  - anxiety relief
+  - panic attack breathing
+  - calm anxiety
 searchVolume: 33000
-priority: "high"
+priority: high
 featured: true
 readingTime: 6
-relatedCbtModules: ["mindfulness", "behavioral", "cognitive"]
-targetEmotions: ["anxiety", "panic", "worry", "stress"]
+relatedCbtModules:
+  - mindfulness
+  - behavioral
+  - cognitive
+targetEmotions:
+  - anxiety
+  - panic
+  - worry
+  - stress
 publishedAt: "2025-01-27"
 draft: false
 ---

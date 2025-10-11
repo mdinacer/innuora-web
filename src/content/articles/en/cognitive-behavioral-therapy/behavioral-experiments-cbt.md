@@ -1,17 +1,31 @@
 ---
 title: "Behavioral Experiments in CBT: Testing Your Anxious Thoughts"
-description: "Learn how to design and conduct behavioral experiments to challenge anxious predictions and build confidence through evidence-based action."
-slug: "behavioral-experiments-cbt"
-category: "cognitive-behavioral-therapy"
-contentType: "article"
-intent: "advanced/actionable"
-keywords: ["behavioral experiments", "exposure therapy", "anxiety treatment", "CBT techniques"]
+description: >-
+  Learn how to design and conduct behavioral experiments to challenge anxious predictions and build confidence through
+  evidence-based action.
+slug: behavioral-experiments-cbt
+category: cognitive-behavioral-therapy
+contentType: article
+intent: actionable
+keywords:
+  - behavioral experiments
+  - exposure therapy
+  - anxiety treatment
+  - CBT techniques
 searchVolume: 4200
-priority: "high"
+priority: high
 featured: true
 readingTime: 11
-relatedCbtModules: ["behavioral", "cognitive", "exposure", "confidence"]
-targetEmotions: ["anxiety", "fear", "avoidance", "uncertainty"]
+relatedCbtModules:
+  - behavioral
+  - cognitive
+  - exposure
+  - confidence
+targetEmotions:
+  - anxiety
+  - fear
+  - avoidance
+  - uncertainty
 publishedAt: "2025-01-27"
 draft: false
 ---

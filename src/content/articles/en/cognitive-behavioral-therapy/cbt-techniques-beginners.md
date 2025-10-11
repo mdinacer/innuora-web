@@ -1,17 +1,31 @@
 ---
-title: "7 Essential CBT Techniques Every Beginner Should Know"
-description: "Master the fundamental CBT techniques that therapists use most. Step-by-step guides for thought challenging, behavioral activation, and more."
-slug: "cbt-techniques-beginners"
-category: "cognitive-behavioral-therapy"
-contentType: "article"
-intent: "actionable"
-keywords: ["CBT techniques", "cognitive therapy exercises", "thought challenging", "CBT skills"]
+title: 7 Essential CBT Techniques Every Beginner Should Know
+description: >-
+  Master the fundamental CBT techniques that therapists use most. Step-by-step guides for thought challenging,
+  behavioral activation, and more.
+slug: cbt-techniques-beginners
+category: cognitive-behavioral-therapy
+contentType: article
+intent: actionable
+keywords:
+  - CBT techniques
+  - cognitive therapy exercises
+  - thought challenging
+  - CBT skills
 searchVolume: 8500
-priority: "high"
+priority: high
 featured: true
 readingTime: 12
-relatedCbtModules: ["cognitive", "behavioral", "mindfulness", "core_beliefs"]
-targetEmotions: ["learning", "motivation", "hope", "curiosity"]
+relatedCbtModules:
+  - cognitive
+  - behavioral
+  - mindfulness
+  - core_beliefs
+targetEmotions:
+  - learning
+  - motivation
+  - hope
+  - curiosity
 publishedAt: "2025-01-27"
 draft: false
 ---

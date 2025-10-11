@@ -42,7 +42,7 @@ export const APP_CONFIG = {
   // Domains & URLs
   domains: {
     primary: "https://www.innuora.com",
-    canonical: "https://innuora.com",
+    canonical: "https://www.innuora.com",
     api: "https://api.innuora.com",
   },
 
@@ -143,9 +143,18 @@ export const EMAIL_ADDRESSES = {
 
 // Social media URLs
 export const SOCIAL_URLS = {
-  twitter: `https://twitter.com/${APP_CONFIG.social.twitter.handle.replace("@", "")}`,
-  linkedin: `https://linkedin.com/company/${APP_CONFIG.social.linkedin.replace("@", "")}`,
-  instagram: `https://instagram.com/${APP_CONFIG.social.instagram.replace("@", "")}`,
+  twitter: `https://twitter.com/${APP_CONFIG.social.twitter.handle.replace(
+    "@",
+    ""
+  )}`,
+  linkedin: `https://linkedin.com/company/${APP_CONFIG.social.linkedin.replace(
+    "@",
+    ""
+  )}`,
+  instagram: `https://instagram.com/${APP_CONFIG.social.instagram.replace(
+    "@",
+    ""
+  )}`,
 } as const;
 
 // =========================

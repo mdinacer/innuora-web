@@ -14,6 +14,7 @@ export const APP_NAMESPACES = {
   NS_LEGAL: "legal",
   NS_SESSIONS: "sessions",
   NS_ERRORS: "errors",
+  NS_CONTENT: "content",
 } as const;
 
 export type AppNamespace = (typeof APP_NAMESPACES)[keyof typeof APP_NAMESPACES];
@@ -23,6 +24,7 @@ export const i18nNamespaces = [
   APP_NAMESPACES.NS_PAGES,
   APP_NAMESPACES.NS_SESSIONS,
   APP_NAMESPACES.NS_ERRORS,
+  APP_NAMESPACES.NS_CONTENT,
 ];
 
 export default async function initTranslations(

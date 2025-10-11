@@ -1,17 +1,17 @@
 ---
-title: "Dépression Post-Partum : Reconnaissance, Soutien et Récupération"
+title: "Dépression post-partum : reconnaître les signes et trouver du soutien"
 description: >-
-  Cet article est en cours de traduction. La version française sera bientôt
-  disponible avec un contenu adapté et de qualité en santé mentale.
+  Un guide complet pour comprendre la dépression post-partum, distinguer le “baby blues”, demander de l’aide et amorcer
+  un rétablissement sécuritaire pour la mère et l’enfant.
 slug: postpartum-depression-support
 category: depression-support
 contentType: article
-intent: supportive/informational
+intent: informational
 keywords:
-  - postpartum depression
-  - new mom depression
-  - maternal mental health
-  - PPD help
+  - dépression post partum
+  - maternité
+  - santé mentale périnatale
+  - soutien jeunes mamans
 searchVolume: 12000
 priority: high
 featured: true
@@ -29,31 +29,72 @@ targetEmotions:
   - shame
 publishedAt: "2025-01-27"
 draft: false
-placeholder: true
 ---
 
-# Contenu disponible prochainement
+# Dépression post-partum : reconnaître les signes et trouver du soutien
 
-## Cet article est en cours de traduction
+## Dépression post-partum ou baby blues ?
 
-Nous travaillons actuellement sur la version française de cet article pour vous offrir le meilleur contenu en santé mentale et thérapie cognitivo-comportementale.
+- **Baby blues** : 50 à 80 % des mamans, débute quelques jours après l’accouchement, disparaît en moins de 2 semaines (pleurs, irritabilité, fatigue).
+- **Dépression post-partum (DPP)** : 10 à 20 % des mamans, symptômes durables (> 2 semaines) et impact sur le fonctionnement.
 
-### En attendant, vous pouvez :
+## Signes de la DPP
 
-- **Consulter la version anglaise** de cet article pour accéder au contenu complet
-- **Explorer nos autres ressources** disponibles en français
-- **Vous inscrire** pour recevoir une notification lorsque la traduction sera terminée
+- Tristesse intense, pleurs fréquents, sensation de vide.
+- Culpabilité (“je suis une mauvaise mère”), honte, difficultés à créer du lien.
+- Perte d’intérêt pour les activités ou la vie sociale.
+- Troubles du sommeil et de l’appétit (au-delà des réveils liés au bébé).
+- Anxiété marquée, pensées intrusives, peur d’être seule avec l’enfant.
+- Dans certains cas : pensées de se faire du mal ou de faire du mal au bébé (urgence médicale).
 
-### Pourquoi cette approche ?
+## Facteurs de risque
 
-Chez Innuora, nous nous engageons à fournir des ressources de qualité en santé mentale. Plutôt que de publier des traductions automatiques de mauvaise qualité, nous prenons le temps de créer des contenus adaptés culturellement et linguistiquement précis.
+- Antécédents personnels ou familiaux de dépression/anxiété.
+- Complications de grossesse ou d’accouchement.
+- Stress financier, isolement, manque de soutien.
+- Déséquilibres hormonaux, fatigue extrême.
+- Traumatisme périnatal, prématurité, bébé hospitalisé.
 
-### Besoin d'aide immédiate ?
+## Quand demander de l’aide ?
 
-Notre plateforme de thérapie assistée par IA est disponible en français dès maintenant. Commencez une conversation thérapeutique personnalisée en français :
+- Symptômes persistants au-delà de 2 semaines.
+- Incapacité à prendre soin de soi ou de son enfant.
+- Pensées d’automutilation ou de blessure pour le bébé (appeler immédiatement les services d’urgence).
 
-**[Commencer une session →](/fr/join)**
+## Ressources professionnelles
+
+- Médecin traitant, sage-femme, gynécologue (dépistage, ordonnance, suivi médical).
+- Psychologue/psychothérapeute spécialisé périnatalité.
+- Groupes de soutien post-partum (associations locales, PMI, plateformes en ligne).
+- Ligne d’écoute dédiée (numéros diffèrent selon les pays).
+
+## Stratégies d’autosoin (en complément)
+
+- Accepter de déléguer : demandez concrètement de l’aide (courses, repas, garde du bébé).
+- Prioriser le sommeil (sieste quand le bébé dort, relais avec le partenaire, tire-lait si possible).
+- Alimentation équilibrée, hydratation, exposition à la lumière naturelle.
+- Activité physique douce (marche, étirements) après avis médical.
+- Moments de connexion sans évaluation (peau à peau, parler au bébé).
+
+## Soutien du partenaire et de l’entourage
+
+- Communiquez, sans jugement, sur ce que traverse la mère.
+- Prendre des responsabilités concrètes (tâches domestiques, soins du bébé).
+- Rassurer et valoriser (“Tu fais de ton mieux”, “Tu n’es pas seule”).
+- Surveiller les signes d’aggravation et accompagner vers des professionnels.
+
+## Et le post-partum du partenaire ?
+
+- Les partenaires peuvent également vivre une dépression post-partum (jusqu’à 10 %).
+- Signes : irritabilité, retrait, surinvestissement au travail, abus d’alcool.
+- Encouragez un dépistage précoce et un soutien adapté.
+
+## À retenir
+
+- La DPP n’est ni un échec ni un manque d’amour. C’est une condition médicale qui se traite.
+- Vous avez le droit de demander de l’aide, même si vous “tenez le coup” extérieurement.
+- Plus le soutien est rapide, plus la récupération est efficace.
 
 ---
 
-_Cette page sert de marque-place pour assurer l'indexation des URLs pendant la traduction du contenu._
+_En cas de crise ou de pensées suicidaires, contactez immédiatement les services d’urgence ou la ligne d’aide de votre pays._

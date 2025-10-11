@@ -1,0 +1,96 @@
+{
+  "shared": {
+    "readingTime_one": "{{count}} min read",
+    "readingTime_other": "{{count}} min read",
+    "minutes_one": "{{count}} min",
+    "minutes_other": "{{count}} min",
+    "articles_one": "{{count}} article",
+    "articles_other": "{{count}} articles",
+    "featured_one": "{{count}} featured",
+    "featured_other": "{{count}} featured",
+    "libraryRoot": "Content Library",
+    "featuredBadge": "Featured",
+    "priority": {
+      "high": "High priority",
+      "medium": "Medium priority",
+      "low": "Low priority"
+    },
+    "intent": {
+      "informational": "Informational",
+      "actionable": "Actionable",
+      "supportive": "Supportive",
+      "therapeutic": "Therapeutic",
+      "emergency": "Emergency"
+    }
+  },
+  "article": {
+    "breadcrumb": "Back to {{category}}",
+    "relatedTopics": "Related Topics",
+    "loading": {
+      "title": "Content Loading...",
+      "description": "Unable to load article content. Please check if the file exists."
+    },
+    "relatedHeading": "Related Articles"
+  },
+  "category": {
+    "featuredHeading": "Featured Articles",
+    "allHeading": "All Articles",
+    "empty": {
+      "title": "Content Coming Soon",
+      "description": "We're working on creating comprehensive content for this category. Check back soon for helpful articles and guides."
+    }
+  },
+  "library": {
+    "heading": "Content Library",
+    "intro": "Explore our comprehensive collection of mental health resources, therapeutic guides, and practical tools to support your wellbeing journey.",
+    "featuredHeading": "Featured Articles",
+    "browseHeading": "Browse by Category",
+    "stats": {
+      "categories_one": "{{count}} category",
+      "categories_other": "{{count}} categories"
+    },
+    "cta": {
+      "title": "Need Personalized Support?",
+      "description": "While our content library provides valuable insights, our AI-powered therapeutic chat offers personalized guidance tailored to your specific needs and situation.",
+      "button": "Start a Session"
+    },
+    "categories": {
+      "cognitive-behavioral-therapy": {
+        "title": "Cognitive Behavioral Therapy",
+        "description": "Evidence-based CBT techniques and strategies."
+      },
+      "anxiety-management": {
+        "title": "Anxiety Management",
+        "description": "Practical strategies for managing anxiety and worry."
+      },
+      "depression-support": {
+        "title": "Depression Support",
+        "description": "Understanding and coping with depression."
+      },
+      "stress-management": {
+        "title": "Stress Management",
+        "description": "Techniques for reducing stress and preventing burnout."
+      },
+      "relationship-patterns": {
+        "title": "Healthy Relationships",
+        "description": "Building and maintaining healthy relationship patterns."
+      },
+      "self-compassion": {
+        "title": "Self-Compassion",
+        "description": "Developing kindness and acceptance toward yourself."
+      },
+      "mindfulness-techniques": {
+        "title": "Mindfulness & Meditation",
+        "description": "Present-moment awareness and mindfulness practices."
+      },
+      "mood-tracking": {
+        "title": "Mood Tracking",
+        "description": "Understanding and monitoring emotional patterns."
+      }
+    }
+  },
+  "layout": {
+    "educationalNotice": "This content is for educational purposes and is not a substitute for professional mental health care.",
+    "privacyNotice": "© {{year}} {{company}}. Your privacy matters."
+  }
+}

@@ -1,17 +1,31 @@
 ---
-title: "7 Powerful Self-Compassion Exercises for Daily Practice"
-description: "Transform self-criticism into self-kindness with these evidence-based self-compassion exercises. Practical techniques you can use anywhere, anytime."
-slug: "self-compassion-exercises"
-category: "self-compassion"
-contentType: "article"
-intent: "actionable"
-keywords: ["self compassion exercises", "self kindness practice", "self love", "emotional healing"]
+title: 7 Powerful Self-Compassion Exercises for Daily Practice
+description: >-
+  Transform self-criticism into self-kindness with these evidence-based self-compassion exercises. Practical techniques
+  you can use anywhere, anytime.
+slug: self-compassion-exercises
+category: self-compassion
+contentType: article
+intent: actionable
+keywords:
+  - self compassion exercises
+  - self kindness practice
+  - self love
+  - emotional healing
 searchVolume: 5200
-priority: "high"
+priority: high
 featured: true
 readingTime: 11
-relatedCbtModules: ["self_compassion", "mindfulness", "emotional", "coping"]
-targetEmotions: ["self-criticism", "shame", "emotional pain", "healing"]
+relatedCbtModules:
+  - self_compassion
+  - mindfulness
+  - emotional
+  - coping
+targetEmotions:
+  - self-criticism
+  - shame
+  - emotional pain
+  - healing
 publishedAt: "2025-01-27"
 draft: false
 ---

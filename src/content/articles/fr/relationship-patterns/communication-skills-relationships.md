@@ -1,17 +1,17 @@
 ---
-title: Compétences de Communication Essentielles pour des Relations Saines
+title: "Compétences essentielles de communication pour des relations épanouies"
 description: >-
-  Cet article est en cours de traduction. La version française sera bientôt
-  disponible avec un contenu adapté et de qualité en santé mentale.
+  Apprenez à exprimer vos besoins, écouter activement et gérer les conflits pour renforcer vos relations sans sacrifier
+  votre authenticité.
 slug: communication-skills-relationships
 category: relationship-patterns
 contentType: article
-intent: actionable/relationship
+intent: supportive
 keywords:
-  - communication skills
-  - relationship communication
-  - conflict resolution
-  - active listening
+  - communication relationnelle
+  - écoute active
+  - résolution de conflits
+  - communication bienveillante
 searchVolume: 14500
 priority: high
 featured: true
@@ -28,31 +28,46 @@ targetEmotions:
   - hope
 publishedAt: "2025-01-27"
 draft: false
-placeholder: true
 ---
 
-# Contenu disponible prochainement
+# Compétences essentielles de communication pour des relations épanouies
 
-## Cet article est en cours de traduction
+## 1. L’écoute active
 
-Nous travaillons actuellement sur la version française de cet article pour vous offrir le meilleur contenu en santé mentale et thérapie cognitivo-comportementale.
+- Regardez votre interlocuteur, posez votre téléphone.
+- Reformulez (“Si je comprends bien…”).
+- Validez l’émotion (“Je vois que c’est important pour toi”).
+- Évitez de préparer votre réponse pendant qu’il parle.
 
-### En attendant, vous pouvez :
+## 2. Le “je” assertif
 
-- **Consulter la version anglaise** de cet article pour accéder au contenu complet
-- **Explorer nos autres ressources** disponibles en français
-- **Vous inscrire** pour recevoir une notification lorsque la traduction sera terminée
+- Structure : **Situation** + **Émotion** + **Besoin** + **Demande**.
+- Exemple : “Quand les factures restent en plan, je me sens stressé. J’aurais besoin qu’on les traite ensemble le dimanche. Est-ce que ça te convient ?”
 
-### Pourquoi cette approche ?
+## 3. Ralentir le conflit
 
-Chez Innuora, nous nous engageons à fournir des ressources de qualité en santé mentale. Plutôt que de publier des traductions automatiques de mauvaise qualité, nous prenons le temps de créer des contenus adaptés culturellement et linguistiquement précis.
+- Instaurer un “time-out” lorsque le ton monte. Revenir après 20 minutes.
+- Se concentrer sur le problème actuel, pas sur le passé.
+- Chercher la solution gagnant-gagnant plutôt que la victoire personnelle.
 
-### Besoin d'aide immédiate ?
+## 4. Poser des limites claires
 
-Notre plateforme de thérapie assistée par IA est disponible en français dès maintenant. Commencez une conversation thérapeutique personnalisée en français :
+- Décrire la limite (“Je ne veux pas qu’on se crie dessus”).
+- Dire ce que vous ferez si elle est franchie (quitter la pièce, suspendre la discussion).
+- Tenir parole pour maintenir la crédibilité.
 
-**[Commencer une session →](/fr/join)**
+## 5. Nourrir la relation
+
+- Rituel quotidien de partage (10 minutes sans distraction).
+- Gratitude explicite (“J’ai apprécié quand tu… aujourd’hui”).
+- Moments d’humour et de jeu pour renforcer la complicité.
+
+## 6. Demander pardon et réparer
+
+- Reconnaître les faits, l’impact et ce que vous ferez différemment.
+- Éviter les excuses conditionnelles (“Je suis désolé si…”).
+- Proposer un geste concret de réparation.
 
 ---
 
-_Cette page sert de marque-place pour assurer l'indexation des URLs pendant la traduction du contenu._
+_La communication relationnelle est une compétence ; plus vous pratiquez, plus elle devient naturelle. Un thérapeute ou un médiateur peut vous accompagner en cas de blocage._

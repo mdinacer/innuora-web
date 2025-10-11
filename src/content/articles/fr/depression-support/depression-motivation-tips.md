@@ -1,17 +1,17 @@
 ---
-title: "Trouver la Motivation en Cas de Dépression : 12 Stratégies Pratiques"
+title: "Retrouver la motivation pendant la dépression : 12 stratégies concrètes"
 description: >-
-  Cet article est en cours de traduction. La version française sera bientôt
-  disponible avec un contenu adapté et de qualité en santé mentale.
+  Des techniques basées sur l’activation comportementale et la gestion de l’énergie pour renouer avec l’action malgré la
+  fatigue et la perte d’envie liées à la dépression.
 slug: depression-motivation-tips
 category: depression-support
 contentType: article
-intent: actionable/motivational
+intent: motivational
 keywords:
-  - depression motivation
-  - depression energy
-  - feeling unmotivated
-  - depression help
+  - motivation dépression
+  - perte d’énergie
+  - activation comportementale
+  - retrouver envie
 searchVolume: 9500
 priority: high
 featured: true
@@ -28,31 +28,35 @@ targetEmotions:
   - hopelessness
 publishedAt: "2025-01-27"
 draft: false
-placeholder: true
 ---
 
-# Contenu disponible prochainement
+# Retrouver la motivation pendant la dépression : 12 stratégies concrètes
 
-## Cet article est en cours de traduction
+## Comprendre le cercle vicieux
 
-Nous travaillons actuellement sur la version française de cet article pour vous offrir le meilleur contenu en santé mentale et thérapie cognitivo-comportementale.
+La dépression retire l’énergie et l’envie. On fait moins d’activités gratifiantes, ce qui accentue le sentiment de vide. L’objectif est de casser ce cercle en reprenant des actions simples, même sans motivation initiale.
 
-### En attendant, vous pouvez :
+## 12 stratégies pas à pas
 
-- **Consulter la version anglaise** de cet article pour accéder au contenu complet
-- **Explorer nos autres ressources** disponibles en français
-- **Vous inscrire** pour recevoir une notification lorsque la traduction sera terminée
+1. **Règle des deux minutes** : commencez une tâche pendant deux minutes seulement. Souvent, le mouvement enclenche la suite.
+2. **Fractionnez** : transformez “faire le ménage” en “ramasser 5 objets” puis “passer 5 minutes à aspirer”.
+3. **Liste “minimum vital”** : définissez 3 actions quotidiennes non négociables (manger, se doucher, s’aérer).
+4. **Complétez un tableau “avant/après”** : notez votre humeur avant et après chaque activité pour constater les effets.
+5. **Agenda bien-être** : planifiez des micro-plaisirs (boisson chaude, musique, bain) comme des rendez-vous.
+6. **Parlez-vous avec bienveillance** : remplacez “je devrais” par “je choisis de… pour aller mieux”.
+7. **Bouger doucement** : marche lente, étirements, yoga doux. L’objectif est d’activer sans se juger.
+8. **Soutien social ciblé** : informez une personne de confiance de votre objectif du jour, demandez-lui de vous encourager.
+9. **Limiter la comparaison** : concentrez-vous sur une progression personnelle (journal, applications de suivi).
+10. **Mise en route stimulante** : musique énergisante, douche fraîche, lumière naturelle dès le réveil.
+11. **Dossier “preuves de réussite”** : gardez une trace de vos petites victoires pour les relire les jours difficiles.
+12. **Professionnel à vos côtés** : un thérapeute peut vous accompagner pour ajuster l’activation comportementale à votre rythme.
 
-### Pourquoi cette approche ?
+## Ce qu’il faut retenir
 
-Chez Innuora, nous nous engageons à fournir des ressources de qualité en santé mentale. Plutôt que de publier des traductions automatiques de mauvaise qualité, nous prenons le temps de créer des contenus adaptés culturellement et linguistiquement précis.
-
-### Besoin d'aide immédiate ?
-
-Notre plateforme de thérapie assistée par IA est disponible en français dès maintenant. Commencez une conversation thérapeutique personnalisée en français :
-
-**[Commencer une session →](/fr/join)**
+- La motivation suit l’action, rarement l’inverse.
+- Célébrez chaque pas, même minime ; la régularité compte plus que l’intensité.
+- Si la perte d’énergie s’aggrave ou s’accompagne d’idées suicidaires, consultez immédiatement un professionnel.
 
 ---
 
-_Cette page sert de marque-place pour assurer l'indexation des URLs pendant la traduction du contenu._
+_Ce guide ne remplace pas un suivi médical. En cas d’urgence, contactez les services d’aide de votre région._

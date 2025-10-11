@@ -1,17 +1,17 @@
 ---
-title: "Alimentation Consciente : Transformez Votre Relation avec la Nourriture"
+title: "Manger en pleine conscience : renouer avec une relation apaisée à la nourriture"
 description: >-
-  Cet article est en cours de traduction. La version française sera bientôt
-  disponible avec un contenu adapté et de qualité en santé mentale.
+  Des pratiques simples pour développer une alimentation consciente, distinguer faim physique et émotionnelle et réduire
+  les compulsions alimentaires.
 slug: mindful-eating-practices
 category: mindfulness-techniques
 contentType: article
-intent: actionable/lifestyle
+intent: actionable
 keywords:
-  - mindful eating
-  - emotional eating
-  - conscious eating
-  - healthy eating habits
+  - alimentation consciente
+  - pleine conscience alimentation
+  - manger intuitif
+  - relation nourriture
 searchVolume: 9500
 priority: high
 featured: true
@@ -28,31 +28,52 @@ targetEmotions:
   - awareness
 publishedAt: "2025-01-27"
 draft: false
-placeholder: true
 ---
 
-# Contenu disponible prochainement
+# Manger en pleine conscience : renouer avec une relation apaisée à la nourriture
 
-## Cet article est en cours de traduction
+## Principes de base
 
-Nous travaillons actuellement sur la version française de cet article pour vous offrir le meilleur contenu en santé mentale et thérapie cognitivo-comportementale.
+- Être présent à l’expérience de manger (vue, odeur, goût, texture).
+- Reconnaître les signaux internes de faim et de satiété.
+- Observer les émotions liées à l’alimentation sans se juger.
+- Apporter curiosité et bienveillance au moment du repas.
 
-### En attendant, vous pouvez :
+## Étape 1 : ralentir
 
-- **Consulter la version anglaise** de cet article pour accéder au contenu complet
-- **Explorer nos autres ressources** disponibles en français
-- **Vous inscrire** pour recevoir une notification lorsque la traduction sera terminée
+- Commencez chaque repas par trois respirations profondes.
+- Déposez les couverts entre chaque bouchée.
+- Mastiquez lentement pour laisser le temps au cerveau de recevoir les signaux de satiété.
 
-### Pourquoi cette approche ?
+## Étape 2 : check-in faim/satiété
 
-Chez Innuora, nous nous engageons à fournir des ressources de qualité en santé mentale. Plutôt que de publier des traductions automatiques de mauvaise qualité, nous prenons le temps de créer des contenus adaptés culturellement et linguistiquement précis.
+- Avant de manger, notez votre niveau de faim (0-10).
+- À mi-parcours, évaluez de nouveau.
+- Arrêtez-vous quand la faim chute autour de 2-3/10 (satiété confortable).
 
-### Besoin d'aide immédiate ?
+## Étape 3 : savourer
 
-Notre plateforme de thérapie assistée par IA est disponible en français dès maintenant. Commencez une conversation thérapeutique personnalisée en français :
+- Concentrez-vous sur les sensations : température, textures, arômes.
+- Identifiez les ingrédients principaux.
+- Remerciez mentalement toutes les étapes qui ont permis à ce repas d’être dans votre assiette.
 
-**[Commencer une session →](/fr/join)**
+## Étape 4 : explorer la faim émotionnelle
+
+- Si l’envie de manger apparaît sans faim physique, notez ce que vous ressentez (stress, ennui, tristesse).
+- Trouvez une alternative qui répond à cette émotion (appeler un ami, se reposer, écrire).
+
+## Exercices rapides
+
+- **Raisin sec en pleine conscience** : observez-le, sentez-le, mangez-le lentement en notant chaque sensation.
+- **Minute gratitude** avant le repas pour basculer en mode appréciation.
+- **Journal alimentaire mindful** : pas de calories, mais le contexte, l’émotion et la satisfaction.
+
+## Quand l’utiliser ?
+
+- Repas quotidiens, collations, moments de fringale.
+- En sortie sociale pour éviter l’autopilot et la culpabilité.
+- Lors d’un rapport compliqué à l’alimentation (à combiner avec un suivi spécialisé si troubles du comportement alimentaire).
 
 ---
 
-_Cette page sert de marque-place pour assurer l'indexation des URLs pendant la traduction du contenu._
+_Si vous souffrez d’un trouble alimentaire diagnostiqué, pratiquez la pleine conscience avec l’encadrement d’un professionnel spécialisé._

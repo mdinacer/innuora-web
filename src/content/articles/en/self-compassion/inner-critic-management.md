@@ -1,17 +1,31 @@
 ---
 title: "Taming Your Inner Critic: From Self-Attack to Self-Support"
-description: "Learn to recognize, understand, and transform your inner critic into a supportive inner voice. Evidence-based strategies for ending self-destructive self-talk."
-slug: "inner-critic-management"
-category: "self-compassion"
-contentType: "article"
-intent: "actionable/transformational"
-keywords: ["inner critic", "negative self talk", "self criticism", "inner voice"]
+description: >-
+  Learn to recognize, understand, and transform your inner critic into a supportive inner voice. Evidence-based
+  strategies for ending self-destructive self-talk.
+slug: inner-critic-management
+category: self-compassion
+contentType: article
+intent: actionable
+keywords:
+  - inner critic
+  - negative self talk
+  - self criticism
+  - inner voice
 searchVolume: 6800
-priority: "high"
+priority: high
 featured: true
 readingTime: 12
-relatedCbtModules: ["cognitive", "self_compassion", "core_beliefs", "emotional"]
-targetEmotions: ["self-criticism", "shame", "inadequacy", "empowerment"]
+relatedCbtModules:
+  - cognitive
+  - self_compassion
+  - core_beliefs
+  - emotional
+targetEmotions:
+  - self-criticism
+  - shame
+  - inadequacy
+  - empowerment
 publishedAt: "2025-01-27"
 draft: false
 ---

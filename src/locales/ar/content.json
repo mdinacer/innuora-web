@@ -1,0 +1,116 @@
+{
+  "shared": {
+    "readingTime_zero": "{{count}} دقيقة للقراءة",
+    "readingTime_one": "{{count}} دقيقة للقراءة",
+    "readingTime_two": "{{count}} دقيقتان للقراءة",
+    "readingTime_few": "{{count}} دقائق للقراءة",
+    "readingTime_many": "{{count}} دقيقة للقراءة",
+    "readingTime_other": "{{count}} دقيقة للقراءة",
+    "minutes_zero": "{{count}} دقيقة",
+    "minutes_one": "{{count}} دقيقة",
+    "minutes_two": "{{count}} دقيقتان",
+    "minutes_few": "{{count}} دقائق",
+    "minutes_many": "{{count}} دقيقة",
+    "minutes_other": "{{count}} دقيقة",
+    "articles_zero": "{{count}} مقال",
+    "articles_one": "{{count}} مقال",
+    "articles_two": "{{count}} مقالان",
+    "articles_few": "{{count}} مقالات",
+    "articles_many": "{{count}} مقال",
+    "articles_other": "{{count}} مقال",
+    "featured_zero": "{{count}} محتوى مميز",
+    "featured_one": "{{count}} محتوى مميز",
+    "featured_two": "{{count}} محتويان مميزان",
+    "featured_few": "{{count}} محتويات مميزة",
+    "featured_many": "{{count}} محتوى مميز",
+    "featured_other": "{{count}} محتوى مميز",
+    "libraryRoot": "مكتبة المحتوى",
+    "featuredBadge": "مميز",
+    "priority": {
+      "high": "أولوية عالية",
+      "medium": "أولوية متوسطة",
+      "low": "أولوية منخفضة"
+    },
+    "intent": {
+      "informational": "توعوي",
+      "actionable": "عملي",
+      "supportive": "داعم",
+      "therapeutic": "علاجي",
+      "emergency": "حالات طارئة"
+    }
+  },
+  "article": {
+    "breadcrumb": "العودة إلى {{category}}",
+    "relatedTopics": "موضوعات ذات صلة",
+    "loading": {
+      "title": "جارٍ تحميل المحتوى...",
+      "description": "تعذر تحميل المقال. يرجى التحقق من وجود الملف."
+    },
+    "relatedHeading": "مقالات ذات صلة"
+  },
+  "category": {
+    "featuredHeading": "مقالات مميزة",
+    "allHeading": "كل المقالات",
+    "empty": {
+      "title": "محتوى قادم قريبًا",
+      "description": "نُعد حاليًا موارد شاملة لهذه الفئة. عودي لاحقًا لاكتشاف مقالات وأدلة جديدة."
+    }
+  },
+  "library": {
+    "heading": "مكتبة المحتوى",
+    "intro": "استكشفي مجموعتنا المتكاملة من الموارد في الصحة النفسية، والأدلة العلاجية، والأدوات العملية لمساندة رحلتك نحو العافية.",
+    "featuredHeading": "مقالات مميزة",
+    "browseHeading": "استكشفي حسب الفئة",
+    "stats": {
+      "categories_zero": "{{count}} فئة",
+      "categories_one": "{{count}} فئة",
+      "categories_two": "{{count}} فئتان",
+      "categories_few": "{{count}} فئات",
+      "categories_many": "{{count}} فئة",
+      "categories_other": "{{count}} فئة"
+    },
+    "cta": {
+      "title": "هل تحتاجين إلى دعم مخصص؟",
+      "description": "تمنحك مكتبتنا رؤىً قيمة، لكن المحادثة العلاجية المدعومة بالذكاء الاصطناعي تقدم توجيهًا شخصيًا يناسب حالتك تحديدًا.",
+      "button": "ابدئي جلسة"
+    },
+    "categories": {
+      "cognitive-behavioral-therapy": {
+        "title": "العلاج المعرفي السلوكي",
+        "description": "تقنيات واستراتيجيات علاجية مثبتة بالأدلة."
+      },
+      "anxiety-management": {
+        "title": "إدارة القلق",
+        "description": "خطوات عملية للتعامل مع القلق والقلق المفرط."
+      },
+      "depression-support": {
+        "title": "دعم التعامل مع الاكتئاب",
+        "description": "فهم الاكتئاب والتكيف معه باستخدام مداخل علاجية موثوقة."
+      },
+      "stress-management": {
+        "title": "إدارة التوتر",
+        "description": "أساليب فعالة لتخفيف التوتر ومنع الإرهاق."
+      },
+      "relationship-patterns": {
+        "title": "أنماط علاقات صحية",
+        "description": "فهم الديناميات بين الأشخاص وبناء علاقات أكثر توازنًا."
+      },
+      "self-compassion": {
+        "title": "الرحمة الذاتية",
+        "description": "تنمية اللطف والقبول تجاه ذاتك."
+      },
+      "mindfulness-techniques": {
+        "title": "اليقظة والتأمل",
+        "description": "ممارسات للحضور اللحظي وتقنيات للوضوح الذهني."
+      },
+      "mood-tracking": {
+        "title": "تتبع الحالة المزاجية",
+        "description": "التعرف إلى أنماطك العاطفية ومتابعتها."
+      }
+    }
+  },
+  "layout": {
+    "educationalNotice": "هذا المحتوى للتوعية ولا يغني عن الرعاية المهنية في الصحة النفسية.",
+    "privacyNotice": "© {{year}} {{company}}. خصوصيتك مهمة لنا."
+  }
+}

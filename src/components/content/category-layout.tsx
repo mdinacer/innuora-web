@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 "use client";
 
-import Link from "next/link";
 import { BookOpen, Clock, Star, StarIcon } from "lucide-react";
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 import { ContentCategory, ContentItem } from "@/types/content.types";
 
@@ -30,6 +31,8 @@ export default function CategoryLayout({
   content,
   featuredContent,
 }: CategoryLayoutProps) {
+  const { t } = useTranslation("content");
+
   // Sort content by priority and reading time
   const sortedContent = [...content].sort((a, b) => {
     const priorityOrder = { high: 3, medium: 2, low: 1 };
@@ -44,41 +47,45 @@ export default function CategoryLayout({
   });
 
   return (
-    <div className="min-h-screen ">
-      <div className="container mx-auto px-4 py-8 max-w-6xl">
+    <div className="min-h-screen bg-background">
+      <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
         {/* Breadcrumb */}
-        <nav className="mb-6">
+        <nav className="mb-8 text-sm text-muted-foreground">
           <Link
             href="/content"
-            className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
+            className="transition hover:text-primary"
           >
-            Content Library
+            {t("shared.libraryRoot")}
           </Link>
-          <span className="mx-2 text-gray-400">/</span>
-          <span className="text-sm text-gray-600 dark:text-gray-400 capitalize">
+          <span className="mx-2 opacity-50">/</span>
+          <span className="capitalize">
             {category.replace(/-/g, " ")}
           </span>
         </nav>
 
         {/* Category Header */}
-        <header className="mb-10">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            {categoryInfo.title}
+        <header className="mb-12 space-y-4 rounded-app border border-border bg-card p-10 shadow-soft">
+          <h1 className="text-4xl font-serif-brand text-foreground md:text-5xl">
+            {t(`library.categories.${category}.title`, {
+              defaultValue: categoryInfo.title,
+            })}
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl">
-            {categoryInfo.description}
+          <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
+            {t(`library.categories.${category}.description`, {
+              defaultValue: categoryInfo.description,
+            })}
           </p>
 
           {/* Category Stats */}
-          <div className="mt-6 flex flex-wrap gap-6 text-sm text-gray-600 dark:text-gray-400">
-            <div className="flex items-center">
-              <BookOpen className="w-4 h-4 mr-2" />
-              {content.length} articles
+          <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1">
+              <BookOpen className="h-4 w-4 text-primary" />
+              {t("shared.articles", { count: content.length })}
             </div>
             {featuredContent.length > 0 && (
-              <div className="flex items-center">
-                <Star className="w-4 h-4 mr-2" />
-                {featuredContent.length} featured
+              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1">
+                <Star className="h-4 w-4 text-primary" />
+                {t("shared.featured", { count: featuredContent.length })}
               </div>
             )}
           </div>
@@ -86,9 +93,9 @@ export default function CategoryLayout({
 
         {/* Featured Content */}
         {featuredContent.length > 0 && (
-          <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Featured Articles
+          <section className="mb-12">
+            <h2 className="mb-6 text-2xl font-serif-brand text-foreground">
+              {t("category.featuredHeading")}
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {featuredContent.map((item) => (
@@ -100,19 +107,18 @@ export default function CategoryLayout({
 
         {/* All Content */}
         <section>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-            All Articles
+          <h2 className="mb-6 text-2xl font-serif-brand text-foreground">
+            {t("category.allHeading")}
           </h2>
 
           {sortedContent.length === 0 ? (
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-8 text-center">
-              <BookOpen className="w-12 h-12 mx-auto text-gray-400 mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                Content Coming Soon
+            <div className="rounded-app border border-border bg-card p-10 text-center shadow-soft">
+              <BookOpen className="mx-auto mb-4 h-12 w-12 text-muted-foreground" />
+              <h3 className="mb-2 text-lg font-semibold text-foreground">
+                {t("category.empty.title")}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                We're working on creating comprehensive content for this
-                category. Check back soon for helpful articles and guides.
+              <p className="max-w-2xl mx-auto text-muted-foreground">
+                {t("category.empty.description")}
               </p>
             </div>
           ) : (
@@ -139,56 +145,59 @@ interface ContentCardProps {
 
 function ContentCard({ item, featured = false }: ContentCardProps) {
   const { metadata, excerpt } = item;
+  const { t } = useTranslation("content");
 
   return (
     <Link
       href={`/content/${metadata.category}/${metadata.slug}`}
-      className={`block bg-inn-bg-card border border-inn-border-light rounded-2xl hover:shadow-[0_4px_20px] hover:shadow-inn-bg-accent/15 transition-all duration-200 overflow-hidden ${
-        featured
-          ? "ring-1 ring-inn-bg-accent/50 "
-          : "hover:border-inn-bg-accent"
+      className={`group block overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_18px_40px_-24px_rgba(15,23,42,0.35)] ${
+        featured ? "ring-1 ring-primary/30" : ""
       }`}
     >
-      <div className="p-6">
-        {/* Header */}
-        <div className="flex items-start justify-between mb-3">
-          <div className="flex-1">
-            {featured && (
-              <div className="flex items-center mb-2">
-                <StarIcon className="w-4 h-4 text-inn-bg-flame mr-1" />
-                <span className="text-xs font-medium text-inn-bg-flame">
-                  Featured
-                </span>
-              </div>
-            )}
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white leading-tight line-clamp-2">
-              {metadata.title}
-            </h3>
-          </div>
-        </div>
-
-        {/* Description */}
-        <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3">
-          {excerpt || metadata.description}
-        </p>
-
-        {/* Metadata */}
-        <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
-          <div className="flex items-center space-x-3">
-            <span
-              className={`px-3 capitalize py-1 rounded-2xl ${getPriorityColor(metadata.priority)} font-medium`}
-            >
-              {metadata.priority}
+      {/* Header */}
+      <div className="mb-3 flex items-start justify-between gap-4">
+        <div className="flex-1">
+          {featured && (
+            <span className="mb-2 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+              <StarIcon className="h-4 w-4" />
+              {t("shared.featuredBadge")}
             </span>
-            <span className="capitalize text-sm">{metadata.intent}</span>
-          </div>
-          {metadata.readingTime && (
-            <div className="flex items-center">
-              <Clock className="w-3 h-3 mr-1" />
-              {metadata.readingTime} min
-            </div>
           )}
+          <h3 className="line-clamp-2 font-semibold text-foreground">
+            {metadata.title}
+          </h3>
         </div>
+      </div>
+
+      {/* Description */}
+      <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+        {excerpt || metadata.description}
+      </p>
+
+      {/* Metadata */}
+      <div className="flex items-center justify-between text-xs text-muted-foreground">
+        <div className="flex items-center gap-3">
+          <span
+            className={`inline-flex items-center rounded-full px-3 py-1 capitalize ${getPriorityColor(
+              metadata.priority
+            )} font-medium`}
+          >
+            {t(`shared.priority.${metadata.priority}`, {
+              defaultValue: metadata.priority,
+            })}
+          </span>
+          <span className="capitalize text-sm opacity-80">
+            {t(`shared.intent.${metadata.intent}`, {
+              defaultValue: metadata.intent,
+            })}
+          </span>
+        </div>
+        {metadata.readingTime && (
+          <div className="flex items-center gap-2 opacity-80">
+            <Clock className="h-3 w-3" />
+            {t("shared.minutes", { count: metadata.readingTime })}
+          </div>
+        )}
       </div>
     </Link>
   );
@@ -200,10 +209,10 @@ function ContentCard({ item, featured = false }: ContentCardProps) {
 
 function getPriorityColor(priority: string): string {
   const colors = {
-    high: "bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300",
+    high: "bg-rose-100 text-rose-700 dark:bg-rose-900/60 dark:text-rose-200",
     medium:
-      "bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300",
-    low: "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300",
+      "bg-amber-100 text-amber-700 dark:bg-amber-900/60 dark:text-amber-200",
+    low: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/60 dark:text-emerald-200",
   };
 
   return colors[priority as keyof typeof colors] || colors.medium;

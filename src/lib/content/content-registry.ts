@@ -1,8 +1,4 @@
-import {
-  ContentCategory,
-  ContentItem,
-  ContentMetadata,
-} from "@/types/content.types";
+import { ContentCategory, ContentItem, ContentMetadata, LocalizedMetadataOverride } from "@/types/content.types";
 
 // =========================
 // Content Registry
@@ -37,6 +33,7 @@ export class ContentRegistry {
     const item: ContentItem = {
       metadata,
       excerpt,
+      localized: {},
     };
 
     // Add to main index
@@ -110,9 +107,7 @@ export class ContentRegistry {
       return (
         title.toLowerCase().includes(lowercaseQuery) ||
         description.toLowerCase().includes(lowercaseQuery) ||
-        keywords.some((keyword) =>
-          keyword.toLowerCase().includes(lowercaseQuery),
-        )
+        keywords.some((keyword) => keyword.toLowerCase().includes(lowercaseQuery))
       );
     });
   }
@@ -131,21 +126,55 @@ export class ContentRegistry {
 
         // Matching CBT modules
         if (relatedCbtModules && other.metadata.relatedCbtModules) {
-          return relatedCbtModules.some((module) =>
-            other.metadata.relatedCbtModules!.includes(module),
-          );
+          return relatedCbtModules.some((module) => other.metadata.relatedCbtModules!.includes(module));
         }
 
         // Matching target emotions
         if (targetEmotions && other.metadata.targetEmotions) {
-          return targetEmotions.some((emotion) =>
-            other.metadata.targetEmotions!.includes(emotion),
-          );
+          return targetEmotions.some((emotion) => other.metadata.targetEmotions!.includes(emotion));
         }
 
         return false;
       })
       .slice(0, limit);
+  }
+
+  addLocalizedMetadata(slug: string, locale: string, override: LocalizedMetadataOverride): void {
+    const item = this.contentIndex.get(slug);
+    if (!item) {
+      return;
+    }
+
+    if (!item.localized) {
+      item.localized = {};
+    }
+
+    item.localized[locale] = {
+      ...(item.localized[locale] || {}),
+      ...override,
+    };
+  }
+
+  getItemForLocale(slug: string, locale: string): ContentItem | undefined {
+    const item = this.contentIndex.get(slug);
+    if (!item) return undefined;
+
+    const override = item.localized?.[locale];
+    if (!override) return item;
+
+    return {
+      ...item,
+      metadata: {
+        ...item.metadata,
+        ...(override.title ? { title: override.title } : {}),
+        ...(override.description ? { description: override.description } : {}),
+      },
+      excerpt: override.excerpt || item.excerpt,
+    };
+  }
+
+  applyLocaleOverrides(items: ContentItem[], locale: string): ContentItem[] {
+    return items.map((item) => this.getItemForLocale(item.metadata.slug, locale) || item);
   }
 }
 

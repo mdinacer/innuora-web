@@ -1,17 +1,17 @@
 ---
-title: Les 10 Distorsions Cognitives les Plus Courantes et Comment les Surmonter
+title: "Les 10 distorsions cognitives les plus courantes et comment les corriger"
 description: >-
-  Cet article est en cours de traduction. La version française sera bientôt
-  disponible avec un contenu adapté et de qualité en santé mentale.
+  Identifiez les erreurs de pensée qui entretiennent anxiété et dépression et apprenez des techniques concrètes pour
+  retrouver un point de vue plus équilibré.
 slug: cognitive-distortions-guide
 category: cognitive-behavioral-therapy
 contentType: article
-intent: informational/actionable
+intent: informational
 keywords:
-  - cognitive distortions
-  - thinking errors
-  - negative thoughts
-  - CBT techniques
+  - distorsions cognitives
+  - erreurs de pensée
+  - pensées automatiques
+  - techniques TCC
 searchVolume: 12000
 priority: high
 featured: true
@@ -27,31 +27,61 @@ targetEmotions:
   - worry
 publishedAt: "2025-01-27"
 draft: false
-placeholder: true
 ---
 
-# Contenu disponible prochainement
+# Les 10 distorsions cognitives les plus courantes et comment les corriger
 
-## Cet article est en cours de traduction
+## Pourquoi s’y intéresser ?
 
-Nous travaillons actuellement sur la version française de cet article pour vous offrir le meilleur contenu en santé mentale et thérapie cognitivo-comportementale.
+Nos pensées filtrent la réalité. Certaines, biaisées, amplifient le stress et les émotions pénibles. Les reconnaître est la première étape pour reprendre le contrôle.
 
-### En attendant, vous pouvez :
+## 1. Pensée tout ou rien
+- “Si je ne réussis pas parfaitement, c’est un échec total.”
+- Correction : recherchez la nuance (quels éléments intermédiaires existent ?).
 
-- **Consulter la version anglaise** de cet article pour accéder au contenu complet
-- **Explorer nos autres ressources** disponibles en français
-- **Vous inscrire** pour recevoir une notification lorsque la traduction sera terminée
+## 2. Généralisation excessive
+- “J’ai raté cette présentation, je suis nul en public.”
+- Correction : identifiez les exceptions, reformulez (“Cette fois ne s’est pas bien passée, voici ce que j’apprends”).
 
-### Pourquoi cette approche ?
+## 3. Filtre mental
+- Se focaliser sur une remarque négative et ignorer dix compliments.
+- Correction : listez objectivement les faits positifs et négatifs.
 
-Chez Innuora, nous nous engageons à fournir des ressources de qualité en santé mentale. Plutôt que de publier des traductions automatiques de mauvaise qualité, nous prenons le temps de créer des contenus adaptés culturellement et linguistiquement précis.
+## 4. Lecture de pensée
+- “Ils pensent que je suis incompétent.”
+- Correction : vérifiez par le dialogue, demandez un feedback.
 
-### Besoin d'aide immédiate ?
+## 5. Divination
+- “Ça va forcément mal se passer.”
+- Correction : testez la prédiction par l’action, préparez un plan B.
 
-Notre plateforme de thérapie assistée par IA est disponible en français dès maintenant. Commencez une conversation thérapeutique personnalisée en français :
+## 6. Maximisation/minimisation
+- Amplifier les problèmes, minimiser les réussites.
+- Correction : attribuez à chaque événement son juste poids (0-10).
 
-**[Commencer une session →](/fr/join)**
+## 7. Raisonnement émotionnel
+- “Je me sens coupable, donc j’ai tort.”
+- Correction : distinguez émotion et réalité (“Je ressens de la culpabilité, voyons les faits”).
+
+## 8. “Je dois” / “Il faut”
+- Auto-exigence rigide (“Je dois toujours être disponible”).
+- Correction : remplacez par “J’aimerais” ou “Il serait utile de…”.
+
+## 9. Étiquettes
+- “Je suis un raté.”
+- Correction : décrivez le comportement plutôt que l’identité (“J’ai commis une erreur”).
+
+## 10. Personnalisation
+- Se croire responsable de tout (“Ils sont de mauvaise humeur à cause de moi”).
+- Correction : identifiez ce qui relève de votre responsabilité et ce qui ne dépend pas de vous.
+
+## Outils pour corriger ces distorsions
+
+- **Fiches de pensée TCC** : situation, émotion, pensée, distorsion, pensée alternative.
+- **Débat socratique** : questionnez la logique de votre pensée (“Où sont preuves ? Qu’est-ce qui se passerait vraiment ?”).
+- **Perspective extérieure** : que diriez-vous à un ami dans la même situation ?
+- **Mindfulness** : observez la pensée sans vous y accrocher, comme un nuage qui passe.
 
 ---
 
-_Cette page sert de marque-place pour assurer l'indexation des URLs pendant la traduction du contenu._
+_Ce guide ne remplace pas un suivi thérapeutique. Consultez un professionnel si les pensées négatives envahissent votre quotidien._

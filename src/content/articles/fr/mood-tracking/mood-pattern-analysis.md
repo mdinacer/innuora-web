@@ -1,17 +1,17 @@
 ---
-title: "Comment Analyser Vos Schémas d'Humeur : Guide Pas à Pas"
+title: "Analyser ses données d’humeur : guide étape par étape"
 description: >-
-  Cet article est en cours de traduction. La version française sera bientôt
-  disponible avec un contenu adapté et de qualité en santé mentale.
+  Méthode détaillée pour détecter les schémas émotionnels, identifier les déclencheurs et ajuster vos stratégies de
+  régulation à partir de votre suivi d’humeur.
 slug: mood-pattern-analysis
 category: mood-tracking
 contentType: article
 intent: analytical
 keywords:
-  - mood patterns
-  - mood analysis
-  - emotional patterns
-  - mood data interpretation
+  - analyse humeur
+  - patterns émotionnels
+  - data mood
+  - interprétation suivi humeur
 searchVolume: 3900
 priority: medium
 featured: false
@@ -28,31 +28,45 @@ targetEmotions:
   - understanding
 publishedAt: "2025-01-27"
 draft: false
-placeholder: true
 ---
 
-# Contenu disponible prochainement
+# Analyser ses données d’humeur : guide étape par étape
 
-## Cet article est en cours de traduction
+## 1. Organiser vos données
 
-Nous travaillons actuellement sur la version française de cet article pour vous offrir le meilleur contenu en santé mentale et thérapie cognitivo-comportementale.
+- Rassemblez au moins 4 semaines de suivi.
+- Utilisez un tableur ou la fonction graphique de votre application.
+- Ajoutez des colonnes contextuelles (sommeil, médicaments, événements marquants).
 
-### En attendant, vous pouvez :
+## 2. Observer la vue d’ensemble
 
-- **Consulter la version anglaise** de cet article pour accéder au contenu complet
-- **Explorer nos autres ressources** disponibles en français
-- **Vous inscrire** pour recevoir une notification lorsque la traduction sera terminée
+- Tracez l’évolution de l’humeur dans le temps.
+- Repérez pics et creux, jours récurrents difficiles (ex : lundis matin).
+- Notez les périodes de stabilité et ce qui les caractérise.
 
-### Pourquoi cette approche ?
+## 3. Identifier déclencheurs et amortisseurs
 
-Chez Innuora, nous nous engageons à fournir des ressources de qualité en santé mentale. Plutôt que de publier des traductions automatiques de mauvaise qualité, nous prenons le temps de créer des contenus adaptés culturellement et linguistiquement précis.
+- Sur les jours de baisse : que s’est-il passé ? manque de sommeil, conflit, météo, cycle hormonal.
+- Sur les jours positifs : quelles activités, quelles personnes, quel environnement ?
+- Cherchez des corrélations visibles (ex : moins de 6 h de sommeil = humeur < 4).
 
-### Besoin d'aide immédiate ?
+## 4. Décoder vos réactions
 
-Notre plateforme de thérapie assistée par IA est disponible en français dès maintenant. Commencez une conversation thérapeutique personnalisée en français :
+- Comment réagissez-vous lorsqu’un creux survient ? (évitement, isolement, ruminations).
+- Ces réactions améliorent-elles ou aggravent-elles l’humeur le lendemain ?
+- Notez les stratégies qui fonctionnent pour rebondir.
 
-**[Commencer une session →](/fr/join)**
+## 5. Tester des ajustements
+
+- Choisissez un levier à modifier (coucher plus tôt, ajouter activité physique, limiter caféine).
+- Appliquez-le pendant 2 semaines et observez l’impact.
+- Ajustez selon les résultats.
+
+## 6. Communiquer vos résultats
+
+- Partagez vos graphiques avec un thérapeute ou médecin pour des décisions éclairées.
+- Utilisez vos données pour demander des aménagements (horaires flexibles, tâches adaptées).
 
 ---
 
-_Cette page sert de marque-place pour assurer l'indexation des URLs pendant la traduction du contenu._
+_Votre suivi d’humeur devient un tableau de bord personnalisé. Prenez le temps de l’explorer régulièrement pour faire évoluer vos stratégies._
