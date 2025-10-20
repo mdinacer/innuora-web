@@ -1,9 +1,11 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 import ContentLibraryLayout from "@/components/content/content-library-layout";
+import { APP_CONFIG } from "@/config/app";
 import { initializeContentRegistry } from "@/lib/content/content-loader";
 import { contentRegistry } from "@/lib/content/content-registry";
-import { APP_CONFIG } from "@/config/app";
+import type { AppLocales } from "@/lib/i18n";
+import { buildLanguageAlternates, buildLocalizedUrl } from "@/lib/seo/url";
 
 // =========================
 // Page Props
@@ -31,9 +33,8 @@ export async function generateMetadata({
     app_name: APP_CONFIG.name,
   });
 
-  // Build locale-aware URLs (respecting prefixDefault: false for English)
-  const localePrefix = locale === "en" ? "" : `/${locale}`;
-  const currentUrl = `${localePrefix}/content`;
+  const canonicalUrl = buildLocalizedUrl(locale, "/content");
+  const languageAlternates = buildLanguageAlternates("/content");
 
   return {
     title,
@@ -43,6 +44,7 @@ export async function generateMetadata({
       description,
       type: "website",
       siteName: APP_CONFIG.name,
+      url: canonicalUrl,
       locale: locale === "ar" ? "ar_AR" : locale === "fr" ? "fr_FR" : "en_US",
       images: [
         {
@@ -61,13 +63,8 @@ export async function generateMetadata({
       creator: APP_CONFIG.social.twitter.creator,
     },
     alternates: {
-      canonical: currentUrl,
-      languages: {
-        en: "/en/content",
-        ar: "/ar/content",
-        fr: "/fr/content",
-        "x-default": "/en/content",
-      },
+      canonical: canonicalUrl,
+      languages: languageAlternates,
     },
   };
 }
@@ -115,6 +112,7 @@ export default async function ContentLibraryPage({
       contentByCategory={contentByCategory}
       featuredContent={localizedFeatured}
       totalArticles={localizedContent.length}
+      currentLocale={(locale as AppLocales) ?? "en"}
     />
   );
 }

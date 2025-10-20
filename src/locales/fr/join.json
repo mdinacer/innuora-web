@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "Tests avancés",
+    "title": "Contribuez à façonner l'avenir de {{app_name}}",
+    "description": "Rejoignez notre programme de tests avancés et partagez des retours précieux pendant que nous affinons les conversations d'IA réflexive de {{app_name}}. Vos insights influencent directement la construction de cet outil de soutien émotionnel."
+  },
+  "form": {
+    "email": {
+      "label": "Adresse e-mail",
+      "placeholder": "vous@example.com",
+      "required": "L'e-mail est requis"
+    },
+    "occupation": {
+      "label": "Métier / rôle",
+      "placeholder": "ex. : ingénieure, enseignante, étudiante, etc.",
+      "helpText": "Nous aide à comprendre la diversité des perspectives et des besoins."
+    },
+    "struggles": {
+      "label": "Difficultés générales / défis émotionnels",
+      "placeholder": "Quels défis émotionnels ou quelles situations de vie souhaitez-vous explorer ? (stress professionnel, relations, prise de décision, etc.)",
+      "helpText": "Partagez ce sur quoi vous aimeriez être accompagnée ou réfléchir. Cela nous aide à comprendre vos besoins."
+    },
+    "coping": {
+      "label": "Mécanismes d’adaptation / gestion du stress",
+      "placeholder": "Comment gérez-vous actuellement le stress ou des émotions difficiles ? (journal, sport, parler à des proches, méditation, etc.)",
+      "helpText": "Comprendre vos stratégies actuelles nous aide à créer des outils complémentaires."
+    },
+    "source": {
+      "label": "Comment avez-vous entendu parler de {{app_name}} ?",
+      "placeholder": "ex. : Twitter, recommandation, article de blog, etc.",
+      "helpText": "Nous aide à savoir quelles actions de communication sont les plus efficaces."
+    },
+    "notes": {
+      "label": "Commentaires / notes supplémentaires",
+      "placeholder": "Autre chose à partager sur votre intérêt pour {{app_name}} ou vos retours sur les outils d'IA émotionnelle ?",
+      "helpText": "Partagez toute autre idée, question ou domaine spécifique à explorer durant les tests."
+    },
+    "submitButton": "Envoyer la candidature",
+    "thankYouNote": "Merci de contribuer à façonner {{app_name}}. Nous étudierons les candidatures et contacterons les testeuses retenues à mesure que nous élargissons le programme. Rappel : {{app_name}} n'est ni une thérapie ni un service de crise."
+  },
+  "messages": {
+    "success": "Candidature envoyée",
+    "pending": "Envoi en cours…",
+    "error": "Échec de l’envoi"
+  },
+  "nextSteps": {
+    "viewDemo": "Voir la démo aidante",
+    "browseLibrary": "Explorer la bibliothèque de contenus",
+    "submitAnother": "Envoyer une autre candidature"
+  }
+}

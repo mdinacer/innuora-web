@@ -5,7 +5,9 @@ import { BookOpen, Clock, Star, StarIcon } from "lucide-react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
-import { ContentCategory, ContentItem } from "@/types/content.types";
+import type { AppLocales } from "@/lib/i18n";
+import { buildLocalizedPath } from "@/lib/i18n/paths";
+import type { ContentCategory, ContentItem } from "@/types/content.types";
 
 // =========================
 // Component Props
@@ -19,6 +21,7 @@ interface CategoryLayoutProps {
   };
   content: ContentItem[];
   featuredContent: ContentItem[];
+  currentLocale: AppLocales;
 }
 
 // =========================
@@ -30,6 +33,7 @@ export default function CategoryLayout({
   categoryInfo,
   content,
   featuredContent,
+  currentLocale,
 }: CategoryLayoutProps) {
   const { t } = useTranslation("content");
 
@@ -51,7 +55,10 @@ export default function CategoryLayout({
       <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
         {/* Breadcrumb */}
         <nav className="mb-8 text-sm text-muted-foreground">
-          <Link href="/content" className="transition hover:text-primary">
+          <Link
+            href={buildLocalizedPath(currentLocale, "/content")}
+            className="transition hover:text-primary"
+          >
             {t("shared.libraryRoot")}
           </Link>
           <span className="mx-2 opacity-50">/</span>
@@ -94,7 +101,12 @@ export default function CategoryLayout({
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {featuredContent.map((item) => (
-                <ContentCard key={item.metadata.slug} item={item} featured />
+                <ContentCard
+                  key={item.metadata.slug}
+                  item={item}
+                  featured
+                  locale={currentLocale}
+                />
               ))}
             </div>
           </section>
@@ -119,7 +131,11 @@ export default function CategoryLayout({
           ) : (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {sortedContent.map((item) => (
-                <ContentCard key={item.metadata.slug} item={item} />
+                <ContentCard
+                  key={item.metadata.slug}
+                  item={item}
+                  locale={currentLocale}
+                />
               ))}
             </div>
           )}
@@ -136,15 +152,19 @@ export default function CategoryLayout({
 interface ContentCardProps {
   item: ContentItem;
   featured?: boolean;
+  locale: AppLocales;
 }
 
-function ContentCard({ item, featured = false }: ContentCardProps) {
+function ContentCard({ item, featured = false, locale }: ContentCardProps) {
   const { metadata, excerpt } = item;
   const { t } = useTranslation("content");
 
   return (
     <Link
-      href={`/content/${metadata.category}/${metadata.slug}`}
+      href={buildLocalizedPath(
+        locale,
+        `/content/${metadata.category}/${metadata.slug}`,
+      )}
       className={`group block overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_18px_40px_-24px_rgba(15,23,42,0.35)] ${
         featured ? "ring-1 ring-primary/30" : ""
       }`}

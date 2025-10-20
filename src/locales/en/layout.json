@@ -1,0 +1,36 @@
+{
+  "header": {
+    "wordmark": "Reflective intelligence",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "links": {
+      "about": "About",
+      "contact": "Contact",
+      "demo": "Demo",
+      "faq": "FAQ",
+      "features": "Features",
+      "home": "Home",
+      "join": "Join beta",
+      "library": "Library"
+    }
+  },
+  "footer": {
+    "disclaimer": {
+      "label": "Important: ",
+      "message": "{{app_name}} is not a mental health or crisis service. If you are experiencing a crisis, please reach out to your local emergency services immediately"
+    },
+    "questions": "Questions about this {{currentPage}}?",
+    "contact_email": "Contact us at ",
+    "navigationHeading": "Navigate",
+    "legalHeading": "Legal",
+    "links": {
+      "eula": "End User License Agreement",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "contact": "Contact",
+      "help": "Help",
+      "support": "Support"
+    },
+    "copyright": "© 2025 {{app_name}}. All rights reserved."
+  }
+}

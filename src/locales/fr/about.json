@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "badge": "Derrière le miroir",
+    "title": "Nous construisons l’infrastructure émotionnelle des esprits modernes",
+    "description": "{{app_name}} associe **les sciences cognitives**, **l’intelligence artificielle empathique** et **une conception axée sur la confidentialité** pour créer une technologie réflexive qui vous comprend, vous protège et évolue avec vous."
+  },
+  "mission": {
+    "title": "Notre mission",
+    "paragraphs": [
+      "Rendre la **clarté émotionnelle** accessible grâce à une intelligence qui **écoute comme un humain** et protège comme un chiffrement.",
+      "{{app_name}} existe pour aider les femmes à comprendre leurs **schémas émotionnels** et les *règles silencieuses* qui les façonnent. Derrière la performance constante se cachent *épuisement*, *culpabilité* et *pression* pour tout maintenir en place.",
+      "La vie moderne a amplifié ces exigences. Les **femmes à haut fonctionnement** portent souvent un *poids invisible* derrière une apparente maîtrise, façonné par des *attentes tacites* de perfection, de soin et de contrôle.",
+      "Notre objectif est de construire une technologie qui les aide à voir au-delà de ces *masques hérités*. Chaque réflexion transforme le **bruit social** en **lucidité personnelle**, remplaçant *l’autocritique* par **la compréhension** et *l’habitude* par **le choix conscient**."
+    ]
+  },
+  "founding": {
+    "title": "Né d’une question essentielle",
+    "body": "{{app_name}} est né d’une expérience d’**empathie numérique**. L’idée était simple : une intelligence artificielle peut-elle vraiment *écouter avec bienveillance* ? Cette question est devenue un système qui aide chacun à traduire ce qu’il ressent en **langage**, **compréhension** et **sérénité intérieure**."
+  },
+  "principles": {
+    "badge": "Ce qui guide notre conception",
+    "title": "Quatre principes définissent {{app_name}}",
+    "items": [
+      {
+        "title": "L’empathie avant la logique",
+        "body": "Chaque réflexion commence par une **validation émotionnelle**, pas une analyse."
+      },
+      {
+        "title": "La confidentialité comme psychologie",
+        "body": "Le **chiffrement à connaissance nulle** garantit la sécurité nécessaire à une authenticité totale."
+      },
+      {
+        "title": "Intelligence thérapeutique",
+        "body": "Chaque échange repose sur une **raisonnement inspiré des thérapies cognitivo-comportementales (TCC)** et une *subtilité émotionnelle*."
+      },
+      {
+        "title": "Conception au rythme humain",
+        "body": "Pensé pour la **régulation émotionnelle**, non pour la stimulation. *L’interaction calme* remplace les *boucles de distraction*."
+      }
+    ]
+  },
+  "cta": {
+    "title": "L’empathie, conçue avec précision.",
+    "description": "{{app_name}} est plus qu’une IA. C’est un **compagnon émotionnel** qui *écoute*, *reflète* et vous aide à retrouver votre propre **clarté**.",
+    "button": "Commencer la réflexion"
+  }
+}

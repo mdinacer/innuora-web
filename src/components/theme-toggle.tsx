@@ -19,6 +19,12 @@ const ThemeToggle = () => {
   if (!mounted) return null; // prevent SSR rendering mismatch
   return (
     <button
+      type="button"
+      aria-label={
+        currentTheme === "dark"
+          ? "Switch to light theme"
+          : "Switch to dark theme"
+      }
       onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
     >
       {currentTheme === "light" ? (
@@ -30,6 +36,7 @@ const ThemeToggle = () => {
           fill="currentColor"
           className="icon icon-tabler icons-tabler-filled icon-tabler-sun"
         >
+          <title>Sun icon</title>
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M12 19a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" />
           <path d="M18.313 16.91l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.218 -1.567l.102 .07z" />
@@ -50,6 +57,7 @@ const ThemeToggle = () => {
           fill="currentColor"
           className="icon icon-tabler icons-tabler-filled icon-tabler-moon"
         >
+          <title>Moon icon</title>
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M12 1.992a10 10 0 1 0 9.236 13.838c.341 -.82 -.476 -1.644 -1.298 -1.31a6.5 6.5 0 0 1 -6.864 -10.787l.077 -.08c.551 -.63 .113 -1.653 -.758 -1.653h-.266l-.068 -.006l-.06 -.002z" />
         </svg>

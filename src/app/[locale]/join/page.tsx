@@ -1,33 +1,63 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import JoinTesterForm from "@/components/tester/join-tester-form";
 import { APP_CONFIG } from "@/config/app";
-import initTranslations, { AppLocales } from "@/lib/i18n";
+import initTranslations, { type AppLocales } from "@/lib/i18n";
+import { buildLanguageAlternates, buildLocalizedUrl } from "@/lib/seo/url";
 
-export const metadata: Metadata = {
-  title: `Join Beta - ${APP_CONFIG.tagline} | ${APP_CONFIG.name}`,
-  description: `Get early access to ${APP_CONFIG.name}, the AI emotional companion for high-functioning women. Join the beta program for burnout recovery, emotional clarity, and overwhelm support.`,
-  keywords: [
-    "emotional burnout support beta",
-    "women burnout recovery app beta",
-    "high-functioning women support beta",
-    "AI emotional companion beta",
-    "emotional overwhelm relief beta",
-    "perfectionist burnout help beta",
-    "safe space for women beta",
-    "emotional clarity app beta",
-    "support for overwhelmed women beta",
-    "emotional companion for women beta",
-  ],
-  alternates: {
-    canonical: `${APP_CONFIG.domains.primary}/join`, // Default locale, no prefix
-    languages: {
-      en: `${APP_CONFIG.domains.primary}/join`, // Default locale, no prefix
-      fr: `${APP_CONFIG.domains.primary}/fr/join`,
-      ar: `${APP_CONFIG.domains.primary}/ar/join`,
-      "x-default": `${APP_CONFIG.domains.primary}/join`, // Default uses English (no prefix)
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale = "en" } = await params;
+
+  const title = `Join Beta - ${APP_CONFIG.tagline} | ${APP_CONFIG.name}`;
+  const description = `Get early access to ${APP_CONFIG.name}, the AI emotional companion for high-functioning women. Join the beta program for burnout recovery, emotional clarity, and overwhelm support.`;
+  const canonicalUrl = buildLocalizedUrl(locale, "/join");
+  const languageAlternates = buildLanguageAlternates("/join");
+
+  return {
+    title,
+    description,
+    keywords: [
+      "emotional burnout support beta",
+      "women burnout recovery app beta",
+      "high-functioning women support beta",
+      "AI emotional companion beta",
+      "emotional overwhelm relief beta",
+      "perfectionist burnout help beta",
+      "safe space for women beta",
+      "emotional clarity app beta",
+      "support for overwhelmed women beta",
+      "emotional companion for women beta",
+    ],
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      siteName: APP_CONFIG.name,
+      images: [
+        {
+          url: `${APP_CONFIG.domains.canonical}/og/innuora-cover.png`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
     },
-  },
-};
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [`${APP_CONFIG.domains.canonical}/og/innuora-cover.png`],
+      creator: APP_CONFIG.social.twitter.creator,
+    },
+    alternates: {
+      canonical: canonicalUrl,
+      languages: languageAlternates,
+    },
+  };
+}
 
 export default async function TesterJoinRoute({
   params,
@@ -35,56 +65,56 @@ export default async function TesterJoinRoute({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale = "en" } = await params;
-  const { t } = await initTranslations(locale, ["pages", "common"]);
+  const { t } = await initTranslations(locale, ["join", "common"]);
   const formCopy = {
     labels: {
       email: {
-        label: t("advancedTester.form.email.label"),
-        placeholder: t("advancedTester.form.email.placeholder"),
-        required: t("advancedTester.form.email.required"),
+        label: t("form.email.label"),
+        placeholder: t("form.email.placeholder"),
+        required: t("form.email.required"),
       },
       occupation: {
-        label: t("advancedTester.form.occupation.label"),
-        placeholder: t("advancedTester.form.occupation.placeholder"),
-        helpText: t("advancedTester.form.occupation.helpText"),
+        label: t("form.occupation.label"),
+        placeholder: t("form.occupation.placeholder"),
+        helpText: t("form.occupation.helpText"),
       },
       struggles: {
-        label: t("advancedTester.form.struggles.label"),
-        placeholder: t("advancedTester.form.struggles.placeholder"),
-        helpText: t("advancedTester.form.struggles.helpText"),
+        label: t("form.struggles.label"),
+        placeholder: t("form.struggles.placeholder"),
+        helpText: t("form.struggles.helpText"),
       },
       coping: {
-        label: t("advancedTester.form.coping.label"),
-        placeholder: t("advancedTester.form.coping.placeholder"),
-        helpText: t("advancedTester.form.coping.helpText"),
+        label: t("form.coping.label"),
+        placeholder: t("form.coping.placeholder"),
+        helpText: t("form.coping.helpText"),
       },
       source: {
-        label: t("advancedTester.form.source.label", {
+        label: t("form.source.label", {
           app_name: APP_CONFIG.name,
         }),
-        placeholder: t("advancedTester.form.source.placeholder"),
-        helpText: t("advancedTester.form.source.helpText"),
+        placeholder: t("form.source.placeholder"),
+        helpText: t("form.source.helpText"),
       },
       notes: {
-        label: t("advancedTester.form.notes.label"),
-        placeholder: t("advancedTester.form.notes.placeholder", {
+        label: t("form.notes.label"),
+        placeholder: t("form.notes.placeholder", {
           app_name: APP_CONFIG.name,
         }),
-        helpText: t("advancedTester.form.notes.helpText"),
+        helpText: t("form.notes.helpText"),
       },
-      submitButton: t("advancedTester.form.submitButton"),
+      submitButton: t("form.submitButton"),
     },
     messages: {
-      successTitle: t("advancedTester.messages.success"),
-      error: t("advancedTester.messages.error"),
-      thankYou: t("advancedTester.form.thankYouNote", {
+      successTitle: t("messages.success"),
+      error: t("messages.error"),
+      thankYou: t("form.thankYouNote", {
         app_name: APP_CONFIG.name,
       }),
     },
     nextSteps: {
-      viewDemo: t("advancedTester.nextSteps.viewDemo"),
-      browseLibrary: t("advancedTester.nextSteps.browseLibrary"),
-      submitAnother: t("advancedTester.nextSteps.submitAnother"),
+      viewDemo: t("nextSteps.viewDemo"),
+      browseLibrary: t("nextSteps.browseLibrary"),
+      submitAnother: t("nextSteps.submitAnother"),
     },
   };
 
@@ -92,13 +122,13 @@ export default async function TesterJoinRoute({
     <main className="mt-20 min-h-screen w-full bg-background pb-24">
       <section className="mx-auto max-w-4xl px-6 py-12 text-center">
         <p className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-primary">
-          {t("advancedTester.hero.badge")}
+          {t("hero.badge")}
         </p>
         <h1 className="mt-4 text-3xl font-serif-brand leading-tight md:text-5xl">
-          {t("advancedTester.hero.title", { app_name: APP_CONFIG.name })}
+          {t("hero.title", { app_name: APP_CONFIG.name })}
         </h1>
         <p className="mt-4 text-lg text-muted-foreground">
-          {t("advancedTester.hero.description", { app_name: APP_CONFIG.name })}
+          {t("hero.description", { app_name: APP_CONFIG.name })}
         </p>
       </section>
 

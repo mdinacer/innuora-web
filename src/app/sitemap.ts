@@ -1,5 +1,5 @@
-import { MetadataRoute } from "next";
-import { Languages } from "next/dist/lib/metadata/types/alternative-urls-types";
+import type { MetadataRoute } from "next";
+import type { Languages } from "next/dist/lib/metadata/types/alternative-urls-types";
 
 import { APP_CONFIG } from "@/config/app";
 import { initializeContentRegistry } from "@/lib/content/content-loader";
@@ -7,7 +7,7 @@ import { contentRegistry } from "@/lib/content/content-registry";
 import { SEOGenerator } from "@/lib/content/seo-generator";
 
 function withTrailingSlash(path: string) {
-  return path.endsWith("/") ? path : path + "/";
+  return path.endsWith("/") ? path : `${path}/`;
 }
 
 //const baseUrl = APP_CONFIG.domains.primary;
@@ -17,6 +17,9 @@ const routes = [
   { path: "", changeFrequency: "weekly", priority: 1 },
   { path: "/join", changeFrequency: "weekly", priority: 0.9 },
   { path: "/demo", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/features", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/about", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/contact", changeFrequency: "monthly", priority: 0.7 },
   { path: "/content", changeFrequency: "weekly", priority: 0.9 },
   { path: "/faq", changeFrequency: "monthly", priority: 0.7 },
   { path: "/privacy", changeFrequency: "monthly", priority: 0.5 },
@@ -40,7 +43,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     locales.map((locale) => {
       const routePath = route.path.startsWith("/")
         ? route.path
-        : "/" + route.path;
+        : `/${route.path}`;
       const isHomepage = routePath === "/" || routePath === "";
 
       // For English (default locale with prefixDefault: false), don't add /en/ prefix

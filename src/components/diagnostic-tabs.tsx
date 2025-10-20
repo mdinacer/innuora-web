@@ -1,7 +1,7 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import React from "react";
+import { cn } from "@/lib/utils";
 
 interface Props {
   basicLabel?: string;
@@ -23,6 +23,7 @@ const DiagnosticsTabs: React.FC<Props> = ({
     <>
       <div className={cn("tab-buttons flex flex-wrap gap-3")}>
         <button
+          type="button"
           onClick={() => setSelectedTab("basic")}
           className={cn(
             "active px-4 py-2 rounded-md bg-card shadow-soft text-sm border-b",
@@ -37,6 +38,7 @@ const DiagnosticsTabs: React.FC<Props> = ({
           {basicLabel}
         </button>
         <button
+          type="button"
           onClick={() => setSelectedTab("advanced")}
           className={cn(
             "active px-4 py-2 rounded-md bg-card shadow-soft text-sm border-b",

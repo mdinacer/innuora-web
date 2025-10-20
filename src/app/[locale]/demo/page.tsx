@@ -1,12 +1,14 @@
-import { Metadata } from "next";
-import DiagnosticsTabs from "@/components/diagnostic-tabs";
-import { APP_CONFIG } from "@/config/app";
-import initTranslations from "@/lib/i18n";
-import { cn } from "@/lib/utils";
-import { BotIcon, BrainCircuitIcon, UserIcon } from "lucide-react";
+import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
+import { BotIcon, BrainCircuitIcon, UserIcon } from "lucide-react";
+
+import DiagnosticsTabs from "@/components/diagnostic-tabs";
+import { APP_CONFIG } from "@/config/app";
+import initTranslations from "@/lib/i18n";
+import { buildLanguageAlternates, buildLocalizedUrl } from "@/lib/seo/url";
+import { cn } from "@/lib/utils";
 
 // SEO Metadata
 export async function generateMetadata({
@@ -15,14 +17,13 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale = "en" } = await params;
-  const { t } = await initTranslations(locale, ["seo", "pages"]);
+  const { t } = await initTranslations(locale, ["seo", "demo"]);
 
   const title = t("seo:demo.title", { app_name: APP_CONFIG.name });
   const description = t("seo:demo.description", { app_name: APP_CONFIG.name });
 
-  // Build locale-aware URLs (respecting prefixDefault: false for English)
-  const localePrefix = locale === "en" ? "" : `/${locale}`;
-  const currentUrl = `${localePrefix}/demo`;
+  const canonicalUrl = buildLocalizedUrl(locale, "/demo");
+  const languageAlternates = buildLanguageAlternates("/demo");
 
   return {
     title,
@@ -40,7 +41,7 @@ export async function generateMetadata({
       description,
       type: "website",
       siteName: APP_CONFIG.name,
-      url: currentUrl,
+      url: canonicalUrl,
       locale: locale === "ar" ? "ar_AR" : locale === "fr" ? "fr_FR" : "en_US",
       images: [
         {
@@ -59,13 +60,8 @@ export async function generateMetadata({
       creator: APP_CONFIG.social.twitter.creator,
     },
     alternates: {
-      canonical: currentUrl,
-      languages: {
-        en: "/demo", // Default locale, no prefix
-        ar: "/ar/demo",
-        fr: "/fr/demo",
-        "x-default": "/demo", // Default uses English (no prefix)
-      },
+      canonical: canonicalUrl,
+      languages: languageAlternates,
     },
   };
 }
@@ -119,70 +115,70 @@ export default async function Page({
 }>) {
   const { locale = "en" } = await params;
 
-  const { t } = await initTranslations(locale, ["pages"]);
+  const { t } = await initTranslations(locale, ["demo"]);
   const { messages, meta, conversation, highlights, diagnostics, cta } = {
-    messages: (t("demo.messages", { returnObjects: true, defaultValue: "" }) ||
+    messages: (t("messages", { returnObjects: true, defaultValue: "" }) ||
       []) as Message[],
     meta: {
-      badge: t("demo.meta.badge"),
-      title: t("demo.meta.title"),
-      description: t("demo.meta.description", {
+      badge: t("meta.badge"),
+      title: t("meta.title"),
+      description: t("meta.description", {
         app_name: APP_CONFIG.name,
       }),
     },
     conversation: {
-      badge: t("demo.conversation.badge"),
-      title: t("demo.conversation.title"),
-      description: t("demo.conversation.description", {
+      badge: t("conversation.badge"),
+      title: t("conversation.title"),
+      description: t("conversation.description", {
         app_name: APP_CONFIG.name,
       }),
-      userReflection: t("demo.conversation.userReflection"),
-      appVerbatim: t("demo.conversation.appVerbatim", {
+      userReflection: t("conversation.userReflection"),
+      appVerbatim: t("conversation.appVerbatim", {
         app_name: APP_CONFIG.name,
       }),
-      vs: t("demo.conversation.vs"),
-      vsLabel: t("demo.conversation.vsLabel"),
-      genericProductivity: t("demo.conversation.genericProductivity"),
-      genericWellness: t("demo.conversation.genericWellness"),
+      vs: t("conversation.vs"),
+      vsLabel: t("conversation.vsLabel"),
+      genericProductivity: t("conversation.genericProductivity"),
+      genericWellness: t("conversation.genericWellness"),
     },
     highlights: {
-      badge: t("demo.highlights.badge"),
-      title: t("demo.highlights.title"),
-      items: (t("demo.highlights.items", {
+      badge: t("highlights.badge"),
+      title: t("highlights.title"),
+      items: (t("highlights.items", {
         returnObjects: true,
         defaultValue: "",
         app_name: APP_CONFIG.name,
       }) || []) as { title: string; body: string }[],
     },
     diagnostics: {
-      badge: t("demo.diagnostics.badge"),
-      title: t("demo.diagnostics.title"),
-      description: t("demo.diagnostics.description"),
+      badge: t("diagnostics.badge"),
+      title: t("diagnostics.title"),
+      description: t("diagnostics.description"),
       labels: {
         rigidity: {
-          rigid: t("demo.diagnostics.labels.rigidity.rigid"),
-          moderate: t("demo.diagnostics.labels.rigidity.moderate"),
-          flexible: t("demo.diagnostics.labels.rigidity.flexible"),
+          rigid: t("diagnostics.labels.rigidity.rigid"),
+          moderate: t("diagnostics.labels.rigidity.moderate"),
+          flexible: t("diagnostics.labels.rigidity.flexible"),
         },
         confidence: {
-          high: t("demo.diagnostics.labels.confidence.high"),
-          medium: t("demo.diagnostics.labels.confidence.medium"),
-          low: t("demo.diagnostics.labels.confidence.low"),
+          high: t("diagnostics.labels.confidence.high"),
+          medium: t("diagnostics.labels.confidence.medium"),
+          low: t("diagnostics.labels.confidence.low"),
         },
       },
-      confidence: t("demo.diagnostics.confidence"),
+      confidence: t("diagnostics.confidence"),
       basic: {
-        title: t("demo.diagnostics.basic.title"),
+        title: t("diagnostics.basic.title"),
         now: {
-          title: t("demo.diagnostics.basic.now.title"),
-          points: (t("demo.diagnostics.basic.now.points", {
+          title: t("diagnostics.basic.now.title"),
+          points: (t("diagnostics.basic.now.points", {
             returnObjects: true,
             defaultValue: "",
           }) || []) as string[],
         },
         rules: {
-          title: t("demo.diagnostics.basic.rules.title"),
-          items: (t("demo.diagnostics.basic.rules.items", {
+          title: t("diagnostics.basic.rules.title"),
+          items: (t("diagnostics.basic.rules.items", {
             returnObjects: true,
             defaultValue: "",
           }) || []) as {
@@ -193,61 +189,61 @@ export default async function Page({
           }[],
         },
         why: {
-          title: t("demo.diagnostics.basic.why.title"),
+          title: t("diagnostics.basic.why.title"),
           item: {
-            title: t("demo.diagnostics.basic.why.item.title"),
-            body: t("demo.diagnostics.basic.why.item.body"),
+            title: t("diagnostics.basic.why.item.title"),
+            body: t("diagnostics.basic.why.item.body"),
           },
         },
         meta: {
-          title: t("demo.diagnostics.basic.meta.title"),
+          title: t("diagnostics.basic.meta.title"),
           item: {
-            title: t("demo.diagnostics.basic.meta.item.title"),
-            body: t("demo.diagnostics.basic.meta.item.body"),
+            title: t("diagnostics.basic.meta.item.title"),
+            body: t("diagnostics.basic.meta.item.body"),
           },
         },
 
         leverage: {
-          title: t("demo.diagnostics.basic.leverage.title"),
-          points: (t("demo.diagnostics.basic.leverage.points", {
+          title: t("diagnostics.basic.leverage.title"),
+          points: (t("diagnostics.basic.leverage.points", {
             returnObjects: true,
             defaultValue: "",
           }) || []) as string[],
         },
 
         start: {
-          title: t("demo.diagnostics.basic.start.title"),
-          points: (t("demo.diagnostics.basic.start.points", {
+          title: t("diagnostics.basic.start.title"),
+          points: (t("diagnostics.basic.start.points", {
             returnObjects: true,
             defaultValue: "",
           }) || []) as string[],
         },
         resources: {
-          title: t("demo.diagnostics.basic.resources.title"),
-          points: (t("demo.diagnostics.basic.resources.points", {
+          title: t("diagnostics.basic.resources.title"),
+          points: (t("diagnostics.basic.resources.points", {
             returnObjects: true,
             defaultValue: "",
           }) || []) as string[],
         },
       },
       advanced: {
-        title: t("demo.diagnostics.advanced.title"),
+        title: t("diagnostics.advanced.title"),
         state: {
-          title: t("demo.diagnostics.advanced.state.title"),
+          title: t("diagnostics.advanced.state.title"),
           labels: {
-            primary: t("demo.diagnostics.advanced.state.labels.primary"),
-            secondary: t("demo.diagnostics.advanced.state.labels.secondary"),
-            risk: t("demo.diagnostics.advanced.state.labels.risk"),
+            primary: t("diagnostics.advanced.state.labels.primary"),
+            secondary: t("diagnostics.advanced.state.labels.secondary"),
+            risk: t("diagnostics.advanced.state.labels.risk"),
           },
           values: {
-            primary: t("demo.diagnostics.advanced.state.values.primary"),
-            secondary: t("demo.diagnostics.advanced.state.values.secondary"),
-            risk_body: t("demo.diagnostics.advanced.state.values.risk_body"),
+            primary: t("diagnostics.advanced.state.values.primary"),
+            secondary: t("diagnostics.advanced.state.values.secondary"),
+            risk_body: t("diagnostics.advanced.state.values.risk_body"),
           },
         },
         themes: {
-          title: t("demo.diagnostics.advanced.themes.title"),
-          items: (t("demo.diagnostics.advanced.themes.items", {
+          title: t("diagnostics.advanced.themes.title"),
+          items: (t("diagnostics.advanced.themes.items", {
             returnObjects: true,
             defaultValue: "",
           }) || []) as {
@@ -258,52 +254,50 @@ export default async function Page({
           }[],
         },
         distortions: {
-          title: t("demo.diagnostics.advanced.distortions.title"),
-          items: t("demo.diagnostics.advanced.distortions.items", {
+          title: t("diagnostics.advanced.distortions.title"),
+          items: t("diagnostics.advanced.distortions.items", {
             returnObjects: true,
           }) as string[],
         },
         therapist_focus: {
-          title: t("demo.diagnostics.advanced.therapist_focus.title"),
-          points: t("demo.diagnostics.advanced.therapist_focus.points", {
+          title: t("diagnostics.advanced.therapist_focus.title"),
+          points: t("diagnostics.advanced.therapist_focus.points", {
             returnObjects: true,
           }) as string[],
         },
         clinical_interpretations: {
-          title: t("demo.diagnostics.advanced.clinical_interpretations.title"),
-          points: t(
-            "demo.diagnostics.advanced.clinical_interpretations.points",
-            { returnObjects: true },
-          ) as string[],
+          title: t("diagnostics.advanced.clinical_interpretations.title"),
+          points: t("diagnostics.advanced.clinical_interpretations.points", {
+            returnObjects: true,
+          }) as string[],
         },
         treatment_recommendations: {
-          title: t("demo.diagnostics.advanced.treatment_recommendations.title"),
-          points: t(
-            "demo.diagnostics.advanced.treatment_recommendations.points",
-            { returnObjects: true },
-          ) as string[],
+          title: t("diagnostics.advanced.treatment_recommendations.title"),
+          points: t("diagnostics.advanced.treatment_recommendations.points", {
+            returnObjects: true,
+          }) as string[],
         },
         professional_language: {
-          title: t("demo.diagnostics.advanced.professional_language.title"),
-          points: t("demo.diagnostics.advanced.professional_language.points", {
+          title: t("diagnostics.advanced.professional_language.title"),
+          points: t("diagnostics.advanced.professional_language.points", {
             returnObjects: true,
           }) as string[],
         },
         clinical_insights: {
-          title: t("demo.diagnostics.advanced.clinical_insights.title"),
-          points: t("demo.diagnostics.advanced.clinical_insights.points", {
+          title: t("diagnostics.advanced.clinical_insights.title"),
+          points: t("diagnostics.advanced.clinical_insights.points", {
             returnObjects: true,
           }) as string[],
         },
       },
     },
     cta: {
-      title: t("demo.cta.title", {
+      title: t("cta.title", {
         app_name: APP_CONFIG.name,
       }),
-      description: t("demo.cta.description"),
-      button: t("demo.cta.button"),
-      disclaimer: t("demo.cta.disclaimer"),
+      description: t("cta.description"),
+      button: t("cta.button"),
+      disclaimer: t("cta.disclaimer"),
     },
   };
 
@@ -312,9 +306,9 @@ export default async function Page({
   const quickLinks = [
     { href: "#conversation", label: conversation.badge },
     { href: "#highlights", label: highlights.badge },
-    { href: "#analytics", label: t("demo.chart.header.badge") },
+    { href: "#analytics", label: t("chart.header.badge") },
     { href: "#diagnostics", label: diagnostics.badge },
-    { href: "#cta", label: t("demo.cta.button") },
+    { href: "#cta", label: t("cta.button") },
   ];
 
   const renderMessageCard = (

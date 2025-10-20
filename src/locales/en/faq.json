@@ -1,0 +1,235 @@
+{
+  "badge": "Support & Transparency",
+  "title": "Frequently Asked Questions",
+  "subtitle": "Everything you need to know about {{app_name}}, how it listens, protects, and stays human in its intelligence.",
+  "sections": {
+    "audience": {
+      "badge": "Users",
+      "title": "Who {{app_name}} is for",
+      "items": [
+        {
+          "question": "Who are high-functioning women?",
+          "answer": "They are women who appear calm, capable, and composed on the outside, yet carry silent pressure within. Often leaders, caregivers, founders, or perfectionists, they move through life performing strength while feeling unseen or emotionally drained beneath it all."
+        },
+        {
+          "question": "Why was {{app_name}} built for them?",
+          "answer": "{{app_name}} was created to offer **psychological clarity without performance pressure**, a space that listens between the lines instead of demanding productivity or positivity. It helps high-functioning women slow down, name their truth, and reconnect with emotional safety."
+        },
+        {
+          "question": "Can anyone use {{app_name}}?",
+          "answer": "Yes. While {{app_name}} was designed around women’s lived experiences, its reflections are inclusive. Anyone seeking calm, grounded self-awareness can benefit from its design."
+        }
+      ]
+    },
+    "general": {
+      "badge": "About",
+      "title": "Understanding {{app_name}}",
+      "items": [
+        {
+          "question": "What is {{app_name}}?",
+          "answer": "{{app_name}} is an **AI-driven emotional reflection platform** built for high-functioning women experiencing burnout, pressure, and perfectionism. It does not diagnose; it reflects. It listens beneath words, identifies patterns, and helps you meet yourself with calm intelligence."
+        },
+        {
+          "question": "Who is it designed for?",
+          "answer": "{{app_name}} is for women who appear composed but feel emotionally exhausted underneath, including founders, caregivers, and professionals, or anyone constantly *on*. It is a safe reflection companion, not a motivational coach."
+        },
+        {
+          "question": "Is it therapy?",
+          "answer": "No. {{app_name}} is **not therapy or a crisis service**. It is a cognitive-behavioral reflection environment that supports emotional awareness, not treatment. It complements therapy by surfacing clarity you can bring into your sessions."
+        },
+        {
+          "question": "How is it different from chatbots or journaling apps?",
+          "answer": "- Emotionally attuned, not conversationally generic\n- CBT-informed insight modules built from therapeutic logic\n- Adaptive memory that preserves emotional continuity\n- Zero-knowledge encryption for total privacy"
+        }
+      ]
+    },
+    "use": {
+      "badge": "Use",
+      "title": "Using {{app_name}} day to day",
+      "items": [
+        {
+          "question": "How do I start a session?",
+          "answer": "Create an account, choose a credit package, and begin a **Reflection Session**. You simply write. {{app_name}} listens, analyzes, and mirrors emotional and cognitive signals in real time."
+        },
+        {
+          "question": "How long can sessions last?",
+          "answer": "Sessions have **no time limit**. Some users reflect for five minutes, others engage for an hour. Each session automatically pauses and resumes, preserving continuity and context."
+        },
+        {
+          "question": "Can I have multiple sessions?",
+          "answer": "Yes. You can create **separate sessions** for different themes such as work, relationships, or burnout patterns. Each maintains its own encrypted context and analytic memory."
+        },
+        {
+          "question": "Can I share my insights?",
+          "answer": "Yes. You can export summaries or diagnostics as **shareable PDFs or JSON files** for therapy, coaching, or personal reflection. Data never leaves encrypted storage until you choose to share it."
+        }
+      ]
+    },
+    "method": {
+      "badge": "Methodology",
+      "title": "How {{app_name}} thinks and listens",
+      "items": [
+        {
+          "question": "What psychological frameworks does it use?",
+          "answer": "{{app_name}} is grounded in **Cognitive Behavioral Therapy (CBT)** and the **Burns methodology**, focusing on cognitive distortions, thought reframing, and emotional labeling through gentle guidance."
+        },
+        {
+          "question": "Does it adapt to me over time?",
+          "answer": "Yes. Each reflection subtly trains an adaptive context model that learns your tone, themes, and emotional baselines, which allows more accurate and human-like resonance over time."
+        },
+        {
+          "question": "Does it ever push advice?",
+          "answer": "No. It guides through **reflective questions, not prescriptions**. The tone is grounded, gentle, and always peer-to-peer, never directive or diagnostic."
+        },
+        {
+          "question": "Can it detect emotional risk?",
+          "answer": "Yes. {{app_name}} includes **crisis detection logic** that identifies high-risk language and responds with grounding and professional resource links, without breaking encryption."
+        }
+      ]
+    },
+    "philosophy": {
+      "badge": "Philosophy",
+      "title": "Our Design Boundaries Are Intentional",
+      "items": [
+        {
+          "question": "Why doesn’t {{app_name}} send reminders or notifications?",
+          "answer": "Because **clarity cannot be scheduled**. We will never interrupt your life to pull you back into the app. You decide when to reflect, when to pause, and when to move on. {{app_name}} honors your autonomy. Silence is part of the design."
+        },
+        {
+          "question": "Why no progress badges, streaks, or gamification?",
+          "answer": "Your **emotional clarity is not a game**. We do not quantify your inner world or turn healing into points. The goal is self-connection, not performance. {{app_name}} measures nothing except how deeply you meet yourself."
+        },
+        {
+          "question": "Is {{app_name}} a journaling app?",
+          "answer": "No. There are excellent tools built for journaling. {{app_name}} is not one of them. We do not store blank pages. We engage with your words in real time and help you decode what they reveal beneath the surface."
+        },
+        {
+          "question": "Why so few interface distractions?",
+          "answer": "Because **quiet is intelligence**. Every pixel, color, and animation in {{app_name}} exists to stay out of your way. No confetti, no prompts, no streak counters. Just presence, privacy, and precision."
+        },
+        {
+          "question": "Does {{app_name}} push me toward goals?",
+          "answer": "Never. We are not a life coach or a behavior tracker. {{app_name}} does not prescribe paths. It clarifies what is already true, so that your next step comes from awareness, not pressure."
+        },
+        {
+          "question": "What is the philosophy behind these boundaries?",
+          "answer": "{{app_name}} was built on **restraint**. It is designed to protect mental space, not occupy it. The absence of reminders, scores, or gamified dopamine loops is not omission. It is discipline. We believe your stillness is sacred data, not engagement lost."
+        }
+      ]
+    },
+    "privacy": {
+      "badge": "Privacy",
+      "title": "Your reflections are yours alone",
+      "items": [
+        {
+          "question": "Can anyone read my sessions?",
+          "answer": "No. Every reflection you write is **encrypted on your device** before it ever leaves it. Only you hold the keys to unlock your data, not {{app_name}}, not our servers, not even our engineers. Your sessions remain fully private through a **zero-knowledge architecture** designed to make access impossible by anyone but you."
+        },
+        {
+          "question": "Does {{app_name}} use my data to train models?",
+          "answer": "Never. Training data excludes user reflections entirely. The system learns adaptively within your session but never exports or aggregates content into external datasets."
+        },
+        {
+          "question": "Can I restore my data if I forget my password?",
+          "answer": "No. Because only you hold your encryption key, {{app_name}} cannot recover lost passwords or decrypt past reflections. This ensures that no one, not even us, can access your data without your explicit key. Think of it as the price of **absolute privacy**. What is yours stays only yours."
+        },
+        {
+          "question": "What happens when I delete my account?",
+          "answer": "All encrypted sessions, keys, and metadata are permanently destroyed within **30 days**, in compliance with GDPR and CCPA regulations. Deletion is irreversible. Once erased, nothing can be restored."
+        },
+        {
+          "question": "Can I choose local-only mode?",
+          "answer": "Yes. You can disable cloud sync and store reflections only on your device. This disables multi-device access but ensures **full offline privacy**. Your data never touches a server."
+        },
+        {
+          "question": "Why does {{app_name}} allow only one active session per user?",
+          "answer": "For your safety and privacy. When you sign in on a new device, {{app_name}} automatically signs out all others. This **one-session rule** ensures your encrypted reflections are not accessible from multiple locations at once. It reduces risk and reinforces the principle of **emotional containment**. {{app_name}} is designed to hold space for one mind at a time: yours."
+        }
+      ]
+    },
+    "security": {
+      "badge": "Security",
+      "title": "Architected for protection",
+      "items": [
+        {
+          "question": "Where is data stored?",
+          "answer": "All reflections are stored in **encrypted form** within secure, privacy-compliant infrastructure based in the European Union. Systems meet globally recognized information security and data protection standards."
+        },
+        {
+          "question": "How is authentication handled?",
+          "answer": "Authentication follows **modern, rate-limited identity protocols** with enforced multi-factor verification for administrative access. Your credentials and session data remain fully encrypted."
+        },
+        {
+          "question": "Does {{app_name}} comply with GDPR?",
+          "answer": "Yes. {{app_name}} complies with **GDPR** and **CCPA**, supporting your rights to access, erasure, portability, and data minimization. Information is processed only for its intended purpose."
+        },
+        {
+          "question": "What if there is a data breach?",
+          "answer": "Even in the unlikely event of a system compromise, **zero-knowledge encryption** ensures that reflections remain unreadable. Any incident would be disclosed transparently and handled in accordance with international data protection standards."
+        }
+      ]
+    },
+    "billing": {
+      "badge": "Billing",
+      "title": "Credits, costs, and fairness",
+      "items": [
+        {
+          "question": "How does credit usage work?",
+          "answer": "Each reflection uses credits based on analytical depth. **Pricing transparency** is displayed before you send each message, so you always know what you will spend."
+        },
+        {
+          "question": "Are there hidden fees or subscriptions?",
+          "answer": "None. You pay only when you engage. **Credits never expire** and can be topped up whenever you need them."
+        },
+        {
+          "question": "Is billing secure?",
+          "answer": "All payments are processed through **certified global payment providers** that meet the highest financial data security standards. {{app_name}} never stores card details."
+        },
+        {
+          "question": "Do I receive receipts?",
+          "answer": "Yes. Receipts are automatically emailed and archived in your account history for full transparency."
+        }
+      ]
+    },
+    "tech": {
+      "badge": "Technical",
+      "title": "Platform and accessibility",
+      "items": [
+        {
+          "question": "Is {{app_name}} mobile-friendly?",
+          "answer": "Yes. {{app_name}} works seamlessly on mobile, tablet, and desktop. It is designed for calm reflection wherever you are."
+        },
+        {
+          "question": "Does it work offline?",
+          "answer": "You can read past reflections without an internet connection. Generating new reflections requires connectivity."
+        },
+        {
+          "question": "What languages are supported?",
+          "answer": "{{app_name}} supports **English (EN)**, **French (FR)**, and **Arabic (AR)** with full right-to-left support for Arabic. Additional languages are in development."
+        },
+        {
+          "question": "Can I use it across devices?",
+          "answer": "Yes. You can access your reflections securely across devices, with **end-to-end encryption** ensuring continuity and protection."
+        }
+      ]
+    },
+    "support": {
+      "badge": "Support",
+      "title": "Help and contact",
+      "items": [
+        {
+          "question": "How do I reach support?",
+          "answer": "Reach us anytime at [**support@{{app_name}}.com**](mailto:support@{{app_name}}.com). We typically respond within **24 to 48 business hours**."
+        },
+        {
+          "question": "What if I encounter a bug?",
+          "answer": "Send us a brief description of what happened, including your device and browser. Critical issues are prioritized immediately."
+        },
+        {
+          "question": "Can I suggest a feature?",
+          "answer": "Yes. We welcome feedback that aligns with {{app_name}} values of **ethical intelligence** and **emotional clarity**. Many user ideas have already shaped the platform."
+        }
+      ]
+    }
+  }
+}

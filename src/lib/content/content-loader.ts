@@ -1,12 +1,9 @@
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 import matter from "gray-matter";
 
-import {
-  ContentCategory,
-  ContentCategorySchema,
-  ContentMetadata,
-} from "@/types/content.types";
+import type { ContentCategory, ContentMetadata } from "@/types/content.types";
+import { ContentCategorySchema } from "@/types/content.types";
 import { contentRegistry } from "./content-registry";
 
 /* eslint-disable @typescript-eslint/no-use-before-define */
@@ -356,6 +353,19 @@ function normalizeLocale(locale: string): SupportedContentLocale {
 /**
  * Fallback: Load from taxonomy (legacy behavior)
  */
+type TaxonomyArticle = {
+  title: string;
+  slug: string;
+  intent: string;
+  keywords: string[];
+};
+
+type TaxonomyCategory = {
+  searchVolume: number;
+  priority?: string;
+  articles: TaxonomyArticle[];
+};
+
 async function initializeFromTaxonomy(): Promise<void> {
   try {
     // Import the content taxonomy
@@ -367,8 +377,9 @@ async function initializeFromTaxonomy(): Promise<void> {
     Object.entries(taxonomy.contentTaxonomy.primaryCategories).forEach(
       ([categoryKey, categoryData]) => {
         const category = categoryKey as ContentCategory;
+        const typedCategory = categoryData as TaxonomyCategory;
 
-        categoryData.articles.forEach((articleData: any) => {
+        typedCategory.articles.forEach((articleData) => {
           const metadata: ContentMetadata = {
             title: articleData.title,
             description: `Learn about ${articleData.title.toLowerCase()}`,
@@ -377,8 +388,8 @@ async function initializeFromTaxonomy(): Promise<void> {
             contentType: "article",
             intent: mapIntent(articleData.intent),
             keywords: articleData.keywords,
-            searchVolume: categoryData.searchVolume,
-            priority: categoryData.priority === "high" ? "high" : "medium",
+            searchVolume: typedCategory.searchVolume,
+            priority: typedCategory.priority === "high" ? "high" : "medium",
             featured: false,
             readingTime: estimateReadingTime(articleData.title),
             draft: true, // All content starts as draft until written
@@ -492,7 +503,7 @@ function inferTargetEmotions(category: ContentCategory): string[] {
   return emotionMap[category] || [];
 }
 
-function generateExcerpt(title: string, category: ContentCategory): string {
+function generateExcerpt(_title: string, category: ContentCategory): string {
   const categoryDescriptions: Record<ContentCategory, string> = {
     "cognitive-behavioral-therapy": "evidence-based CBT techniques",
     "anxiety-management": "practical anxiety relief strategies",

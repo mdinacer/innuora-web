@@ -1,8 +1,9 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { APP_CONFIG, EMAIL_ADDRESSES } from "@/config/app";
 import initTranslations from "@/lib/i18n";
+import { buildLanguageAlternates, buildLocalizedUrl } from "@/lib/seo/url";
 import { cn } from "@/lib/utils";
-import { Metadata } from "next";
-import Link from "next/link";
 
 // SEO Metadata
 export async function generateMetadata({
@@ -18,9 +19,8 @@ export async function generateMetadata({
     app_name: APP_CONFIG.name,
   });
 
-  // Build locale-aware URLs (respecting prefixDefault: false for English)
-  const localePrefix = locale === "en" ? "" : `/${locale}`;
-  const currentUrl = `${localePrefix}/contact`;
+  const canonicalUrl = buildLocalizedUrl(locale, "/contact");
+  const languageAlternates = buildLanguageAlternates("/contact");
 
   return {
     title,
@@ -43,7 +43,7 @@ export async function generateMetadata({
       description,
       type: "website",
       siteName: APP_CONFIG.name,
-      url: currentUrl,
+      url: canonicalUrl,
       locale: locale === "ar" ? "ar_AR" : locale === "fr" ? "fr_FR" : "en_US",
       images: [
         {
@@ -62,13 +62,8 @@ export async function generateMetadata({
       creator: APP_CONFIG.social.twitter.creator,
     },
     alternates: {
-      canonical: currentUrl,
-      languages: {
-        en: "/contact", // Default locale, no prefix
-        ar: "/ar/contact",
-        fr: "/fr/contact",
-        "x-default": "/contact", // Default uses English (no prefix)
-      },
+      canonical: canonicalUrl,
+      languages: languageAlternates,
     },
   };
 }
@@ -102,30 +97,42 @@ export default async function ContactPage() {
         <div className="mx-auto max-w-3xl px-4 space-y-8">
           <form className="rounded-app border bg-card p-8 shadow-soft space-y-6">
             <div>
-              <label className="block text-sm font-medium text-foreground">
+              <label
+                htmlFor="contact-name"
+                className="block text-sm font-medium text-foreground"
+              >
                 Name
               </label>
               <input
                 type="text"
+                id="contact-name"
                 className="mt-2 w-full rounded-md border border-border bg-background px-4 py-3"
                 placeholder="Your name"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-foreground">
+              <label
+                htmlFor="contact-email"
+                className="block text-sm font-medium text-foreground"
+              >
                 Email
               </label>
               <input
                 type="email"
+                id="contact-email"
                 className="mt-2 w-full rounded-md border border-border bg-background px-4 py-3"
                 placeholder="you@example.com"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-foreground">
+              <label
+                htmlFor="contact-message"
+                className="block text-sm font-medium text-foreground"
+              >
                 Message
               </label>
               <textarea
+                id="contact-message"
                 className="mt-2 w-full rounded-md border border-border bg-background px-4 py-3 h-32"
                 placeholder="Write your message..."
               ></textarea>

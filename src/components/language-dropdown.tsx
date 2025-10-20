@@ -1,31 +1,12 @@
 "use client";
 
-import { useCallback, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import { useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { AppLocales } from "@/lib/i18n";
+import type { AppLocales } from "@/lib/i18n";
 import i18nConfig from "@/lib/i18n/config";
 import { cn } from "@/lib/utils";
-import { useIsMobile } from "@/hooks/use-mobile";
-
-const LOCALES = [
-  {
-    label: "English",
-    abbreviation: "EN",
-    value: "en",
-  },
-  {
-    label: "العربية",
-    abbreviation: "AR",
-    value: "ar",
-  },
-  {
-    label: "Français",
-    abbreviation: "FR",
-    value: "fr",
-  },
-];
 
 const LANGUAGES_DATA = [
   {
@@ -55,37 +36,54 @@ const LanguagePicker = () => {
   const { i18n, t } = useTranslation("common");
   const currentLocale = i18n.language;
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLang, setSelectedLang] = useState("English");
-  const [isSwitching, setIsSwitching] = useState(false);
   const router = useRouter();
 
   const currentPathname = usePathname();
 
-  const isMobile = useIsMobile();
-
   const handleChange = useCallback(
     (newLocale: AppLocales) => {
       // set cookie for next-i18n-router
-      setIsSwitching(true);
       const days = 30;
       const date = new Date();
       date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-      const expires = date.toUTCString();
-      document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`;
+      const expiresAt = new Date(date.getTime());
+      const docWithCookieStore = document as Document & {
+        cookieStore?: {
+          set?: (init: {
+            name: string;
+            value: string;
+            expires: Date;
+            path: string;
+          }) => Promise<void> | void;
+        };
+      };
+      if (
+        docWithCookieStore.cookieStore &&
+        typeof docWithCookieStore.cookieStore.set === "function"
+      ) {
+        void docWithCookieStore.cookieStore.set({
+          name: "NEXT_LOCALE",
+          value: newLocale,
+          expires: expiresAt,
+          path: "/",
+        });
+      } else {
+        // biome-ignore lint/suspicious/noDocumentCookie: Fallback for browsers without CookieStore support
+        document.cookie = `NEXT_LOCALE=${newLocale};expires=${expiresAt.toUTCString()};path=/`;
+      }
 
       // redirect to the new locale path
       if (
         currentLocale === i18nConfig.defaultLocale &&
         !i18nConfig.prefixDefault
       ) {
-        router.push("/" + newLocale + currentPathname);
+        router.push(`/${newLocale}${currentPathname}`);
       } else {
         router.push(
           currentPathname.replace(`/${currentLocale}`, `/${newLocale}`),
         );
       }
 
-      setIsSwitching(false);
       router.refresh();
     },
     [currentLocale, currentPathname, router],
@@ -93,6 +91,7 @@ const LanguagePicker = () => {
   return (
     <div className="relative rtl:font-arabic-body">
       <button
+        type="button"
         onClick={() => setIsOpen(!isOpen)}
         id="langDropdownTrigger"
         className="flex items-center gap-2 rounded-2xl border border-border bg-card px-3 py-2 hover:border-accent transition"
@@ -107,7 +106,9 @@ const LanguagePicker = () => {
           stroke="currentColor"
           strokeWidth="2"
           className="text-secondary-foreground/50"
+          role="img"
         >
+          <title>Language selection globe</title>
           <circle cx="12" cy="12" r="10"></circle>
           <line x1="2" y1="12" x2="22" y2="12"></line>
           <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
@@ -136,7 +137,9 @@ const LanguagePicker = () => {
           stroke="currentColor"
           strokeWidth="2"
           className="text-inn-text-secondary"
+          role="img"
         >
+          <title>Toggle language menu</title>
           <polyline points="6 9 12 15 18 9"></polyline>
         </svg>
       </button>
@@ -157,6 +160,7 @@ const LanguagePicker = () => {
           {LANGUAGES_DATA.map((lang) => (
             <button
               key={lang.locale}
+              type="button"
               onClick={() => handleChange(lang.locale as AppLocales)}
               className={cn(
                 "lang-option active w-full flex items-center justify-between px-4 py-3 rounded-xl text-left hover:bg-secondary",

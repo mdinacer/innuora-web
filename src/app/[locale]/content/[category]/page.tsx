@@ -1,11 +1,13 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import CategoryLayout from "@/components/content/category-layout";
+import { APP_CONFIG } from "@/config/app";
 import { initializeContentRegistry } from "@/lib/content/content-loader";
 import { contentRegistry } from "@/lib/content/content-registry";
-import { ContentCategory } from "@/types/content.types";
-import { APP_CONFIG } from "@/config/app";
+import type { AppLocales } from "@/lib/i18n";
+import { buildLanguageAlternates, buildLocalizedUrl } from "@/lib/seo/url";
+import type { ContentCategory } from "@/types/content.types";
 
 // =========================
 // Page Props
@@ -96,10 +98,9 @@ export async function generateMetadata({
     defaultValue: info.description,
   });
 
-  // Build locale-aware URLs (respecting prefixDefault: false for English)
-  const localePrefix = locale === "en" ? "" : `/${locale}`;
-  const currentUrl = `${localePrefix}/content/${category}`;
   const canonicalPath = `/content/${category}`;
+  const canonicalUrl = buildLocalizedUrl(locale, canonicalPath);
+  const languageAlternates = buildLanguageAlternates(canonicalPath);
 
   return {
     title: `${localizedTitle} | Innuora`,
@@ -109,7 +110,7 @@ export async function generateMetadata({
       description: localizedDescription,
       type: "website",
       siteName: "Innuora",
-      url: currentUrl,
+      url: canonicalUrl,
       locale: locale === "ar" ? "ar_AR" : locale === "fr" ? "fr_FR" : "en_US",
       images: [
         {
@@ -121,13 +122,8 @@ export async function generateMetadata({
       ],
     },
     alternates: {
-      canonical: currentUrl,
-      languages: {
-        en: canonicalPath, // Default locale, no prefix
-        ar: `/ar${canonicalPath}`,
-        fr: `/fr${canonicalPath}`,
-        "x-default": canonicalPath, // Default uses English (no prefix)
-      },
+      canonical: canonicalUrl,
+      languages: languageAlternates,
     },
   };
 }
@@ -189,6 +185,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       categoryInfo={localizedCategoryInfo}
       content={localizedContent}
       featuredContent={featuredContent}
+      currentLocale={(locale as AppLocales) ?? "en"}
     />
   );
 }

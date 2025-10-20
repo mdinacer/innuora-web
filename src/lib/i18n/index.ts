@@ -10,21 +10,31 @@ export type AppLocales = "en" | "ar" | "fr";
 
 export const APP_NAMESPACES = {
   NS_COMMON: "common",
-  NS_PAGES: "pages",
+  NS_LAYOUT: "layout",
+  NS_HOME: "home",
+  NS_ABOUT: "about",
+  NS_FEATURES: "features",
+  NS_DEMO: "demo",
+  NS_FAQ: "faq",
+  NS_JOIN: "join",
   NS_LEGAL: "legal",
-  NS_SESSIONS: "sessions",
-  NS_ERRORS: "errors",
   NS_CONTENT: "content",
+  NS_SEO: "seo",
 } as const;
 
 export type AppNamespace = (typeof APP_NAMESPACES)[keyof typeof APP_NAMESPACES];
 
 export const i18nNamespaces = [
   APP_NAMESPACES.NS_COMMON,
-  APP_NAMESPACES.NS_PAGES,
-  APP_NAMESPACES.NS_SESSIONS,
-  APP_NAMESPACES.NS_ERRORS,
+  APP_NAMESPACES.NS_LAYOUT,
+  APP_NAMESPACES.NS_HOME,
+  APP_NAMESPACES.NS_ABOUT,
+  APP_NAMESPACES.NS_FEATURES,
+  APP_NAMESPACES.NS_DEMO,
+  APP_NAMESPACES.NS_FAQ,
+  APP_NAMESPACES.NS_JOIN,
   APP_NAMESPACES.NS_CONTENT,
+  APP_NAMESPACES.NS_LEGAL,
 ];
 
 export default async function initTranslations(

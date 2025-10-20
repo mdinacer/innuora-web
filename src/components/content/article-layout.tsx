@@ -6,7 +6,7 @@ import Markdown from "markdown-to-jsx";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
-import { ContentCategory, ContentItem } from "@/types/content.types";
+import type { ContentCategory, ContentItem } from "@/types/content.types";
 
 // =========================
 // Component Props
@@ -95,10 +95,32 @@ export default function ArticleLayout({
 
         {/* Content Area */}
         <main className="rounded-app border border-border bg-card p-8 shadow-soft md:p-10">
-          <div className="prose prose-lg max-w-none text-muted-foreground">
+          <div className="prose prose-lg max-w-none break-words text-muted-foreground prose-pre:text-sm">
             {markdownContent ? (
               <Markdown
-                options={{ forceBlock: true, disableParsingRawHTML: true }}
+                options={{
+                  forceBlock: true,
+                  disableParsingRawHTML: true,
+                  overrides: {
+                    a: {
+                      props: {
+                        className:
+                          "break-words hyphens-auto text-primary underline underline-offset-2",
+                      },
+                    },
+                    pre: {
+                      props: {
+                        className:
+                          "whitespace-pre-wrap break-words rounded-md bg-muted p-4 text-sm",
+                      },
+                    },
+                    code: {
+                      props: {
+                        className: "break-words",
+                      },
+                    },
+                  },
+                }}
               >
                 {markdownContent}
               </Markdown>

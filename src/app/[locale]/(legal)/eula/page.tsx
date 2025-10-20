@@ -1,8 +1,9 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import Link from "next/link";
 
 import { APP_CONFIG } from "@/config/app";
 import initTranslations from "@/lib/i18n";
-import Link from "next/link";
+import { buildLanguageAlternates, buildLocalizedUrl } from "@/lib/seo/url";
 
 export async function generateMetadata({
   params,
@@ -12,16 +13,15 @@ export async function generateMetadata({
   const { locale = "en" } = await params;
   const { t } = await initTranslations(locale, ["seo"]);
 
+  const canonicalUrl = buildLocalizedUrl(locale, "/eula");
+  const languageAlternates = buildLanguageAlternates("/eula");
+
   return {
     title: t("seo:eula.title"),
     description: t("seo:eula.description"),
     alternates: {
-      canonical: `${APP_CONFIG.domains.primary}/en/eula`,
-      languages: {
-        en: `${APP_CONFIG.domains.primary}/en/eula`,
-        fr: `${APP_CONFIG.domains.primary}/fr/eula`,
-        ar: `${APP_CONFIG.domains.primary}/ar/eula`,
-      },
+      canonical: canonicalUrl,
+      languages: languageAlternates,
     },
     robots: {
       index: true,

@@ -1,19 +1,39 @@
 // app/(marketing)/faq/page.tsx
+import type { Metadata } from "next";
+import Markdown from "markdown-to-jsx";
+
 import { APP_CONFIG } from "@/config/app";
 import initTranslations from "@/lib/i18n";
-import Markdown from "markdown-to-jsx";
-import { Metadata } from "next";
+import { buildLanguageAlternates, buildLocalizedUrl } from "@/lib/seo/url";
+
+type FAQSectionItem = { question: string; answer: string };
+type FAQSectionData = {
+  badge: string;
+  title: string;
+  items: FAQSectionItem[];
+};
+
+export type FAQSections =
+  | "general"
+  | "use"
+  | "method"
+  | "philosophy"
+  | "privacy"
+  | "security"
+  | "billing"
+  | "tech"
+  | "support";
 
 export function buildFAQStructuredData(
-  sections: Record<string, any>,
+  sections: Record<string, FAQSectionData>,
   options?: { includeSections?: string[]; maxPerSection?: number },
 ) {
   const { includeSections, maxPerSection = 1 } = options || {};
 
   const mainEntity = Object.entries(sections)
     .filter(([key]) => (includeSections ? includeSections.includes(key) : true))
-    .flatMap(([, section]: [string, any]) =>
-      section.items.slice(0, maxPerSection).map((item: any) => ({
+    .flatMap(([, section]) =>
+      section.items.slice(0, maxPerSection).map((item) => ({
         "@type": "Question",
         name: item.question.replace(/{{app_name}}/g, APP_CONFIG.name),
         acceptedAnswer: {
@@ -43,6 +63,9 @@ export async function generateMetadata({
   const { locale = "en" } = await params;
   const { t } = await initTranslations(locale, ["seo"]);
 
+  const canonicalUrl = buildLocalizedUrl(locale, "/faq");
+  const languageAlternates = buildLanguageAlternates("/faq");
+
   return {
     title: t("seo:faq.title", { app_name: APP_CONFIG.name }),
     description: t("seo:faq.description", { app_name: APP_CONFIG.name }),
@@ -59,7 +82,7 @@ export async function generateMetadata({
     openGraph: {
       title: t("seo:faq.title"),
       description: t("seo:faq.description"),
-      url: `/${locale}/faq`,
+      url: canonicalUrl,
       siteName: APP_CONFIG.name,
       images: [
         {
@@ -80,33 +103,11 @@ export async function generateMetadata({
       creator: APP_CONFIG.social.twitter.creator,
     },
     alternates: {
-      canonical: locale === "en" ? "/faq" : `/${locale}/faq`, // Respect prefixDefault: false
-      languages: {
-        en: "/faq", // Default locale, no prefix
-        fr: "/fr/faq",
-        ar: "/ar/faq",
-        "x-default": "/faq", // Default uses English (no prefix)
-      },
+      canonical: canonicalUrl,
+      languages: languageAlternates,
     },
   };
 }
-
-type FAQSections =
-  | "general"
-  | "use"
-  | "method"
-  | "philosophy"
-  | "privacy"
-  | "security"
-  | "billing"
-  | "tech"
-  | "support";
-
-type FAQSectionData = {
-  badge: string;
-  title: string;
-  items: Array<{ question: string; answer: string }>;
-};
 
 const FAQCard = ({ id, data }: { id: string; data: FAQSectionData }) => {
   const { badge, title, items } = data;
@@ -147,13 +148,13 @@ export default async function FAQPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale = "en" } = await params;
-  const { t } = await initTranslations(locale, ["pages"]);
+  const { t } = await initTranslations(locale, ["faq"]);
 
   const { badge, title, subtitle, sections } = {
-    badge: t("faq.badge"),
-    title: t("faq.title"),
-    subtitle: t("faq.subtitle", { app_name: APP_CONFIG.name }),
-    sections: t("faq.sections", {
+    badge: t("badge"),
+    title: t("title"),
+    subtitle: t("subtitle", { app_name: APP_CONFIG.name }),
+    sections: t("sections", {
       returnObjects: true,
       app_name: APP_CONFIG.name,
     }) as Record<FAQSections, FAQSectionData>,

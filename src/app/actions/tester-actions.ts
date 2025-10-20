@@ -25,8 +25,7 @@ export async function addAdvancedTester(formData: FormData) {
       scopes: ["https://www.googleapis.com/auth/spreadsheets"],
     });
 
-    const authClient = await auth.getClient();
-    const sheets = google.sheets({ version: "v4", auth: authClient as any });
+    const sheets = google.sheets({ version: "v4", auth });
 
     await sheets.spreadsheets.values.append({
       spreadsheetId: sheetId,
@@ -48,7 +47,7 @@ export async function addAdvancedTester(formData: FormData) {
     });
 
     return { success: true };
-  } catch (err: any) {
+  } catch (err) {
     if (err instanceof z.ZodError) {
       return {
         success: false,
@@ -59,13 +58,11 @@ export async function addAdvancedTester(formData: FormData) {
         })),
       };
     }
-    console.error("Google Sheets append failed:", err);
-    console.error("Error details:", {
-      message: err.message,
-      code: err.code,
-      status: err.status,
-      errors: err.errors,
-    });
-    return { success: false, error: err.message || "Unexpected error" };
+    if (err instanceof Error) {
+      console.error("Google Sheets append failed:", err);
+      return { success: false, error: err.message || "Unexpected error" };
+    }
+    console.error("Google Sheets append failed with unknown error:", err);
+    return { success: false, error: "Unexpected error" };
   }
 }

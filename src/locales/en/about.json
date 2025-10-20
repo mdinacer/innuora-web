@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "badge": "Behind the mirror",
+    "title": "We build emotional infrastructure for modern minds",
+    "description": "{{app_name}} merges **cognitive science**, **empathic AI**, and **privacy-first design** to create reflective technology that understands, protects, and evolves with you."
+  },
+  "mission": {
+    "title": "Our mission",
+    "paragraphs": [
+      "To make **emotional clarity** accessible through intelligence that listens like a human and safeguards like encryption.",
+      "{{app_name}} exists to help women understand their **emotional patterns** and the *silent rules* that shape them. Behind constant performance there is *exhaustion*, *guilt*, and the pressure to hold everything together.",
+      "Modern life has amplified these demands. **High-functioning women** often carry *invisible weight* beneath composure, shaped by *unspoken expectations* of perfection, care, and control.",
+      "Our goal is to build technology that helps them see through these *inherited masks*. Each reflection turns **societal noise** into **personal insight**, replacing *self-blame* with **understanding** and *awareness* with **choice**."
+    ]
+  },
+  "founding": {
+    "title": "Born from a question that mattered",
+    "body": "{{app_name}} started as an experiment in **digital empathy**. The idea was simple: could artificial intelligence truly *listen with care*? That question grew into a system that helps people translate what they feel into **language**, **insight**, and *calm awareness*."
+  },
+  "principles": {
+    "badge": "What guides our design",
+    "title": "Four principles define {{app_name}}",
+    "items": [
+      {
+        "title": "Empathy before logic",
+        "body": "Every reflection begins with **emotional validation**, not analysis."
+      },
+      {
+        "title": "Privacy as psychology",
+        "body": "**Zero-knowledge encryption** provides the safety required for real honesty."
+      },
+      {
+        "title": "Therapeutic intelligence",
+        "body": "Each exchange is grounded in **CBT-informed reasoning** and *emotional nuance*."
+      },
+      {
+        "title": "Human-paced design",
+        "body": "Built for **regulation**, not engagement. *Calm interaction* replaces *distraction loops*."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Empathy, engineered.",
+    "description": "{{app_name}} is more than AI. It is an **emotional companion** that *listens*, *reflects*, and helps you reconnect with your own **clarity**.",
+    "button": "Start your reflection"
+  }
+}

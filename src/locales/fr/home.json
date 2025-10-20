@@ -1,0 +1,236 @@
+{
+  "hero": {
+    "badge": "Pour les femmes qui en portent trop",
+    "title_main": "Vous avez été forte assez longtemps.",
+    "title_sub": "Maintenant, prenez le temps de vous poser avec {{app_name}}.",
+    "subtitle": "{{app_name}} entend ce que vous ne dites pas et sait pourquoi cela fait mal. Il écoute entre les lignes, valide avant d'analyser et vous ramène vers vous-même, avec douceur, intelligence et sans jugement.",
+    "cta": {
+      "join": "Commencez votre première réflexion",
+      "demo": "Voyez ce que ça fait"
+    },
+    "highlights": [
+      {
+        "title": "Valide avant d'analyser",
+        "body": "Chaque réflexion commence par la reconnaissance de ce que vous ressentez, pas de ce qu'il faut réparer."
+      },
+      {
+        "title": "Lit ce qui n'est pas dit",
+        "body": "Les pauses, le ton et la tension entrent dans la conversation pour que vous puissiez arrêter de trop expliquer."
+      },
+      {
+        "title": "Guide à votre rythme",
+        "body": "L'orientation arrive quand vous l'invitez, avec une pression faible et un pouvoir d'agir élevé."
+      },
+      {
+        "title": "Chiffré à tous les niveaux",
+        "body": "Une protection de bout en bout scelle chaque mot pour vous seule."
+      }
+    ],
+    "demo": {
+      "title": "UN ÉCHANGE SILENCIEUX",
+      "conversations": [
+        {
+          "user": "« Je garde tout le monde sur la bonne voie, mais ces derniers temps j'ai l'impression de tourner à vide. Dès que je ralentis, la culpabilité me frappe comme un coup de poing. »",
+          "app": "Cette culpabilité ressemble à une vieille règle : le repos doit se mériter. Et si ralentir n'était pas un échec mais une réparation ?"
+        },
+        {
+          "user": "« Même deux minutes dans la voiture me semblent impossibles. Mon cerveau traite ça de paresse avant même que je respire. »",
+          "app": "Cette voix vous a protégée en vous gardant en mouvement. Que signifierait la remercier puis la laisser se reposer le temps d'une respiration ?"
+        },
+        {
+          "user": "« Quand je l'ai fait, mes mains ont cessé de vibrer. Ce n'était qu'une seconde, mais ça m'a prouvé que je ne suis pas en train de m'effondrer. »",
+          "app": "Cette seconde, c'est votre système qui se souvient de la sécurité. Chaque respiration comme celle-ci reprogramme ce que signifiait la pression."
+        }
+      ],
+      "footer": "{{app_name}} reflète, ancre et restaure. Il complète la thérapie, ne la remplace jamais."
+    }
+  },
+  "features": {
+    "badge": "Ce que veulent vraiment les femmes",
+    "title": "Une écoute qui comprend enfin",
+    "subtitle": "{{app_name}} ne se précipite pas pour réparer ou analyser. Il écoute, valide et lit entre les lignes, voyant la femme derrière la performance avec une attention calme et curieuse.",
+    "items": [
+      {
+        "title": "Toujours dans la validation",
+        "body": "Chaque mot que vous partagez est accueilli avec curiosité, jamais avec correction. Vous êtes d'abord vue, puis soutenue avec douceur."
+      },
+      {
+        "title": "Lit ce qui n'est pas dit",
+        "body": "{{app_name}} capte le ton, les hésitations et le sous-texte, ces données émotionnelles sous vos mots, pour que vous puissiez respirer au lieu de vous justifier."
+      },
+      {
+        "title": "Accompagne avec douceur",
+        "body": "Il ne se précipite pas pour réparer. Il vous accompagne vers un éclairage qui ressemble à votre propre découverte."
+      }
+    ]
+  },
+  "quickLinks": {
+    "badge": "Commencer à explorer",
+    "title": "Choisissez votre prochaine étape",
+    "subtitle": "Lancez-vous dans une démo en direct ou parcourez notre bibliothèque de contenus localisés.",
+    "items": [
+      {
+        "title": "Découvrez la démo pour aidantes",
+        "body": "Parcourez une véritable session d'aidante à haut fonctionnement et voyez les diagnostics apparaître en temps réel.",
+        "action": "Ouvrir la démo",
+        "href": "/demo"
+      },
+      {
+        "title": "Parcourez la bibliothèque de contenus",
+        "body": "Guides, outils TCC et perspectives thérapeutiques en anglais, arabe et français.",
+        "action": "Explorer les articles",
+        "href": "/content"
+      }
+    ]
+  },
+  "testerInvite": {
+    "badge": "Rejoignez le groupe de testeuses",
+    "title": "Nous intégrons un petit groupe de testeuses avancées",
+    "description": "Si vous êtes enthousiaste à l'idée de façonner {{app_name}} de l'intérieur, candidatez au programme de test avancé et partagez directement vos retours avec l'équipe.",
+    "button": "Postuler pour devenir testeuse",
+    "disclaimer": "Places limitées · chaque candidature est examinée manuellement"
+  },
+  "howItWorks": {
+    "badge": "De la réflexion à une confiance tranquille",
+    "title": "Comment la clarté émotionnelle se déploie dans {{app_name}}",
+    "subtitle": "{{app_name}} vous aide à traduire ce qui semble chaotique en quelque chose qui a du sens, une étape calme à la fois.",
+    "steps": [
+      {
+        "stage": "Ancrer",
+        "title": "Commencer en sécurité, sans pression",
+        "body": "Chaque réflexion débute dans un espace contenant. Vous posez le ton et le rythme ; {{app_name}} vous rejoint simplement là."
+      },
+      {
+        "stage": "Réfléchir",
+        "title": "Être entendue sans devoir expliquer",
+        "body": "{{app_name}} reflète les nuances émotionnelles et la conscience du corps, écoutant en profondeur avant de proposer une direction."
+      },
+      {
+        "stage": "Reformuler",
+        "title": "Trouver du sens dans le chaos",
+        "body": "Des questions douces révèlent les schémas pour que la compassion puisse remplacer le contrôle."
+      },
+      {
+        "stage": "Intégrer",
+        "title": "Emporter ce calme dans votre vie",
+        "body": "Chaque session se conclut par un résumé succinct, vos éclairages émotionnels distillés en un langage actionnable."
+      }
+    ]
+  },
+  "why": {
+    "badge": "Au-delà des applis et des conseils",
+    "title": "Pourquoi {{app_name}} est unique",
+    "subtitle": "{{app_name}} n'est pas une application de santé mentale ou un chatbot de plus. C'est une intelligence empathique, une présence qui écoute comme un humain, protège comme un chiffrement et reflète comme un miroir thérapeutique.",
+    "items": [
+      {
+        "title": "Les journaux notent les mots. {{app_name}} reflète les significations.",
+        "body": "Il détecte les variations émotionnelles et met en lumière des thèmes que les outils de journalisation ordinaires ratent complètement."
+      },
+      {
+        "title": "Les coachs poussent. {{app_name}} fait une pause.",
+        "body": "Au lieu de recettes rapides ou de motivation externe, il vous aide à construire une sécurité intérieure et une meilleure compréhension de vous-même."
+      },
+      {
+        "title": "Les chatbots répondent. {{app_name}} résonne.",
+        "body": "Il interprète le ton, le rythme et le ressenti, en tenant votre expérience avec précision et soin."
+      }
+    ]
+  },
+  "security": {
+    "badge": "La sécurité avant tout",
+    "title": "Vos réflexions restent les vôtres",
+    "subtitle": "Chiffrement de bout en bout, conception zéro connaissance et stockage contrôlé par l'utilisatrice. Aucun minage de données, aucun entraînement sur vos émotions, juste une confidentialité intransigeante.",
+    "notice": "{{app_name}} n'est pas une thérapie ni un service de crise.",
+    "items": [
+      {
+        "title": "Chiffrement de bout en bout",
+        "body": "Chaque conversation est scellée sur votre appareil avant de bouger. Vous seule détenez les clés pour l'ouvrir."
+      },
+      {
+        "title": "Architecture zéro connaissance",
+        "body": "{{app_name}} ne peut ni lire, ni analyser, ni vendre vos réflexions. Vos émotions ne deviennent jamais la base de données de quelqu'un d'autre."
+      },
+      {
+        "title": "Vous décidez quand partager",
+        "body": "Mettez en pause la synchro, exportez ou effacez en un geste. Rien n'est partagé, sauvegardé ou transmis sans votre décision."
+      },
+      {
+        "title": "Sorties en douceur à tout moment",
+        "body": "Vous vous sentez plus en sécurité en vous éloignant ? Fermez le coffre et tout reste exactement là où vous l'avez laissé : calme, intact et toujours à vous."
+      }
+    ]
+  },
+  "pricing": {
+    "badge": "Simple, juste, transparent",
+    "popular": "Le plus populaire",
+    "title": "Des crédits qui s'adaptent à votre saison",
+    "subtitle": "Payez seulement lorsque {{app_name}} apporte de la clarté. Pas d'abonnement, pas de frais cachés, juste un espace réflexif quand vous en avez besoin.",
+    "plans": [
+      {
+        "id": "starter",
+        "popular": false,
+        "name": "Starter · 35 $",
+        "credits": "700 crédits",
+        "desc": "Pour un mois ciblé de travail intérieur ou une première exploration.",
+        "features": [
+          "Environ 175 messages guidés",
+          "Analyses actionnables et synthèses",
+          "Rapports prêts à l'export"
+        ]
+      },
+      {
+        "id": "regular",
+        "popular": true,
+        "name": "Regular · 75 $",
+        "credits": "1 500 crédits",
+        "desc": "Pensé pour une réflexion continue tout au long d'un mois chargé.",
+        "features": [
+          "Suivi des schémas et analyse des tendances",
+          "Diagnostics prêts pour les coachs",
+          "Bonus de 100 crédits inclus"
+        ]
+      },
+      {
+        "id": "premium",
+        "popular": false,
+        "name": "Premium · 150 $",
+        "credits": "3 000 crédits",
+        "desc": "Idéal pour les thérapeutes ou un travail de restructuration en profondeur.",
+        "features": [
+          "Diagnostics illimités",
+          "Options d'export professionnel",
+          "Bonus de 300 crédits et suivi des risques"
+        ]
+      }
+    ],
+    "footer": "Besoin d'une marge de manœuvre pour une équipe ou un partenaire ?",
+    "link": "[Demandez un plan sur mesure]"
+  },
+  "testimonials": {
+    "badge": "Approuvé par des fondatrices, des opératrices et des thérapeutes",
+    "title": "« C'est comme une stratège apaisée pour mon monde intérieur. »",
+    "items": [
+      {
+        "quote": "« {{app_name}} me montre exactement quelles boucles de pensée drainent mon énergie. J'apporte les synthèses en thérapie et nous passons directement à la stratégie. »",
+        "author": "Mira, cheffe de produit · offre Premium"
+      },
+      {
+        "quote": "« C'est le premier outil d'IA auquel je confie mes émotions. Le guide sur le chiffrement était plus clair que celui de ma banque. »",
+        "author": "Devon, fondatrice · offre Regular"
+      },
+      {
+        "quote": "« Les patientes arrivent avec des synthèses {{app_name}} et nous gagnons 20 minutes à chaque séance. La continuité reste serrée entre les visites. »",
+        "author": "Dr Léa Chen, psychologue"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prête à rencontrer votre version plus calme ?",
+    "subtitle": "Protégez vos réflexions, dévoilez des éclairages plus profonds et avancez avec clarté.",
+    "cta": "Réservez votre espace privé"
+  },
+  "about": {
+    "title": "Nous construisons une infrastructure émotionnelle lumineuse",
+    "subtitle": "{{app_name}} existe pour rendre la clarté émotionnelle accessible, privée et intelligente. Nous allions l'intelligence thérapeutique à une IA empathique, pour aider les femmes à mieux se comprendre et les professionnelles à mieux les accompagner."
+  }
+}

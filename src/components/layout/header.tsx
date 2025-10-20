@@ -1,15 +1,15 @@
 "use client";
 
+import { Menu, Sparkles, X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import React from "react";
+import { useTranslation } from "react-i18next";
 import { APP_CONFIG } from "@/config/app";
 import type { AppLocales } from "@/lib/i18n";
 import { buildLocalizedPath } from "@/lib/i18n/paths";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
-import React from "react";
-import { useTranslation } from "react-i18next";
 import LanguagePicker from "../language-dropdown";
 import ThemeToggle from "../theme-toggle";
 
@@ -26,9 +26,10 @@ interface Props {
 }
 
 const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
-  const { t } = useTranslation("pages", { keyPrefix: "header" });
+  const { t } = useTranslation("layout", { keyPrefix: "header" });
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const firstLinkRef = React.useRef<HTMLAnchorElement | null>(null);
 
   const navLinks = React.useMemo<HeaderLink[]>(() => {
     if (links && links.length > 0) {
@@ -83,22 +84,16 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
     ];
   }, [links, locale, t]);
 
+  const closeMenu = React.useCallback(() => setIsMenuOpen(false), []);
+
   React.useEffect(() => {
-    setIsMenuOpen(false);
-  }, [pathname]);
+    if (pathname !== undefined) {
+      closeMenu();
+    }
+  }, [pathname, closeMenu]);
 
   const toggleMenu = React.useCallback(() => {
     setIsMenuOpen((open) => !open);
-  }, []);
-
-  const normalize = React.useCallback((value: string) => {
-    if (!value) {
-      return "/";
-    }
-    if (value.length > 1 && value.endsWith("/")) {
-      return value.slice(0, -1);
-    }
-    return value;
   }, []);
 
   const isActiveLink = React.useCallback(
@@ -145,7 +140,14 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
             key={`${link.href}-${index}`}
             href={link.href}
             className={cn(buttonClasses, "rtl:font-arabic-title")}
-            onClick={() => setIsMenuOpen(false)}
+            onClick={closeMenu}
+            ref={
+              !isDesktop && index === 0
+                ? (node) => {
+                    firstLinkRef.current = node;
+                  }
+                : undefined
+            }
           >
             {link.label}
           </Link>
@@ -161,6 +163,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
         isDesktop &&
           "after:absolute after:bottom-[2px] after:left-1/2 after:h-[2px] after:w-[70%] after:-translate-x-1/2 after:scale-x-0 after:bg-primary after:transition-transform after:duration-200 hover:after:scale-x-100",
         isDesktop && active && "after:scale-x-100",
+        !isDesktop && "text-base",
       );
 
       return (
@@ -168,14 +171,43 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
           key={`${link.href}-${index}`}
           href={link.href}
           className={cn(linkClasses, "rtl:font-arabic-title")}
-          onClick={() => setIsMenuOpen(false)}
+          onClick={closeMenu}
+          ref={
+            !isDesktop && index === 0
+              ? (node) => {
+                  firstLinkRef.current = node;
+                }
+              : undefined
+          }
         >
           {link.label}
         </Link>
       );
     },
-    [isActiveLink],
+    [isActiveLink, closeMenu],
   );
+
+  React.useEffect(() => {
+    if (isMenuOpen && typeof document !== "undefined") {
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = "";
+      };
+    }
+
+    if (!isMenuOpen && typeof document !== "undefined") {
+      document.body.style.overflow = "";
+    }
+  }, [isMenuOpen]);
+
+  React.useEffect(() => {
+    if (isMenuOpen) {
+      const timer = window.setTimeout(() => {
+        firstLinkRef.current?.focus();
+      }, 120);
+      return () => window.clearTimeout(timer);
+    }
+  }, [isMenuOpen]);
 
   return (
     <header
@@ -240,11 +272,65 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
           </div>
 
           {isMenuOpen && (
-            <div className="mt-4 lg:hidden">
-              <nav className="flex flex-col gap-2 rounded-2xl border border-border/70 bg-card/95 p-3 shadow-soft">
-                {navLinks.map((link, index) => renderLink(link, index, false))}
-              </nav>
-            </div>
+            <>
+              <div
+                className="fixed inset-0 z-40 bg-background/70 backdrop-blur-sm transition-opacity duration-200 lg:hidden"
+                aria-hidden="true"
+                onClick={closeMenu}
+              />
+              <div
+                className="fixed inset-x-4 top-4 z-50 origin-top rounded-3xl border border-border/70 bg-card/95 p-5 shadow-[0_20px_60px_-28px_rgba(99,102,241,0.55)] transition-transform duration-200 lg:hidden"
+                role="dialog"
+                aria-modal="true"
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex flex-col">
+                    <span className="text-sm font-medium uppercase tracking-[0.38em] text-muted-foreground">
+                      {t("mobileMenu.title", {
+                        defaultValue: "Navigate",
+                      })}
+                    </span>
+                    <span className="text-base font-semibold text-foreground">
+                      {t("mobileMenu.subtitle", {
+                        defaultValue: "Explore Innuora",
+                      })}
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={closeMenu}
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border/70 bg-background/80 text-muted-foreground transition hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+                    aria-label={t("closeMenu", { defaultValue: "Close menu" })}
+                  >
+                    <X className="h-5 w-5" aria-hidden="true" />
+                  </button>
+                </div>
+
+                <nav className="mt-5 flex flex-col gap-2">
+                  {navLinks.map((link, index) =>
+                    renderLink(link, index, false),
+                  )}
+                </nav>
+
+                <div className="mt-6 grid gap-3 rounded-2xl border border-border/60 bg-background/60 p-4">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                      <Sparkles className="h-5 w-5" />
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      {t("mobileMenu.cta", {
+                        defaultValue:
+                          "Built for high-functioning women seeking clarity and calm.",
+                      })}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <ThemeToggle />
+                    <LanguagePicker />
+                  </div>
+                </div>
+              </div>
+            </>
           )}
         </div>
       </div>

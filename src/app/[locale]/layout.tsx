@@ -6,7 +6,7 @@ import TranslationProvider from "@/components/translation-provider";
 import { METADATA } from "@/config/metadata";
 import { VIEWPORT } from "@/config/viewport";
 import { sans, serif, arabicBody, arabicTitle } from "@/lib/fonts";
-import initTranslations, { AppLocales, i18nNamespaces } from "@/lib/i18n";
+import initTranslations, { type AppLocales, i18nNamespaces } from "@/lib/i18n";
 import i18nConfig from "@/lib/i18n/config";
 import { notFound } from "next/navigation";
 import "../globals.css";

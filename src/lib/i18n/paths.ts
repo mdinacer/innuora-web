@@ -1,5 +1,5 @@
-import i18nConfig from "@/lib/i18n/config";
 import type { AppLocales } from "@/lib/i18n";
+import i18nConfig from "@/lib/i18n/config";
 
 const ROOT = "/";
 

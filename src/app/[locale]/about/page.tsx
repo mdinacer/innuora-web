@@ -1,9 +1,13 @@
+import Markdown from "markdown-to-jsx";
+import type { Metadata } from "next";
+import Link from "next/link";
+
 import { APP_CONFIG } from "@/config/app";
 import initTranslations from "@/lib/i18n";
+import type { AppLocales } from "@/lib/i18n";
+import { buildLocalizedPath } from "@/lib/i18n/paths";
+import { buildLanguageAlternates, buildLocalizedUrl } from "@/lib/seo/url";
 import { cn } from "@/lib/utils";
-import { Metadata } from "next";
-import Markdown from "markdown-to-jsx";
-import Link from "next/link";
 
 // SEO Metadata
 export async function generateMetadata({
@@ -17,9 +21,8 @@ export async function generateMetadata({
   const title = t("seo:about.title", { app_name: APP_CONFIG.name });
   const description = t("seo:about.description", { app_name: APP_CONFIG.name });
 
-  // Build locale-aware URLs (respecting prefixDefault: false for English)
-  const localePrefix = locale === "en" ? "" : `/${locale}`;
-  const currentUrl = `${localePrefix}/about`;
+  const canonicalUrl = buildLocalizedUrl(locale, "/about");
+  const languageAlternates = buildLanguageAlternates("/about");
 
   return {
     title,
@@ -42,7 +45,7 @@ export async function generateMetadata({
       description,
       type: "website",
       siteName: APP_CONFIG.name,
-      url: currentUrl,
+      url: canonicalUrl,
       locale: locale === "ar" ? "ar_AR" : locale === "fr" ? "fr_FR" : "en_US",
       images: [
         {
@@ -61,13 +64,8 @@ export async function generateMetadata({
       creator: APP_CONFIG.social.twitter.creator,
     },
     alternates: {
-      canonical: currentUrl,
-      languages: {
-        en: "/about", // Default locale, no prefix
-        ar: "/ar/about",
-        fr: "/fr/about",
-        "x-default": "/about", // Default uses English (no prefix)
-      },
+      canonical: canonicalUrl,
+      languages: languageAlternates,
     },
   };
 }
@@ -78,41 +76,41 @@ export default async function AboutPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale = "en" } = await params;
-  const { t } = await initTranslations(locale, ["pages"]);
+  const { t } = await initTranslations(locale, ["about"]);
 
   const { hero, mission, founding, principles, cta } = {
     hero: {
-      badge: t("about.hero.badge"),
-      title: t("about.hero.title"),
-      description: t("about.hero.description", { app_name: APP_CONFIG.name }),
+      badge: t("hero.badge"),
+      title: t("hero.title"),
+      description: t("hero.description", { app_name: APP_CONFIG.name }),
     },
     mission: {
-      title: t("about.mission.title"),
-      paragraphs: (t("about.mission.paragraphs", {
+      title: t("mission.title"),
+      paragraphs: (t("mission.paragraphs", {
         returnObjects: true,
         defaultValue: "",
         app_name: APP_CONFIG.name,
       }) || []) as string[],
     },
     founding: {
-      title: t("about.founding.title"),
-      body: t("about.founding.body", {
+      title: t("founding.title"),
+      body: t("founding.body", {
         app_name: APP_CONFIG.name,
       }),
     },
     principles: {
-      badge: t("about.principles.badge"),
-      title: t("about.principles.title", { app_name: APP_CONFIG.name }),
-      items: (t("about.principles.items", {
+      badge: t("principles.badge"),
+      title: t("principles.title", { app_name: APP_CONFIG.name }),
+      items: (t("principles.items", {
         returnObjects: true,
         defaultValue: "",
         app_name: APP_CONFIG.name,
       }) || []) as { title: string; body: string }[],
     },
     cta: {
-      title: t("about.cta.title"),
-      description: t("about.cta.description", { app_name: APP_CONFIG.name }),
-      button: t("about.cta.button"),
+      title: t("cta.title"),
+      description: t("cta.description", { app_name: APP_CONFIG.name }),
+      button: t("cta.button"),
     },
   };
   return (
@@ -292,7 +290,7 @@ export default async function AboutPage({
               {cta.description}
             </Markdown>
             <Link
-              href="/join"
+              href={buildLocalizedPath(locale as AppLocales, "/join")}
               className="inline-flex rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft hover:opacity-90"
             >
               {cta.button}

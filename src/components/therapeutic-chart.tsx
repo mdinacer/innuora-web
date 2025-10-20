@@ -1,19 +1,19 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 import {
-  ResponsiveContainer,
-  ComposedChart,
   Area,
+  CartesianGrid,
+  ComposedChart,
+  Legend,
   Line,
+  ResponsiveContainer,
   Scatter,
+  Tooltip,
   XAxis,
   YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
 } from "recharts";
+import { cn } from "@/lib/utils";
 
 // =====================================
 //  Precomputed demo-safe dataset
@@ -153,7 +153,7 @@ const colors = ["bg-primary", "bg-red-500", "bg-green-600", "bg-purple-600"];
 //  Chart Component
 // =====================================
 export default function TherapeuticProgressChart() {
-  const { t } = useTranslation("pages", { keyPrefix: "demo.chart" });
+  const { t } = useTranslation("demo", { keyPrefix: "chart" });
 
   const {
     header: analyticsHeader,
@@ -248,31 +248,10 @@ export default function TherapeuticProgressChart() {
     },
   };
 
-  const { header, axes, tooltip, legend, chart_config } = {
-    header: {
-      badge: t("header.badge"),
-      title: t("header.title"),
-      subtitle: t("header.subtitle"),
-    },
-    axes: {
-      x_label: t("axes.x_label"),
-      y_label: t("axes.y_label"),
-    },
-    tooltip: {
-      label_prefix: t("tooltip.label_prefix"),
-    },
-    legend: {
-      emotional_intensity: t("legend.emotional_intensity"),
-      cognitive_load: t("legend.cognitive_load"),
-      readiness: t("legend.readiness"),
-      integration: t("legend.integration"),
-    },
-    chart_config: {
-      emotionalIntensity: t("chart_config.emotionalIntensity"),
-      cognitiveLoad: t("chart_config.cognitiveLoad"),
-      readiness: t("chart_config.readiness"),
-      integration: t("chart_config.integration"),
-    },
+  const header = {
+    badge: t("header.badge"),
+    title: t("header.title"),
+    subtitle: t("header.subtitle"),
   };
 
   return (
@@ -383,7 +362,7 @@ export default function TherapeuticProgressChart() {
                 {metrics.emotional_cognitive.rows.cognitive_load.label}
               </span>
               <span className="font-semibold">
-                {metrics.emotional_cognitive.rows.cognitive_load.value})
+                {metrics.emotional_cognitive.rows.cognitive_load.value}
               </span>
             </div>
             <div className="flex justify-between">
@@ -476,12 +455,12 @@ export default function TherapeuticProgressChart() {
       <div className="rounded-app p-8 bg-primary/5 border border-primary/30  ">
         <h3 className="text-2xl font-semibold mb-4">{insights.title}</h3>
         <ul className="space-y-3 text-sm">
-          {insights.list.map((item, index) => (
-            <li key={index} className="flex items-start gap-3">
+          {insights.list.map((item, idx) => (
+            <li key={item} className="flex items-start gap-3">
               <span
                 className={cn(
                   "inline-block w-2 h-2 rounded-full mt-2",
-                  colors[index],
+                  colors[idx % colors.length],
                 )}
               ></span>
               <span>{item}</span>

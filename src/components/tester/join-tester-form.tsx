@@ -1,11 +1,11 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import Link from "next/link";
 import { Loader2 } from "lucide-react";
+import Link from "next/link";
+import { useMemo, useState } from "react";
 
 import { addAdvancedTester } from "@/app/actions/tester-actions";
-import { AppLocales } from "@/lib/i18n";
+import type { AppLocales } from "@/lib/i18n";
 import { advancedTesterSchema } from "@/types/tester-form-data";
 
 type FieldErrors = Partial<Record<string, string>>;

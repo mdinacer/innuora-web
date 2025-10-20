@@ -1,0 +1,114 @@
+{
+  "hero": {
+    "badge": "Fonctionnalités essentielles",
+    "title": "Un espace calme et intelligent pour la clarté émotionnelle",
+    "description": "{{app_name}} combine **intuition**, **confidentialité** et **réflexion** pour vous aider à mieux vous comprendre à votre propre rythme. Pas de pression, pas de suivi, pas de bruit. Juste un espace pour respirer et apprendre."
+  },
+  "core": {
+    "badge": "Expérience principale",
+    "title": "Conçu pour la profondeur, pas la distraction",
+    "items": [
+      {
+        "title": "Bibliothèque de guidance",
+        "body": "Une bibliothèque vivante d’**articles, d’analyses et de guides réflexifs** inspirés de la psychologie, de la pleine conscience et de l’éducation émotionnelle. Toujours accessible, toujours à votre rythme."
+      },
+      {
+        "title": "Réflexion à votre rythme",
+        "body": "Pas de rappels, pas de notifications, pas de séries. Vos progrès suivent votre propre cadence, pas un algorithme."
+      },
+      {
+        "title": "Design humain et apaisant",
+        "body": "Chaque interaction est ancrée et sereine. Pas de gamification, pas de boucles dopaminergiques, seulement un design réfléchi favorisant la clarté intérieure."
+      }
+    ]
+  },
+  "privacy": {
+    "badge": "Confidentialité et confiance",
+    "title": "Parce que la réflexion exige la sécurité",
+    "items": [
+      {
+        "title": "Protection de bout en bout",
+        "body": "Vos conversations sont protégées par un **chiffrement de bout en bout**. Ce que vous écrivez reste entre vous et votre appareil."
+      },
+      {
+        "title": "Confidentialité par principe",
+        "body": "{{app_name}} est conçu sans **suivi comportemental** ni **collecte de données**. Votre monde intérieur reste le vôtre."
+      },
+      {
+        "title": "Maîtrise silencieuse",
+        "body": "Vous décidez ce que vous conservez ou supprimez. Vos données, vos clés, votre choix."
+      }
+    ]
+  },
+  "insight": {
+    "badge": "Clarté et conscience",
+    "title": "Se comprendre avec clarté et bienveillance",
+    "items": [
+      {
+        "title": "Diagnostic de base",
+        "body": "Une vue d’ensemble **simple et accessible** des thèmes émotionnels et cognitifs, présentée avec chaleur et clarté."
+      },
+      {
+        "title": "Analyse approfondie",
+        "body": "Des **informations structurées et détaillées** pour identifier les schémas émotionnels récurrents et les tendances de croissance."
+      },
+      {
+        "title": "Intégration éducative",
+        "body": "Chaque diagnostic est relié à du **contenu d’apprentissage sélectionné**, transformant la réflexion en compréhension concrète."
+      }
+    ]
+  },
+  "interaction": {
+    "badge": "Design empathique",
+    "title": "Comment {{app_name}} vous rencontre là où vous êtes",
+    "items": [
+      {
+        "title": "Validation avant analyse",
+        "body": "{{app_name}} commence chaque échange par *la reconnaissance de votre expérience*, avant toute analyse. Il écoute d’abord, afin que vos émotions soient vues avant d’être interprétées."
+      },
+      {
+        "title": "Lire entre les lignes",
+        "body": "Grâce à sa sensibilité linguistique et émotionnelle, {{app_name}} perçoit ce qui est *implicite mais non dit*. Il détecte la tension derrière les mots et la fatigue cachée sous la force."
+      },
+      {
+        "title": "Tonalité féminine et sensibilité culturelle",
+        "body": "Chaque réponse est formulée avec une *douceur directe* et une *conscience culturelle*. {{app_name}} respecte le contexte, la langue et les normes émotionnelles, sans imposer un modèle unique."
+      },
+      {
+        "title": "Voir la femme, pas le rôle",
+        "body": "Derrière la soignante, la professionnelle ou la perfectionniste, {{app_name}} reconnaît la personne. Il reflète qui vous êtes, pas ce que l’on attend de vous."
+      },
+      {
+        "title": "La compréhension avant la directive",
+        "body": "Contrairement aux applications de bien-être classiques qui cherchent des solutions rapides, {{app_name}} ralentit le rythme. Il favorise *la réflexion avant la réaction*, pour vous aider à construire votre propre compréhension."
+      }
+    ]
+  },
+  "experience": {
+    "badge": "Accès et simplicité",
+    "title": "Réflexion, partout et à tout moment",
+    "items": [
+      {
+        "title": "Expérience fluide sur tous les appareils",
+        "body": "Installez {{app_name}} comme une application sur n’importe quel appareil. Fonctionne hors ligne et se synchronise quand vous le souhaitez."
+      },
+      {
+        "title": "Disponibilité continue",
+        "body": "Votre espace de réflexion est toujours accessible. Pas de rendez-vous, pas d’attente, juste un accès calme quand vous en avez besoin."
+      },
+      {
+        "title": "Empathie multilingue",
+        "body": "{{app_name}} parle couramment **anglais**, **français** et **arabe**, avec prise en charge complète de l’écriture de droite à gauche."
+      },
+      {
+        "title": "Profondeur éducative",
+        "body": "Accédez à une bibliothèque croissante de **ressources fondées sur la recherche**, pour développer votre intelligence émotionnelle et votre résilience."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Une technologie qui écoute avant de guider",
+    "description": "Découvrez un espace numérique qui remplace le bruit par la nuance et les algorithmes par la conscience.",
+    "button": "Voir en action"
+  }
+}

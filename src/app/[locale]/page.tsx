@@ -1,8 +1,9 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { APP_CONFIG } from "@/config/app";
 import initTranslations from "@/lib/i18n";
+import { buildLanguageAlternates, buildLocalizedUrl } from "@/lib/seo/url";
 import { cn } from "@/lib/utils";
-import { Metadata } from "next";
-import Link from "next/link";
 
 export async function generateMetadata({
   params,
@@ -11,6 +12,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale = "en" } = await params;
   const { t } = await initTranslations(locale, ["seo"]);
+  const canonicalUrl = buildLocalizedUrl(locale, "/");
+  const languageAlternates = buildLanguageAlternates("/");
 
   return {
     title: t("seo:home.title"),
@@ -19,7 +22,7 @@ export async function generateMetadata({
     openGraph: {
       title: t("seo:home.title"),
       description: t("seo:home.description"),
-      url: `/${locale}`,
+      url: canonicalUrl,
       siteName: APP_CONFIG.name,
       images: [
         {
@@ -40,13 +43,8 @@ export async function generateMetadata({
       creator: APP_CONFIG.social.twitter.creator,
     },
     alternates: {
-      canonical: `/${locale}`,
-      languages: {
-        en: "/en",
-        fr: "/fr",
-        ar: "/ar",
-        "x-default": "/en",
-      },
+      canonical: canonicalUrl,
+      languages: languageAlternates,
     },
   };
 }
@@ -58,7 +56,7 @@ export default async function Home({
 }>) {
   const { locale = "en" } = await params;
 
-  const { t } = await initTranslations(locale, ["pages"]);
+  const { t } = await initTranslations(locale, ["home"]);
 
   const {
     hero,
@@ -74,37 +72,37 @@ export default async function Home({
     testerInvite,
   } = {
     hero: {
-      badge: t("home.hero.badge"),
+      badge: t("hero.badge"),
       title: {
-        main: t("home.hero.title_main"),
-        sub: t("home.hero.title_sub", { app_name: APP_CONFIG.name }),
+        main: t("hero.title_main"),
+        sub: t("hero.title_sub", { app_name: APP_CONFIG.name }),
       },
-      subtitle: t("home.hero.subtitle", { app_name: APP_CONFIG.name }),
+      subtitle: t("hero.subtitle", { app_name: APP_CONFIG.name }),
       cta: {
-        join: t("home.hero.cta.join"),
-        demo: t("home.hero.cta.demo"),
+        join: t("hero.cta.join"),
+        demo: t("hero.cta.demo"),
       },
-      highlights: t("home.hero.highlights", { returnObjects: true }) as {
+      highlights: t("hero.highlights", { returnObjects: true }) as {
         title: string;
         body: string;
       }[],
       demo: {
-        title: t("home.hero.demo.title"),
-        conversations: t("home.hero.demo.conversations", {
+        title: t("hero.demo.title"),
+        conversations: t("hero.demo.conversations", {
           returnObjects: true,
         }) as {
           user: string;
           app: string;
         }[],
-        footer: t("home.hero.demo.footer", { app_name: APP_CONFIG.name }),
+        footer: t("hero.demo.footer", { app_name: APP_CONFIG.name }),
       },
     },
 
     features: {
-      badge: t("home.features.badge"),
-      title: t("home.features.title"),
-      subtitle: t("home.features.subtitle", { app_name: APP_CONFIG.name }),
-      items: t("home.features.items", {
+      badge: t("features.badge"),
+      title: t("features.title"),
+      subtitle: t("features.subtitle", { app_name: APP_CONFIG.name }),
+      items: t("features.items", {
         returnObjects: true,
         app_name: APP_CONFIG.name,
       }) as {
@@ -114,10 +112,10 @@ export default async function Home({
     },
 
     howItWorks: {
-      badge: t("home.howItWorks.badge"),
-      title: t("home.howItWorks.title", { app_name: APP_CONFIG.name }),
-      subtitle: t("home.howItWorks.subtitle", { app_name: APP_CONFIG.name }),
-      steps: t("home.howItWorks.steps", {
+      badge: t("howItWorks.badge"),
+      title: t("howItWorks.title", { app_name: APP_CONFIG.name }),
+      subtitle: t("howItWorks.subtitle", { app_name: APP_CONFIG.name }),
+      steps: t("howItWorks.steps", {
         returnObjects: true,
         app_name: APP_CONFIG.name,
       }) as {
@@ -128,10 +126,10 @@ export default async function Home({
     },
 
     why: {
-      badge: t("home.why.badge"),
-      title: t("home.why.title", { app_name: APP_CONFIG.name }),
-      subtitle: t("home.why.subtitle", { app_name: APP_CONFIG.name }),
-      items: t("home.why.items", {
+      badge: t("why.badge"),
+      title: t("why.title", { app_name: APP_CONFIG.name }),
+      subtitle: t("why.subtitle", { app_name: APP_CONFIG.name }),
+      items: t("why.items", {
         returnObjects: true,
         app_name: APP_CONFIG.name,
       }) as {
@@ -141,11 +139,11 @@ export default async function Home({
     },
 
     security: {
-      badge: t("home.security.badge"),
-      title: t("home.security.title"),
-      subtitle: t("home.security.subtitle"),
-      notice: t("home.security.notice", { app_name: APP_CONFIG.name }),
-      items: t("home.security.items", {
+      badge: t("security.badge"),
+      title: t("security.title"),
+      subtitle: t("security.subtitle"),
+      notice: t("security.notice", { app_name: APP_CONFIG.name }),
+      items: t("security.items", {
         returnObjects: true,
         app_name: APP_CONFIG.name,
       }) as {
@@ -155,11 +153,11 @@ export default async function Home({
     },
 
     pricing: {
-      badge: t("home.pricing.badge"),
-      popular: t("home.pricing.popular"),
-      title: t("home.pricing.title"),
-      subtitle: t("home.pricing.subtitle", { app_name: APP_CONFIG.name }),
-      plans: t("home.pricing.plans", { returnObjects: true }) as {
+      badge: t("pricing.badge"),
+      popular: t("pricing.popular"),
+      title: t("pricing.title"),
+      subtitle: t("pricing.subtitle", { app_name: APP_CONFIG.name }),
+      plans: t("pricing.plans", { returnObjects: true }) as {
         id: "starter" | "regular" | "premium";
         popular: boolean;
         name: string;
@@ -167,14 +165,14 @@ export default async function Home({
         desc: string;
         features: string[];
       }[],
-      footer: t("home.pricing.footer"),
-      link: t("home.pricing.link"),
+      footer: t("pricing.footer"),
+      link: t("pricing.link"),
     },
 
     testimonials: {
-      badge: t("home.testimonials.badge"),
-      title: t("home.testimonials.title"),
-      items: t("home.testimonials.items", {
+      badge: t("testimonials.badge"),
+      title: t("testimonials.title"),
+      items: t("testimonials.items", {
         returnObjects: true,
         app_name: APP_CONFIG.name,
       }) as {
@@ -184,10 +182,10 @@ export default async function Home({
     },
 
     quickLinks: {
-      badge: t("home.quickLinks.badge"),
-      title: t("home.quickLinks.title"),
-      subtitle: t("home.quickLinks.subtitle"),
-      items: t("home.quickLinks.items", {
+      badge: t("quickLinks.badge"),
+      title: t("quickLinks.title"),
+      subtitle: t("quickLinks.subtitle"),
+      items: t("quickLinks.items", {
         returnObjects: true,
       }) as {
         title: string;
@@ -198,24 +196,24 @@ export default async function Home({
     },
 
     testerInvite: {
-      badge: t("home.testerInvite.badge"),
-      title: t("home.testerInvite.title"),
-      description: t("home.testerInvite.description", {
+      badge: t("testerInvite.badge"),
+      title: t("testerInvite.title"),
+      description: t("testerInvite.description", {
         app_name: APP_CONFIG.name,
       }),
-      button: t("home.testerInvite.button"),
-      disclaimer: t("home.testerInvite.disclaimer"),
+      button: t("testerInvite.button"),
+      disclaimer: t("testerInvite.disclaimer"),
     },
 
     cta: {
-      title: t("home.cta.title"),
-      subtitle: t("home.cta.subtitle"),
-      cta: t("home.cta.cta"),
+      title: t("cta.title"),
+      subtitle: t("cta.subtitle"),
+      cta: t("cta.cta"),
     },
 
     about: {
-      title: t("home.about.title"),
-      subtitle: t("home.about.subtitle", { app_name: APP_CONFIG.name }),
+      title: t("about.title"),
+      subtitle: t("about.subtitle", { app_name: APP_CONFIG.name }),
     },
   };
 

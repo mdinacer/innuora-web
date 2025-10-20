@@ -1,8 +1,9 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { APP_CONFIG } from "@/config/app";
 import initTranslations from "@/lib/i18n";
+import { buildLanguageAlternates, buildLocalizedUrl } from "@/lib/seo/url";
 
 export async function generateMetadata({
   params,
@@ -12,17 +13,15 @@ export async function generateMetadata({
   const { locale = "en" } = await params;
   const { t } = await initTranslations(locale, ["seo"]);
 
+  const canonicalUrl = buildLocalizedUrl(locale, "/privacy");
+  const languageAlternates = buildLanguageAlternates("/privacy");
+
   return {
     title: t("seo:privacy.title"),
     description: t("seo:privacy.description"),
     alternates: {
-      canonical: `${APP_CONFIG.domains.primary}/privacy`, // Default locale, no prefix
-      languages: {
-        en: `${APP_CONFIG.domains.primary}/privacy`, // Default locale, no prefix
-        fr: `${APP_CONFIG.domains.primary}/fr/privacy`,
-        ar: `${APP_CONFIG.domains.primary}/ar/privacy`,
-        "x-default": `${APP_CONFIG.domains.primary}/privacy`, // Default uses English (no prefix)
-      },
+      canonical: canonicalUrl,
+      languages: languageAlternates,
     },
     robots: {
       index: true,

@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import ArticleLayout from "@/components/content/article-layout";
@@ -8,8 +8,8 @@ import {
   loadLocalizedContent,
 } from "@/lib/content/content-loader";
 import { contentRegistry } from "@/lib/content/content-registry";
-import { ContentCategory } from "@/types/content.types";
-import { APP_CONFIG } from "@/config/app";
+import type { ContentCategory } from "@/types/content.types";
+import { buildLanguageAlternates, buildLocalizedUrl } from "@/lib/seo/url";
 
 // =========================
 // Page Props
@@ -54,25 +54,18 @@ export async function generateMetadata({
     localizedContentItem.metadata,
   );
   const canonicalPath = `/content/${contentItem.metadata.category}/${contentItem.metadata.slug}`;
-
-  // Build locale-aware URLs (respecting prefixDefault: false for English)
-  const localePrefix = locale === "en" ? "" : `/${locale}`;
-  const currentUrl = `${localePrefix}${canonicalPath}`;
+  const canonicalUrl = buildLocalizedUrl(locale, canonicalPath);
+  const languageAlternates = buildLanguageAlternates(canonicalPath);
 
   return {
     ...baseMetadata,
     openGraph: {
       ...baseMetadata.openGraph,
-      url: currentUrl,
+      url: canonicalUrl,
     },
     alternates: {
-      canonical: currentUrl,
-      languages: {
-        en: canonicalPath, // Default locale, no prefix
-        ar: `/ar${canonicalPath}`,
-        fr: `/fr${canonicalPath}`,
-        "x-default": canonicalPath, // Default uses English (no prefix)
-      },
+      canonical: canonicalUrl,
+      languages: languageAlternates,
     },
   };
 }

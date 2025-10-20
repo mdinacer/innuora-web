@@ -5,7 +5,9 @@ import { BookOpen, Clock, Star, TrendingUp } from "lucide-react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
-import { ContentCategory, ContentItem } from "@/types/content.types";
+import type { AppLocales } from "@/lib/i18n";
+import { buildLocalizedPath } from "@/lib/i18n/paths";
+import type { ContentCategory, ContentItem } from "@/types/content.types";
 
 // =========================
 // Component Props
@@ -15,6 +17,7 @@ interface ContentLibraryLayoutProps {
   contentByCategory: Record<string, ContentItem[]>;
   featuredContent: ContentItem[];
   totalArticles: number;
+  currentLocale: AppLocales;
 }
 
 // =========================
@@ -40,6 +43,7 @@ export default function ContentLibraryLayout({
   contentByCategory,
   featuredContent,
   totalArticles,
+  currentLocale,
 }: ContentLibraryLayoutProps) {
   const { t } = useTranslation("content");
 
@@ -85,7 +89,11 @@ export default function ContentLibraryLayout({
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {featuredContent.slice(0, 6).map((item) => (
-                <FeaturedContentCard key={item.metadata.slug} item={item} />
+                <FeaturedContentCard
+                  key={item.metadata.slug}
+                  item={item}
+                  locale={currentLocale}
+                />
               ))}
             </div>
           </section>
@@ -102,6 +110,7 @@ export default function ContentLibraryLayout({
                 key={category}
                 category={category as ContentCategory}
                 articles={articles}
+                locale={currentLocale}
               />
             ))}
           </div>
@@ -116,7 +125,7 @@ export default function ContentLibraryLayout({
             {t("library.cta.description")}
           </p>
           <Link
-            href="/sessions"
+            href={buildLocalizedPath(currentLocale, "/sessions")}
             className="mt-6 inline-flex items-center rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft transition hover:opacity-90"
           >
             {t("library.cta.button")}
@@ -133,15 +142,19 @@ export default function ContentLibraryLayout({
 
 interface FeaturedContentCardProps {
   item: ContentItem;
+  locale: AppLocales;
 }
 
-function FeaturedContentCard({ item }: FeaturedContentCardProps) {
+function FeaturedContentCard({ item, locale }: FeaturedContentCardProps) {
   const { metadata, excerpt } = item;
   const { t } = useTranslation("content");
 
   return (
     <Link
-      href={`/content/${metadata.category}/${metadata.slug}`}
+      href={buildLocalizedPath(
+        locale,
+        `/content/${metadata.category}/${metadata.slug}`,
+      )}
       className="group block overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-soft ring-1 ring-primary/20 transition-all hover:-translate-y-1 hover:shadow-[0_18px_40px_-24px_rgba(15,23,42,0.35)]"
     >
       {/* Featured Badge */}
@@ -185,9 +198,10 @@ function FeaturedContentCard({ item }: FeaturedContentCardProps) {
 interface CategoryCardProps {
   category: ContentCategory;
   articles: ContentItem[];
+  locale: AppLocales;
 }
 
-function CategoryCard({ category, articles }: CategoryCardProps) {
+function CategoryCard({ category, articles, locale }: CategoryCardProps) {
   const { t } = useTranslation("content");
   const icon = CATEGORY_ICONS[category];
   const featuredCount = articles.filter(
@@ -196,7 +210,7 @@ function CategoryCard({ category, articles }: CategoryCardProps) {
 
   return (
     <Link
-      href={`/content/${category}`}
+      href={buildLocalizedPath(locale, `/content/${category}`)}
       className="group block rounded-2xl border border-border bg-card p-6 shadow-soft transition hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_18px_40px_-24px_rgba(15,23,42,0.35)]"
     >
       {/* Icon and Title */}

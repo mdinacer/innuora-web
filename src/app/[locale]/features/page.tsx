@@ -1,9 +1,13 @@
-import { APP_CONFIG } from "@/config/app";
-import initTranslations from "@/lib/i18n";
-import { cn } from "@/lib/utils";
-import { Metadata } from "next";
 import Markdown from "markdown-to-jsx";
+import type { Metadata } from "next";
 import Link from "next/link";
+
+import { APP_CONFIG } from "@/config/app";
+import type { AppLocales } from "@/lib/i18n";
+import initTranslations from "@/lib/i18n";
+import { buildLocalizedPath } from "@/lib/i18n/paths";
+import { buildLanguageAlternates, buildLocalizedUrl } from "@/lib/seo/url";
+import { cn } from "@/lib/utils";
 
 // SEO Metadata
 export async function generateMetadata({
@@ -19,9 +23,8 @@ export async function generateMetadata({
     app_name: APP_CONFIG.name,
   });
 
-  // Build locale-aware URLs (respecting prefixDefault: false for English)
-  const localePrefix = locale === "en" ? "" : `/${locale}`;
-  const currentUrl = `${localePrefix}/features`;
+  const canonicalUrl = buildLocalizedUrl(locale, "/features");
+  const languageAlternates = buildLanguageAlternates("/features");
 
   return {
     title,
@@ -44,7 +47,7 @@ export async function generateMetadata({
       description,
       type: "website",
       siteName: APP_CONFIG.name,
-      url: currentUrl,
+      url: canonicalUrl,
       locale: locale === "ar" ? "ar_AR" : locale === "fr" ? "fr_FR" : "en_US",
       images: [
         {
@@ -63,13 +66,8 @@ export async function generateMetadata({
       creator: APP_CONFIG.social.twitter.creator,
     },
     alternates: {
-      canonical: currentUrl,
-      languages: {
-        en: "/features", // Default locale, no prefix
-        ar: "/ar/features",
-        fr: "/fr/features",
-        "x-default": "/features", // Default uses English (no prefix)
-      },
+      canonical: canonicalUrl,
+      languages: languageAlternates,
     },
   };
 }
@@ -80,65 +78,65 @@ export default async function FeaturePage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale = "en" } = await params;
-  const { t } = await initTranslations(locale, ["pages"]);
+  const { t } = await initTranslations(locale, ["features"]);
 
   const data = {
     hero: {
-      badge: t("features.hero.badge"),
-      title: t("features.hero.title"),
-      description: t("features.hero.description", {
+      badge: t("hero.badge"),
+      title: t("hero.title"),
+      description: t("hero.description", {
         app_name: APP_CONFIG.name,
       }),
     },
     core: {
-      badge: t("features.core.badge"),
-      title: t("features.core.title"),
-      items: (t("features.core.items", {
+      badge: t("core.badge"),
+      title: t("core.title"),
+      items: (t("core.items", {
         returnObjects: true,
         defaultValue: "",
       }) || []) as DataType[],
     },
     privacy: {
-      badge: t("features.privacy.badge"),
-      title: t("features.privacy.title"),
-      items: (t("features.privacy.items", {
+      badge: t("privacy.badge"),
+      title: t("privacy.title"),
+      items: (t("privacy.items", {
         app_name: APP_CONFIG.name,
         returnObjects: true,
         defaultValue: "",
       }) || []) as DataType[],
     },
     insight: {
-      badge: t("features.insight.badge"),
-      title: t("features.insight.title"),
-      items: (t("features.insight.items", {
+      badge: t("insight.badge"),
+      title: t("insight.title"),
+      items: (t("insight.items", {
         returnObjects: true,
         defaultValue: "",
       }) || []) as DataType[],
     },
     interaction: {
-      badge: t("features.interaction.badge"),
-      title: t("features.interaction.title", {
+      badge: t("interaction.badge"),
+      title: t("interaction.title", {
         app_name: APP_CONFIG.name,
       }),
-      items: (t("features.interaction.items", {
+      items: (t("interaction.items", {
         app_name: APP_CONFIG.name,
         returnObjects: true,
         defaultValue: "",
       }) || []) as DataType[],
     },
     experience: {
-      badge: t("features.experience.badge"),
-      title: t("features.experience.title"),
-      items: (t("features.experience.items", {
+      badge: t("experience.badge"),
+      title: t("experience.title"),
+      items: (t("experience.items", {
         returnObjects: true,
         defaultValue: "",
         app_name: APP_CONFIG.name,
       }) || []) as DataType[],
     },
     cta: {
-      title: t("features.cta.title"),
-      description: t("features.cta.description"),
-      button: t("features.cta.button"),
+      title: t("cta.title"),
+      description: t("cta.description"),
+      button: t("cta.button"),
     },
   };
   return (
@@ -191,7 +189,7 @@ export default async function FeaturePage({
               <Markdown>{data.cta.description}</Markdown>
             </div>
             <Link
-              href="/demo"
+              href={buildLocalizedPath(locale as AppLocales, "/demo")}
               className="inline-flex rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft hover:opacity-90"
             >
               {data.cta.button}

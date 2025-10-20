@@ -1,6 +1,12 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 import { APP_CONFIG, APP_NAMES } from "@/config/app";
+import i18nConfig from "@/lib/i18n/config";
+import { buildLanguageAlternates, buildLocalizedUrl } from "@/lib/seo/url";
+
+const ROOT_PATH = "/";
+const ROOT_CANONICAL = buildLocalizedUrl(i18nConfig.defaultLocale, ROOT_PATH);
+const ROOT_LANG_ALTERNATES = buildLanguageAlternates(ROOT_PATH);
 
 export const METADATA: Metadata = {
   // ──────────────────────────────────────────────
@@ -16,13 +22,8 @@ export const METADATA: Metadata = {
 
   metadataBase: new URL(APP_CONFIG.domains.primary),
   alternates: {
-    canonical: "/en",
-    languages: {
-      en: "/en",
-      ar: "/ar",
-      fr: "/fr",
-      "x-default": "/en",
-    },
+    canonical: ROOT_CANONICAL,
+    languages: ROOT_LANG_ALTERNATES,
   },
 
   robots: {

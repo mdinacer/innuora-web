@@ -1,10 +1,3 @@
-import Link from "next/link";
-
-import LanguageDropdown from "@/components/language-dropdown";
-import { APP_CONFIG } from "@/config/app";
-import initTranslations, { AppLocales } from "@/lib/i18n";
-import LayoutHeader from "@/components/layout/header";
-
 export default async function Layout({
   children,
   params,
@@ -12,8 +5,7 @@ export default async function Layout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
-  const { locale = "en" } = await params;
-  const { t } = await initTranslations(locale, ["common"]);
+  await params;
 
   return (
     <>

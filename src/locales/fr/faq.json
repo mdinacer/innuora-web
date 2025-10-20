@@ -1,0 +1,235 @@
+{
+  "badge": "Assistance et Transparence",
+  "title": "Questions Fréquemment Posées",
+  "subtitle": "Tout ce qu’il faut savoir sur {{app_name}} : comment il écoute, protège et reste humain dans son intelligence.",
+  "sections": {
+    "audience": {
+      "badge": "Utilisatrices",
+      "title": "À qui s’adresse {{app_name}}",
+      "items": [
+        {
+          "question": "Qui sont les femmes à haut fonctionnement ?",
+          "answer": "Ce sont des femmes qui paraissent calmes, capables et organisées à l’extérieur, mais qui portent une pression silencieuse à l’intérieur. Souvent cheffes d’entreprise, mères, dirigeantes ou perfectionnistes, elles avancent avec force apparente tout en se sentant invisibles ou épuisées émotionnellement."
+        },
+        {
+          "question": "Pourquoi {{app_name}} a-t-il été conçu pour elles ?",
+          "answer": "{{app_name}} a été créé pour offrir une **clarté psychologique sans pression de performance**, un espace qui écoute entre les lignes au lieu d’exiger de la productivité ou de la positivité. Il aide les femmes à haut fonctionnement à ralentir, à nommer leur vérité et à se reconnecter à une sécurité émotionnelle."
+        },
+        {
+          "question": "Tout le monde peut-il utiliser {{app_name}} ?",
+          "answer": "Oui. Même si {{app_name}} a été conçu à partir de l’expérience vécue des femmes, ses réflexions sont inclusives. Toute personne recherchant une conscience de soi calme et ancrée peut en bénéficier."
+        }
+      ]
+    },
+    "general": {
+      "badge": "À propos",
+      "title": "Comprendre {{app_name}}",
+      "items": [
+        {
+          "question": "Qu’est-ce que {{app_name}} ?",
+          "answer": "{{app_name}} est une **plateforme de réflexion émotionnelle assistée par IA**, conçue pour les femmes à haut fonctionnement qui font face à l’épuisement, à la pression et au perfectionnisme. Il ne diagnostique pas, il reflète. Il écoute au-delà des mots, identifie les schémas et vous aide à vous rencontrer avec une intelligence calme."
+        },
+        {
+          "question": "Pour qui est-il conçu ?",
+          "answer": "{{app_name}} s’adresse aux femmes qui semblent maîtriser leur vie mais se sentent épuisées à l’intérieur : fondatrices, soignantes, professionnelles ou toute personne toujours *en alerte*. C’est un compagnon de réflexion sûr, pas un coach de motivation."
+        },
+        {
+          "question": "Est-ce une thérapie ?",
+          "answer": "Non. {{app_name}} **n’est pas une thérapie ni un service de crise**. C’est un environnement de réflexion cognitivo-comportemental qui soutient la conscience émotionnelle, sans se substituer à un traitement. Il complète la thérapie en faisant émerger une clarté que vous pouvez apporter à vos séances."
+        },
+        {
+          "question": "En quoi est-il différent des chatbots ou des applications de journal ?",
+          "answer": "- Émotionnellement attentif, pas conversationnellement générique\n- Modules d’analyse inspirés des principes de la TCC\n- Mémoire adaptative qui préserve la continuité émotionnelle\n- Chiffrement à connaissance nulle pour une confidentialité totale"
+        }
+      ]
+    },
+    "use": {
+      "badge": "Utilisation",
+      "title": "Utiliser {{app_name}} au quotidien",
+      "items": [
+        {
+          "question": "Comment démarrer une session ?",
+          "answer": "Créez un compte, choisissez un **forfait de crédits** et lancez une **session de réflexion**. Vous écrivez simplement. {{app_name}} écoute, analyse et reflète vos signaux émotionnels et cognitifs en temps réel."
+        },
+        {
+          "question": "Combien de temps dure une session ?",
+          "answer": "Les sessions **n’ont pas de limite de temps**. Certaines durent cinq minutes, d’autres une heure. Chaque session se met en pause et reprend automatiquement, préservant la continuité et le contexte."
+        },
+        {
+          "question": "Puis-je avoir plusieurs sessions ?",
+          "answer": "Oui. Vous pouvez créer **plusieurs sessions** selon vos thèmes : travail, relations, fatigue émotionnelle. Chacune conserve son propre contexte chiffré et sa mémoire analytique."
+        },
+        {
+          "question": "Puis-je partager mes réflexions ?",
+          "answer": "Oui. Vous pouvez exporter vos synthèses ou diagnostics sous forme de **PDF ou fichiers JSON** à partager avec un thérapeute, un coach ou pour votre propre usage. Aucune donnée ne quitte le stockage chiffré sans votre décision."
+        }
+      ]
+    },
+    "method": {
+      "badge": "Méthodologie",
+      "title": "Comment {{app_name}} pense et écoute",
+      "items": [
+        {
+          "question": "Sur quels cadres psychologiques repose-t-il ?",
+          "answer": "{{app_name}} s’appuie sur la **Thérapie Cognitivo-Comportementale (TCC)** et la **méthodologie Burns**, en travaillant sur les distorsions cognitives, la reformulation des pensées et la reconnaissance émotionnelle par une guidance douce."
+        },
+        {
+          "question": "S’adapte-t-il à moi avec le temps ?",
+          "answer": "Oui. Chaque réflexion entraîne subtilement un modèle de contexte adaptatif qui apprend votre ton, vos thèmes et vos repères émotionnels, offrant ainsi une résonance de plus en plus humaine et précise."
+        },
+        {
+          "question": "Donne-t-il des conseils directs ?",
+          "answer": "Non. Il guide par des **questions réflexives, pas des prescriptions**. Le ton reste posé, bienveillant et de pair à pair, jamais directif ni diagnostic."
+        },
+        {
+          "question": "Peut-il détecter un risque émotionnel ?",
+          "answer": "Oui. {{app_name}} intègre une **détection de risque de crise** qui identifie les signaux de détresse et répond avec des messages d’ancrage et des ressources professionnelles, sans jamais rompre le chiffrement."
+        }
+      ]
+    },
+    "philosophy": {
+      "badge": "Philosophie",
+      "title": "Nos limites de conception sont intentionnelles",
+      "items": [
+        {
+          "question": "Pourquoi {{app_name}} n’envoie-t-il pas de rappels ou de notifications ?",
+          "answer": "Parce que **la clarté ne se programme pas**. Nous ne vous interromprons jamais pour vous ramener dans l’application. Vous décidez quand réfléchir, quand faire une pause et quand avancer. {{app_name}} respecte votre autonomie. Le silence fait partie de son design."
+        },
+        {
+          "question": "Pourquoi n’y a-t-il pas de badges, de séries ou de jeux de progression ?",
+          "answer": "Votre **clarté émotionnelle n’est pas un jeu**. Nous ne quantifions pas votre monde intérieur et ne transformons pas la guérison en points. L’objectif est la connexion à soi, pas la performance. {{app_name}} ne mesure qu’une chose : la profondeur avec laquelle vous vous rencontrez."
+        },
+        {
+          "question": "{{app_name}} est-il une application de journal ?",
+          "answer": "Non. Il existe d’excellentes applications pour cela. {{app_name}} n’en fait pas partie. Nous ne stockons pas de pages blanches. Nous interagissons avec vos mots en temps réel pour vous aider à comprendre ce qu’ils révèlent sous la surface."
+        },
+        {
+          "question": "Pourquoi l’interface est-elle si épurée ?",
+          "answer": "Parce que **le calme est une forme d’intelligence**. Chaque pixel, chaque couleur et chaque mouvement dans {{app_name}} est conçu pour ne pas vous distraire. Pas de confettis, pas de rappels, pas de compteurs. Juste de la présence, de la confidentialité et de la précision."
+        },
+        {
+          "question": "{{app_name}} me pousse-t-il vers des objectifs ?",
+          "answer": "Jamais. {{app_name}} n’est ni un coach de vie ni un outil de suivi. Il ne prescrit aucun chemin. Il clarifie simplement ce qui est déjà vrai, pour que vos décisions naissent de la conscience, pas de la pression."
+        },
+        {
+          "question": "Quelle est la philosophie derrière ces limites ?",
+          "answer": "{{app_name}} repose sur la **retenue**. Il est conçu pour protéger votre espace mental, pas l’occuper. L’absence de rappels, de scores ou de mécanismes dopaminergiques n’est pas un manque. C’est une discipline. Votre calme est une donnée sacrée, pas une perte d’engagement."
+        }
+      ]
+    },
+    "privacy": {
+      "badge": "Confidentialité",
+      "title": "Vos réflexions vous appartiennent entièrement",
+      "items": [
+        {
+          "question": "Quelqu’un peut-il lire mes sessions ?",
+          "answer": "Non. Chaque réflexion est **chiffrée sur votre appareil** avant d’être envoyée. Vous seule détenez les clés. Ni {{app_name}}, ni nos serveurs, ni nos ingénieurs n’y ont accès. Votre contenu reste privé grâce à une **architecture à connaissance nulle** qui rend tout accès impossible à quiconque d’autre que vous."
+        },
+        {
+          "question": "{{app_name}} utilise-t-il mes données pour entraîner ses modèles ?",
+          "answer": "Jamais. Les données d’entraînement excluent totalement les réflexions des utilisatrices. Le système apprend de manière adaptative dans votre session, sans jamais exporter ni agréger vos contenus."
+        },
+        {
+          "question": "Puis-je récupérer mes données si j’oublie mon mot de passe ?",
+          "answer": "Non. Puisque vous seule détenez votre clé de chiffrement, {{app_name}} ne peut pas récupérer un mot de passe perdu ni déchiffrer vos réflexions passées. Cela garantit qu’aucune tierce partie, pas même nous, ne puisse accéder à vos données. C’est le prix de la **confidentialité absolue** : ce qui est à vous reste à vous."
+        },
+        {
+          "question": "Que se passe-t-il si je supprime mon compte ?",
+          "answer": "Toutes les sessions chiffrées, clés et métadonnées sont définitivement supprimées sous **30 jours**, conformément au RGPD et au CCPA. La suppression est irréversible. Une fois effacées, vos données ne peuvent pas être restaurées."
+        },
+        {
+          "question": "Puis-je choisir un mode local uniquement ?",
+          "answer": "Oui. Vous pouvez désactiver la synchronisation cloud et stocker vos réflexions uniquement sur votre appareil. Cela désactive l’accès multi-appareils, mais garantit une **confidentialité totale hors ligne**. Vos données ne quittent jamais votre appareil."
+        },
+        {
+          "question": "Pourquoi {{app_name}} n’autorise-t-il qu’une seule session active par utilisatrice ?",
+          "answer": "Pour votre sécurité et votre confidentialité. Lorsque vous vous connectez sur un nouvel appareil, {{app_name}} déconnecte automatiquement les autres. Cette **règle d’une seule session** empêche tout accès simultané à vos réflexions chiffrées et renforce le principe de **contenance émotionnelle**. {{app_name}} est conçu pour accueillir un seul esprit à la fois : le vôtre."
+        }
+      ]
+    },
+    "security": {
+      "badge": "Sécurité",
+      "title": "Conçu pour protéger",
+      "items": [
+        {
+          "question": "Où sont stockées les données ?",
+          "answer": "Toutes les réflexions sont stockées sous **forme chiffrée** dans une infrastructure sécurisée et conforme à la législation européenne sur la confidentialité. Les systèmes respectent les normes internationales de sécurité de l’information."
+        },
+        {
+          "question": "Comment l’authentification est-elle gérée ?",
+          "answer": "L’authentification suit des **protocoles d’identité modernes et limités en fréquence**, avec vérification multi-facteurs pour les accès administratifs. Vos identifiants et sessions restent entièrement chiffrés."
+        },
+        {
+          "question": "{{app_name}} respecte-t-il le RGPD ?",
+          "answer": "Oui. {{app_name}} est conforme au **RGPD** et au **CCPA**, garantissant vos droits d’accès, d’effacement, de portabilité et de minimisation des données. Les informations sont utilisées uniquement dans le cadre prévu."
+        },
+        {
+          "question": "Que se passe-t-il en cas de violation de données ?",
+          "answer": "Même en cas de compromission improbable, le **chiffrement à connaissance nulle** empêche toute lecture des réflexions. Tout incident serait traité de manière transparente et conforme aux standards internationaux de protection des données."
+        }
+      ]
+    },
+    "billing": {
+      "badge": "Facturation",
+      "title": "Crédits, coûts et équité",
+      "items": [
+        {
+          "question": "Comment fonctionne l’utilisation des crédits ?",
+          "answer": "Chaque réflexion consomme des crédits selon sa profondeur analytique. La **transparence tarifaire** est affichée avant chaque message afin que vous sachiez toujours ce que vous dépensez."
+        },
+        {
+          "question": "Y a-t-il des frais cachés ou des abonnements ?",
+          "answer": "Aucun. Vous payez uniquement lorsque vous utilisez le service. Les **crédits n’expirent jamais** et peuvent être rechargés à tout moment."
+        },
+        {
+          "question": "Le paiement est-il sécurisé ?",
+          "answer": "Tous les paiements sont traités via des **fournisseurs certifiés de niveau international**, conformes aux plus hauts standards de sécurité des données financières. {{app_name}} ne stocke jamais les informations de carte bancaire."
+        },
+        {
+          "question": "Est-ce que je reçois des reçus ?",
+          "answer": "Oui. Les reçus sont automatiquement envoyés par e-mail et archivés dans l’historique de votre compte pour une transparence totale."
+        }
+      ]
+    },
+    "tech": {
+      "badge": "Technique",
+      "title": "Plateforme et accessibilité",
+      "items": [
+        {
+          "question": "{{app_name}} est-il adapté aux mobiles ?",
+          "answer": "Oui. {{app_name}} fonctionne parfaitement sur mobile, tablette et ordinateur. Il est conçu pour favoriser une réflexion calme où que vous soyez."
+        },
+        {
+          "question": "Fonctionne-t-il hors ligne ?",
+          "answer": "Vous pouvez consulter vos réflexions passées sans connexion Internet. La génération de nouvelles réflexions nécessite une connexion."
+        },
+        {
+          "question": "Quelles langues sont disponibles ?",
+          "answer": "{{app_name}} prend en charge **l’anglais (EN)**, **le français (FR)** et **l’arabe (AR)** avec prise en charge complète du mode droite-à-gauche. D’autres langues sont en cours de développement."
+        },
+        {
+          "question": "Puis-je l’utiliser sur plusieurs appareils ?",
+          "answer": "Oui. Vous pouvez accéder à vos réflexions de manière sécurisée sur plusieurs appareils, avec un **chiffrement de bout en bout** garantissant la continuité et la protection."
+        }
+      ]
+    },
+    "support": {
+      "badge": "Assistance",
+      "title": "Aide et contact",
+      "items": [
+        {
+          "question": "Comment contacter l’assistance ?",
+          "answer": "Contactez-nous à tout moment à [**support@innuora.com**](mailto:support@innuora.com). Nous répondons généralement sous **24 à 48 heures ouvrées**."
+        },
+        {
+          "question": "Que faire si je rencontre un bug ?",
+          "answer": "Envoyez-nous une brève description du problème, avec les détails de votre appareil et navigateur. Les incidents critiques sont traités en priorité immédiate."
+        },
+        {
+          "question": "Puis-je proposer une fonctionnalité ?",
+          "answer": "Oui. Nous accueillons les suggestions alignées sur les valeurs de {{app_name}} : **intelligence éthique** et **clarté émotionnelle**. De nombreuses idées d’utilisatrices ont déjà façonné la plateforme."
+        }
+      ]
+    }
+  }
+}

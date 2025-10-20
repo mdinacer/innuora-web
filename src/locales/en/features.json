@@ -1,0 +1,114 @@
+{
+  "hero": {
+    "badge": "Features that matter",
+    "title": "A calm, intelligent space for emotional clarity",
+    "description": "{{app_name}} combines insight, privacy, and reflection to help you understand yourself on your own terms. No pressure, no tracking, no noise. Just space to breathe and learn."
+  },
+  "core": {
+    "badge": "Core Experience",
+    "title": "Built for depth, not distraction",
+    "items": [
+      {
+        "title": "Library of Guidance",
+        "body": "A living library of **articles, insights, and reflective guides** drawn from psychology, mindfulness, and emotional education. Always accessible, always at your pace."
+      },
+      {
+        "title": "User-Paced Reflection",
+        "body": "No reminders, no notifications, no streaks. Your progress follows your rhythm, not an algorithm."
+      },
+      {
+        "title": "Human-Calm Design",
+        "body": "Every interaction feels grounded and spacious. No gamification, no dopamine loops, just thoughtful design for reflection."
+      }
+    ]
+  },
+  "privacy": {
+    "badge": "Privacy & Trust",
+    "title": "Because reflection requires safety",
+    "items": [
+      {
+        "title": "End-to-End Protection",
+        "body": "Your conversations are sealed with **end-to-end encryption**. What you write stays between you and your device."
+      },
+      {
+        "title": "Private by Principle",
+        "body": "{{app_name}} is designed around **zero tracking** and **no behavioral data collection**. Your inner world remains yours."
+      },
+      {
+        "title": "Quiet Ownership",
+        "body": "You decide what to keep or erase. Your data, your keys, your choice."
+      }
+    ]
+  },
+  "insight": {
+    "badge": "Insight & Awareness",
+    "title": "Understand yourself clearly and compassionately",
+    "items": [
+      {
+        "title": "Basic Diagnostics",
+        "body": "A simple, **user-friendly overview** of emotional and cognitive themes, presented with warmth and clarity."
+      },
+      {
+        "title": "Advanced Analysis",
+        "body": "Deeper, **structured insights** for those who want to recognize recurring emotional patterns and growth trends."
+      },
+      {
+        "title": "Educational Integration",
+        "body": "Each diagnostic connects to **curated learning content** so reflection becomes understanding, not abstraction."
+      }
+    ]
+  },
+  "interaction": {
+    "badge": "Empathic Design",
+    "title": "How {{app_name}} meets you where you are",
+    "items": [
+      {
+        "title": "Validation Before Analysis",
+        "body": "{{app_name}} begins every exchange by *acknowledging your experience*, not dissecting it. It listens first, ensuring your feelings are seen before any insight is offered."
+      },
+      {
+        "title": "Reading Between the Lines",
+        "body": "Through linguistic and emotional nuance, {{app_name}} perceives what’s *implied but unspoken*. It senses the tension beneath words and the fatigue behind strength."
+      },
+      {
+        "title": "Feminine Tone and Cultural Sensitivity",
+        "body": "Every response is shaped with *gentle directness* and *cultural awareness*. {{app_name}} respects context, language, and emotional norms, rather than imposing one-size-fits-all advice."
+      },
+      {
+        "title": "Seeing the Woman, Not the Role",
+        "body": "Behind the caregiver, professional, or perfectionist, {{app_name}} recognizes the person. It reflects who you are, not just the expectations you navigate."
+      },
+      {
+        "title": "Insight Over Instruction",
+        "body": "Unlike generic mental health apps that rush to solve, {{app_name}} slows the pace. It invites *reflection before reaction*, helping you form your own understanding."
+      }
+    ]
+  },
+  "experience": {
+    "badge": "Access & Ease",
+    "title": "Reflection anywhere, anytime",
+    "items": [
+      {
+        "title": "Seamless PWA Experience",
+        "body": "Install {{app_name}} like an app on any device. Works offline, syncs when you’re ready."
+      },
+      {
+        "title": "24/7 Reflection Availability",
+        "body": "Your space for reflection is always open. No appointments, no waiting, just quiet access whenever you need to breathe and think."
+      },
+      {
+        "title": "Multilingual Empathy",
+        "body": "Emotionally fluent in **English**, **French**, and **Arabic**, with full right-to-left support."
+      },
+      {
+        "title": "Educational Depth",
+        "body": "Access an expanding library of **research-based resources** designed to build emotional literacy and resilience."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Technology that listens before it guides",
+    "description": "Experience a digital space that replaces noise with nuance and algorithms with awareness.",
+    "button": "See it in action"
+  }
+}

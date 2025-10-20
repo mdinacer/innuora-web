@@ -1,4 +1,4 @@
-import {
+import type {
   ContentCategory,
   ContentItem,
   ContentMetadata,
@@ -48,7 +48,8 @@ export class ContentRegistry {
     if (!this.categoryIndex.has(metadata.category)) {
       this.categoryIndex.set(metadata.category, []);
     }
-    this.categoryIndex.get(metadata.category)!.push(item);
+    const categoryItems = this.categoryIndex.get(metadata.category);
+    categoryItems?.push(item);
   }
 
   /**
@@ -133,15 +134,17 @@ export class ContentRegistry {
 
         // Matching CBT modules
         if (relatedCbtModules && other.metadata.relatedCbtModules) {
-          return relatedCbtModules.some((module) =>
-            other.metadata.relatedCbtModules!.includes(module),
+          return relatedCbtModules.some(
+            (module) =>
+              other.metadata.relatedCbtModules?.includes(module) ?? false,
           );
         }
 
         // Matching target emotions
         if (targetEmotions && other.metadata.targetEmotions) {
-          return targetEmotions.some((emotion) =>
-            other.metadata.targetEmotions!.includes(emotion),
+          return targetEmotions.some(
+            (emotion) =>
+              other.metadata.targetEmotions?.includes(emotion) ?? false,
           );
         }
 

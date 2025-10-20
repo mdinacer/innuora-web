@@ -1,0 +1,36 @@
+{
+  "header": {
+    "wordmark": "Intelligence réfléchie",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "links": {
+      "about": "À propos",
+      "contact": "Contactez-nous",
+      "demo": "Démo",
+      "faq": "FAQ",
+      "features": "Fonctionnalités",
+      "home": "Accueil",
+      "join": "Rejoindre la version bêta",
+      "library": "Bibliothèque"
+    }
+  },
+  "footer": {
+    "disclaimer": {
+      "label": "Important : ",
+      "message": "{{app_name}} n'est pas un service de santé mentale ni un service d'urgence. En cas de crise, contactez immédiatement les services de secours locaux."
+    },
+    "questions": "Des questions sur cette page {{currentPage}} ?",
+    "contact_email": "Écrivez-nous à ",
+    "navigationHeading": "Navigation",
+    "legalHeading": "Mentions légales",
+    "links": {
+      "eula": "Contrat de licence d'utilisateur final",
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d’utilisation",
+      "contact": "Contact",
+      "help": "Aide",
+      "support": "Support"
+    },
+    "copyright": "© 2025 {{app_name}}. Tous droits réservés."
+  }
+}

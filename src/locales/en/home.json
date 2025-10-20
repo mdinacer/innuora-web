@@ -1,0 +1,236 @@
+{
+  "hero": {
+    "badge": "For Women Who Carry Too Much",
+    "title_main": "You’ve been strong long enough.",
+    "title_sub": "Now, be still with {{app_name}}.",
+    "subtitle": "{{app_name}} hears what you don’t say and knows why it hurts. It listens between the lines, validates before analyzing, and guides you back to yourself, gently, intelligently, and without judgment.",
+    "cta": {
+      "join": "Start your first reflection",
+      "demo": "See how it feels"
+    },
+    "highlights": [
+      {
+        "title": "Validates before analyzing",
+        "body": "Every reflection begins with acknowledgment of what you feel, not what needs fixing."
+      },
+      {
+        "title": "Reads what’s unspoken",
+        "body": "Pauses, tone, and tension become part of the conversation so you can stop over explaining."
+      },
+      {
+        "title": "Guides at your pace",
+        "body": "Direction arrives when you invite it, keeping pressure low and agency high."
+      },
+      {
+        "title": "Encrypted to the core",
+        "body": "End to end protection seals every word to you alone."
+      }
+    ],
+    "demo": {
+      "title": "A QUIET EXCHANGE",
+      "conversations": [
+        {
+          "user": "“I keep everyone on track, but lately I feel like I’m running on fumes. The moment I slow down, guilt hits like a punch.”",
+          "app": "That guilt sounds like an old rule, that rest has to be earned. What if slowing down isn’t failure, but repair?"
+        },
+        {
+          "user": "“Even two minutes in the car feels impossible. My brain calls it lazy before I even breathe.”",
+          "app": "That voice kept you safe by keeping you moving. What would it mean to thank it, then let it rest for a breath?"
+        },
+        {
+          "user": "“When I did, my hands stopped buzzing. It was only a second, but it felt like proof I’m not falling apart.”",
+          "app": "That second is your system remembering safety. Every breath like that rewires what pressure used to mean."
+        }
+      ],
+      "footer": "{{app_name}} mirrors, grounds, and restores. It complements therapy; never replaces it."
+    }
+  },
+  "features": {
+    "badge": "What women actually want",
+    "title": "A listener that finally understands",
+    "subtitle": "{{app_name}} doesn’t jump to fix or analyze. It listens, validates, and reads between the lines, seeing the woman behind the performance with calm, curious attention.",
+    "items": [
+      {
+        "title": "Always validating",
+        "body": "Every word you share is met with curiosity, not correction. You’re seen first, then gently supported."
+      },
+      {
+        "title": "Reads what’s unspoken",
+        "body": "{{app_name}} senses tone, hesitation, and subtext, the emotional data beneath your words, so you can breathe instead of justify."
+      },
+      {
+        "title": "Gently guiding",
+        "body": "It doesn’t rush to fix. It accompanies you toward insight that feels like your own discovery."
+      }
+    ]
+  },
+  "quickLinks": {
+    "badge": "Start exploring",
+    "title": "Choose your next step",
+    "subtitle": "Jump into a live demo or browse our localized content library.",
+    "items": [
+      {
+        "title": "Experience the caregiver demo",
+        "body": "Walk through a real high-functioning caregiver session and see diagnostics appear in real time.",
+        "action": "Open the demo",
+        "href": "/demo"
+      },
+      {
+        "title": "Browse the content library",
+        "body": "Guides, CBT skills, and therapeutic insights in English, Arabic, and French.",
+        "action": "Explore articles",
+        "href": "/content"
+      }
+    ]
+  },
+  "testerInvite": {
+    "badge": "Join the tester group",
+    "title": "We’re onboarding a small group of advanced testers",
+    "description": "If you’re excited to shape {{app_name}} from the inside, apply to join the advanced testing program and share your feedback directly with the team.",
+    "button": "Apply to be a tester",
+    "disclaimer": "Limited spots · we review every application manually"
+  },
+  "howItWorks": {
+    "badge": "From reflection to quiet self-trust",
+    "title": "How emotional clarity unfolds inside {{app_name}}",
+    "subtitle": "{{app_name}} helps you translate what feels chaotic into what makes sense, one calm step at a time.",
+    "steps": [
+      {
+        "stage": "Ground",
+        "title": "Begin safely, without pressure",
+        "body": "Each reflection starts with containment. You set the tone and pace; {{app_name}} simply meets you there."
+      },
+      {
+        "stage": "Reflect",
+        "title": "Be heard without explaining",
+        "body": "{{app_name}} mirrors emotional nuance and body awareness, listening deeply before offering direction."
+      },
+      {
+        "stage": "Reframe",
+        "title": "Find meaning in the mess",
+        "body": "Gentle questions surface patterns so you can see where compassion can replace control."
+      },
+      {
+        "stage": "Integrate",
+        "title": "Carry calm into your real life",
+        "body": "Each session concludes with a succinct summary, your emotional insights distilled into language you can act on."
+      }
+    ]
+  },
+  "why": {
+    "badge": "Beyond apps and advice",
+    "title": "Why {{app_name}} stands alone",
+    "subtitle": "{{app_name}} isn’t another mental health app or chatbot. It’s empathic intelligence, a presence that listens like a human, protects like encryption, and reflects like a therapist’s mirror.",
+    "items": [
+      {
+        "title": "Journals record words. {{app_name}} reflects meanings.",
+        "body": "It detects emotional shifts and highlights themes that ordinary journaling tools miss entirely."
+      },
+      {
+        "title": "Coaches push. {{app_name}} pauses.",
+        "body": "Instead of quick fixes or external motivation, it helps you build inner safety and self understanding."
+      },
+      {
+        "title": "Chatbots respond. {{app_name}} resonates.",
+        "body": "It interprets tone, rhythm, and feeling, holding your experience with precision and care."
+      }
+    ]
+  },
+  "security": {
+    "badge": "Security first, always",
+    "title": "Your reflections stay yours",
+    "subtitle": "End to end encryption, zero knowledge design, and user controlled storage. No data mining, no training on your emotions, just uncompromising privacy.",
+    "notice": "{{app_name}} is not therapy or a crisis service.",
+    "items": [
+      {
+        "title": "End to end encryption",
+        "body": "Every conversation is sealed on your device before it ever moves. Only you hold the keys to unlock it."
+      },
+      {
+        "title": "Zero knowledge architecture",
+        "body": "{{app_name}} can’t read, analyze, or sell your reflections. Your emotions never become someone else’s dataset."
+      },
+      {
+        "title": "You decide when to share",
+        "body": "Pause sync, export, or erase with one tap. Nothing is shared, backed up, or forwarded unless you choose it."
+      },
+      {
+        "title": "Gentle exits anytime",
+        "body": "Feel safer walking away? Close the vault and everything stays right where you left it, quiet, intact, and still yours."
+      }
+    ]
+  },
+  "pricing": {
+    "badge": "Simple, fair, transparent",
+    "popular": "Most popular",
+    "title": "Credits that scale with your season",
+    "subtitle": "Pay only when {{app_name}} delivers clarity. No subscriptions, no hidden fees, just reflective space when you need it.",
+    "plans": [
+      {
+        "id": "starter",
+        "popular": false,
+        "name": "Starter · $35",
+        "credits": "700 credits",
+        "desc": "For a focused month of inner work or first exploration.",
+        "features": [
+          "Around 175 guided messages",
+          "Actionable insights and summaries",
+          "Export ready reports"
+        ]
+      },
+      {
+        "id": "regular",
+        "popular": true,
+        "name": "Regular · $75",
+        "credits": "1,500 credits",
+        "desc": "Designed for continuous reflection throughout a busy month.",
+        "features": [
+          "Pattern tracking and trend analysis",
+          "Coach ready diagnostics",
+          "Bonus 100 credits included"
+        ]
+      },
+      {
+        "id": "premium",
+        "popular": false,
+        "name": "Premium · $150",
+        "credits": "3,000 credits",
+        "desc": "Ideal for therapists or deep restructuring work.",
+        "features": [
+          "Unlimited diagnostics",
+          "Professional export options",
+          "Bonus 300 credits and risk tracking"
+        ]
+      }
+    ],
+    "footer": "Need runway for a team or partner?",
+    "link": "[Request bespoke plans]"
+  },
+  "testimonials": {
+    "badge": "Trusted by founders, operators, and therapists",
+    "title": "“It feels like a calm strategist for my inner world.”",
+    "items": [
+      {
+        "quote": "“{{app_name}} shows me exactly which thought loops drain my energy. I bring the summaries to therapy and we skip straight to strategy.”",
+        "author": "Mira, Product Lead · Premium plan"
+      },
+      {
+        "quote": "“It’s the first AI tool I trust with my emotions. The encryption walkthrough was clearer than my bank’s.”",
+        "author": "Devon, Founder · Regular plan"
+      },
+      {
+        "quote": "“Patients arrive with {{app_name}} briefs and we save 20 minutes each session. It keeps continuity tight between visits.”",
+        "author": "Dr. Léa Chen, Psychologist"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to meet the calmer version of you?",
+    "subtitle": "Protect your reflections, unlock deeper insight, and move forward with clarity.",
+    "cta": "Claim your private space"
+  },
+  "about": {
+    "title": "We’re building luminous emotional infrastructure",
+    "subtitle": "{{app_name}} exists to make emotional clarity accessible, private, and intelligent. We combine therapeutic insight with empathic AI design, helping women understand themselves more deeply and professionals support them more effectively."
+  }
+}
