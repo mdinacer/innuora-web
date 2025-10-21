@@ -30,6 +30,10 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const firstLinkRef = React.useRef<HTMLAnchorElement | null>(null);
+  const dialogRef = React.useRef<HTMLDivElement | null>(null);
+  const toggleButtonRef = React.useRef<HTMLButtonElement | null>(null);
+  const mobileMenuTitleId = React.useId();
+  const mobileMenuSubtitleId = React.useId();
 
   const navLinks = React.useMemo<HeaderLink[]>(() => {
     if (links && links.length > 0) {
@@ -84,17 +88,71 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
     ];
   }, [links, locale, t]);
 
-  const closeMenu = React.useCallback(() => setIsMenuOpen(false), []);
+  const closeMenu = React.useCallback((options?: { focusToggle?: boolean }) => {
+    setIsMenuOpen(false);
+    if (options?.focusToggle !== false) {
+      window.setTimeout(() => {
+        toggleButtonRef.current?.focus();
+      }, 0);
+    }
+  }, []);
 
   React.useEffect(() => {
     if (pathname !== undefined) {
-      closeMenu();
+      closeMenu({ focusToggle: false });
     }
   }, [pathname, closeMenu]);
 
   const toggleMenu = React.useCallback(() => {
-    setIsMenuOpen((open) => !open);
+    setIsMenuOpen((open) => {
+      if (open) {
+        window.setTimeout(() => {
+          toggleButtonRef.current?.focus();
+        }, 0);
+        return false;
+      }
+      return true;
+    });
   }, []);
+
+  const handleDialogKeyDown = React.useCallback(
+    (event: React.KeyboardEvent<HTMLDivElement>) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeMenu();
+        return;
+      }
+
+      if (event.key === "Tab" && dialogRef.current) {
+        const focusableSelectors =
+          'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+        const focusable =
+          dialogRef.current.querySelectorAll<HTMLElement>(focusableSelectors);
+
+        if (focusable.length === 0) {
+          return;
+        }
+
+        const firstElement = focusable[0];
+        const lastElement = focusable[focusable.length - 1];
+        const currentElement = document.activeElement as HTMLElement | null;
+
+        if (event.shiftKey) {
+          if (
+            currentElement === firstElement ||
+            !dialogRef.current.contains(currentElement)
+          ) {
+            event.preventDefault();
+            lastElement.focus();
+          }
+        } else if (currentElement === lastElement) {
+          event.preventDefault();
+          firstElement.focus();
+        }
+      }
+    },
+    [closeMenu],
+  );
 
   const isActiveLink = React.useCallback(
     (href: string) => {
@@ -140,7 +198,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
             key={`${link.href}-${index}`}
             href={link.href}
             className={cn(buttonClasses, "rtl:font-arabic-title")}
-            onClick={closeMenu}
+            onClick={() => closeMenu({ focusToggle: false })}
             ref={
               !isDesktop && index === 0
                 ? (node) => {
@@ -171,7 +229,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
           key={`${link.href}-${index}`}
           href={link.href}
           className={cn(linkClasses, "rtl:font-arabic-title")}
-          onClick={closeMenu}
+          onClick={() => closeMenu({ focusToggle: false })}
           ref={
             !isDesktop && index === 0
               ? (node) => {
@@ -254,6 +312,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
               <button
                 type="button"
                 onClick={toggleMenu}
+                ref={toggleButtonRef}
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border/70 bg-card/80 text-muted-foreground transition hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 lg:hidden"
                 aria-label={
                   isMenuOpen
@@ -276,25 +335,35 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
               <div
                 className="fixed inset-0 z-40 bg-background/70 backdrop-blur-sm transition-opacity duration-200 lg:hidden"
                 aria-hidden="true"
-                onClick={closeMenu}
+                onClick={() => closeMenu()}
               />
               <div
                 className="fixed inset-x-4 top-4 z-50 origin-top rounded-3xl border border-border/70 bg-card/95 p-5 shadow-[0_20px_60px_-28px_rgba(99,102,241,0.55)] transition-transform duration-200 lg:hidden"
                 role="dialog"
                 aria-modal="true"
+                aria-labelledby={mobileMenuTitleId}
+                aria-describedby={mobileMenuSubtitleId}
+                ref={dialogRef}
+                onKeyDown={handleDialogKeyDown}
               >
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex flex-col">
-                    <span className="text-sm font-medium uppercase tracking-[0.38em] text-muted-foreground">
+                    <span
+                      id={mobileMenuTitleId}
+                      className="text-sm font-medium uppercase tracking-[0.38em] text-muted-foreground"
+                    >
                       {t("mobileMenu.title")}
                     </span>
-                    <span className="text-base font-semibold text-foreground">
+                    <span
+                      id={mobileMenuSubtitleId}
+                      className="text-base font-semibold text-foreground"
+                    >
                       {t("mobileMenu.subtitle")}
                     </span>
                   </div>
                   <button
                     type="button"
-                    onClick={closeMenu}
+                    onClick={() => closeMenu()}
                     className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border/70 bg-background/80 text-muted-foreground transition hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
                     aria-label={t("closeMenu", { defaultValue: "Close menu" })}
                   >

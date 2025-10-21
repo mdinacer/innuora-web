@@ -1,7 +1,8 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
+import type { KeyboardEvent as ReactKeyboardEvent } from "react";
 import { useTranslation } from "react-i18next";
 
 import type { AppLocales } from "@/lib/i18n";
@@ -37,11 +38,20 @@ const LanguagePicker = () => {
   const currentLocale = i18n.language;
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+  const triggerRef = useRef<HTMLButtonElement | null>(null);
+  const activeOptionRef = useRef<HTMLButtonElement | null>(null);
+  const dropdownId = useId();
+  const activeOptionId = `language-option-${currentLocale}`;
 
   const currentPathname = usePathname();
 
   const handleChange = useCallback(
     (newLocale: AppLocales) => {
+      setIsOpen(false);
+      triggerRef.current?.focus();
+
       // set cookie for next-i18n-router
       const days = 30;
       const date = new Date();
@@ -88,14 +98,125 @@ const LanguagePicker = () => {
     },
     [currentLocale, currentPathname, router],
   );
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+
+    const handlePointerDown = (event: MouseEvent | TouchEvent) => {
+      if (!containerRef.current?.contains(event.target as Node)) {
+        setIsOpen(false);
+        triggerRef.current?.focus();
+      }
+    };
+
+    const handleEscapeKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setIsOpen(false);
+        triggerRef.current?.focus();
+      }
+    };
+
+    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("touchstart", handlePointerDown);
+    document.addEventListener("keydown", handleEscapeKey);
+
+    const focusTimer = window.setTimeout(() => {
+      activeOptionRef.current?.focus();
+    }, 0);
+
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("touchstart", handlePointerDown);
+      document.removeEventListener("keydown", handleEscapeKey);
+      window.clearTimeout(focusTimer);
+    };
+  }, [isOpen]);
+
+  const focusOptionByIndex = useCallback((index: number) => {
+    const buttons = dropdownRef.current?.querySelectorAll<HTMLButtonElement>(
+      '[data-lang-option="true"]',
+    );
+    if (!buttons || buttons.length === 0) {
+      return;
+    }
+    const total = buttons.length;
+    const normalizedIndex = ((index % total) + total) % total;
+    buttons[normalizedIndex].focus();
+  }, []);
+
+  const handleOptionKeyDown = useCallback(
+    (event: ReactKeyboardEvent<HTMLButtonElement>, index: number) => {
+      switch (event.key) {
+        case "ArrowDown": {
+          event.preventDefault();
+          focusOptionByIndex(index + 1);
+          break;
+        }
+        case "ArrowUp": {
+          event.preventDefault();
+          focusOptionByIndex(index - 1);
+          break;
+        }
+        case "Home": {
+          event.preventDefault();
+          focusOptionByIndex(0);
+          break;
+        }
+        case "End": {
+          event.preventDefault();
+          focusOptionByIndex(LANGUAGES_DATA.length - 1);
+          break;
+        }
+        case "Escape": {
+          event.preventDefault();
+          setIsOpen(false);
+          triggerRef.current?.focus();
+          break;
+        }
+        case "Tab": {
+          setIsOpen(false);
+          break;
+        }
+        case "Enter":
+        case " ": {
+          event.preventDefault();
+          handleChange(LANGUAGES_DATA[index].locale as AppLocales);
+          break;
+        }
+        default:
+          break;
+      }
+    },
+    [focusOptionByIndex, handleChange],
+  );
+
   return (
-    <div className="relative rtl:font-arabic-body">
+    <div className="relative rtl:font-arabic-body" ref={containerRef}>
       <button
         type="button"
+        ref={triggerRef}
         onClick={() => setIsOpen(!isOpen)}
         id="langDropdownTrigger"
         className="flex items-center gap-2 rounded-2xl border border-border bg-card px-3 py-2 hover:border-accent transition"
         aria-label="Select language"
+        aria-haspopup="listbox"
+        aria-expanded={isOpen}
+        aria-controls={`langDropdown-${dropdownId}`}
+        aria-activedescendant={isOpen ? activeOptionId : undefined}
+        onKeyDown={(event) => {
+          if (
+            (event.key === "ArrowDown" || event.key === "ArrowUp") &&
+            !isOpen
+          ) {
+            event.preventDefault();
+            setIsOpen(true);
+          } else if (event.key === "Escape" && isOpen) {
+            event.preventDefault();
+            setIsOpen(false);
+          }
+        }}
       >
         {/* <!-- Globe Icon --> */}
         <svg
@@ -146,7 +267,8 @@ const LanguagePicker = () => {
 
       {/* <!-- Language Dropdown --> */}
       <div
-        id="langDropdown"
+        id={`langDropdown-${dropdownId}`}
+        ref={dropdownRef}
         className={cn(
           "absolute top-[calc(100%_+_8px)] ltr:right-0 rtl:left-0 min-w-[200px] ",
           "lang-dropdown rounded-2xl border border-border bg-background shadow-floating",
@@ -155,9 +277,12 @@ const LanguagePicker = () => {
             ? "opacity-100  visible translate-y-0"
             : "opacity-0 hidden -translate-y-2.5 pointer-events-none",
         )}
+        role="listbox"
+        aria-labelledby="langDropdownTrigger"
+        aria-activedescendant={isOpen ? activeOptionId : undefined}
       >
         <div className="p-2">
-          {LANGUAGES_DATA.map((lang) => (
+          {LANGUAGES_DATA.map((lang, index) => (
             <button
               key={lang.locale}
               type="button"
@@ -166,9 +291,21 @@ const LanguagePicker = () => {
                 "lang-option active w-full flex items-center justify-between px-4 py-3 rounded-xl text-left hover:bg-secondary",
                 { "bg-primary": lang.locale === currentLocale },
               )}
+              id={`language-option-${lang.locale}`}
+              role="option"
+              aria-selected={lang.locale === currentLocale}
               data-lang={lang.locale}
               data-name={lang.nativeName}
               data-short={lang.short}
+              data-lang-option="true"
+              ref={
+                lang.locale === currentLocale
+                  ? (node) => {
+                      activeOptionRef.current = node;
+                    }
+                  : undefined
+              }
+              onKeyDown={(event) => handleOptionKeyDown(event, index)}
             >
               <div
                 className={cn(

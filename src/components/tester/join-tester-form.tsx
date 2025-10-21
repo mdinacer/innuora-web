@@ -94,6 +94,65 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
       Object.entries(values).map(([key, value]) => [key, value.trim()]),
     ) as FormValues;
   }, [values]);
+  const buildDescribedBy = (...ids: Array<string | null | undefined>) => {
+    const tokens = ids.filter(Boolean) as string[];
+    return tokens.length > 0 ? tokens.join(" ") : undefined;
+  };
+
+  const emailIds = {
+    input: "join-tester-email",
+    helper: "join-tester-email-helper",
+    error: "join-tester-email-error",
+  };
+  const occupationIds = {
+    input: "join-tester-occupation",
+    helper: "join-tester-occupation-helper",
+    error: "join-tester-occupation-error",
+  };
+  const strugglesIds = {
+    input: "join-tester-struggles",
+    helper: "join-tester-struggles-helper",
+    error: "join-tester-struggles-error",
+  };
+  const copingIds = {
+    input: "join-tester-coping",
+    helper: "join-tester-coping-helper",
+    error: "join-tester-coping-error",
+  };
+  const sourceIds = {
+    input: "join-tester-source",
+    helper: "join-tester-source-helper",
+    error: "join-tester-source-error",
+  };
+  const notesIds = {
+    input: "join-tester-notes",
+    helper: "join-tester-notes-helper",
+    error: "join-tester-notes-error",
+  };
+  const emailDescribedBy = buildDescribedBy(
+    fieldErrors.email ? null : emailIds.helper,
+    fieldErrors.email ? emailIds.error : null,
+  );
+  const occupationDescribedBy = buildDescribedBy(
+    copy.labels.occupation.helpText ? occupationIds.helper : null,
+    fieldErrors.occupation ? occupationIds.error : null,
+  );
+  const strugglesDescribedBy = buildDescribedBy(
+    copy.labels.struggles.helpText ? strugglesIds.helper : null,
+    fieldErrors.struggles ? strugglesIds.error : null,
+  );
+  const copingDescribedBy = buildDescribedBy(
+    copy.labels.coping.helpText ? copingIds.helper : null,
+    fieldErrors.coping ? copingIds.error : null,
+  );
+  const sourceDescribedBy = buildDescribedBy(
+    copy.labels.source.helpText ? sourceIds.helper : null,
+    fieldErrors.source ? sourceIds.error : null,
+  );
+  const notesDescribedBy = buildDescribedBy(
+    copy.labels.notes.helpText ? notesIds.helper : null,
+    fieldErrors.notes ? notesIds.error : null,
+  );
 
   const validate = (): boolean => {
     const result = advancedTesterSchema.safeParse(normalizedValues);
@@ -161,7 +220,7 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
 
   if (status === "success") {
     return (
-      <div className="space-y-6 text-center">
+      <div className="space-y-6 text-center" role="status" aria-live="polite">
         <div className="rounded-2xl border border-green-200 bg-green-50 p-6 text-green-800">
           <h2 className="text-xl font-semibold">
             {copy.messages.successTitle}
@@ -196,18 +255,22 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
   }
 
   return (
-    <form className="grid gap-8" onSubmit={handleSubmit}>
+    <form
+      className="grid gap-8"
+      onSubmit={handleSubmit}
+      aria-busy={isSubmitting}
+    >
       <fieldset className="grid gap-6" disabled={isSubmitting}>
         <div className="grid gap-2 text-left">
           <label
             className="text-sm font-semibold text-foreground"
-            htmlFor="email"
+            htmlFor={emailIds.input}
           >
             {copy.labels.email.label}
             <span className="text-red-500"> *</span>
           </label>
           <input
-            id="email"
+            id={emailIds.input}
             name="email"
             type="email"
             required
@@ -215,11 +278,19 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
             onChange={handleChange}
             placeholder={copy.labels.email.placeholder}
             className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+            aria-invalid={fieldErrors.email ? "true" : undefined}
+            aria-describedby={emailDescribedBy}
           />
           {fieldErrors.email ? (
-            <p className="text-sm text-red-500">{fieldErrors.email}</p>
+            <p
+              id={emailIds.error}
+              className="text-sm text-red-500"
+              role="alert"
+            >
+              {fieldErrors.email}
+            </p>
           ) : (
-            <p className="text-xs text-muted-foreground">
+            <p id={emailIds.helper} className="text-xs text-muted-foreground">
               {copy.labels.email.required}
             </p>
           )}
@@ -228,134 +299,184 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
         <div className="grid gap-2 text-left">
           <label
             className="text-sm font-semibold text-foreground"
-            htmlFor="occupation"
+            htmlFor={occupationIds.input}
           >
             {copy.labels.occupation.label}
           </label>
           <input
-            id="occupation"
+            id={occupationIds.input}
             name="occupation"
             value={values.occupation}
             onChange={handleChange}
             placeholder={copy.labels.occupation.placeholder}
             className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+            aria-invalid={fieldErrors.occupation ? "true" : undefined}
+            aria-describedby={occupationDescribedBy}
           />
           {copy.labels.occupation.helpText && (
-            <p className="text-xs text-muted-foreground">
+            <p
+              id={occupationIds.helper}
+              className="text-xs text-muted-foreground"
+            >
               {copy.labels.occupation.helpText}
             </p>
           )}
           {fieldErrors.occupation && (
-            <p className="text-sm text-red-500">{fieldErrors.occupation}</p>
+            <p
+              id={occupationIds.error}
+              className="text-sm text-red-500"
+              role="alert"
+            >
+              {fieldErrors.occupation}
+            </p>
           )}
         </div>
 
         <div className="grid gap-2 text-left">
           <label
             className="text-sm font-semibold text-foreground"
-            htmlFor="struggles"
+            htmlFor={strugglesIds.input}
           >
             {copy.labels.struggles.label}
           </label>
           <textarea
-            id="struggles"
+            id={strugglesIds.input}
             name="struggles"
             rows={4}
             value={values.struggles}
             onChange={handleChange}
             placeholder={copy.labels.struggles.placeholder}
             className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+            aria-invalid={fieldErrors.struggles ? "true" : undefined}
+            aria-describedby={strugglesDescribedBy}
           />
           {copy.labels.struggles.helpText && (
-            <p className="text-xs text-muted-foreground">
+            <p
+              id={strugglesIds.helper}
+              className="text-xs text-muted-foreground"
+            >
               {copy.labels.struggles.helpText}
             </p>
           )}
           {fieldErrors.struggles && (
-            <p className="text-sm text-red-500">{fieldErrors.struggles}</p>
+            <p
+              id={strugglesIds.error}
+              className="text-sm text-red-500"
+              role="alert"
+            >
+              {fieldErrors.struggles}
+            </p>
           )}
         </div>
 
         <div className="grid gap-2 text-left">
           <label
             className="text-sm font-semibold text-foreground"
-            htmlFor="coping"
+            htmlFor={copingIds.input}
           >
             {copy.labels.coping.label}
           </label>
           <textarea
-            id="coping"
+            id={copingIds.input}
             name="coping"
             rows={4}
             value={values.coping}
             onChange={handleChange}
             placeholder={copy.labels.coping.placeholder}
             className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+            aria-invalid={fieldErrors.coping ? "true" : undefined}
+            aria-describedby={copingDescribedBy}
           />
           {copy.labels.coping.helpText && (
-            <p className="text-xs text-muted-foreground">
+            <p id={copingIds.helper} className="text-xs text-muted-foreground">
               {copy.labels.coping.helpText}
             </p>
           )}
           {fieldErrors.coping && (
-            <p className="text-sm text-red-500">{fieldErrors.coping}</p>
+            <p
+              id={copingIds.error}
+              className="text-sm text-red-500"
+              role="alert"
+            >
+              {fieldErrors.coping}
+            </p>
           )}
         </div>
 
         <div className="grid gap-2 text-left">
           <label
             className="text-sm font-semibold text-foreground"
-            htmlFor="source"
+            htmlFor={sourceIds.input}
           >
             {copy.labels.source.label}
           </label>
           <input
-            id="source"
+            id={sourceIds.input}
             name="source"
             value={values.source}
             onChange={handleChange}
             placeholder={copy.labels.source.placeholder}
             className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+            aria-invalid={fieldErrors.source ? "true" : undefined}
+            aria-describedby={sourceDescribedBy}
           />
           {copy.labels.source.helpText && (
-            <p className="text-xs text-muted-foreground">
+            <p id={sourceIds.helper} className="text-xs text-muted-foreground">
               {copy.labels.source.helpText}
             </p>
           )}
           {fieldErrors.source && (
-            <p className="text-sm text-red-500">{fieldErrors.source}</p>
+            <p
+              id={sourceIds.error}
+              className="text-sm text-red-500"
+              role="alert"
+            >
+              {fieldErrors.source}
+            </p>
           )}
         </div>
 
         <div className="grid gap-2 text-left">
           <label
             className="text-sm font-semibold text-foreground"
-            htmlFor="notes"
+            htmlFor={notesIds.input}
           >
             {copy.labels.notes.label}
           </label>
           <textarea
-            id="notes"
+            id={notesIds.input}
             name="notes"
             rows={4}
             value={values.notes}
             onChange={handleChange}
             placeholder={copy.labels.notes.placeholder}
             className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+            aria-invalid={fieldErrors.notes ? "true" : undefined}
+            aria-describedby={notesDescribedBy}
           />
           {copy.labels.notes.helpText && (
-            <p className="text-xs text-muted-foreground">
+            <p id={notesIds.helper} className="text-xs text-muted-foreground">
               {copy.labels.notes.helpText}
             </p>
           )}
           {fieldErrors.notes && (
-            <p className="text-sm text-red-500">{fieldErrors.notes}</p>
+            <p
+              id={notesIds.error}
+              className="text-sm text-red-500"
+              role="alert"
+            >
+              {fieldErrors.notes}
+            </p>
           )}
         </div>
       </fieldset>
 
       {status === "error" && errorMessage && (
-        <p className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700">
+        <p
+          className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700"
+          role="alert"
+          aria-live="assertive"
+        >
           {errorMessage}
         </p>
       )}

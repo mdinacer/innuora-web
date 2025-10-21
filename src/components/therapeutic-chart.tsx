@@ -1,5 +1,6 @@
 "use client";
 
+import { useId } from "react";
 import { useTranslation } from "react-i18next";
 import {
   Area,
@@ -154,6 +155,8 @@ const colors = ["bg-primary", "bg-red-500", "bg-green-600", "bg-purple-600"];
 // =====================================
 export default function TherapeuticProgressChart() {
   const { t } = useTranslation("demo", { keyPrefix: "chart" });
+  const chartTitleId = useId();
+  const chartDescriptionId = useId();
 
   const {
     header: analyticsHeader,
@@ -254,6 +257,26 @@ export default function TherapeuticProgressChart() {
     subtitle: t("header.subtitle"),
   };
 
+  const accessibleSummaryTitle = t("analytics.accessibility.summaryTitle", {
+    defaultValue: "Therapeutic progress chart data",
+  });
+  const accessibleSummaryDescription = t(
+    "analytics.accessibility.summaryDescription",
+    {
+      defaultValue:
+        "Table listing exchanges with emotional intensity, cognitive load, therapeutic readiness, and insight milestones.",
+    },
+  );
+  const exchangeColumnLabel = t("analytics.accessibility.exchange", {
+    defaultValue: "Exchange",
+  });
+  const readinessColumnLabel = t("analytics.accessibility.readiness", {
+    defaultValue: "Therapeutic readiness score",
+  });
+  const integrationColumnLabel = t("analytics.accessibility.integration", {
+    defaultValue: "Insight milestone present",
+  });
+
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6 space-y-12 w-full py-8">
       <div className="mb-6 text-center space-y-2">
@@ -266,15 +289,20 @@ export default function TherapeuticProgressChart() {
 
       <div className="rounded-app shadow-soft bg-card  border border-border p-8">
         <div className="mb-6">
-          <h3 className="text-xl font-semibold mb-2">
+          <h3 className="text-xl font-semibold mb-2" id={chartTitleId}>
             {analyticsHeader.title}
           </h3>
           <p className="text-sm text-muted-foreground">
             {analyticsHeader.subtitle}
           </p>
         </div>
-        <div className="relative h-96">
-          <ResponsiveContainer width="100%" height="100%">
+        <div
+          className="relative h-96"
+          role="img"
+          aria-labelledby={chartTitleId}
+          aria-describedby={chartDescriptionId}
+        >
+          <ResponsiveContainer width="100%" height="100%" aria-hidden="true">
             <ComposedChart data={analysisData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
               <XAxis
@@ -333,6 +361,45 @@ export default function TherapeuticProgressChart() {
               />
             </ComposedChart>
           </ResponsiveContainer>
+        </div>
+        <div id={chartDescriptionId} className="sr-only">
+          <p className="font-semibold">{accessibleSummaryTitle}</p>
+          <p>{accessibleSummaryDescription}</p>
+          <table>
+            <caption className="sr-only">{accessibleSummaryTitle}</caption>
+            <thead>
+              <tr>
+                <th scope="col">{exchangeColumnLabel}</th>
+                <th scope="col">
+                  {metrics.emotional_cognitive.rows.emotional_intensity.label}
+                </th>
+                <th scope="col">
+                  {metrics.emotional_cognitive.rows.cognitive_load.label}
+                </th>
+                <th scope="col">{readinessColumnLabel}</th>
+                <th scope="col">{integrationColumnLabel}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {analysisData.map((row) => (
+                <tr key={row.exchange}>
+                  <th scope="row">{row.exchange}</th>
+                  <td>{row.emotionalIntensity}</td>
+                  <td>{row.cognitiveLoad}</td>
+                  <td>{row.readiness}</td>
+                  <td>
+                    {row.integration === 1
+                      ? t("analytics.accessibility.integrationYes", {
+                          defaultValue: "Yes",
+                        })
+                      : t("analytics.accessibility.integrationNo", {
+                          defaultValue: "No",
+                        })}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
 
