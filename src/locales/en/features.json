@@ -89,8 +89,8 @@
     "title": "Reflection anywhere, anytime",
     "items": [
       {
-        "title": "Seamless PWA Experience",
-        "body": "Install {{app_name}} like an app on any device. Works offline, syncs when you’re ready."
+        "title": "Consistent experience on every device",
+        "body": "Use {{app_name}} from desktop, tablet, or phone with the same calm interface—no downloads or special setup required."
       },
       {
         "title": "24/7 Reflection Availability",

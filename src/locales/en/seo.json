@@ -47,5 +47,10 @@
     "title": "Contact Innuora | Secure Communication and Support",
     "description": "Get in touch with the Innuora team. For support, business, or privacy inquiries — reach us through encrypted and transparent channels.",
     "ogImageAlt": "Contact Innuora — Support, business, and privacy communication"
+  },
+  "demoDiagnostics": {
+    "title": "Innuora Diagnostics Walkthrough | Full Emotional Reports",
+    "description": "Explore the complete diagnostic outputs from the Innuora demo session, including basic and advanced analyses ready for therapy or coaching handoff.",
+    "ogImageAlt": "Innuora Diagnostics — Full emotional intelligence report"
   }
 }

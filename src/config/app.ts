@@ -63,13 +63,6 @@ export const APP_CONFIG = {
     privacyCompliance: ["GDPR", "CCPA"],
   },
 
-  // App Store & PWA
-  app: {
-    bundleId: "com.innuora.app",
-    appleTouchIcon: "/assets/icons/ios/180.png",
-    manifestIcon: "/assets/icons/ios/512.png",
-  },
-
   // SEO & Marketing
   seo: {
     primaryKeywords: [

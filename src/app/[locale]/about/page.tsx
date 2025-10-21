@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { APP_CONFIG } from "@/config/app";
-import initTranslations from "@/lib/i18n";
 import type { AppLocales } from "@/lib/i18n";
+import initTranslations from "@/lib/i18n";
 import { buildLocalizedPath } from "@/lib/i18n/paths";
 import { buildLanguageAlternates, buildLocalizedUrl } from "@/lib/seo/url";
 import { cn } from "@/lib/utils";
@@ -115,6 +115,7 @@ export default async function AboutPage({
   };
   return (
     <main
+      id="main-content"
       className={cn(
         "relative",
         "min-h-screen flex flex-col",
@@ -166,9 +167,9 @@ export default async function AboutPage({
         <div className="mx-auto max-w-5xl px-4 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-5">
             <h2 className="text-3xl font-serif-brand">{mission.title}</h2>
-            {mission.paragraphs.map((p, i) => (
+            {mission.paragraphs.map((paragraph, idx) => (
               <Markdown
-                key={i}
+                key={`${idx}-${paragraph.slice(0, 24)}`}
                 options={{
                   forceBlock: true,
                   disableParsingRawHTML: true,
@@ -185,7 +186,7 @@ export default async function AboutPage({
                   },
                 }}
               >
-                {p}
+                {paragraph}
               </Markdown>
             ))}
           </div>
@@ -230,14 +231,13 @@ export default async function AboutPage({
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            {principles.items.map((item, i) => (
+            {principles.items.map((item) => (
               <article
-                key={i}
+                key={item.title}
                 className="rounded-app border bg-card p-6 shadow-soft"
               >
                 <h3 className="text-lg font-semibold">{item.title}</h3>
                 <Markdown
-                  key={i}
                   options={{
                     forceBlock: true,
                     disableParsingRawHTML: true,

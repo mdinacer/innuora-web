@@ -51,7 +51,7 @@ export default function CategoryLayout({
   });
 
   return (
-    <div className="min-h-screen bg-background">
+    <main id="main-content" className="min-h-screen bg-background">
       <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
         {/* Breadcrumb */}
         <nav className="mb-8 text-sm text-muted-foreground">
@@ -141,7 +141,7 @@ export default function CategoryLayout({
           )}
         </section>
       </div>
-    </div>
+    </main>
   );
 }
 

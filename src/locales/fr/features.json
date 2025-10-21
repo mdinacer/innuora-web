@@ -89,8 +89,8 @@
     "title": "Réflexion, partout et à tout moment",
     "items": [
       {
-        "title": "Expérience fluide sur tous les appareils",
-        "body": "Installez {{app_name}} comme une application sur n’importe quel appareil. Fonctionne hors ligne et se synchronise quand vous le souhaitez."
+        "title": "Expérience cohérente sur tous les appareils",
+        "body": "Utilisez {{app_name}} depuis un ordinateur, une tablette ou un téléphone avec la même interface apaisante — aucun téléchargement ni configuration."
       },
       {
         "title": "Disponibilité continue",

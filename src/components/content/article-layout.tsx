@@ -1,9 +1,11 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 "use client";
 
+import clsx from "clsx";
 import { ArrowLeft, Clock, Tag } from "lucide-react";
 import Markdown from "markdown-to-jsx";
 import Link from "next/link";
+import type { ComponentPropsWithoutRef } from "react";
 import { useTranslation } from "react-i18next";
 
 import type { ContentCategory, ContentItem } from "@/types/content.types";
@@ -24,6 +26,21 @@ interface ArticleLayoutProps {
 // =========================
 // Article Layout Component
 // =========================
+
+const MarkdownTable = ({
+  className,
+  ...props
+}: ComponentPropsWithoutRef<"table">) => (
+  <div className="my-6 w-full overflow-x-auto rounded-2xl border border-border/60 bg-background/80 shadow-soft">
+    <table
+      {...props}
+      className={clsx(
+        "w-full min-w-[420px] border-collapse text-left text-sm md:text-base",
+        className,
+      )}
+    />
+  </div>
+);
 
 export default function ArticleLayout({
   contentItem,
@@ -94,7 +111,10 @@ export default function ArticleLayout({
         </header>
 
         {/* Content Area */}
-        <main className="rounded-app border border-border bg-card p-8 shadow-soft md:p-10">
+        <main
+          id="main-content"
+          className="rounded-app border border-border bg-card p-8 shadow-soft md:p-10"
+        >
           <div className="prose prose-lg max-w-none break-words text-muted-foreground prose-pre:text-sm">
             {markdownContent ? (
               <Markdown
@@ -117,6 +137,27 @@ export default function ArticleLayout({
                     code: {
                       props: {
                         className: "break-words",
+                      },
+                    },
+                    table: {
+                      component: MarkdownTable,
+                    },
+                    tr: {
+                      props: {
+                        className:
+                          "border-b border-border last:border-0 even:bg-muted/40",
+                      },
+                    },
+                    th: {
+                      props: {
+                        className:
+                          "border-b border-border bg-muted px-4 py-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground",
+                      },
+                    },
+                    td: {
+                      props: {
+                        className:
+                          "border-b border-border/70 px-4 py-3 align-top text-muted-foreground",
                       },
                     },
                   },

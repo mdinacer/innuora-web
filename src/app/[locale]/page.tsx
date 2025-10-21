@@ -219,6 +219,7 @@ export default async function Home({
 
   return (
     <main
+      id="main-content"
       className={cn(
         "relative",
         "min-h-screen flex flex-col",
@@ -257,8 +258,8 @@ export default async function Home({
               </Link>
             </div>
             <dl className="grid sm:grid-cols-2 gap-6 text-sm rtl:text-base text-muted-foreground">
-              {hero.highlights.map(({ title, body }, index) => (
-                <div key={index}>
+              {hero.highlights.map(({ title, body }) => (
+                <div key={title}>
                   <dt className="font-semibold text-foreground">{title}</dt>
                   <dd>{body}</dd>
                 </div>
@@ -340,9 +341,9 @@ export default async function Home({
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            {quickLinks.items.map(({ title, body, action, href }, index) => (
+            {quickLinks.items.map(({ title, body, action, href }) => (
               <article
-                key={index}
+                key={href}
                 className="flex h-full flex-col justify-between rounded-app border border-border bg-card p-6 shadow-soft transition hover:-translate-y-1 hover:border-primary/40"
               >
                 <div className="space-y-3">

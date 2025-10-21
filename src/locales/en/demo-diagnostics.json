@@ -1,0 +1,206 @@
+{
+  "diagnostics": {
+    "backLink": "Back to demo overview",
+    "badge": "Diagnostics distilled",
+    "title": "Two lenses on the same conversation",
+    "description": "Tap through the tabs to see both full diagnostics exactly as the app renders them.",
+    "ariaLabel": "Diagnostics sections",
+    "labels": {
+      "rigidity": {
+        "rigid": "Rigid rule",
+        "moderate": "Moderately rigid",
+        "flexible": "Flexible rule"
+      },
+      "confidence": {
+        "high": "High confidence",
+        "medium": "Medium confidence",
+        "low": "Low confidence"
+      }
+    },
+    "confidenceValue": "{{value}} Confidence",
+    "basic": {
+      "title": "Basic diagnostic",
+      "now": {
+        "title": "What’s happening right now",
+        "points": [
+          "Sustained caregiving and work demands sit alongside chronic tension and a composed exterior, creating a quiet loneliness behind her competence.",
+          "She’s caught in an inner conflict, craving rest while an inner critic insists she keep producing, triggering guilt and a hyper-responsibility rebound.",
+          "Micro-experiments, pausing in the driveway or texting her sister, prove gentle self-care and shared support already soften the load."
+        ]
+      },
+      "rules": {
+        "title": "Hidden rules driving the weight",
+        "items": [
+          {
+            "title": "Rest must be earned by crisis",
+            "rigidity": "rigid",
+            "confidence": "high",
+            "body": "This rule convinces her she can slow down only when everything breaks. Perfectionism and rumination then keep the system in overdrive."
+          },
+          {
+            "title": "Don’t add to anyone else’s load",
+            "rigidity": "moderate",
+            "confidence": "high",
+            "body": "The rule silences her needs to protect others, making every help request feel dangerous and increasing the internal pressure to perform."
+          }
+        ]
+      },
+      "why": {
+        "title": "Why it feels heavy",
+        "item": {
+          "title": "The weight of the invisible load",
+          "body": "Caregiving + work + guilt loop through guilt → tension → avoidance of rest → deeper exhaustion. The body stays braced even when nothing is wrong."
+        }
+      },
+      "meta": {
+        "title": "Meta-pattern to watch",
+        "item": {
+          "title": "The hidden caretaker cycle",
+          "body": "She manages every role silently, avoids rest because of inner rules, then experiments cautiously with self-care. The cycle maintains the belief that worth equals keeping everything running."
+        }
+      },
+      "leverage": {
+        "title": "Leverage points",
+        "points": [
+          "The two-minute pause before home interrupts automatic tension and turns rest into an embodied experience instead of a performance.",
+          "Asking for help (Thursday dinner) cracks the rule against sharing the load and invites connection."
+        ]
+      },
+      "start": {
+        "title": "Where to start",
+        "points": [
+          "Practice the two-minute pause before entering the house. It’s brief, self-directed, and builds trust in slowing down. Difficulty: gentle.",
+          "Send one help request, the Thursday dinner text, to challenge the rule against burdening others. Difficulty: gentle.",
+          "Notice one moment of tension, shoulders or throat, and greet it with curiosity. Difficulty: gentle."
+        ]
+      },
+      "resources": {
+        "title": "Resources suggested",
+        "points": [
+          "Self-compassion · Cultivate kindness toward the exhausted inner critic. Beginner.",
+          "Mindfulness techniques · Short pauses and body awareness to reduce overwhelm. Beginner.",
+          "Anxiety management · Gently challenge anticipatory fear and negative self-talk. Intermediate."
+        ]
+      }
+    },
+    "advanced": {
+      "title": "Advanced diagnostic",
+      "state": {
+        "title": "Emotional state and risk",
+        "labels": {
+          "primary": "Primary",
+          "secondary": "Secondary",
+          "risk": "Risk"
+        },
+        "values": {
+          "primary": "moderate emotional exhaustion",
+          "secondary": "guilt · anxiety about burdening others · ambivalence about rest",
+          "risk_body": "Level: low. No crisis observed; emotional intensity is moderate and congruent. User is engaged and responsive to therapeutic experiments."
+        }
+      },
+      "themes": {
+        "title": "Themes (4)",
+        "items": [
+          {
+            "title": "Emotional exhaustion under a composed exterior",
+            "severity": "Severity: high",
+            "trajectory": "Trajectory: stable",
+            "points": [
+              "Carrying family logistics since her mother’s surgery.",
+              "Snapping when fatigued, then over-correcting to appear reliable.",
+              "Guilt whenever she contemplates rest."
+            ]
+          },
+          {
+            "title": "Chronic physical tension and somatic holding",
+            "severity": "Severity: high",
+            "trajectory": "Trajectory: stable",
+            "points": [
+              "Shoulder and throat tightness, cheek biting, buzzing hands.",
+              "Tension eases when micro-rest rituals land.",
+              "Body braces for anticipated disappointment."
+            ]
+          },
+          {
+            "title": "Overresponsibility and indispensability beliefs",
+            "severity": "Severity: high",
+            "trajectory": "Trajectory: stable",
+            "points": [
+              "Hidden to-do lists; reluctance to delegate to sister or team.",
+              "Core beliefs: If I slow down, everything falls apart and My worth depends on keeping everything running.",
+              "Silent rules: rest must be earned; don’t add to anyone else’s load."
+            ]
+          },
+          {
+            "title": "Avoidance behaviors and inner critic resistance to rest",
+            "severity": "Severity: medium",
+            "trajectory": "Trajectory: stable",
+            "points": [
+              "Late-night scrolling, productivity loops, ambivalence toward pausing.",
+              "Inner critic dismisses rest as dramatic.",
+              "Micro-rest experiments show emerging readiness."
+            ]
+          }
+        ]
+      },
+      "distortions": {
+        "title": "Cognitive distortions (5)",
+        "items": [
+          "Should statements · Frequency: 6 · Severity: moderate. Productivity rules define worth.",
+          "Personalization · Frequency: 5 · Severity: moderate. Interprets every burden as her responsibility.",
+          "Emotional reasoning · Frequency: 5 · Severity: moderate. Reads tension as proof she’s failing.",
+          "Mental filter · Frequency: 4 · Severity: moderate. Focuses on risks of rest, overlooks wins.",
+          "Catastrophizing · Frequency: 3 · Severity: moderate. Anticipates collapse if she slows down."
+        ]
+      },
+      "therapist_focus": {
+        "title": "Therapist focus",
+        "points": [
+          "Target indispensability beliefs and rest-related guilt.",
+          "Pair compassion work with body regulation practices.",
+          "Reinforce micro-rest rituals and somatic check-ins.",
+          "Challenge should statements and catastrophizing.",
+          "Support gradual delegation and shared support experiments."
+        ]
+      },
+      "clinical_interpretations": {
+        "title": "Clinical interpretations",
+        "points": [
+          "Perfectionism plus caretaking burden sustain chronic arousal.",
+          "Silent rules maintain avoidance of rest and help.",
+          "Distortions amplify guilt and difficulty disengaging.",
+          "Behavioral experiments signal readiness for deeper change."
+        ]
+      },
+      "treatment_recommendations": {
+        "title": "Treatment recommendations",
+        "points": [
+          "Cognitive restructuring for should statements and catastrophizing around delegation.",
+          "Compassion-focused interventions to soften the critic.",
+          "Consistent micro-rest rituals and body awareness techniques.",
+          "Guided help-seeking experiments to dismantle overresponsibility.",
+          "Monitor emotional intensity and ambivalence toward rest to pace work."
+        ]
+      },
+      "professional_language": {
+        "title": "Professional language",
+        "points": [
+          "Chronic caregiving burden with perfectionism sustains sympathetic activation.",
+          "Core schemas of indispensability and conditional self-worth inhibit help-seeking.",
+          "Distortions (should statements, personalization, catastrophizing) perpetuate maladaptive coping.",
+          "Therapeutic engagement is moderate-high with emerging behavioral activation.",
+          "Low acute risk supports CBT and compassion-based approaches."
+        ]
+      },
+      "clinical_insights": {
+        "title": "Clinical insights",
+        "points": [
+          "Mind–body integration is essential given somatic tension.",
+          "Rest ambivalence stems from internalized silent rules.",
+          "Micro-rest successes show leverage for core belief shifts.",
+          "Ongoing monitoring of intensity will guide pacing and intervention depth."
+        ]
+      }
+    }
+  }
+}

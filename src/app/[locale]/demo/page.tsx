@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { BotIcon, BrainCircuitIcon, UserIcon } from "lucide-react";
 
-import DiagnosticsTabs from "@/components/diagnostic-tabs";
 import { APP_CONFIG } from "@/config/app";
-import initTranslations from "@/lib/i18n";
+import initTranslations, { type AppLocales } from "@/lib/i18n";
+import { buildLocalizedPath } from "@/lib/i18n/paths";
 import { buildLanguageAlternates, buildLocalizedUrl } from "@/lib/seo/url";
 import { cn } from "@/lib/utils";
 
@@ -77,35 +77,6 @@ type Message = {
   app: string;
 };
 
-const BADGE_COLORS = {
-  // Confidence Levels
-  confidence: {
-    high: "bg-green-100 text-green-800 dark:bg-green-700 dark:text-white",
-    medium: "bg-yellow-100 text-yellow-800 dark:bg-yellow-600 dark:text-white",
-    low: "bg-red-100 text-red-800 dark:bg-red-700 dark:text-white",
-  },
-
-  // Rigidity Levels
-  rigidity: {
-    flexible: "bg-blue-100 text-blue-800 dark:bg-blue-700 dark:text-white",
-    moderate:
-      "bg-yellow-100 text-yellow-800 dark:bg-yellow-600 dark:text-white",
-    rigid: "bg-red-100 text-red-800 dark:bg-red-700 dark:text-white",
-  },
-
-  // Difficulty Levels
-  difficulty: {
-    gentle: "bg-green-100 text-green-800 dark:bg-green-700 dark:text-white",
-    moderate:
-      "bg-yellow-100 text-yellow-800 dark:bg-yellow-600 dark:text-white",
-    challenging: "bg-red-100 text-red-800 dark:bg-red-700 dark:text-white",
-    beginner: "bg-green-100 text-green-800 dark:bg-green-700 dark:text-white",
-    intermediate:
-      "bg-yellow-100 text-yellow-800 dark:bg-yellow-600 dark:text-white",
-    advanced: "bg-red-100 text-red-800 dark:bg-red-700 dark:text-white",
-  },
-};
-
 const PREVIEW_COUNT = 5;
 
 export default async function Page({
@@ -116,198 +87,68 @@ export default async function Page({
   const { locale = "en" } = await params;
 
   const { t } = await initTranslations(locale, ["demo"]);
-  const { messages, meta, conversation, highlights, diagnostics, cta } = {
-    messages: (t("messages", { returnObjects: true, defaultValue: "" }) ||
-      []) as Message[],
-    meta: {
-      badge: t("meta.badge"),
-      title: t("meta.title"),
-      description: t("meta.description", {
-        app_name: APP_CONFIG.name,
-      }),
-    },
-    conversation: {
-      badge: t("conversation.badge"),
-      title: t("conversation.title"),
-      description: t("conversation.description", {
-        app_name: APP_CONFIG.name,
-      }),
-      userReflection: t("conversation.userReflection"),
-      appVerbatim: t("conversation.appVerbatim", {
-        app_name: APP_CONFIG.name,
-      }),
-      vs: t("conversation.vs"),
-      vsLabel: t("conversation.vsLabel"),
-      genericProductivity: t("conversation.genericProductivity"),
-      genericWellness: t("conversation.genericWellness"),
-    },
-    highlights: {
-      badge: t("highlights.badge"),
-      title: t("highlights.title"),
-      items: (t("highlights.items", {
-        returnObjects: true,
-        defaultValue: "",
-        app_name: APP_CONFIG.name,
-      }) || []) as { title: string; body: string }[],
-    },
-    diagnostics: {
-      badge: t("diagnostics.badge"),
-      title: t("diagnostics.title"),
-      description: t("diagnostics.description"),
-      labels: {
-        rigidity: {
-          rigid: t("diagnostics.labels.rigidity.rigid"),
-          moderate: t("diagnostics.labels.rigidity.moderate"),
-          flexible: t("diagnostics.labels.rigidity.flexible"),
-        },
-        confidence: {
-          high: t("diagnostics.labels.confidence.high"),
-          medium: t("diagnostics.labels.confidence.medium"),
-          low: t("diagnostics.labels.confidence.low"),
-        },
+  const { messages, meta, conversation, highlights, diagnosticsPreview, cta } =
+    {
+      messages: (t("messages", { returnObjects: true, defaultValue: "" }) ||
+        []) as Message[],
+      meta: {
+        badge: t("meta.badge"),
+        title: t("meta.title"),
+        description: t("meta.description", {
+          app_name: APP_CONFIG.name,
+        }),
       },
-      confidence: t("diagnostics.confidence"),
-      basic: {
-        title: t("diagnostics.basic.title"),
-        now: {
-          title: t("diagnostics.basic.now.title"),
-          points: (t("diagnostics.basic.now.points", {
-            returnObjects: true,
-            defaultValue: "",
-          }) || []) as string[],
-        },
-        rules: {
-          title: t("diagnostics.basic.rules.title"),
-          items: (t("diagnostics.basic.rules.items", {
-            returnObjects: true,
-            defaultValue: "",
-          }) || []) as {
-            title: string;
-            body: string;
-            rigidity: "rigid" | "moderate" | "flexible";
-            confidence: "high" | "medium" | "low";
-          }[],
-        },
-        why: {
-          title: t("diagnostics.basic.why.title"),
-          item: {
-            title: t("diagnostics.basic.why.item.title"),
-            body: t("diagnostics.basic.why.item.body"),
-          },
-        },
-        meta: {
-          title: t("diagnostics.basic.meta.title"),
-          item: {
-            title: t("diagnostics.basic.meta.item.title"),
-            body: t("diagnostics.basic.meta.item.body"),
-          },
-        },
-
-        leverage: {
-          title: t("diagnostics.basic.leverage.title"),
-          points: (t("diagnostics.basic.leverage.points", {
-            returnObjects: true,
-            defaultValue: "",
-          }) || []) as string[],
-        },
-
-        start: {
-          title: t("diagnostics.basic.start.title"),
-          points: (t("diagnostics.basic.start.points", {
-            returnObjects: true,
-            defaultValue: "",
-          }) || []) as string[],
-        },
-        resources: {
-          title: t("diagnostics.basic.resources.title"),
-          points: (t("diagnostics.basic.resources.points", {
-            returnObjects: true,
-            defaultValue: "",
-          }) || []) as string[],
-        },
+      conversation: {
+        badge: t("conversation.badge"),
+        title: t("conversation.title"),
+        description: t("conversation.description", {
+          app_name: APP_CONFIG.name,
+        }),
+        userReflection: t("conversation.userReflection"),
+        appVerbatim: t("conversation.appVerbatim", {
+          app_name: APP_CONFIG.name,
+        }),
+        vs: t("conversation.vs"),
+        vsLabel: t("conversation.vsLabel"),
+        genericProductivity: t("conversation.genericProductivity"),
+        genericWellness: t("conversation.genericWellness"),
       },
-      advanced: {
-        title: t("diagnostics.advanced.title"),
-        state: {
-          title: t("diagnostics.advanced.state.title"),
-          labels: {
-            primary: t("diagnostics.advanced.state.labels.primary"),
-            secondary: t("diagnostics.advanced.state.labels.secondary"),
-            risk: t("diagnostics.advanced.state.labels.risk"),
-          },
-          values: {
-            primary: t("diagnostics.advanced.state.values.primary"),
-            secondary: t("diagnostics.advanced.state.values.secondary"),
-            risk_body: t("diagnostics.advanced.state.values.risk_body"),
-          },
-        },
-        themes: {
-          title: t("diagnostics.advanced.themes.title"),
-          items: (t("diagnostics.advanced.themes.items", {
-            returnObjects: true,
-            defaultValue: "",
-          }) || []) as {
-            title: string;
-            severity: string;
-            trajectory: string;
-            points: string[];
-          }[],
-        },
-        distortions: {
-          title: t("diagnostics.advanced.distortions.title"),
-          items: t("diagnostics.advanced.distortions.items", {
-            returnObjects: true,
-          }) as string[],
-        },
-        therapist_focus: {
-          title: t("diagnostics.advanced.therapist_focus.title"),
-          points: t("diagnostics.advanced.therapist_focus.points", {
-            returnObjects: true,
-          }) as string[],
-        },
-        clinical_interpretations: {
-          title: t("diagnostics.advanced.clinical_interpretations.title"),
-          points: t("diagnostics.advanced.clinical_interpretations.points", {
-            returnObjects: true,
-          }) as string[],
-        },
-        treatment_recommendations: {
-          title: t("diagnostics.advanced.treatment_recommendations.title"),
-          points: t("diagnostics.advanced.treatment_recommendations.points", {
-            returnObjects: true,
-          }) as string[],
-        },
-        professional_language: {
-          title: t("diagnostics.advanced.professional_language.title"),
-          points: t("diagnostics.advanced.professional_language.points", {
-            returnObjects: true,
-          }) as string[],
-        },
-        clinical_insights: {
-          title: t("diagnostics.advanced.clinical_insights.title"),
-          points: t("diagnostics.advanced.clinical_insights.points", {
-            returnObjects: true,
-          }) as string[],
-        },
+      highlights: {
+        badge: t("highlights.badge"),
+        title: t("highlights.title"),
+        items: (t("highlights.items", {
+          returnObjects: true,
+          defaultValue: "",
+          app_name: APP_CONFIG.name,
+        }) || []) as { title: string; body: string }[],
       },
-    },
-    cta: {
-      title: t("cta.title", {
-        app_name: APP_CONFIG.name,
-      }),
-      description: t("cta.description"),
-      button: t("cta.button"),
-      disclaimer: t("cta.disclaimer"),
-    },
-  };
+      diagnosticsPreview: {
+        badge: t("diagnosticsPreview.badge"),
+        title: t("diagnosticsPreview.title"),
+        description: t("diagnosticsPreview.description"),
+        ctaLabel: t("diagnosticsPreview.ctaLabel"),
+      },
+      cta: {
+        title: t("cta.title", {
+          app_name: APP_CONFIG.name,
+        }),
+        description: t("cta.description"),
+        button: t("cta.button"),
+        disclaimer: t("cta.disclaimer"),
+      },
+    };
 
   const previewMessages = messages.slice(0, PREVIEW_COUNT);
   const remainingMessages = messages.slice(PREVIEW_COUNT);
+  const diagnosticsLink = buildLocalizedPath(
+    locale as AppLocales,
+    "/demo/diagnostics",
+  );
   const quickLinks = [
     { href: "#conversation", label: conversation.badge },
     { href: "#highlights", label: highlights.badge },
     { href: "#analytics", label: t("chart.header.badge") },
-    { href: "#diagnostics", label: diagnostics.badge },
+    { href: diagnosticsLink, label: diagnosticsPreview.badge },
     { href: "#cta", label: t("cta.button") },
   ];
 
@@ -395,7 +236,8 @@ export default async function Page({
   );
 
   return (
-    <div
+    <main
+      id="main-content"
       className={cn(
         "relative flex-1",
         "min-h-screen flex flex-col",
@@ -488,9 +330,9 @@ export default async function Page({
             </h2>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
-            {highlights.items.map((item, index) => (
+            {highlights.items.map((item) => (
               <article
-                key={index}
+                key={item.title}
                 className="rounded-app border border-border bg-card p-6 shadow-soft space-y-3"
               >
                 <h3 className="text-lg font-semibold">{item.title}</h3>
@@ -511,310 +353,25 @@ export default async function Page({
       </section>
 
       <section
-        id="diagnostics"
+        id="diagnostics-preview"
         className="border-t border-border bg-card py-16"
       >
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 space-y-12">
-          <div className="space-y-3 text-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-              {diagnostics.badge}
-            </p>
-            <h2 className="text-3xl ltr:font-serif-brand rtl:font-arabic-title">
-              {diagnostics.title}
-            </h2>
-            <p className="mx-auto max-w-3xl text-sm text-muted-foreground">
-              {diagnostics.description}
-            </p>
-          </div>
-
-          <div className="rounded-app border border-border bg-background p-6 shadow-soft space-y-6">
-            <DiagnosticsTabs
-              basicLabel={diagnostics.basic.title}
-              advancedLabel={diagnostics.advanced.title}
-              basicContent={
-                <div
-                  id="basic"
-                  key={"basic"}
-                  className="tab-content active space-y-8 text-sm text-muted-foreground"
-                >
-                  <section className="rounded-2xl border border-border bg-card p-6 space-y-4">
-                    <h3 className="text-xl text-foreground ltr:font-serif-brand rtl:font-arabic-title">
-                      {diagnostics.basic.now.title}
-                    </h3>
-                    <ul className="list-disc list-inside space-y-2">
-                      {diagnostics.basic.now.points.map((item, index) => (
-                        <li key={index} className="list-item">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </section>
-
-                  <section className="rounded-2xl border border-border bg-card p-6 space-y-4">
-                    <h3 className="text-xl text-foreground ltr:font-serif-brand rtl:font-arabic-title">
-                      {diagnostics.basic.rules.title}
-                    </h3>
-                    <div className="space-y-4">
-                      {diagnostics.basic.rules.items.map((item, index) => (
-                        <article
-                          key={index}
-                          className="rounded-xl bg-muted p-4 border-l-4 border-primary/60"
-                        >
-                          <header className="flex items-center justify-between gap-3 mb-2">
-                            <h4 className="font-semibold text-foreground">
-                              {item.title}
-                            </h4>
-                            <div className="flex items-center shrink-0 text-center grid-cols-2 gap-3">
-                              <div
-                                className={cn(
-                                  "rounded-md px-2 py-0.5 text-xs uppercase",
-                                  BADGE_COLORS.rigidity[item.rigidity],
-                                )}
-                              >
-                                {diagnostics.labels.rigidity[item.rigidity] ??
-                                  item.rigidity}
-                              </div>
-                              <div
-                                className={cn(
-                                  "rounded-md px-2 py-0.5 text-xs text-center uppercase",
-                                  BADGE_COLORS.confidence[item.confidence],
-                                )}
-                              >
-                                {diagnostics.labels.confidence[
-                                  item.confidence
-                                ] ?? item.confidence}
-                              </div>
-                            </div>
-                          </header>
-                          <p>{item.body}</p>
-                        </article>
-                      ))}
-                    </div>
-                  </section>
-
-                  <section className="rounded-2xl border border-border bg-card p-6 space-y-4">
-                    <h3 className="text-xl text-foreground ltr:font-serif-brand rtl:font-arabic-title">
-                      {diagnostics.basic.why.title}
-                    </h3>
-                    <article className="rounded-xl bg-muted p-4 border-l-4 border-primary/60">
-                      <h4 className="font-semibold mb-2">
-                        {diagnostics.basic.why.item.title}
-                      </h4>
-                      <p>{diagnostics.basic.why.item.body}</p>
-                    </article>
-                  </section>
-
-                  <section className="rounded-2xl border border-border bg-card p-6 space-y-4">
-                    <h3 className="text-xl text-foreground ltr:font-serif-brand rtl:font-arabic-title">
-                      {diagnostics.basic.meta.title}
-                    </h3>
-                    <article className="rounded-xl bg-muted p-4 border-l-4 border-primary/60">
-                      <h4 className="font-semibold mb-2">
-                        {diagnostics.basic.meta.item.title}
-                      </h4>
-                      <p>{diagnostics.basic.meta.item.body}</p>
-                    </article>
-                  </section>
-
-                  <section className="rounded-2xl border border-border bg-card p-6 space-y-4">
-                    <h3 className="text-xl text-foreground ltr:font-serif-brand rtl:font-arabic-title">
-                      {diagnostics.basic.leverage.title}
-                    </h3>
-                    <ul className="list-disc list-inside space-y-2">
-                      {diagnostics.basic.leverage.points.map((item, index) => (
-                        <li key={index} className="list-item">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </section>
-
-                  <section className="rounded-2xl border border-border bg-card p-6 space-y-4">
-                    <h3 className="text-xl text-foreground ltr:font-serif-brand rtl:font-arabic-title">
-                      {diagnostics.basic.start.title}
-                    </h3>
-                    <ol className="list-decimal list-inside space-y-2">
-                      {diagnostics.basic.start.points.map((item, index) => (
-                        <li key={index} className="list-item">
-                          {item}
-                        </li>
-                      ))}
-                    </ol>
-                  </section>
-
-                  <section className="rounded-2xl border border-border bg-card p-6 space-y-4">
-                    <h3 className="text-xl text-foreground ltr:font-serif-brand rtl:font-arabic-title">
-                      {diagnostics.basic.resources.title}
-                    </h3>
-                    <ul className="list-disc list-inside space-y-2">
-                      {diagnostics.basic.resources.points.map((item, index) => (
-                        <li key={index} className="list-item">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </section>
-                </div>
-              }
-              advancedContent={
-                <div
-                  key="advanced"
-                  id="advanced"
-                  className="tab-content space-y-8 text-sm text-muted-foreground"
-                >
-                  {/* === Emotional State & Risk === */}
-                  <section className="rounded-2xl border border-border bg-card p-6 space-y-4">
-                    <h3 className="text-xl text-foreground ltr:font-serif-brand rtl:font-arabic-title">
-                      {diagnostics.advanced.state.title}
-                    </h3>
-
-                    <div className="grid gap-4 md:grid-cols-2">
-                      <div className="rounded-xl bg-muted p-4">
-                        <p className="text-xs text-muted-foreground mb-1 uppercase tracking-[0.3em]">
-                          {diagnostics.advanced.state.labels.primary}
-                        </p>
-                        <p className="text-base font-semibold capitalize">
-                          {diagnostics.advanced.state.values.primary}
-                        </p>
-                      </div>
-
-                      <div className="rounded-xl bg-muted p-4">
-                        <p className="text-xs text-muted-foreground mb-1 uppercase tracking-[0.3em]">
-                          {diagnostics.advanced.state.labels.secondary}
-                        </p>
-                        <p>{diagnostics.advanced.state.values.secondary}</p>
-                      </div>
-                    </div>
-
-                    <div className="rounded-xl bg-muted p-4 border-l-4 border-primary/60">
-                      <p className="text-xs text-muted-foreground uppercase tracking-[0.3em] mb-1">
-                        {diagnostics.advanced.state.labels.risk}
-                      </p>
-                      <p>{diagnostics.advanced.state.values.risk_body}</p>
-                    </div>
-                  </section>
-
-                  {/* === Themes === */}
-                  <section className="rounded-2xl border border-border bg-card p-6 space-y-4">
-                    <h3 className="text-xl text-foreground ltr:font-serif-brand rtl:font-arabic-title">
-                      {diagnostics.advanced.themes.title}
-                    </h3>
-
-                    <div className="space-y-4">
-                      {diagnostics.advanced.themes.items.map((theme, index) => (
-                        <article
-                          key={index}
-                          className="rounded-xl bg-muted p-4"
-                        >
-                          <header className="flex flex-wrap items-center gap-2 mb-2">
-                            <h4 className="font-semibold text-foreground">
-                              {theme.title}
-                            </h4>
-                            <span className="inline-flex items-center rounded-md bg-red-100 px-2 py-0.5 text-xs text-red-800 uppercase">
-                              {theme.severity}
-                            </span>
-                            <span className="inline-flex items-center rounded-md bg-gray-100 px-2 py-0.5 text-xs text-gray-800 uppercase">
-                              {theme.trajectory}
-                            </span>
-                          </header>
-
-                          <ul className="list-disc list-inside space-y-1">
-                            {theme.points.map((point, i) => (
-                              <li key={i}>{point}</li>
-                            ))}
-                          </ul>
-                        </article>
-                      ))}
-                    </div>
-                  </section>
-
-                  {/* === Distortions === */}
-                  <section className="rounded-2xl border border-border bg-card p-6 space-y-4">
-                    <h3 className="text-xl text-foreground ltr:font-serif-brand rtl:font-arabic-title">
-                      {diagnostics.advanced.distortions.title}
-                    </h3>
-                    <ul className="space-y-3">
-                      {diagnostics.advanced.distortions.items.map(
-                        (item, index) => (
-                          <li key={index}>{item}</li>
-                        ),
-                      )}
-                    </ul>
-                  </section>
-
-                  {/* === Therapist Focus === */}
-                  <section className="rounded-2xl border border-border bg-card p-6 space-y-4">
-                    <h3 className="text-xl text-foreground ltr:font-serif-brand rtl:font-arabic-title">
-                      {diagnostics.advanced.therapist_focus.title}
-                    </h3>
-                    <ul className="list-disc list-inside space-y-2">
-                      {diagnostics.advanced.therapist_focus.points.map(
-                        (point, index) => (
-                          <li key={index}>{point}</li>
-                        ),
-                      )}
-                    </ul>
-                  </section>
-
-                  {/* === Clinical Interpretations === */}
-                  <section className="rounded-2xl border border-border bg-card p-6 space-y-4">
-                    <h3 className="text-xl text-foreground ltr:font-serif-brand rtl:font-arabic-title">
-                      {diagnostics.advanced.clinical_interpretations.title}
-                    </h3>
-                    <ul className="list-disc list-inside space-y-2">
-                      {diagnostics.advanced.clinical_interpretations.points.map(
-                        (point, index) => (
-                          <li key={index}>{point}</li>
-                        ),
-                      )}
-                    </ul>
-                  </section>
-
-                  {/* === Treatment Recommendations === */}
-                  <section className="rounded-2xl border border-border bg-card p-6 space-y-4">
-                    <h3 className="text-xl text-foreground ltr:font-serif-brand rtl:font-arabic-title">
-                      {diagnostics.advanced.treatment_recommendations.title}
-                    </h3>
-                    <ul className="list-disc list-inside space-y-2">
-                      {diagnostics.advanced.treatment_recommendations.points.map(
-                        (point, index) => (
-                          <li key={index}>{point}</li>
-                        ),
-                      )}
-                    </ul>
-                  </section>
-
-                  {/* === Professional Language === */}
-                  <section className="rounded-2xl border border-border bg-card p-6 space-y-4">
-                    <h3 className="text-xl text-foreground ltr:font-serif-brand rtl:font-arabic-title">
-                      {diagnostics.advanced.professional_language.title}
-                    </h3>
-                    <ul className="list-disc list-inside space-y-2">
-                      {diagnostics.advanced.professional_language.points.map(
-                        (point, index) => (
-                          <li key={index}>{point}</li>
-                        ),
-                      )}
-                    </ul>
-                  </section>
-
-                  {/* === Clinical Insights === */}
-                  <section className="rounded-2xl border border-border bg-card p-6 space-y-4">
-                    <h3 className="text-xl text-foreground ltr:font-serif-brand rtl:font-arabic-title">
-                      {diagnostics.advanced.clinical_insights.title}
-                    </h3>
-                    <ul className="list-disc list-inside space-y-2">
-                      {diagnostics.advanced.clinical_insights.points.map(
-                        (point, index) => (
-                          <li key={index}>{point}</li>
-                        ),
-                      )}
-                    </ul>
-                  </section>
-                </div>
-              }
-            />
-          </div>
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 text-center space-y-6">
+          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+            {diagnosticsPreview.badge}
+          </p>
+          <h2 className="text-3xl md:text-4xl ltr:font-serif-brand rtl:font-arabic-title">
+            {diagnosticsPreview.title}
+          </h2>
+          <p className="mx-auto max-w-2xl text-sm text-muted-foreground">
+            {diagnosticsPreview.description}
+          </p>
+          <Link
+            href={diagnosticsLink}
+            className="inline-flex items-center justify-center rounded-full border border-primary/30 bg-primary/5 px-6 py-3 text-sm font-semibold text-primary shadow-soft transition hover:border-primary/60 hover:bg-primary/10"
+          >
+            {diagnosticsPreview.ctaLabel}
+          </Link>
         </div>
       </section>
 
@@ -835,6 +392,6 @@ export default async function Page({
           </p>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

@@ -36,6 +36,9 @@ export default async function RootLayout({
     return notFound();
   }
   const { resources } = await initTranslations(locale, i18nNamespaces);
+  const localeResources = (resources as Record<string, any>)[locale] ?? {};
+  const skipLinkLabel =
+    localeResources?.common?.skipToMain ?? "Skip to main content";
 
   return (
     <html lang={locale} dir={textDirection} suppressHydrationWarning>
@@ -53,6 +56,9 @@ export default async function RootLayout({
             resources={resources}
             namespaces={i18nNamespaces}
           >
+            <a href="#main-content" className="skip-link">
+              {skipLinkLabel}
+            </a>
             <LayoutHeader locale={locale as AppLocales} />
             {children}
             <LayoutFooter locale={locale as AppLocales} />

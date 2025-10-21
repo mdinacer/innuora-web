@@ -3,6 +3,11 @@
     "wordmark": "Reflective intelligence",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
+    "mobileMenu": {
+      "title": "Navigate",
+      "subtitle": "Explore Innuora",
+      "cta": "Built for high-functioning women seeking clarity and calm."
+    },
     "links": {
       "about": "About",
       "contact": "Contact",

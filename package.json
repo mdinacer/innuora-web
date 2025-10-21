@@ -7,6 +7,7 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "biome check",
+    "check:translations": "node scripts/check-translations.mjs",
     "format": "biome format --write"
   },
   "dependencies": {

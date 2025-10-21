@@ -355,6 +355,26 @@
   background-color: var(--color-muted);
 }
 
+.skip-link {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  z-index: 1000;
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+  left: 1rem;
+  transform: translateY(0);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.6);
+}
+
 @layer utilities {
   [dir="rtl"] .text-xs {
     font-size: 0.8rem;

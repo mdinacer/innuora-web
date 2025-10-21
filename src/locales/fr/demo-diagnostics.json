@@ -1,0 +1,206 @@
+{
+  "diagnostics": {
+    "backLink": "Retour à la démo",
+    "badge": "Diagnostics distillés",
+    "title": "Deux regards sur la même conversation",
+    "description": "Parcourez les onglets pour voir les diagnostics complets exactement tels que l'app les restitue.",
+    "ariaLabel": "Sections de diagnostic",
+    "labels": {
+      "rigidity": {
+        "rigid": "Règle rigide",
+        "moderate": "Règle modérément rigide",
+        "flexible": "Règle assouplie"
+      },
+      "confidence": {
+        "high": "Grande confiance",
+        "medium": "Confiance moyenne",
+        "low": "Faible confiance"
+      }
+    },
+    "confidenceValue": "Confiance : {{value}}",
+    "basic": {
+      "title": "Diagnostic de base",
+      "now": {
+        "title": "Ce qui se passe en ce moment",
+        "points": [
+          "Une charge continue de soin et de travail cohabite avec une tension chronique et une façade maîtrisée, créant une solitude silencieuse derrière sa compétence.",
+          "Elle est prise dans un conflit interne : elle réclame du repos tandis qu'un critique intérieur exige de continuer, déclenchant culpabilité et sur-responsabilité.",
+          "Les micro-expériences — pause dans l'allée ou texto à sa sœur — montrent qu'un soin doux et un soutien partagé allègent déjà la charge."
+        ]
+      },
+      "rules": {
+        "title": "Règles cachées qui maintiennent le poids",
+        "items": [
+          {
+            "title": "Le repos doit être mérité par la crise",
+            "rigidity": "rigid",
+            "confidence": "high",
+            "body": "Cette règle la convainc qu'elle ne peut ralentir que lorsque tout s'effondre. Le perfectionnisme et la rumination maintiennent alors le système en surchauffe."
+          },
+          {
+            "title": "Ne pas ajouter à la charge des autres",
+            "rigidity": "moderate",
+            "confidence": "high",
+            "body": "La règle fait taire ses besoins pour protéger les autres, rendant chaque demande d'aide périlleuse et augmentant la pression de performance."
+          }
+        ]
+      },
+      "why": {
+        "title": "Pourquoi c’est si lourd",
+        "item": {
+          "title": "Le poids de la charge invisible",
+          "body": "Soin + travail + culpabilité forment la boucle culpabilité → tension → évitement du repos → épuisement accru. Le corps reste en alerte même quand rien de grave ne se passe."
+        }
+      },
+      "meta": {
+        "title": "Méta-schéma à surveiller",
+        "item": {
+          "title": "Le cycle de la soigneuse invisible",
+          "body": "Elle gère chaque rôle en silence, évite le repos à cause de règles internes, puis teste prudemment des soins de soi. Le cycle entretient la croyance que sa valeur dépend de tout maintenir."
+        }
+      },
+      "leverage": {
+        "title": "Points d'appui",
+        "points": [
+          "La pause de deux minutes avant d'entrer chez elle casse la tension automatique et transforme le repos en expérience corporelle plutôt qu'en performance.",
+          "Demander de l'aide (dîner du jeudi) fissure la règle « ne pas partager la charge » et invite à la connexion."
+        ]
+      },
+      "start": {
+        "title": "Par où commencer",
+        "points": [
+          "Pratiquer la pause de deux minutes avant d'entrer à la maison. Courte, auto-dirigée, elle construit la confiance dans le ralentissement. Difficulté : douce.",
+          "Envoyer une demande d'aide, le texto pour le dîner du jeudi, afin de défier la règle qui interdit de peser sur les autres. Difficulté : douce.",
+          "Remarquer un moment de tension, aux épaules ou à la gorge, et l'accueillir avec curiosité. Difficulté : douce."
+        ]
+      },
+      "resources": {
+        "title": "Ressources suggérées",
+        "points": [
+          "Auto-compassion · Cultiver la bienveillance envers le critique épuisé. Débutante.",
+          "Techniques de pleine conscience · Courtes pauses et écoute corporelle pour réduire le débordement. Débutante.",
+          "Gestion de l'anxiété · Questionner avec douceur la peur anticipée et l'auto-discours négatif. Intermédiaire."
+        ]
+      }
+    },
+    "advanced": {
+      "title": "Diagnostic avancé",
+      "state": {
+        "title": "État émotionnel et risques",
+        "labels": {
+          "primary": "Principal",
+          "secondary": "Secondaire",
+          "risk": "Risque"
+        },
+        "values": {
+          "primary": "épuisement émotionnel modéré",
+          "secondary": "culpabilité · anxiété de peser sur les autres · ambivalence face au repos",
+          "risk_body": "Niveau : faible. Aucune crise observée ; l'intensité émotionnelle est modérée et congruente. L'utilisatrice est engagée et répond aux expériences thérapeutiques."
+        }
+      },
+      "themes": {
+        "title": "Thèmes (4)",
+        "items": [
+          {
+            "title": "Épuisement émotionnel derrière une façade maîtrisée",
+            "severity": "Gravité : élevée",
+            "trajectory": "Trajectoire : stable",
+            "points": [
+              "Gère la logistique familiale depuis l'opération de sa mère.",
+              "Craque quand la fatigue arrive, puis surcorrige pour paraître fiable.",
+              "Culpabilité dès qu’elle envisage de se reposer."
+            ]
+          },
+          {
+            "title": "Tension physique chronique et maintien somatique",
+            "severity": "Gravité : élevée",
+            "trajectory": "Trajectoire : stable",
+            "points": [
+              "Épaules et gorge contractées, mâchoire mordue, mains qui bourdonnent.",
+              "La tension diminue lorsque les rituels de micro-repos prennent racine.",
+              "Le corps se crispe en prévision d’une déception."
+            ]
+          },
+          {
+            "title": "Sur-responsabilité et croyances d’indispensabilité",
+            "severity": "Gravité : élevée",
+            "trajectory": "Trajectoire : stable",
+            "points": [
+              "Listes de tâches cachées ; réticence à déléguer à la sœur ou à l’équipe.",
+              "Croyances centrales : si je ralentis, tout s’effondre et ma valeur dépend de tout faire tourner.",
+              "Règles silencieuses : le repos doit être mérité ; ne pas ajouter à la charge des autres."
+            ]
+          },
+          {
+            "title": "Évitements et résistance du critique intérieur au repos",
+            "severity": "Gravité : moyenne",
+            "trajectory": "Trajectoire : stable",
+            "points": [
+              "Défilement tardif, boucles de productivité, ambivalence à l’idée de faire une pause.",
+              "Le critique intérieur juge le repos dramatique.",
+              "Les micro-expériences de repos montrent une disponibilité naissante."
+            ]
+          }
+        ]
+      },
+      "distortions": {
+        "title": "Distorsions cognitives (5)",
+        "items": [
+          "Énoncés en « il faut » · Fréquence : 6 · Gravité : modérée. Les règles de productivité définissent la valeur.",
+          "Personnalisation · Fréquence : 5 · Gravité : modérée. Interprète chaque charge comme sa responsabilité.",
+          "Raisonnement émotionnel · Fréquence : 5 · Gravité : modérée. Lit la tension comme la preuve d’un échec.",
+          "Filtre mental · Fréquence : 4 · Gravité : modérée. Focalise sur les risques du repos, néglige les victoires.",
+          "Catastrophisme · Fréquence : 3 · Gravité : modérée. Anticipe l’effondrement si elle ralentit."
+        ]
+      },
+      "therapist_focus": {
+        "title": "Axes de travail pour la thérapeute",
+        "points": [
+          "Cibler les croyances d’indispensabilité et la culpabilité liée au repos.",
+          "Associer le travail de compassion à des pratiques de régulation corporelle.",
+          "Renforcer les rituels de micro-repos et les check-ins somatiques.",
+          "Défier les “il faut” et le catastrophisme.",
+          "Soutenir une délégation progressive et des expériences de soutien partagé."
+        ]
+      },
+      "clinical_interpretations": {
+        "title": "Interprétations cliniques",
+        "points": [
+          "Le perfectionnisme combiné à la charge de soin entretient une activation chronique.",
+          "Les règles silencieuses maintiennent l’évitement du repos et de l’aide.",
+          "Les distorsions amplifient la culpabilité et la difficulté à décrocher.",
+          "Les expériences comportementales signalent une disponibilité à un changement plus profond."
+        ]
+      },
+      "treatment_recommendations": {
+        "title": "Recommandations d’intervention",
+        "points": [
+          "Restructuration cognitive des “il faut” et du catastrophisme autour de la délégation.",
+          "Interventions centrées sur la compassion pour adoucir le critique.",
+          "Rituels réguliers de micro-repos et techniques d’écoute corporelle.",
+          "Expériences guidées de demande d’aide pour desserrer la sur-responsabilité.",
+          "Surveiller l’intensité émotionnelle et l’ambivalence face au repos afin d’ajuster le rythme du travail."
+        ]
+      },
+      "professional_language": {
+        "title": "Langage professionnel",
+        "points": [
+          "La charge chronique de soin associée au perfectionnisme maintient l’activation sympathique.",
+          "Des schémas d’indispensabilité et de valeur conditionnelle freinent la demande d’aide.",
+          "Les distorsions (« il faut », personnalisation, catastrophisme) perpétuent des stratégies d’adaptation inadaptées.",
+          "L’engagement thérapeutique est modéré à élevé avec une activation comportementale émergente.",
+          "Le faible risque aigu soutient les approches TCC et centrées sur la compassion."
+        ]
+      },
+      "clinical_insights": {
+        "title": "Aperçus cliniques",
+        "points": [
+          "L’intégration corps-esprit est essentielle face à la tension somatique.",
+          "L’ambivalence face au repos découle de règles silencieuses intériorisées.",
+          "Les réussites de micro-repos offrent un levier pour transformer les croyances centrales.",
+          "Un suivi continu de l’intensité guidera le rythme et la profondeur des interventions."
+        ]
+      }
+    }
+  }
+}

@@ -115,7 +115,10 @@ export default async function EULARoute({
   };
 
   return (
-    <main className="relative  font-sans rtl:font-arabic-body [&_h2]:ltr:font-serif [&_h2]:rtl:font-arabic rtl:text-base min-h-screen pt-20 w-screen standalone:w-full overflow-hidden bg-background transition-all duration-300 ease-in text-foreground">
+    <main
+      id="main-content"
+      className="relative  font-sans rtl:font-arabic-body [&_h2]:ltr:font-serif [&_h2]:rtl:font-arabic rtl:text-base min-h-screen pt-20 w-screen standalone:w-full overflow-hidden bg-background transition-all duration-300 ease-in text-foreground"
+    >
       {/* <!-- Hero Section --> */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-center">
         <h1 className="rtl:font-arabic ltr:font-serif-brand font-bold text-4xl md:text-5xl leading-tight tracking-tight mb-4">
@@ -178,8 +181,8 @@ export default async function EULARoute({
               {content.licenseRestrictions.message}
             </p>
             <ul className="space-y-3 text-muted-foreground">
-              {content.licenseRestrictions.items.map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
+              {content.licenseRestrictions.items.map((item) => (
+                <li key={item.slice(0, 32)} className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
                   <span>{item}</span>
                 </li>

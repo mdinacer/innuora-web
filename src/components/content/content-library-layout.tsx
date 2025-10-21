@@ -48,7 +48,7 @@ export default function ContentLibraryLayout({
   const { t } = useTranslation("content");
 
   return (
-    <div className="min-h-screen bg-background">
+    <main id="main-content" className="min-h-screen bg-background">
       <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
         {/* Header */}
         <header className="mb-12 space-y-6 text-center">
@@ -132,7 +132,7 @@ export default function ContentLibraryLayout({
           </Link>
         </section>
       </div>
-    </div>
+    </main>
   );
 }
 

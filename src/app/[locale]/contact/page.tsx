@@ -71,6 +71,7 @@ export async function generateMetadata({
 export default async function ContactPage() {
   return (
     <main
+      id="main-content"
       className={cn(
         "relative",
         "min-h-screen flex flex-col",

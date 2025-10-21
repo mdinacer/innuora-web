@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 
 import ArticleLayout from "@/components/content/article-layout";
 import {
@@ -8,8 +9,8 @@ import {
   loadLocalizedContent,
 } from "@/lib/content/content-loader";
 import { contentRegistry } from "@/lib/content/content-registry";
-import type { ContentCategory } from "@/types/content.types";
 import { buildLanguageAlternates, buildLocalizedUrl } from "@/lib/seo/url";
+import type { ContentCategory } from "@/types/content.types";
 
 // =========================
 // Page Props
@@ -148,10 +149,13 @@ export default async function ContentPage({ params }: ContentPageProps) {
   return (
     <>
       {/* JSON-LD Structured Data for SEO */}
-      <script
+      <Script
+        id={`article-structured-data-${localizedContentItem.metadata.slug}`}
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
+        strategy="afterInteractive"
+      >
+        {JSON.stringify(structuredData)}
+      </Script>
       <ArticleLayout
         contentItem={localizedContentItem}
         relatedContent={relatedContent}

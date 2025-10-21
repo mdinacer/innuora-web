@@ -119,7 +119,10 @@ export default async function TesterJoinRoute({
   };
 
   return (
-    <main className="mt-20 min-h-screen w-full bg-background pb-24">
+    <main
+      id="main-content"
+      className="mt-20 min-h-screen w-full bg-background pb-24"
+    >
       <section className="mx-auto max-w-4xl px-6 py-12 text-center">
         <p className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-primary">
           {t("hero.badge")}

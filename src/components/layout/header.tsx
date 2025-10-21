@@ -286,14 +286,10 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex flex-col">
                     <span className="text-sm font-medium uppercase tracking-[0.38em] text-muted-foreground">
-                      {t("mobileMenu.title", {
-                        defaultValue: "Navigate",
-                      })}
+                      {t("mobileMenu.title")}
                     </span>
                     <span className="text-base font-semibold text-foreground">
-                      {t("mobileMenu.subtitle", {
-                        defaultValue: "Explore Innuora",
-                      })}
+                      {t("mobileMenu.subtitle")}
                     </span>
                   </div>
                   <button
@@ -318,10 +314,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
                       <Sparkles className="h-5 w-5" />
                     </div>
                     <p className="text-sm text-muted-foreground">
-                      {t("mobileMenu.cta", {
-                        defaultValue:
-                          "Built for high-functioning women seeking clarity and calm.",
-                      })}
+                      {t("mobileMenu.cta")}
                     </p>
                   </div>
                   <div className="flex items-center gap-3">

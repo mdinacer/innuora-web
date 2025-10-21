@@ -3,6 +3,11 @@
     "wordmark": "Intelligence réfléchie",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
+    "mobileMenu": {
+      "title": "Navigation",
+      "subtitle": "Explorez Innuora",
+      "cta": "Conçu pour les femmes à haut fonctionnement en quête de clarté et d'apaisement."
+    },
     "links": {
       "about": "À propos",
       "contact": "Contactez-nous",

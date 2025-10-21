@@ -32,5 +32,25 @@
     "title": "Démo Innuora — Séance réelle en direct | Clarté émotionnelle en action",
     "description": "Découvrez une véritable séance Innuora en temps réel avec des messages authentiques d’utilisatrices et les réponses de l’IA. Comparez comment un bot de productivité, une application de bien-être et le système émotionnellement intelligent d’Innuora réagissent face au burnout, à la culpabilité et à l’ambivalence autour du repos.",
     "ogImageAlt": "Démo Innuora — Séance réelle et parcours de clarté émotionnelle"
+  },
+  "about": {
+    "title": "À propos d'Innuora | Une intelligence empathique pour la clarté émotionnelle",
+    "description": "Découvrez la mission, les valeurs et l'équipe derrière Innuora — le compagnon émotionnel IA qui redéfinit la technologie réflexive grâce à l'intelligence thérapeutique et à l'éthique du chiffrement.",
+    "ogImageAlt": "Innuora — L'équipe qui construit une IA empathique pour le bien-être émotionnel"
+  },
+  "features": {
+    "title": "Fonctionnalités | Plateforme d'intelligence réflexive Innuora",
+    "description": "Explorez les capacités essentielles d'Innuora — réflexion empathique, diagnostics thérapeutiques, mémoire chiffrée et support multilingue pour le bien-être émotionnel et la clarté cognitive.",
+    "ogImageAlt": "Fonctionnalités Innuora — Une IA empathique née pour la clarté émotionnelle"
+  },
+  "contact": {
+    "title": "Contactez Innuora | Communication et support sécurisés",
+    "description": "Entrez en contact avec l'équipe Innuora. Pour le support, les partenariats ou les questions de confidentialité — échangez via des canaux transparents et chiffrés.",
+    "ogImageAlt": "Contact Innuora — Support, partenariats et questions de confidentialité"
+  },
+  "demoDiagnostics": {
+    "title": "Diagnostics Innuora | Rapports émotionnels complets",
+    "description": "Découvrez l'ensemble des diagnostics issus de la séance de démonstration Innuora, avec analyses de base et avancées prêtes pour un suivi thérapeutique ou un coaching.",
+    "ogImageAlt": "Diagnostics Innuora — Rapport complet d'intelligence émotionnelle"
   }
 }

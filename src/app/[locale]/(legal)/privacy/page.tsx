@@ -92,7 +92,10 @@ export default async function PrivacyPolicyRoute({
     },
   };
   return (
-    <main className="relative font-sans rtl:font-arabic-body rtl:text-lg min-h-screen pt-20 w-screen standalone:w-full overflow-hidden bg-background transition-all duration-300 ease-in text-foreground">
+    <main
+      id="main-content"
+      className="relative font-sans rtl:font-arabic-body rtl:text-lg min-h-screen pt-20 w-screen standalone:w-full overflow-hidden bg-background transition-all duration-300 ease-in text-foreground"
+    >
       {/* <!-- Hero Section --> */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-center">
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-4 rtl:font-arabic">
@@ -131,8 +134,8 @@ export default async function PrivacyPolicyRoute({
               {content.principles.title}
             </h2>
             <div className="space-y-4">
-              {content.principles.items.map((item, index) => (
-                <div key={index} className="flex items-start gap-3">
+              {content.principles.items.map((item) => (
+                <div key={item.slice(0, 32)} className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
                   <p className="text-muted-foreground">{item}</p>
                 </div>
@@ -152,24 +155,22 @@ export default async function PrivacyPolicyRoute({
               <table className="w-full">
                 <thead className="bg-muted">
                   <tr>
-                    {content.dataWeCollect.table.headers.map(
-                      (header, index) => (
-                        <th
-                          key={index}
-                          className="px-6 py-4 ltr:text-left rtl:text-right text-sm rtl:text-base font-semibold text-foreground"
-                        >
-                          {header}
-                        </th>
-                      ),
-                    )}
+                    {content.dataWeCollect.table.headers.map((header) => (
+                      <th
+                        key={header}
+                        className="px-6 py-4 ltr:text-left rtl:text-right text-sm rtl:text-base font-semibold text-foreground"
+                      >
+                        {header}
+                      </th>
+                    ))}
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-border">
-                  {content.dataWeCollect.table.rows.map((row, index) => {
+                  {content.dataWeCollect.table.rows.map((row) => {
                     if (row.length !== 3) return null;
                     const [header, description, storage] = row;
                     return (
-                      <tr key={index}>
+                      <tr key={`${header}-${storage}`}>
                         <td className="px-6 py-4 font-medium text-foreground">
                           {header}
                         </td>
@@ -188,13 +189,13 @@ export default async function PrivacyPolicyRoute({
 
             {/* <!-- Mobile Cards --> */}
             <div className="md:hidden p-6 space-y-6">
-              {content.dataWeCollect.table.rows.map((row, index) => {
+              {content.dataWeCollect.table.rows.map((row) => {
                 if (row.length !== 3) return null;
                 const [header, description, storage] = row;
                 const [, descriptionCol, storageCol] =
                   content.dataWeCollect.table.headers;
                 return (
-                  <div key={index} className="space-y-2">
+                  <div key={`${header}-${storage}`} className="space-y-2">
                     <h3 className="font-semibold text-foreground">{header}</h3>
                     <p className="text-sm rtl:text-base text-muted-foreground">
                       <strong>{descriptionCol}: </strong>
@@ -218,8 +219,8 @@ export default async function PrivacyPolicyRoute({
               {content.howWeUse.title}
             </h2>
             <div className="space-y-4 text-muted-foreground">
-              {content.howWeUse.paragraphs.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
+              {content.howWeUse.paragraphs.map((paragraph, idx) => (
+                <p key={`${idx}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
               ))}
             </div>
           </div>
@@ -232,8 +233,8 @@ export default async function PrivacyPolicyRoute({
               {content.yourRights.title}
             </h2>
             <div className="space-y-4 text-muted-foreground">
-              {content.yourRights.paragraphs.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
+              {content.yourRights.paragraphs.map((paragraph, idx) => (
+                <p key={`${idx}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
               ))}
             </div>
           </div>

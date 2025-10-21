@@ -264,7 +264,10 @@ export default async function TermsOfUseRoute({
   };
 
   return (
-    <main className="relative font-sans rtl:font-arabic-body [&_h2]:ltr:font-serif [&_h2]:rtl:font-arabic rtl:text-lg min-h-screen pt-20 w-screen standalone:w-full overflow-hidden bg-background transition-all duration-300 ease-in text-foreground">
+    <main
+      id="main-content"
+      className="relative font-sans rtl:font-arabic-body [&_h2]:ltr:font-serif [&_h2]:rtl:font-arabic rtl:text-lg min-h-screen pt-20 w-screen standalone:w-full overflow-hidden bg-background transition-all duration-300 ease-in text-foreground"
+    >
       {/* <!-- Hero Section --> */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-center">
         <h1 className="text-4xl rtl:font-arabic ltr:font-serif-brand md:text-5xl font-extrabold leading-tight tracking-tight mb-4">
@@ -369,8 +372,8 @@ export default async function TermsOfUseRoute({
                 {content.license.restricted.title}
               </h3>
               <ul className="space-y-2 list-disc list-inside [&>li]:list-item text-muted-foreground">
-                {content.license.restricted.items.map((item, index) => (
-                  <li key={index}>{item}</li>
+                {content.license.restricted.items.map((item) => (
+                  <li key={item.slice(0, 32)}>{item}</li>
                 ))}
               </ul>
             </div>
@@ -412,8 +415,8 @@ export default async function TermsOfUseRoute({
               </p>
               <ul className="space-y-2 text-muted-foreground list-disc list-inside">
                 {content.responsibilities.sections.prohibitedUses.items.map(
-                  (item, index) => (
-                    <li className="list-item" key={index}>
+                  (item) => (
+                    <li className="list-item" key={item.slice(0, 32)}>
                       {item}
                     </li>
                   ),
@@ -478,8 +481,8 @@ export default async function TermsOfUseRoute({
           <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
             <h2 className="text-2xl font-bold mb-4">{content.fees.title}</h2>
             <div className="space-y-3 text-muted-foreground">
-              {content.fees.points.map((item, index) => (
-                <p key={index}>{item}</p>
+              {content.fees.points.map((item, idx) => (
+                <p key={`${idx}-${item.slice(0, 24)}`}>{item}</p>
               ))}
               <div className="p-3 rounded-lg bg-muted">
                 <p className="text-sm rtl:text-base">
@@ -610,8 +613,8 @@ export default async function TermsOfUseRoute({
               {content.governingLaw.title}
             </h2>
             <div className="space-y-3 text-muted-foreground">
-              {content.governingLaw.points.map((point, index) => (
-                <p key={index}>{point}</p>
+              {content.governingLaw.points.map((point, idx) => (
+                <p key={`${idx}-${point.slice(0, 24)}`}>{point}</p>
               ))}
             </div>
           </div>

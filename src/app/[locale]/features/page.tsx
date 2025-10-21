@@ -141,6 +141,7 @@ export default async function FeaturePage({
   };
   return (
     <main
+      id="main-content"
       className={cn(
         "relative",
         "min-h-screen flex flex-col",

@@ -1,5 +1,6 @@
 // app/(marketing)/faq/page.tsx
 import type { Metadata } from "next";
+import Script from "next/script";
 import Markdown from "markdown-to-jsx";
 
 import { APP_CONFIG } from "@/config/app";
@@ -122,9 +123,9 @@ const FAQCard = ({ id, data }: { id: string; data: FAQSectionData }) => {
         </h2>
       </div>
       <div className="grid gap-6 md:grid-cols-2">
-        {items.map(({ question, answer }, index) => (
+        {items.map(({ question, answer }) => (
           <article
-            key={index}
+            key={question}
             className="rounded-app border bg-background p-6 shadow-soft"
           >
             <h3 className="text-lg font-semibold">{question}</h3>
@@ -176,11 +177,14 @@ export default async function FAQPage({
 
   return (
     <>
-      <script
+      <Script
+        id="faq-structured-data"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
-      />
-      <main className="min-h-screen flex flex-col">
+        strategy="afterInteractive"
+      >
+        {JSON.stringify(faqStructuredData)}
+      </Script>
+      <main id="main-content" className="min-h-screen flex flex-col">
         <section className="relative isolate border-b">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20 text-center space-y-6">
             <p className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs uppercase tracking-[0.25em] text-muted-foreground shadow-soft">
