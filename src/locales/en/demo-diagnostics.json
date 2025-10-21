@@ -18,6 +18,7 @@
       }
     },
     "confidenceValue": "{{value}} Confidence",
+    "confidence": "Confidence",
     "basic": {
       "title": "Basic diagnostic",
       "now": {
@@ -202,5 +203,11 @@
         ]
       }
     }
+  },
+  "cta": {
+    "title": "Bring {{app_name}} into your own context",
+    "description": "Share a live scenario. We’ll mirror the emotional pattern, surface silent rules, and return user- and clinician-ready diagnostics in under fifteen minutes.",
+    "button": "Request an invitation",
+    "disclaimer": "Reflective intelligence · not a crisis service"
   }
 }

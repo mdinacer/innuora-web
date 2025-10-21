@@ -18,6 +18,7 @@
       }
     },
     "confidenceValue": "Confiance : {{value}}",
+    "confidence": "Confiance",
     "basic": {
       "title": "Diagnostic de base",
       "now": {
@@ -202,5 +203,11 @@
         ]
       }
     }
+  },
+  "cta": {
+    "title": "Intégrez {{app_name}} à votre propre contexte",
+    "description": "Partagez un scénario réel. Nous mirerons le schéma émotionnel, ferons émerger les règles silencieuses et renverrons des diagnostics prêts pour l'utilisatrice et la clinicienne en moins de quinze minutes.",
+    "button": "Demander une invitation",
+    "disclaimer": "Intelligence réflexive · pas un service de crise"
   }
 }
