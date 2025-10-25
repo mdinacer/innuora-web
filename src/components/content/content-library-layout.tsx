@@ -52,7 +52,7 @@ export default function ContentLibraryLayout({
       <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
         {/* Header */}
         <header className="mb-12 space-y-6 text-center">
-          <h1 className="text-4xl font-serif-brand text-foreground md:text-6xl">
+          <h1 className="text-4xl text-foreground md:text-6xl">
             {t("library.heading")}
           </h1>
           <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted-foreground">
@@ -60,7 +60,7 @@ export default function ContentLibraryLayout({
           </p>
 
           {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
+          <div className="flex flex-wrap justify-center gap-4 text-sm ltr:text-base text-muted-foreground">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1">
               <BookOpen className="h-4 w-4 text-primary" />
               {t("shared.articles", { count: totalArticles })}
@@ -83,7 +83,7 @@ export default function ContentLibraryLayout({
         {/* Featured Content */}
         {featuredContent.length > 0 && (
           <section className="mb-12 space-y-6">
-            <h2 className="flex items-center gap-3 text-2xl font-serif-brand text-foreground">
+            <h2 className="flex items-center gap-3 text-2xl text-foreground">
               <Star className="h-6 w-6 text-primary" />
               {t("library.featuredHeading")}
             </h2>
@@ -101,7 +101,7 @@ export default function ContentLibraryLayout({
 
         {/* Categories Grid */}
         <section>
-          <h2 className="mb-6 text-2xl font-serif-brand text-foreground">
+          <h2 className="mb-6 text-2xl text-foreground">
             {t("library.browseHeading")}
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -118,15 +118,13 @@ export default function ContentLibraryLayout({
 
         {/* Call to Action */}
         <section className="mt-16 rounded-app border border-border bg-card p-10 text-center shadow-soft">
-          <h3 className="text-2xl font-serif-brand text-foreground">
-            {t("library.cta.title")}
-          </h3>
+          <h3 className="text-2xl text-foreground">{t("library.cta.title")}</h3>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
             {t("library.cta.description")}
           </p>
           <Link
             href={buildLocalizedPath(currentLocale, "/sessions")}
-            className="mt-6 inline-flex items-center rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft transition hover:opacity-90"
+            className="mt-6 inline-flex items-center rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft transition hover:bg-primary/90"
           >
             {t("library.cta.button")}
           </Link>
@@ -153,7 +151,7 @@ function FeaturedContentCard({ item, locale }: FeaturedContentCardProps) {
     <Link
       href={buildLocalizedPath(
         locale,
-        `/content/${metadata.category}/${metadata.slug}`,
+        `/content/${metadata.category}/${metadata.slug}`
       )}
       className="group block overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-soft ring-1 ring-primary/20 transition-all hover:-translate-y-1 hover:shadow-[0_18px_40px_-24px_rgba(15,23,42,0.35)]"
     >
@@ -169,7 +167,7 @@ function FeaturedContentCard({ item, locale }: FeaturedContentCardProps) {
       </h3>
 
       {/* Description */}
-      <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+      <p className="mb-4 line-clamp-3 text-sm ltr:text-base leading-relaxed text-muted-foreground">
         {excerpt || metadata.description}
       </p>
 
@@ -205,13 +203,13 @@ function CategoryCard({ category, articles, locale }: CategoryCardProps) {
   const { t } = useTranslation("content");
   const icon = CATEGORY_ICONS[category];
   const featuredCount = articles.filter(
-    (article) => article.metadata.featured,
+    (article) => article.metadata.featured
   ).length;
 
   return (
     <Link
       href={buildLocalizedPath(locale, `/content/${category}`)}
-      className="group block rounded-2xl border border-border bg-card p-6 shadow-soft transition hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_18px_40px_-24px_rgba(15,23,42,0.35)]"
+      className="group block rounded-2xl border border-border bg-card p-6 shadow-soft transition hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_18px_40px_-24px_rgba(15,23,42,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
     >
       {/* Icon and Title */}
       <div className="mb-3 flex items-center gap-3">
@@ -224,7 +222,7 @@ function CategoryCard({ category, articles, locale }: CategoryCardProps) {
       </div>
 
       {/* Description */}
-      <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+      <p className="mb-4 text-sm ltr:text-base text-muted-foreground">
         {t(`library.categories.${category}.description`, {
           defaultValue: "",
         })}

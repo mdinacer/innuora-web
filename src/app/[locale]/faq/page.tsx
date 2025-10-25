@@ -115,7 +115,7 @@ const FAQCard = ({ id, data }: { id: string; data: FAQSectionData }) => {
   return (
     <div id={id} className="space-y-6">
       <div className="text-center space-y-3">
-        <p className="text-sm uppercase tracking-[0.3em] rtl:font-arabic-title text-muted-foreground">
+        <p className="text-sm uppercase tracking-[0.2em] rtl:font-arabic-title text-muted-foreground">
           {badge}
         </p>
         <h2 className="text-3xl ltr:font-serif-brand rtl:font-arabic-title">

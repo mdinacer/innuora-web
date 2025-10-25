@@ -102,7 +102,7 @@ export default async function LayoutFooter({
               <span className="text-xl font-semibold ltr:font-serif-brand text-foreground">
                 {APP_CONFIG.name}
               </span>
-              <span className="text-xs font-medium uppercase tracking-[0.4em] text-muted-foreground">
+              <span className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
                 {t("header.wordmark", {
                   defaultValue: "Reflective intelligence",
                 })}
@@ -116,7 +116,7 @@ export default async function LayoutFooter({
                 href="https://x.com/innuora"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border/60 bg-background transition hover:border-primary/40 hover:bg-primary/5"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border/60 bg-background transition hover:border-primary/40 hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
                 aria-label="X (Twitter)"
               >
                 <X className="h-4 w-4 text-muted-foreground" />
@@ -126,7 +126,7 @@ export default async function LayoutFooter({
                 href="https://www.linkedin.com/company/innuora"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border/60 bg-background transition hover:border-primary/40 hover:bg-primary/5"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border/60 bg-background transition hover:border-primary/40 hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
                 aria-label="LinkedIn"
               >
                 <svg
@@ -143,7 +143,7 @@ export default async function LayoutFooter({
                 href="https://www.instagram.com/innuora"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border/60 bg-background transition hover:border-primary/40 hover:bg-primary/5"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border/60 bg-background transition hover:border-primary/40 hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
                 aria-label="Instagram"
               >
                 <svg
@@ -160,7 +160,7 @@ export default async function LayoutFooter({
                 href="https://www.facebook.com/innuora"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border/60 bg-background transition hover:border-primary/40 hover:bg-primary/5"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border/60 bg-background transition hover:border-primary/40 hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
                 aria-label="Facebook"
               >
                 <svg
@@ -177,7 +177,7 @@ export default async function LayoutFooter({
                 href="https://www.youtube.com/@Innuora"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border/60 bg-background transition hover:border-primary/40 hover:bg-primary/5"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border/60 bg-background transition hover:border-primary/40 hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
                 aria-label="YouTube"
               >
                 <svg
@@ -204,7 +204,7 @@ export default async function LayoutFooter({
 
           <div className="grid w-full max-w-xl grid-cols-1 gap-8 sm:grid-cols-2">
             <div>
-              <h3 className="text-xs font-semibold uppercase tracking-[0.4em] text-muted-foreground">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                 {navigationHeading}
               </h3>
               <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
@@ -221,7 +221,7 @@ export default async function LayoutFooter({
               </ul>
             </div>
             <div>
-              <h3 className="text-xs font-semibold uppercase tracking-[0.4em] text-muted-foreground">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                 {legalHeading}
               </h3>
               <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
@@ -240,7 +240,7 @@ export default async function LayoutFooter({
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-4 border-t border-border/60 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-4 border-t border-border/60 pt-6 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p className="flex flex-wrap items-center gap-1">
             <span>{contactLabel}</span>
             <Link

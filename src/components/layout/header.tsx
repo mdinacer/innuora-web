@@ -268,18 +268,13 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
   }, [isMenuOpen]);
 
   return (
-    <header
-      className={cn(
-        "sticky top-0 z-50 w-full backdrop-blur supports-[backdrop-filter]:bg-background/70",
-        className
-      )}
-    >
-      <div className="border-b border-border/60 bg-background/80">
+    <header className={cn("sticky top-0 z-50 w-full", className)}>
+      <div className="border-b border-border/60 backdrop-blur supports-[backdrop-filter]:bg-background/80">
         <div className="mx-auto flex max-w-7xl flex-col px-4 py-3 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <Link
               href={buildLocalizedPath(locale, "/")}
-              className="group inline-flex items-center gap-3 rounded-full border border-border/70 bg-card/80 px-3 rtl:pl-5 py-2 shadow-soft transition hover:border-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+              className="group inline-flex items-center gap-3 rounded-full border border-border/70 bg-card/80 px-5 rtl:pl-5 ltr:pr-5 py-2 shadow-soft transition hover:border-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
             >
               <span className="relative flex h-9 w-9 items-center justify-center rounded-full border border-primary/40 bg-primary/10">
                 <Image
@@ -294,7 +289,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
                 <span className="text-lg font-semibold ltr:font-serif-brand text-foreground">
                   {APP_CONFIG.name}
                 </span>
-                <span className="text-[0.68rem] sr-only sm:not-sr-only rtl:font-arabic-title rtl:text-sm font-medium uppercase tracking-[0.35em] text-muted-foreground group-hover:text-foreground/80">
+                <span className="text-sm sr-only sm:not-sr-only rtl:font-arabic-title rtl:text-base font-medium uppercase tracking-[0.18em] leading-snug text-muted-foreground group-hover:text-foreground/80">
                   {t("wordmark", { defaultValue: "AI Companion" })}
                 </span>
               </span>

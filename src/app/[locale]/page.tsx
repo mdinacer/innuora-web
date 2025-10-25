@@ -231,12 +231,12 @@ export default async function Home({
       <section className="relative isolate">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
           <div className="space-y-8">
-            <p className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs rtl:text-sm rtl:font-arabic-title uppercase tracking-[0.2em] text-muted-foreground shadow-soft">
+            <p className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.18em] text-muted-foreground shadow-soft">
               {hero.badge}
             </p>
             <h1 className="text-4xl rtl:font-arabic-title sm:text-5xl lg:text-6xl rtl:lg:text-5xl ltr:font-serif-brand leading-tight">
               {hero.title.main}
-              <span className="block text-transparent bg-clip-text bg-brand-gradient">
+              <span className="block text-primary ltr:font-serif-brand">
                 {hero.title.sub}
               </span>
             </h1>
@@ -246,13 +246,13 @@ export default async function Home({
             <div className="flex flex-wrap gap-4">
               <Link
                 href="#cta"
-                className="rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft hover:opacity-90"
+                className="rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft transition hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
               >
                 {hero.cta.join}
               </Link>
               <Link
                 href="#features"
-                className="rounded-lg border px-6 py-3 hover:bg-muted"
+                className="rounded-lg border px-6 py-3 transition hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
               >
                 {hero.cta.demo}
               </Link>
@@ -270,7 +270,7 @@ export default async function Home({
           <div className="relative flex items-center justify-center">
             <div className="absolute inset-6 rounded-full bg-brand-gradient opacity-10 blur-3xl"></div>
             <div className="relative w-full max-w-md rounded-app border border-border bg-card/70 p-8 shadow-elevated backdrop-blur">
-              <p className="text-xs rtl:text-sm rtl:font-arabic-title uppercase tracking-[0.35em] text-muted-foreground">
+            <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.28em] text-muted-foreground">
                 {hero.demo.title}
               </p>
               <div className="mt-4 space-y-5 text-sm">
@@ -288,7 +288,7 @@ export default async function Home({
                   </article>
                 ))}
 
-                <p className="text-xs rtl:text-sm uppercase tracking-[0.3em] text-muted-foreground text-center">
+                <p className="text-sm rtl:text-base uppercase tracking-[0.24em] text-muted-foreground text-center">
                   {hero.demo.footer}
                 </p>
               </div>
@@ -301,7 +301,7 @@ export default async function Home({
       <section id="join-testers" className="border-t bg-background py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="rounded-app border border-dashed border-primary/40 bg-card p-10 text-center shadow-soft">
-            <p className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-primary">
+            <p className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1 text-sm font-semibold uppercase tracking-[0.28em] text-primary">
               {testerInvite.badge}
             </p>
             <h2 className="mt-6 text-3xl font-serif-brand text-foreground md:text-4xl">
@@ -313,12 +313,12 @@ export default async function Home({
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
               <Link
                 href={`/${locale}/join`}
-                className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft transition hover:opacity-90"
+                className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft transition hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
               >
                 {testerInvite.button}
               </Link>
             </div>
-            <p className="mt-4 text-xs uppercase tracking-[0.4em] text-muted-foreground">
+            <p className="mt-4 text-sm uppercase tracking-[0.32em] text-muted-foreground">
               {testerInvite.disclaimer}
             </p>
           </div>
@@ -329,7 +329,7 @@ export default async function Home({
       <section id="explore" className="border-t bg-background py-16">
         <div className="mx-auto max-w-6xl space-y-10 px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4">
-            <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.3em] text-muted-foreground">
+            <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.2em] text-muted-foreground">
               {quickLinks.badge}
             </p>
             <h2 className="text-3xl md:text-4xl ltr:font-serif-brand rtl:font-arabic-title">
@@ -355,7 +355,7 @@ export default async function Home({
                 <div className="mt-6">
                   <Link
                     href={`/${locale}${href}`}
-                    className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-4 py-2 text-sm font-medium text-foreground transition hover:border-primary/40 hover:text-primary"
+                    className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-4 py-2 text-sm font-medium text-foreground transition hover:border-primary/40 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
                   >
                     {action}
                   </Link>
@@ -370,7 +370,7 @@ export default async function Home({
       <section id="features" className="border-t bg-card py-16 ">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center font-serif-brand rtl:font-arabic-title space-y-4">
-            <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.3em] text-muted-foreground">
+            <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.2em] text-muted-foreground">
               {features.badge}
             </p>
             <h2 className="text-3xl md:text-4xl ltr:font-serif-brand rtl:font-arabic-title">
@@ -401,7 +401,7 @@ export default async function Home({
           <div className="rounded-app border bg-background p-8 md:p-12 shadow-soft">
             <div className="grid gap-10 md:grid-cols-3">
               <div>
-                <p className="text-sm rtl:text-base uppercase tracking-[0.3em] text-muted-foreground">
+                <p className="text-sm rtl:text-base uppercase tracking-[0.2em] text-muted-foreground">
                   {howItWorks.badge}
                 </p>
                 <h2 className="mt-3 text-3xl rtl:font-arabic-title ltr:font-serif-brand">
@@ -418,7 +418,7 @@ export default async function Home({
                       {index + 1}
                     </span>
                     <div>
-                      <p className="text-xs rtl:text-sm rtl:mb-0.5 uppercase tracking-[0.25em] text-muted-foreground">
+                      <p className="text-sm rtl:text-base rtl:mb-0.5 uppercase tracking-[0.2em] text-muted-foreground">
                         {stage}
                       </p>
                       <h3 className="font-semibold rtl:font-arabic-title rtl:mb-1 text-foreground">
@@ -438,7 +438,7 @@ export default async function Home({
       <section id="why" className="border-t bg-background py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-10">
           <div className="text-center space-y-4">
-            <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.3em] text-muted-foreground">
+            <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.2em] text-muted-foreground">
               {why.badge}
             </p>
             <h2 className="text-3xl md:text-4xl ltr:font-serif-brand rtl:font-arabic-title">
@@ -469,7 +469,7 @@ export default async function Home({
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.3em] text-muted-foreground">
+              <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.2em] text-muted-foreground">
                 {security.badge}
               </p>
               <h2 className="mt-2 text-3xl rtl:font-arabic-title ltr:font-serif-brand">
@@ -479,7 +479,7 @@ export default async function Home({
                 {security.subtitle}
               </p>
             </div>
-            <span className="text-xs rtl:text-sm text-muted-foreground uppercase tracking-[0.3em]">
+            <span className="text-sm rtl:text-base text-muted-foreground uppercase tracking-[0.24em]">
               {security.notice}
             </span>
           </div>
@@ -504,7 +504,7 @@ export default async function Home({
         <section id="pricing" className="py-16">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8">
             <div className="text-center space-y-4">
-              <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.3em] text-muted-foreground">
+              <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.2em] text-muted-foreground">
                 {pricing.badge}
               </p>
               <h2 className="text-3xl md:text-4xl rtl:font-arabic-title ltr:font-serif-brand">
@@ -522,7 +522,7 @@ export default async function Home({
                       key={index}
                       className="rounded-app border-2 border-primary p-6 shadow-elevated bg-background relative"
                     >
-                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 text-xs text-primary-foreground shadow-soft">
+                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 text-sm text-primary-foreground shadow-soft">
                         {pricing.popular}
                       </span>
                       <p className="text-sm rtl:text-base uppercase tracking-[0.25em] text-muted-foreground">
@@ -585,7 +585,7 @@ export default async function Home({
           <section id="stories" className="border-t bg-card py-16">
             <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-12">
               <div className="text-center space-y-4">
-                <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.3em] text-muted-foreground">
+                <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.2em] text-muted-foreground">
                   {testimonials.badge}
                 </p>
                 <h2 className="text-3xl md:text-4xl ltr:font-serif-brand rtl:font-arabic-title">
@@ -601,7 +601,7 @@ export default async function Home({
                     <div className="flex-1">
                       <p>{item.quote}</p>
                     </div>
-                    <footer className="mt-4 text-xs rtl:text-sm rtl:font-arabic-title text-foreground">
+                    <footer className="mt-4 text-sm rtl:text-base rtl:font-arabic-title text-foreground">
                       {`- ${item.author}`}
                     </footer>
                   </blockquote>
@@ -623,7 +623,7 @@ export default async function Home({
                   <div className="flex md:justify-end">
                     <Link
                       href="#"
-                      className="rounded-lg bg-primary  px-6 py-3 text-primary-foreground shadow-soft hover:opacity-90"
+                      className="rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft transition hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
                     >
                       {cta.cta}
                     </Link>

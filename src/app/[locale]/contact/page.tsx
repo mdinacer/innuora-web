@@ -81,7 +81,7 @@ export default async function ContactPage() {
     >
       <section className="py-20 border-b bg-card text-center">
         <div className="mx-auto max-w-4xl px-4 space-y-6">
-          <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">
+          <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
             Reach out securely
           </p>
           <h1 className="text-4xl md:text-5xl font-serif-brand">
@@ -140,7 +140,7 @@ export default async function ContactPage() {
             </div>
             <button
               type="submit"
-              className="w-full rounded-md bg-primary px-6 py-3 text-primary-foreground shadow-soft hover:opacity-90"
+              className="w-full rounded-md bg-primary px-6 py-3 text-primary-foreground shadow-soft hover:bg-primary/90"
             >
               Send Message
             </button>
@@ -175,7 +175,7 @@ export default async function ContactPage() {
                 {EMAIL_ADDRESSES.business}
               </Link>
             </p>
-            <p className="mt-2 text-xs uppercase tracking-[0.3em]">
+            <p className="mt-2 text-sm uppercase tracking-[0.24em]">
               {APP_CONFIG.company.legalName} · {APP_CONFIG.legal.jurisdiction}
             </p>
           </div>

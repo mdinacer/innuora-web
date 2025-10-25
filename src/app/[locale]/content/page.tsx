@@ -87,25 +87,22 @@ export default async function ContentLibraryPage({
 
   const localizedContent = contentRegistry.applyLocaleOverrides(
     allContent,
-    locale,
+    locale
   );
   const localizedFeatured = contentRegistry.applyLocaleOverrides(
     featuredContent,
-    locale,
+    locale
   );
 
   // Group localized content by category
-  const contentByCategory = localizedContent.reduce(
-    (acc, item) => {
-      const category = item.metadata.category;
-      if (!acc[category]) {
-        acc[category] = [];
-      }
-      acc[category].push(item);
-      return acc;
-    },
-    {} as Record<string, typeof localizedContent>,
-  );
+  const contentByCategory = localizedContent.reduce((acc, item) => {
+    const category = item.metadata.category;
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(item);
+    return acc;
+  }, {} as Record<string, typeof localizedContent>);
 
   return (
     <ContentLibraryLayout

@@ -171,8 +171,8 @@ export default async function Page({
           <div className="space-y-6">
             <div className="rounded-xl border border-primary/25 bg-primary/5 p-5 md:p-6 space-y-4">
               <div className="flex flex-col gap-3">
-                <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] font-semibold text-primary">
-                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-full text-primary-foreground text-[10px]">
+                <div className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.24em] font-semibold text-primary">
+                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-full text-primary-foreground text-xs">
                     <UserIcon className="text-primary" />
                   </span>
                   <span>{conversation.userReflection}</span>
@@ -182,8 +182,8 @@ export default async function Page({
                 </p>
               </div>
               <div className="rounded-xl border border-primary/40 bg-primary/5 p-4 shadow-[0_4px_20px_-12px_rgba(8,47,73,0.45)]">
-                <div className="flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-2">
-                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-full  text-primary-foreground text-[10px]">
+                <div className="flex items-center gap-2 text-sm uppercase tracking-[0.24em] text-primary font-semibold mb-2">
+                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-full text-primary-foreground text-xs">
                     <Image
                       src={"/assets/images/logo.png"}
                       alt={APP_CONFIG.name}
@@ -198,16 +198,16 @@ export default async function Page({
             </div>
 
             <div className="space-y-4">
-              <div className="flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-muted-foreground font-semibold">
-                <span className="uppercase inline-flex h-6 w-6 items-center justify-center rounded-full bg-muted text-foreground text-[10px]">
+              <div className="flex items-center gap-2 text-sm uppercase tracking-[0.24em] text-muted-foreground font-semibold">
+                <span className="uppercase inline-flex h-6 w-6 items-center justify-center rounded-full bg-muted text-foreground text-xs">
                   {conversation.vs}
                 </span>
                 <span>{conversation.vsLabel}</span>
               </div>
               <div className="grid gap-4 lg:grid-cols-2">
                 <div className="rounded-xl border border-border bg-card p-4 space-y-3 shadow-[0_8px_24px_-16px_rgba(15,23,42,0.35)]">
-                  <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-muted-foreground font-semibold">
-                    <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-muted text-foreground text-[10px]">
+                  <div className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.24em] text-muted-foreground font-semibold">
+                    <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-muted text-foreground text-xs">
                       <BotIcon className="text-primary" />
                     </span>
                     <span>{conversation.genericProductivity}</span>
@@ -217,8 +217,8 @@ export default async function Page({
                   </p>
                 </div>
                 <div className="rounded-xl border border-border bg-card p-4 space-y-3 shadow-[0_8px_24px_-16px_rgba(15,23,42,0.35)]">
-                  <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-muted-foreground font-semibold">
-                    <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-muted text-foreground text-[10px]">
+                  <div className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.24em] text-muted-foreground font-semibold">
+                    <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-muted text-foreground text-xs">
                       <BrainCircuitIcon className="text-primary" />
                     </span>
                     <span>{conversation.genericWellness}</span>
@@ -246,7 +246,7 @@ export default async function Page({
     >
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-4xl px-4 text-center space-y-8">
-          <p className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1 text-xs uppercase tracking-[0.3em] text-muted-foreground shadow-soft">
+          <p className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1 text-sm uppercase tracking-[0.24em] text-muted-foreground shadow-soft">
             {meta.badge}
           </p>
           <h1 className="text-4xl md:text-5xl leading-tight ltr:font-serif-brand rtl:font-arabic-title">
@@ -256,23 +256,23 @@ export default async function Page({
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
             <Link
               href={`mailto:${APP_CONFIG.contact.business}`}
-              className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft hover:opacity-90 text-sm font-medium transition"
+              className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft hover:bg-primary/90 text-sm font-medium transition"
             >
               {cta.button}
             </Link>
             <Link
               href="#conversation"
-              className="inline-flex items-center rounded-lg border border-border bg-card px-6 py-3 text-sm font-medium text-foreground shadow-soft hover:border-primary/40 hover:text-primary transition"
+              className="inline-flex items-center rounded-lg border border-border bg-card px-6 py-3 text-sm font-medium text-foreground shadow-soft transition hover:border-primary/40 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
             >
               {conversation.title}
             </Link>
           </div>
-          <nav className="flex flex-wrap items-center justify-center gap-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
+          <nav className="flex flex-wrap items-center justify-center gap-3 text-sm uppercase tracking-[0.24em] text-muted-foreground">
             {quickLinks.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                className="inline-flex items-center gap-1 rounded-full border border-border/60 bg-background px-3 py-2 font-semibold hover:border-primary/40 hover:text-primary transition"
+                className="inline-flex items-center gap-1 rounded-full border border-border/60 bg-background px-3 py-2 font-semibold transition hover:border-primary/40 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
               >
                 {label}
               </Link>
@@ -287,7 +287,7 @@ export default async function Page({
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 space-y-10">
           <div className="space-y-3 text-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+            <p className="text-sm uppercase tracking-[0.24em] text-muted-foreground">
               {conversation.badge}
             </p>
             <h2 className="ltr:font-serif-brand rtl:font-arabic-title text-3xl">
@@ -303,7 +303,7 @@ export default async function Page({
             )}
             {remainingMessages.length > 0 && (
               <details className="rounded-app border border-border bg-background p-6 shadow-soft">
-                <summary className="cursor-pointer text-sm font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+                <summary className="cursor-pointer text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                   {conversation.badge} ·{" "}
                   {remainingMessages.length.toString().padStart(2, "0")} more
                   messages
@@ -322,7 +322,7 @@ export default async function Page({
       <section id="highlights" className="border-t border-border py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 space-y-10">
           <div className="space-y-3 text-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+            <p className="text-sm uppercase tracking-[0.24em] text-muted-foreground">
               {highlights.badge}
             </p>
             <h2 className="ltr:font-serif-brand rtl:font-arabic-title text-3xl">
@@ -357,7 +357,7 @@ export default async function Page({
         className="border-t border-border bg-card py-16"
       >
         <div className="mx-auto max-w-5xl px-4 sm:px-6 text-center space-y-6">
-          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+          <p className="text-sm uppercase tracking-[0.24em] text-muted-foreground">
             {diagnosticsPreview.badge}
           </p>
           <h2 className="text-3xl md:text-4xl ltr:font-serif-brand rtl:font-arabic-title">
@@ -383,11 +383,11 @@ export default async function Page({
           <p className="text-sm text-muted-foreground">{cta.description}</p>
           <Link
             href={`mailto:${APP_CONFIG.contact.business}`}
-            className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft hover:opacity-90 text-sm font-medium transition"
+            className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft hover:bg-primary/90 text-sm font-medium transition"
           >
             {cta.button}
           </Link>
-          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+          <p className="text-sm uppercase tracking-[0.24em] text-muted-foreground">
             {cta.disclaimer}
           </p>
         </div>

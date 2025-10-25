@@ -126,7 +126,7 @@ export default async function AboutPage({
       {/* Hero Section */}
       <section className="py-20 border-b bg-card">
         <div className="mx-auto max-w-4xl px-4 text-center space-y-6">
-          <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">
+          <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
             {hero.badge}
           </p>
           <h1 className="text-4xl md:text-5xl font-serif-brand">
@@ -222,7 +222,7 @@ export default async function AboutPage({
       <section className="py-16 border-t bg-background">
         <div className="mx-auto max-w-6xl px-4 space-y-10">
           <div className="text-center space-y-4">
-            <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">
+            <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
               {principles.badge}
             </p>
             <h2 className="text-3xl md:text-4xl font-serif-brand">
@@ -291,7 +291,7 @@ export default async function AboutPage({
             </Markdown>
             <Link
               href={buildLocalizedPath(locale as AppLocales, "/join")}
-              className="inline-flex rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft hover:opacity-90"
+              className="inline-flex rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft hover:bg-primary/90"
             >
               {cta.button}
             </Link>

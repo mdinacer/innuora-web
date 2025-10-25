@@ -280,7 +280,7 @@ export default function TherapeuticProgressChart() {
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6 space-y-12 w-full py-8">
       <div className="mb-6 text-center space-y-2">
-        <p className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1 text-xs uppercase tracking-[0.3em] text-muted-foreground shadow-soft">
+        <p className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1 text-xs uppercase tracking-[0.2em] text-muted-foreground shadow-soft">
           {header.badge}
         </p>
         <h2 className="text-3xl font-serif">{header.title}</h2>

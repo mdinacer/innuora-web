@@ -165,7 +165,7 @@ function ContentCard({ item, featured = false, locale }: ContentCardProps) {
         locale,
         `/content/${metadata.category}/${metadata.slug}`,
       )}
-      className={`group block overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_18px_40px_-24px_rgba(15,23,42,0.35)] ${
+      className={`group block overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_18px_40px_-24px_rgba(15,23,42,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
         featured ? "ring-1 ring-primary/30" : ""
       }`}
     >

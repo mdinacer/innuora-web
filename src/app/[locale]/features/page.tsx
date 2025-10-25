@@ -152,10 +152,10 @@ export default async function FeaturePage({
       {/* Hero */}
       <section className="py-20 border-b bg-card text-center space-y-6">
         <div className="mx-auto max-w-4xl px-4">
-          <p className="text-sm ltr:text-base rtl:mb-1 uppercase tracking-[0.3em] text-muted-foreground">
+          <p className="text-sm ltr:text-base rtl:mb-1 uppercase tracking-[0.2em] text-muted-foreground">
             {data.hero.badge}
           </p>
-          <h1 className="text-4xl md:text-5xl ltr: rtl:font-arabic-title">
+          <h1 className="text-4xl md:text-5xl rtl:font-arabic-title">
             {data.hero.title}
           </h1>
           <div className="text-lg text-muted-foreground mt-4">
@@ -181,15 +181,15 @@ export default async function FeaturePage({
 
       {/* CTA */}
       <section className="py-16">
-        <div className="mx-auto max-w-5xl px-4 rounded-app bg-flame-gradient p-1 shadow-elevated">
-          <div className="bg-card rounded-app p-10 md:p-12 text-center space-y-4">
-            <h2 className="text-2xl md:text-3xl ">{data.cta.title}</h2>
+        <div className="mx-auto max-w-5xl px-4 bg-card rounded-app border  p-1 shadow-elevated">
+          <div className=" rounded-app p-10 md:p-12 text-center space-y-4">
+            <h2 className="text-2xl md:text-3xl rtl:font-arabic-title">{data.cta.title}</h2>
             <div className="text-muted-foreground text-lg">
               <Markdown>{data.cta.description}</Markdown>
             </div>
             <Link
               href={buildLocalizedPath(locale as AppLocales, "/demo")}
-              className="inline-flex rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft hover:opacity-90"
+              className="inline-flex rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft hover:bg-primary/90"
             >
               {data.cta.button}
             </Link>
@@ -220,10 +220,10 @@ function FeatureSection({
     <section className={cn("py-16 border-b", background)}>
       <div className="mx-auto max-w-6xl px-4 space-y-10">
         <div className="text-center space-y-4">
-          <p className="text-sm ltr:text-base ltr:mb-1 uppercase tracking-[0.3em] text-muted-foreground">
+          <p className="text-sm ltr:text-base ltr:mb-1 uppercase tracking-[0.2em] text-muted-foreground">
             {data.badge}
           </p>
-          <h2 className="text-3xl md:text-4xl ">{data.title}</h2>
+          <h2 className="text-3xl md:text-4xl rtl:font-arabic-title">{data.title}</h2>
         </div>
 
         <div className="grid gap-8 md:grid-cols-3">
@@ -232,7 +232,7 @@ function FeatureSection({
               key={i}
               className="rounded-app border bg-background p-6 shadow-soft ltr:text-left rtl:text-right"
             >
-              <h3 className="text-xl font-semibold text-foreground">
+              <h3 className="text-xl font-semibold text-foreground rtl:font-arabic-title">
                 {item.title}
               </h3>
               <div className="mt-2 text-muted-foreground ltr:text-sm  ltr:leading-loose">

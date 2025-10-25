@@ -236,7 +236,7 @@ export default async function DemoDiagnosticsPage({
     >
       <section className="py-16 md:py-20 border-b border-border bg-card">
         <div className="mx-auto max-w-4xl px-4 text-center space-y-6">
-          <p className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1 text-xs uppercase tracking-[0.3em] text-muted-foreground shadow-soft">
+          <p className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1 text-xs uppercase tracking-[0.2em] text-muted-foreground shadow-soft">
             {diagnostics.badge}
           </p>
           <h1 className="text-4xl md:text-5xl ltr:font-serif-brand rtl:font-arabic-title leading-tight">
@@ -248,13 +248,13 @@ export default async function DemoDiagnosticsPage({
           <div className="flex flex-wrap items-center justify-center gap-3 text-sm font-semibold">
             <Link
               href={parentDemoLink}
-              className="inline-flex items-center rounded-full border border-border bg-background px-5 py-3 text-foreground shadow-soft transition hover:border-primary/40 hover:text-primary"
+              className="inline-flex items-center rounded-full border border-border bg-background px-5 py-3 text-foreground shadow-soft transition hover:border-primary/40 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
             >
               {t("diagnostics.backLink", { defaultValue: "Back to demo" })}
             </Link>
             <Link
               href={contactLink}
-              className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-primary-foreground shadow-soft hover:opacity-90 transition"
+              className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-primary-foreground shadow-soft hover:bg-primary/90 transition"
             >
               {t("cta.button")}
             </Link>
@@ -568,11 +568,11 @@ export default async function DemoDiagnosticsPage({
           </p>
           <Link
             href={contactLink}
-            className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft hover:opacity-90 text-sm font-medium transition"
+            className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-primary-foreground shadow-soft hover:bg-primary/90 text-sm font-medium transition"
           >
             {t("cta.button")}
           </Link>
-          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
             {t("cta.disclaimer")}
           </p>
         </div>

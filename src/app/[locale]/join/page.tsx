@@ -124,7 +124,7 @@ export default async function TesterJoinRoute({
       className="mt-20 min-h-screen w-full bg-background pb-24"
     >
       <section className="mx-auto max-w-4xl px-6 py-12 text-center">
-        <p className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-primary">
+        <p className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
           {t("hero.badge")}
         </p>
         <h1 className="mt-4 text-3xl font-serif-brand leading-tight md:text-5xl">

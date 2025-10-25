@@ -89,14 +89,14 @@
   --color-brand-200: #99ddff;
   --color-brand-300: #66cbff;
   --color-brand-400: #33b8f5;
-  --color-brand-500: #009fde;
-  --color-brand-600: #008dcc;
-  --color-brand-700: #007c9b;
-  --color-brand-800: #06607b;
+  --color-brand-500: #0077b6;
+  --color-brand-600: #00659b;
+  --color-brand-700: #004f80;
+  --color-brand-800: #003961;
   --color-brand-900: #0b4b61;
-  --color-accent-400: #ff9f43;
-  --color-accent-500: #ff7f1a;
-  --color-accent-600: #ff6f00;
+  --color-accent-400: #ffb26d;
+  --color-accent-500: #ba4600;
+  --color-accent-600: #963700;
   --color-navy-950: #0b1120;
   --color-navy-900: #111931;
   --color-navy-800: #15223f;
@@ -116,8 +116,8 @@
   --color-muted: #eef2f7;
   --color-muted-foreground: #475569;
   --color-accent: var(--color-accent-500);
-  --color-accent-foreground: #0b1120;
-  --color-destructive: #ef4444;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #c02a26;
   --color-destructive-foreground: #ffffff;
   --color-border: #e2e8f0;
   --color-input: #e2e8f0;
@@ -131,13 +131,15 @@
   --shadow-elevated: 0 12px 40px -12px rgb(0 0 0 / 0.22);
   --grad-brand: linear-gradient(
     135deg,
-    var(--color-brand-700),
-    var(--color-brand-500)
+    var(--color-brand-700) 0%,
+    var(--color-brand-600) 55%,
+    var(--color-brand-500) 100%
   );
   --grad-flame: linear-gradient(
     135deg,
-    var(--color-accent-600),
-    var(--color-accent-400)
+    var(--color-accent-600) 0%,
+    var(--color-accent-500) 60%,
+    rgba(255, 255, 255, 0.12) 100%
   );
 
   --chart-1: oklch(0.646 0.222 41.116);
@@ -155,15 +157,15 @@
   --color-popover: #0f172a;
   --color-popover-foreground: #e5e7eb;
   --color-primary: var(--color-brand-500);
-  --color-primary-foreground: #04121e;
+  --color-primary-foreground: #ffffff;
   --color-secondary: #111931;
   --color-secondary-foreground: #e5e7eb;
   --color-muted: #0f1a2b;
   --color-muted-foreground: #93a3b8; /* slate-400 */
   --color-accent: var(--color-accent-500);
-  --color-accent-foreground: #04121e;
-  --color-destructive: #f87171;
-  --color-destructive-foreground: #0b1120;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #c02a26;
+  --color-destructive-foreground: #ffffff;
   --color-border: #1f2a44;
   --color-input: #24314f;
   --color-ring: var(--color-brand-600);
@@ -214,8 +216,7 @@
   [dir="ltr"] h3,
   [dir="ltr"] h4,
   [dir="ltr"] .ltr\:font-serif-brand {
-    font-family: var(--font-serif-brand);
-    /* letter-spacing: -0.015em; */
+    font-family: var(--font-serif);
   }
 
   [dir="rtl"] strong {
@@ -299,6 +300,17 @@
     code {
       background-color: rgb(55 65 81);
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 

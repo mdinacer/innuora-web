@@ -179,7 +179,7 @@ export default function ArticleLayout({
             {/* Keywords */}
             {metadata.keywords.length > 0 && (
               <div className="mt-10 border-t border-border pt-6">
-                <h4 className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+                <h4 className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                   {t("article.relatedTopics")}
                 </h4>
                 <div className="flex flex-wrap gap-2">
@@ -208,7 +208,7 @@ export default function ArticleLayout({
                 <Link
                   key={item.metadata.slug}
                   href={`/content/${item.metadata.category}/${item.metadata.slug}`}
-                  className="group block rounded-2xl border border-border bg-background p-5 transition hover:border-primary/40 hover:shadow-[0_8px_24px_-16px] hover:shadow-primary/40"
+                  className="group block rounded-2xl border border-border bg-background p-5 transition hover:border-primary/40 hover:shadow-[0_8px_24px_-16px] hover:shadow-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
                 >
                   <h3 className="mb-2 line-clamp-2 font-semibold text-foreground">
                     {item.metadata.title}
