@@ -129,9 +129,7 @@ export default async function AboutPage({
           <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
             {hero.badge}
           </p>
-          <h1 className="text-4xl md:text-5xl font-serif-brand">
-            {hero.title}
-          </h1>
+          <h1 className="text-4xl md:text-5xl ">{hero.title}</h1>
 
           <Markdown
             options={{
@@ -166,7 +164,7 @@ export default async function AboutPage({
       <section className="py-16 bg-background">
         <div className="mx-auto max-w-5xl px-4 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-5">
-            <h2 className="text-3xl font-serif-brand">{mission.title}</h2>
+            <h2 className="text-3xl ">{mission.title}</h2>
             {mission.paragraphs.map((paragraph, idx) => (
               <Markdown
                 key={`${idx}-${paragraph.slice(0, 24)}`}
@@ -197,7 +195,7 @@ export default async function AboutPage({
       {/* Founding Section */}
       <section className="py-16 border-t bg-card">
         <div className="mx-auto max-w-4xl px-4 text-center space-y-6">
-          <h2 className="text-3xl font-serif-brand">{founding.title}</h2>
+          <h2 className="text-3xl ">{founding.title}</h2>
           <Markdown
             options={{
               forceBlock: true,
@@ -225,9 +223,7 @@ export default async function AboutPage({
             <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
               {principles.badge}
             </p>
-            <h2 className="text-3xl md:text-4xl font-serif-brand">
-              {principles.title}
-            </h2>
+            <h2 className="text-3xl md:text-4xl ">{principles.title}</h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -264,11 +260,9 @@ export default async function AboutPage({
 
       {/* CTA Section */}
       <section className="py-16">
-        <div className="mx-auto max-w-5xl px-4 rounded-app bg-flame-gradient p-1 shadow-elevated">
-          <div className="bg-card rounded-app p-10 md:p-12 text-center space-y-4">
-            <h2 className="text-2xl md:text-3xl font-serif-brand">
-              {cta.title}
-            </h2>
+        <div className="mx-auto max-w-5xl px-4 rounded-app bg-card border p-1 shadow-elevated">
+          <div className=" rounded-app p-10 md:p-12 text-center space-y-4">
+            <h2 className="text-2xl md:text-3xl ">{cta.title}</h2>
 
             <Markdown
               options={{

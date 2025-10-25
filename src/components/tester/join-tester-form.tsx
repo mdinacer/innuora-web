@@ -220,7 +220,7 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
 
   if (status === "success") {
     return (
-      <div className="space-y-6 text-center" role="status" aria-live="polite">
+      <div className="space-y-6 text-center" aria-live="polite">
         <div className="rounded-2xl border border-green-200 bg-green-50 p-6 text-green-800">
           <h2 className="text-xl font-semibold">
             {copy.messages.successTitle}
@@ -261,7 +261,7 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
       aria-busy={isSubmitting}
     >
       <fieldset className="grid gap-6" disabled={isSubmitting}>
-        <div className="grid gap-2 text-left">
+        <div className="grid gap-2 ">
           <label
             className="text-sm font-semibold text-foreground"
             htmlFor={emailIds.input}
@@ -296,7 +296,7 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
           )}
         </div>
 
-        <div className="grid gap-2 text-left">
+        <div className="grid gap-2 ">
           <label
             className="text-sm font-semibold text-foreground"
             htmlFor={occupationIds.input}
@@ -332,7 +332,7 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
           )}
         </div>
 
-        <div className="grid gap-2 text-left">
+        <div className="grid gap-2 ">
           <label
             className="text-sm font-semibold text-foreground"
             htmlFor={strugglesIds.input}
@@ -369,7 +369,7 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
           )}
         </div>
 
-        <div className="grid gap-2 text-left">
+        <div className="grid gap-2 ">
           <label
             className="text-sm font-semibold text-foreground"
             htmlFor={copingIds.input}
@@ -403,7 +403,7 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
           )}
         </div>
 
-        <div className="grid gap-2 text-left">
+        <div className="grid gap-2 ">
           <label
             className="text-sm font-semibold text-foreground"
             htmlFor={sourceIds.input}
@@ -436,7 +436,7 @@ export default function JoinTesterForm({ locale, copy }: JoinTesterFormProps) {
           )}
         </div>
 
-        <div className="grid gap-2 text-left">
+        <div className="grid gap-2 ">
           <label
             className="text-sm font-semibold text-foreground"
             htmlFor={notesIds.input}

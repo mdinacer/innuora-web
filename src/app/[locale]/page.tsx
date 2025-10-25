@@ -270,12 +270,12 @@ export default async function Home({
           <div className="relative flex items-center justify-center">
             <div className="absolute inset-6 rounded-full bg-brand-gradient opacity-10 blur-3xl"></div>
             <div className="relative w-full max-w-md rounded-app border border-border bg-card/70 p-8 shadow-elevated backdrop-blur">
-            <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.28em] text-muted-foreground">
+              <p className="text-sm rtl:text-base rtl:font-arabic-title uppercase tracking-[0.28em] text-muted-foreground">
                 {hero.demo.title}
               </p>
               <div className="mt-4 space-y-5 text-sm">
-                {hero.demo.conversations.map(({ app, user }, index) => (
-                  <article className="space-y-3" key={index}>
+                {hero.demo.conversations.map(({ app, user }) => (
+                  <article className="space-y-3" key={`${user}-${app}`}>
                     <p className="rounded-lg bg-muted p-3 text-foreground">
                       {user}
                     </p>
@@ -382,9 +382,9 @@ export default async function Home({
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            {features.items.map(({ title, body }, index) => (
+            {features.items.map(({ title, body }) => (
               <article
-                key={index}
+                key={title}
                 className="rounded-app border p-6 shadow-soft bg-background"
               >
                 <h3 className="text-lg font-semibold">{title}</h3>
@@ -413,7 +413,7 @@ export default async function Home({
               </div>
               <ol className="md:col-span-2 space-y-6 text-sm text-muted-foreground">
                 {howItWorks.steps.map(({ stage, title, body }, index) => (
-                  <li key={index} className="flex gap-4 rounded-lg border p-4">
+                  <li key={stage} className="flex gap-4 rounded-lg border p-4">
                     <span className="h-8 w-8 shrink-0 rounded-full bg-primary/10 text-primary flex items-center justify-center font-semibold">
                       {index + 1}
                     </span>
@@ -449,9 +449,9 @@ export default async function Home({
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
-            {why.items.map(({ title, body }, index) => (
+            {why.items.map(({ title, body }) => (
               <article
-                key={index}
+                key={title}
                 className="rounded-app border p-6 shadow-soft bg-card"
               >
                 <h3 className="text-lg font-semibold rtl:font-arabic-title">
@@ -484,9 +484,9 @@ export default async function Home({
             </span>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
-            {security.items.map(({ title, body }, index) => (
+            {security.items.map(({ title, body }) => (
               <article
-                key={index}
+                key={title}
                 className="rounded-app border p-6 shadow-soft bg-background"
               >
                 <h3 className="text-lg font-semibold rtl:font-arabic-title">
@@ -515,11 +515,11 @@ export default async function Home({
               </p>
             </div>
             <div className="grid gap-6 md:grid-cols-3">
-              {pricing.plans.map((plan, index) => {
+              {pricing.plans.map((plan) => {
                 if (plan.popular) {
                   return (
                     <article
-                      key={index}
+                      key={plan.name}
                       className="rounded-app border-2 border-primary p-6 shadow-elevated bg-background relative"
                     >
                       <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 text-sm text-primary-foreground shadow-soft">
@@ -533,8 +533,11 @@ export default async function Home({
                       </h3>
                       <p className="mt-3 text-muted-foreground">{plan.desc}</p>
                       <ul className="mt-4 space-y-2 text-sm rtl:text-base text-muted-foreground list-disc list-inside">
-                        {plan.features.map((feature, index) => (
-                          <li className="list-item" key={index}>
+                        {plan.features.map((feature) => (
+                          <li
+                            className="list-item"
+                            key={`${plan.name}-${feature}`}
+                          >
                             {feature}
                           </li>
                         ))}
@@ -544,7 +547,7 @@ export default async function Home({
                 }
                 return (
                   <article
-                    key={index}
+                    key={plan.name}
                     className="rounded-app border p-6 shadow-soft bg-background"
                   >
                     <p className="text-sm rtl:text-base uppercase tracking-[0.25em] text-muted-foreground">
@@ -555,8 +558,11 @@ export default async function Home({
                     </h3>
                     <p className="mt-3 text-muted-foreground">{plan.desc}</p>
                     <ul className="mt-4 space-y-2 text-sm rtl:text-base text-muted-foreground list-disc list-inside">
-                      {plan.features.map((feature, index) => (
-                        <li className="list-item" key={index}>
+                      {plan.features.map((feature) => (
+                        <li
+                          className="list-item"
+                          key={`${plan.name}-${feature}`}
+                        >
                           {feature}
                         </li>
                       ))}
@@ -593,9 +599,9 @@ export default async function Home({
                 </h2>
               </div>
               <div className="grid gap-6 md:grid-cols-3">
-                {testimonials.items.map((item, index) => (
+                {testimonials.items.map((item) => (
                   <blockquote
-                    key={index}
+                    key={item.author}
                     className="rounded-app flex flex-col border bg-background p-6 shadow-soft text-sm rtl:text-base text-muted-foreground"
                   >
                     <div className="flex-1">

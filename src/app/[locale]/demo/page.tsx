@@ -1,8 +1,8 @@
+import { BotIcon, BrainCircuitIcon, UserIcon } from "lucide-react";
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
-import { BotIcon, BrainCircuitIcon, UserIcon } from "lucide-react";
 
 import { APP_CONFIG } from "@/config/app";
 import initTranslations, { type AppLocales } from "@/lib/i18n";

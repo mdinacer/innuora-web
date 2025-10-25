@@ -1,0 +1,8 @@
+
+> innuora-web@0.1.0 lint /Users/abdenassermohammedi/Documents/GitHub/innuora-web
+> biome check --max-diagnostics 200
+
+Checked 95 files in 15ms. No fixes applied.
+Found 20 errors.
+Found 6 warnings.
+ ELIFECYCLE  Command failed with exit code 1.

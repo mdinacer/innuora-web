@@ -151,7 +151,7 @@ function FeaturedContentCard({ item, locale }: FeaturedContentCardProps) {
     <Link
       href={buildLocalizedPath(
         locale,
-        `/content/${metadata.category}/${metadata.slug}`
+        `/content/${metadata.category}/${metadata.slug}`,
       )}
       className="group block overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-soft ring-1 ring-primary/20 transition-all hover:-translate-y-1 hover:shadow-[0_18px_40px_-24px_rgba(15,23,42,0.35)]"
     >
@@ -203,7 +203,7 @@ function CategoryCard({ category, articles, locale }: CategoryCardProps) {
   const { t } = useTranslation("content");
   const icon = CATEGORY_ICONS[category];
   const featuredCount = articles.filter(
-    (article) => article.metadata.featured
+    (article) => article.metadata.featured,
   ).length;
 
   return (

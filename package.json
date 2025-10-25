@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "biome check",
+    "lint": "biome check --max-diagnostics 200",
     "check:translations": "node scripts/check-translations.mjs",
     "format": "biome format --write"
   },

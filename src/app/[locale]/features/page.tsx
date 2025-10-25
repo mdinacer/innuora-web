@@ -146,7 +146,7 @@ export default async function FeaturePage({
         "relative",
         "min-h-screen flex flex-col",
         "rtl:font-arabic-body rtl:text-lg",
-        "[&_section]:relative"
+        "[&_section]:relative",
       )}
     >
       {/* Hero */}
@@ -183,7 +183,9 @@ export default async function FeaturePage({
       <section className="py-16">
         <div className="mx-auto max-w-5xl px-4 bg-card rounded-app border  p-1 shadow-elevated">
           <div className=" rounded-app p-10 md:p-12 text-center space-y-4">
-            <h2 className="text-2xl md:text-3xl rtl:font-arabic-title">{data.cta.title}</h2>
+            <h2 className="text-2xl md:text-3xl rtl:font-arabic-title">
+              {data.cta.title}
+            </h2>
             <div className="text-muted-foreground text-lg">
               <Markdown>{data.cta.description}</Markdown>
             </div>
@@ -223,13 +225,15 @@ function FeatureSection({
           <p className="text-sm ltr:text-base ltr:mb-1 uppercase tracking-[0.2em] text-muted-foreground">
             {data.badge}
           </p>
-          <h2 className="text-3xl md:text-4xl rtl:font-arabic-title">{data.title}</h2>
+          <h2 className="text-3xl md:text-4xl rtl:font-arabic-title">
+            {data.title}
+          </h2>
         </div>
 
         <div className="grid gap-8 md:grid-cols-3">
-          {data.items.map((item, i) => (
+          {data.items.map((item) => (
             <article
-              key={i}
+              key={item.title}
               className="rounded-app border bg-background p-6 shadow-soft ltr:text-left rtl:text-right"
             >
               <h3 className="text-xl font-semibold text-foreground rtl:font-arabic-title">

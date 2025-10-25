@@ -2,8 +2,8 @@
 
 import { Check } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
-import { useCallback, useEffect, useId, useRef, useState } from "react";
 import type { KeyboardEvent as ReactKeyboardEvent } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import type { AppLocales } from "@/lib/i18n";
@@ -91,13 +91,13 @@ const LanguagePicker = () => {
         router.push(`/${newLocale}${currentPathname}`);
       } else {
         router.push(
-          currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
+          currentPathname.replace(`/${currentLocale}`, `/${newLocale}`),
         );
       }
 
       router.refresh();
     },
-    [currentLocale, currentPathname, router]
+    [currentLocale, currentPathname, router],
   );
   useEffect(() => {
     if (!isOpen) {
@@ -137,7 +137,7 @@ const LanguagePicker = () => {
 
   const focusOptionByIndex = useCallback((index: number) => {
     const buttons = dropdownRef.current?.querySelectorAll<HTMLButtonElement>(
-      '[data-lang-option="true"]'
+      '[data-lang-option="true"]',
     );
     if (!buttons || buttons.length === 0) {
       return;
@@ -190,7 +190,7 @@ const LanguagePicker = () => {
           break;
       }
     },
-    [focusOptionByIndex, handleChange]
+    [focusOptionByIndex, handleChange],
   );
 
   return (
@@ -205,7 +205,6 @@ const LanguagePicker = () => {
         aria-haspopup="listbox"
         aria-expanded={isOpen}
         aria-controls={`langDropdown-${dropdownId}`}
-        aria-activedescendant={isOpen ? activeOptionId : undefined}
         onKeyDown={(event) => {
           if (
             (event.key === "ArrowDown" || event.key === "ArrowUp") &&
@@ -276,11 +275,12 @@ const LanguagePicker = () => {
           "transition-all duration-200 ease-in-out z-10",
           isOpen
             ? "opacity-100  visible translate-y-0"
-            : "opacity-0 hidden -translate-y-2.5 pointer-events-none"
+            : "opacity-0 hidden -translate-y-2.5 pointer-events-none",
         )}
         role="listbox"
         aria-labelledby="langDropdownTrigger"
         aria-activedescendant={isOpen ? activeOptionId : undefined}
+        tabIndex={0}
       >
         <div className="p-2">
           {LANGUAGES_DATA.map((lang, index) => (
@@ -292,7 +292,7 @@ const LanguagePicker = () => {
                 "lang-option active flex w-full items-center justify-between rounded-xl border px-4 py-3 text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40",
                 lang.locale === currentLocale
                   ? "border-primary bg-primary text-primary-foreground shadow-soft"
-                  : "border-border/60 hover:bg-secondary"
+                  : "border-border/60 hover:bg-secondary",
               )}
               id={`language-option-${lang.locale}`}
               role="option"
@@ -313,19 +313,19 @@ const LanguagePicker = () => {
               <div
                 className={cn(
                   "flex items-center gap-3 w-full",
-                  lang.locale === "ar" ? "flex-row-reverse" : "flex-row"
+                  lang.locale === "ar" ? "flex-row-reverse" : "flex-row",
                 )}
               >
                 <span className="text-2xl">{lang.flag}</span>
                 <div
                   className={cn(
                     "flex-1",
-                    lang.locale === "ar" ? "text-right" : "text-left"
+                    lang.locale === "ar" ? "text-right" : "text-left",
                   )}
                 >
                   <div
                     className={cn(
-                      "font-medium font-sans text-sm sm:rtl:font-arabic-title"
+                      "font-medium font-sans text-sm sm:rtl:font-arabic-title",
                     )}
                   >
                     {lang.label}
@@ -335,14 +335,15 @@ const LanguagePicker = () => {
                   </div>
                 </div>
               </div>
-              {/* {lang.locale === currentLocale && (
+
+              {lang.locale === currentLocale && (
                 <span
                   className="ml-3 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-primary-foreground/40 bg-primary-foreground/10 text-primary-foreground"
                   aria-hidden="true"
                 >
                   <Check className="h-3.5 w-3.5" />
                 </span>
-              )} */}
+              )}
             </button>
           ))}
         </div>

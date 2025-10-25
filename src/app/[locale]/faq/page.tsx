@@ -1,7 +1,8 @@
 // app/(marketing)/faq/page.tsx
+
+import Markdown from "markdown-to-jsx";
 import type { Metadata } from "next";
 import Script from "next/script";
-import Markdown from "markdown-to-jsx";
 
 import { APP_CONFIG } from "@/config/app";
 import initTranslations from "@/lib/i18n";

@@ -151,7 +151,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
         }
       }
     },
-    [closeMenu]
+    [closeMenu],
   );
 
   const isActiveLink = React.useCallback(
@@ -175,7 +175,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
       // ✅ Case 2: Exact or nested match (e.g. /content or /content/article)
       return current === target || current.startsWith(`${target}/`);
     },
-    [pathname]
+    [pathname],
   );
 
   const renderLink = React.useCallback(
@@ -190,7 +190,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
           isDesktop
             ? "bg-primary text-primary-foreground hover:bg-primary/90"
             : "w-full bg-primary text-primary-foreground hover:bg-primary/90",
-          active && "ring-2 ring-primary/50"
+          active && "ring-2 ring-primary/50",
         );
 
         return (
@@ -221,7 +221,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
         isDesktop &&
           "after:absolute after:bottom-[2px] after:left-1/2 after:h-[2px] after:w-[70%] after:-translate-x-1/2 after:scale-x-0 after:bg-primary after:transition-transform after:duration-200 hover:after:scale-x-100",
         isDesktop && active && "after:scale-x-100",
-        !isDesktop && "text-base"
+        !isDesktop && "text-base",
       );
 
       return (
@@ -242,7 +242,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
         </Link>
       );
     },
-    [isActiveLink, closeMenu]
+    [isActiveLink, closeMenu],
   );
 
   React.useEffect(() => {
@@ -368,7 +368,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
 
                 <nav className="mt-5 flex flex-col gap-2">
                   {navLinks.map((link, index) =>
-                    renderLink(link, index, false)
+                    renderLink(link, index, false),
                   )}
                 </nav>
 
