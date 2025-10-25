@@ -151,7 +151,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
         }
       }
     },
-    [closeMenu],
+    [closeMenu]
   );
 
   const isActiveLink = React.useCallback(
@@ -175,7 +175,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
       // ✅ Case 2: Exact or nested match (e.g. /content or /content/article)
       return current === target || current.startsWith(`${target}/`);
     },
-    [pathname],
+    [pathname]
   );
 
   const renderLink = React.useCallback(
@@ -190,7 +190,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
           isDesktop
             ? "bg-primary text-primary-foreground hover:bg-primary/90"
             : "w-full bg-primary text-primary-foreground hover:bg-primary/90",
-          active && "ring-2 ring-primary/50",
+          active && "ring-2 ring-primary/50"
         );
 
         return (
@@ -221,7 +221,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
         isDesktop &&
           "after:absolute after:bottom-[2px] after:left-1/2 after:h-[2px] after:w-[70%] after:-translate-x-1/2 after:scale-x-0 after:bg-primary after:transition-transform after:duration-200 hover:after:scale-x-100",
         isDesktop && active && "after:scale-x-100",
-        !isDesktop && "text-base",
+        !isDesktop && "text-base"
       );
 
       return (
@@ -242,7 +242,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
         </Link>
       );
     },
-    [isActiveLink, closeMenu],
+    [isActiveLink, closeMenu]
   );
 
   React.useEffect(() => {
@@ -271,7 +271,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
     <header
       className={cn(
         "sticky top-0 z-50 w-full backdrop-blur supports-[backdrop-filter]:bg-background/70",
-        className,
+        className
       )}
     >
       <div className="border-b border-border/60 bg-background/80">
@@ -291,8 +291,8 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
                 />
               </span>
               <span className="flex flex-col leading-tight">
-                <span className="text-base font-semibold text-foreground">
-                  In<span>nu</span>ora
+                <span className="text-lg font-semibold ltr:font-serif-brand text-foreground">
+                  {APP_CONFIG.name}
                 </span>
                 <span className="text-[0.68rem] sr-only sm:not-sr-only rtl:font-arabic-title rtl:text-sm font-medium uppercase tracking-[0.35em] text-muted-foreground group-hover:text-foreground/80">
                   {t("wordmark", { defaultValue: "AI Companion" })}
@@ -373,7 +373,7 @@ const LayoutHeader: React.FC<Props> = ({ className, links, locale = "en" }) => {
 
                 <nav className="mt-5 flex flex-col gap-2">
                   {navLinks.map((link, index) =>
-                    renderLink(link, index, false),
+                    renderLink(link, index, false)
                   )}
                 </nav>
 

@@ -73,18 +73,16 @@
 }
 
 :root {
-  --font-sans:
-    "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-  --font-serif:
-    "DM Serif Display", ui-serif, Georgia, Cambria, "Times New Roman", Times,
-    serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji",
+    "Segoe UI Emoji";
+  --font-serif: "DM Serif Display", ui-serif, Georgia, Cambria,
+    "Times New Roman", Times, serif;
 
-  --font-arabic-title:
-    "Cairo", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-arabic-body:
-    "Noto Sans Arabic", ui-serif, Georgia, Cambria, "Times New Roman", Times,
-    serif;
+  --font-arabic-title: "Cairo", ui-serif, Georgia, Cambria, "Times New Roman",
+    Times, serif;
+  --font-arabic-body: "Noto Sans Arabic", ui-serif, Georgia, Cambria,
+    "Times New Roman", Times, serif;
 
   --color-brand-50: #e6f6ff;
   --color-brand-100: #cceeff;
@@ -209,6 +207,15 @@
   [dir="rtl"] .rtl\:font-arabic-title {
     font-family: var(--font-arabic-title);
     letter-spacing: -0.015em;
+  }
+
+  [dir="ltr"] h1,
+  [dir="ltr"] h2,
+  [dir="ltr"] h3,
+  [dir="ltr"] h4,
+  [dir="ltr"] .ltr\:font-serif-brand {
+    font-family: var(--font-serif-brand);
+    /* letter-spacing: -0.015em; */
   }
 
   [dir="rtl"] strong {

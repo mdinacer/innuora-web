@@ -1,6 +1,6 @@
 // /lib/fonts.ts
 import {
-  Noto_Sans_Arabic as ArabicBodyFont,
+  Tajawal as ArabicBodyFont,
   Cairo as ArabicTitleFont,
   Inter as SansFont,
   DM_Serif_Display as SerifFont,

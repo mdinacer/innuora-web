@@ -89,7 +89,7 @@ export default async function LayoutFooter({
     <footer
       className={cn(
         "relative border-t border-border/60 bg-background/90",
-        className,
+        className
       )}
     >
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
@@ -99,8 +99,8 @@ export default async function LayoutFooter({
               href={buildLocalizedPath(locale, "/")}
               className="inline-flex items-center gap-3 rounded-3xl border border-border/60 bg-card/90 px-4 py-3 shadow-soft transition hover:border-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
             >
-              <span className="text-xl font-semibold text-foreground">
-                In<span className="text-primary">nu</span>ora
+              <span className="text-xl font-semibold ltr:font-serif-brand text-foreground">
+                {APP_CONFIG.name}
               </span>
               <span className="text-xs font-medium uppercase tracking-[0.4em] text-muted-foreground">
                 {t("header.wordmark", {
