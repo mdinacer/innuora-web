@@ -69,6 +69,21 @@
       "categories_many": "{{count}} فئة",
       "categories_other": "{{count}} فئة"
     },
+    "search": {
+      "label": "ابحثي في مكتبة المحتوى",
+      "placeholder": "ابحثي حسب الموضوع أو الشعور أو مهارة العلاج المعرفي السلوكي",
+      "resultsHeading": "نتائج البحث",
+      "resultsCount_zero": "لا توجد نتائج",
+      "resultsCount_one": "نتيجة واحدة",
+      "resultsCount_two": "نتيجتان",
+      "resultsCount_few": "{{count}} نتائج",
+      "resultsCount_many": "{{count}} نتيجة",
+      "resultsCount_other": "{{count}} نتيجة",
+      "empty": {
+        "title": "لا توجد مقالات مطابقة لبحثك",
+        "description": "جرّبي كلمة مفتاحية أخرى أو تصفحي الفئات أدناه."
+      }
+    },
     "cta": {
       "title": "هل تحتاجين إلى دعم مخصص؟",
       "description": "تمنحك مكتبتنا رؤىً قيمة، لكن المحادثة العلاجية المدعومة بالذكاء الاصطناعي تقدم توجيهًا شخصيًا يناسب حالتك تحديدًا.",

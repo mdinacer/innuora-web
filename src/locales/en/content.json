@@ -49,6 +49,17 @@
       "categories_one": "{{count}} category",
       "categories_other": "{{count}} categories"
     },
+    "search": {
+      "label": "Search the content library",
+      "placeholder": "Search by topic, emotion, or CBT skill",
+      "resultsHeading": "Search results",
+      "resultsCount_one": "{{count}} match",
+      "resultsCount_other": "{{count}} matches",
+      "empty": {
+        "title": "No articles match your search",
+        "description": "Try a different keyword or browse the categories below."
+      }
+    },
     "cta": {
       "title": "Need Personalized Support?",
       "description": "While our content library provides valuable insights, our AI-powered therapeutic chat offers personalized guidance tailored to your specific needs and situation.",

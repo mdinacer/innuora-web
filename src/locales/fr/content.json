@@ -49,6 +49,17 @@
       "categories_one": "{{count}} catégorie",
       "categories_other": "{{count}} catégories"
     },
+    "search": {
+      "label": "Rechercher dans la bibliothèque",
+      "placeholder": "Recherche par sujet, émotion ou compétence TCC",
+      "resultsHeading": "Résultats de recherche",
+      "resultsCount_one": "{{count}} résultat",
+      "resultsCount_other": "{{count}} résultats",
+      "empty": {
+        "title": "Aucun article ne correspond à ta recherche",
+        "description": "Essaie un autre mot-clé ou explore les catégories ci-dessous."
+      }
+    },
     "cta": {
       "title": "Besoin d’un accompagnement personnalisé ?",
       "description": "Notre bibliothèque offre des repères précieux, mais notre chat thérapeutique propulsé par l’IA propose un accompagnement sur mesure adapté à ta situation.",
